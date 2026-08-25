@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter Test</title>
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="assets/public/images/XoHub_Solutions_Logo.png" />
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 50px;
+            background: #f5f5f5;
+        }
+        .test-section {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            margin: 20px 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .counter {
+            font-size: 48px;
+            font-weight: bold;
+            color: #333;
+            margin: 20px 0;
+        }
+        .spacer {
+            height: 100vh;
+            background: linear-gradient(to bottom, #fff, #eee);
+        }
+    </style>
+</head>
+<body>
+    <h1>Counter Animation Test</h1>
+    
+    <div class="spacer">
+        <p>Scroll down to see the counter animate...</p>
+    </div>
+    
+    <div class="XoHubSolutions-ImpactSection test-section">
+        <h2>Our Impact</h2>
+        <div class="counter">
+            Projects: <span class="XoHubSolutions-AnimatedCounter" data-count="800">0</span>+
+        </div>
+        <div class="counter">
+            Satisfaction: <span class="XoHubSolutions-AnimatedCounter" data-count="98">0</span>%
+        </div>
+        <div class="counter">
+            Years: <span class="XoHubSolutions-AnimatedCounter" data-count="6">0</span>+
+        </div>
+        <div class="counter">
+            Industries: <span class="XoHubSolutions-AnimatedCounter" data-count="76">0</span>+
+        </div>
+    </div>
+    
+    <script>
+        // Simple counter animation test
+        const counters = document.querySelectorAll('.XoHubSolutions-AnimatedCounter');
+        let countersAnimated = false;
+        
+        const animateCounter = (element, target, duration = 2000) => {
+            const startTime = performance.now();
+            
+            const updateCount = (currentTime) => {
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                
+                // Ease-out cubic
+                const eased = 1 - Math.pow(1 - progress, 3);
+                const currentValue = Math.floor(eased * target);
+                
+                element.textContent = currentValue;
+                
+                if (progress < 1) {
+                    requestAnimationFrame(updateCount);
+                } else {
+                    element.textContent = target;
+                }
+            };
+            
+            requestAnimationFrame(updateCount);
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting && !countersAnimated) {
+                    countersAnimated = true;
+                    console.log('✅ Counter animation triggered!');
+                    
+                    counters.forEach((counter) => {
+                        const target = parseInt(counter.getAttribute('data-count'), 10);
+                        if (!isNaN(target)) {
+                            counter.textContent = '0';
+                            animateCounter(counter, target);
+                        }
+                    });
+                    
+                    observer.disconnect();
+                }
+            });
+        }, {
+            threshold: 0.2,
+            rootMargin: '0px 0px -100px 0px'
+        });
+        
+        const section = document.querySelector('.XoHubSolutions-ImpactSection');
+        if (section && counters.length > 0) {
+            observer.observe(section);
+            console.log('✅ Observer setup complete. Counters found:', counters.length);
+        } else {
+            console.error('❌ Section or counters not found');
+        }
+    </script>
+</body>
+</html>

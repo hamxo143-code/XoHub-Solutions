@@ -1,0 +1,1589 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>XoHub Solutions — Your Digital Growth Partner</title>
+
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;5000;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome 6 (Free) — Updated to stable version for fa-x-twitter support -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="assets/public/images/XoHub_Solutions_Logo.png" />
+    <link rel="apple-touch-icon" href="assets/public/images/XoHub_Solutions_Logo.png" />
+
+    <!-- Primary Stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- Responsive Stylesheet -->
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+</head>
+
+<body>
+    <!-- ============================================================
+    MAIN HEADER — Sticky, contains Top Bar + Navigation
+    ============================================================ -->
+    <header id="main-header" role="banner" aria-label="Site header">
+        <!-- ================== TOP ANNOUNCEMENT BAR ================== -->
+        <div id="top-bar" role="complementary" aria-label="Announcement bar">
+            <div class="container top-bar__inner">
+                <!-- Left: Rocket icon + tagline -->
+                <div class="top-bar__left">
+                    <span class="top-bar__icon" aria-hidden="true">
+                        <i class="fas fa-rocket"></i>
+                    </span>
+                    <p class="top-bar__text">
+                        We help brands
+                        <span class="highlight-lime">grow digitally</span>
+                        with innovative solutions
+                    </p>
+                </div>
+
+                <!-- Right: Quick links & social icons -->
+                <div class="top-bar__right">
+                    <nav class="top-bar__nav" aria-label="Quick links">
+                        <a href="#" class="top-bar__link">Career</a>
+                        <a href="#" class="top-bar__link">Blog</a>
+                        <a href="#" class="top-bar__link">Contact Us</a>
+                    </nav>
+                    <div class="top-bar__socials">
+                        <a href="https://www.linkedin.com/in/xohubsolutions" aria-label="LinkedIn" class="social-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.youtube.com/c/XohubSolutions" aria-label="YouTube" class="social-icon">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@xohubsolutions" aria-label="TikTok" class="social-icon">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="https://www.instagram.com/xohubsolutions" aria-label="Instagram" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.facebook.com/xohubsolutions" aria-label="Facebook" class="social-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ================ END TOP BAR ================ -->
+
+        <!-- ================== MAIN NAVIGATION ================== -->
+        <nav id="main-nav" class="main-nav" role="navigation" aria-label="Primary navigation" data-scroll="false">
+            <div class="container main-nav__inner">
+                <!-- Logo — FIXED: proper dimensions + text uncommented -->
+                <div class="logo">
+                    <a href="http://127.0.0.1:5500/" aria-label="XoHub Solutions — Home">
+                        <img src="assets/public/images/XoHub_Solutions_Logo.png" alt="XoHub Solutions Logo"
+                            class="logo__image" width="180" height="180" loading="lazy" />
+                        <!-- <span class="logo__text">XoHub <span class="logo__highlight">Solutions</span></span> -->
+                    </a>
+                </div>
+
+                <!-- Center Navigation Links (desktop) — Restructured for cleaner IA -->
+                <ul class="nav-links" id="nav-links" role="menubar">
+                    <li role="none"><a href="http://127.0.0.1:5500/" role="menuitem" class="nav-link">Home</a></li>
+
+                    <!-- Company dropdown -->
+                    <li role="none" class="dropdown">
+                        <a href="#" role="menuitem" class="nav-link dropdown-toggle" aria-haspopup="true"
+                            aria-expanded="false">
+                            Company
+                            <i class="fas fa-chevron-down dropdown-icon" aria-hidden="true"></i>
+                        </a>
+                        <ul class="dropdown-menu" role="menu" aria-label="Company">
+                            <li role="none"><a href="about.html" role="menuitem" class="dropdown-link">About Us</a></li>
+                            <li role="none"><a href="#" role="menuitem" class="dropdown-link">Careers</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Services dropdown — Expanded -->
+                    <li role="none" class="dropdown">
+                        <a href="#" role="menuitem" class="nav-link dropdown-toggle" aria-haspopup="true"
+                            aria-expanded="false">
+                            Services
+                            <i class="fas fa-chevron-down dropdown-icon" aria-hidden="true"></i>
+                        </a>
+                        <ul class="dropdown-menu" role="menu" aria-label="Services">
+                            <li role="none"><a href="#" role="menuitem" class="dropdown-link">Web Development</a></li>
+                            <li role="none"><a href="#" role="menuitem" class="dropdown-link">Mobile Development</a>
+                            </li>
+                            <li role="none"><a href="#" role="menuitem" class="dropdown-link">UI/UX Design</a></li>
+                            <li role="none"><a href="#" role="menuitem" class="dropdown-link">AI Solutions</a></li>
+                            <li role="none"><a href="#" role="menuitem" class="dropdown-link">Cloud Solutions</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Products dropdown -->
+                    <li role="none" class="dropdown">
+                        <a href="#" role="menuitem" class="nav-link dropdown-toggle" aria-haspopup="true"
+                            aria-expanded="false">
+                            Products
+                            <i class="fas fa-chevron-down dropdown-icon" aria-hidden="true"></i>
+                        </a>
+                        <ul class="dropdown-menu" role="menu" aria-label="Products">
+                            <li role="none"><a href="#" role="menuitem" class="dropdown-link">HubCRM</a></li>
+                            <li role="none"><a href="#" role="menuitem" class="dropdown-link">Analytics Pro</a></li>
+                            <li role="none"><a href="#" role="menuitem" class="dropdown-link">AI Assistant</a></li>
+                            <li role="none"><a href="#" role="menuitem" class="dropdown-link">Cloud Platform</a></li>
+                        </ul>
+                    </li>
+
+                    <li role="none"><a href="http://127.0.0.1:5500/portfolio.html" role="menuitem"
+                            class="nav-link">Portfolio</a></li>
+
+                    <!-- Resources dropdown -->
+                    <li role="none" class="dropdown">
+                        <a href="#" role="menuitem" class="nav-link dropdown-toggle" aria-haspopup="true"
+                            aria-expanded="false">
+                            Resources
+                            <i class="fas fa-chevron-down dropdown-icon" aria-hidden="true"></i>
+                        </a>
+                        <ul class="dropdown-menu" role="menu" aria-label="Resources">
+                            <li role="none"><a href="#" role="menuitem" class="dropdown-link">Blog</a></li>
+                            <li role="none"><a href="http://127.0.0.1:5500/case_studies.html" role="menuitem"
+                                    class="dropdown-link">Case Studies</a></li>
+                            <li role="none"><a href="#" role="menuitem" class="dropdown-link">Documentation</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- <li role="none"><a href="#" role="menuitem" class="nav-link">Contact</a></li> -->
+                </ul>
+
+                <!-- Right side: Search + CTA -->
+                <div class="nav-actions">
+                    <button class="search-btn" aria-label="Search" id="search-toggle">
+                        <i class="fas fa-search" aria-hidden="true"></i>
+                    </button>
+                    <a href="#" class="btn-primary">
+                        Get a Free Quote
+                        <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                    </a>
+                </div>
+
+                <!-- Hamburger (mobile) -->
+                <button class="hamburger" id="hamburger" aria-label="Open main menu" aria-expanded="false"
+                    aria-controls="mobile-menu">
+                    <span class="hamburger__line"></span>
+                    <span class="hamburger__line"></span>
+                    <span class="hamburger__line"></span>
+                </button>
+            </div>
+        </nav>
+        <!-- ================ END MAIN NAV ================ -->
+    </header>
+    <!-- ================ END HEADER ================ -->
+
+    <!-- ==================================================
+START: Hero & Brand Story
+================================================== -->
+<section id="brand-hero" class="brand-hero" aria-label="Our Brand - XoHub Solutions">
+    <!-- Background Decorations -->
+    <div class="brand-hero__bg" aria-hidden="true">
+        <div class="brand-hero__glow brand-hero__glow--1"></div>
+        <div class="brand-hero__glow brand-hero__glow--2"></div>
+        <div class="brand-hero__glow brand-hero__glow--3"></div>
+        <div class="brand-hero__orb brand-hero__orb--1"></div>
+        <div class="brand-hero__orb brand-hero__orb--2"></div>
+        <div class="brand-hero__shape brand-hero__shape--1"></div>
+        <div class="brand-hero__shape brand-hero__shape--2"></div>
+        <svg class="brand-hero__grid" viewBox="0 0 1000 800" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="160" cy="160" r="130" stroke="rgba(192,227,74,0.025)" stroke-width="1" stroke-dasharray="6 6"/>
+            <circle cx="840" cy="640" r="150" stroke="rgba(124,58,237,0.025)" stroke-width="1" stroke-dasharray="8 8"/>
+            <circle cx="500" cy="400" r="230" stroke="rgba(192,227,74,0.015)" stroke-width="1"/>
+            <path d="M220 0 L220 800" stroke="rgba(124,58,237,0.015)" stroke-width="1"/>
+            <path d="M780 0 L780 800" stroke="rgba(192,227,74,0.015)" stroke-width="1"/>
+        </svg>
+        <div class="particle particle--1"></div>
+        <div class="particle particle--2"></div>
+        <div class="particle particle--3"></div>
+        <div class="particle particle--4"></div>
+        <div class="particle particle--5"></div>
+        <div class="particle particle--6"></div>
+    </div>
+
+    <div class="container brand-hero__inner">
+        <!-- Hero Content -->
+        <div class="brand-hero__content">
+            <!-- Badge -->
+            <span class="brand-hero__badge">OUR BRAND</span>
+
+            <!-- Heading -->
+            <h1 class="brand-hero__title">The Story Behind <span class="highlight-text">XoHub Solutions</span></h1>
+
+            <!-- Description -->
+            <p class="brand-hero__subtitle">
+                Every great brand begins with a vision. Discover the inspiration behind our name, logo, colors,
+                and mission to empower businesses through technology.
+            </p>
+
+            <!-- Buttons -->
+            <div class="brand-hero__actions">
+                <a href="#" class="btn-primary btn-brand-services">
+                    Explore Our Services
+                    <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                </a>
+                <a href="#" class="btn-secondary btn-brand-contact">
+                    <i class="fas fa-headset" aria-hidden="true"></i> Contact Us
+                </a>
+            </div>
+        </div>
+
+        <!-- Logo Visual -->
+        <div class="brand-hero__visual" aria-hidden="true">
+            <div class="brand-hero__logo-container">
+                <!-- Logo Placeholder -->
+                <div class="brand-hero__logo">
+                    <!-- <span class="brand-hero__logo-icon">◆</span> -->
+                    <!-- <span class="brand-hero__logo-text">XoHub</span> -->
+                    <!-- <span class="brand-hero__logo-solutions">Solutions</span> -->
+                    <img src="./assets/public/images/XoHub_Solutions_Logo.png" alt="XoHub Solutions Logo">
+                </div>
+
+                <!-- Animated Circuits -->
+                <div class="brand-hero__circuit brand-hero__circuit--1">
+                    <span class="brand-hero__circuit-line"></span>
+                    <span class="brand-hero__circuit-dot"></span>
+                    <span class="brand-hero__circuit-line"></span>
+                    <span class="brand-hero__circuit-dot"></span>
+                    <span class="brand-hero__circuit-line"></span>
+                </div>
+                <div class="brand-hero__circuit brand-hero__circuit--2">
+                    <span class="brand-hero__circuit-line"></span>
+                    <span class="brand-hero__circuit-dot"></span>
+                    <span class="brand-hero__circuit-line"></span>
+                </div>
+                <div class="brand-hero__circuit brand-hero__circuit--3">
+                    <span class="brand-hero__circuit-line"></span>
+                    <span class="brand-hero__circuit-dot"></span>
+                    <span class="brand-hero__circuit-line"></span>
+                    <span class="brand-hero__circuit-dot"></span>
+                    <span class="brand-hero__circuit-line"></span>
+                </div>
+
+                <!-- Floating Connection Nodes -->
+                <span class="brand-hero__node brand-hero__node--1"></span>
+                <span class="brand-hero__node brand-hero__node--2"></span>
+                <span class="brand-hero__node brand-hero__node--3"></span>
+                <span class="brand-hero__node brand-hero__node--4"></span>
+                <span class="brand-hero__node brand-hero__node--5"></span>
+                <span class="brand-hero__node brand-hero__node--6"></span>
+
+                <!-- Glow Ring -->
+                <div class="brand-hero__glow-ring"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================================================
+START: Brand Story Section
+================================================== -->
+<section id="brand-story" class="brand-story" aria-label="The Brand Story - XoHub Solutions">
+    <div class="container brand-story__inner">
+        <!-- Two-Column Layout -->
+        <div class="brand-story__grid">
+            <!-- Left: Story Content -->
+            <div class="brand-story__content">
+                <!-- The Beginning -->
+                <div class="brand-story__block">
+                    <span class="brand-story__block-number">01</span>
+                    <h2 class="brand-story__block-title">The Beginning</h2>
+                    <p class="brand-story__block-text">
+                        <span class="brand-story__highlight">"Xo"</span> comes from the founder's nickname —
+                        <span class="brand-story__highlight">HamXo</span>. This represents the personal dedication,
+                        vision, and passion behind the company.
+                    </p>
+                    <p class="brand-story__block-text">
+                        <span class="brand-story__highlight">"Hub"</span> represents a central place where businesses
+                        can access all their digital needs — from custom software and websites to AI automation,
+                        digital marketing, and business growth solutions.
+                    </p>
+                    <p class="brand-story__block-text brand-story__block-text--emphasized">
+                        Together, <span class="brand-story__block-name">XoHub</span> means:
+                        <span class="brand-story__block-meaning">"A central hub where technology, innovation, and business growth come together."</span>
+                    </p>
+                </div>
+
+                <!-- Mission -->
+                <div class="brand-story__block">
+                    <span class="brand-story__block-number">02</span>
+                    <h2 class="brand-story__block-title">Our Mission</h2>
+                    <p class="brand-story__block-text">
+                        We exist to help businesses grow through modern technology. By combining technical
+                        expertise with a deep understanding of business needs, we deliver solutions that drive
+                        real results — not just code, but growth.
+                    </p>
+                </div>
+
+                <!-- Vision -->
+                <div class="brand-story__block">
+                    <span class="brand-story__block-number">03</span>
+                    <h2 class="brand-story__block-title">Our Vision</h2>
+                    <p class="brand-story__block-text">
+                        To become a trusted global digital partner for businesses of all sizes. We envision a
+                        world where every company, from startups to enterprises, can leverage the power of
+                        technology to innovate, scale, and succeed.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Right: Quote Card -->
+            <div class="brand-story__quote">
+                <div class="brand-story__quote-card">
+                    <span class="brand-story__quote-icon" aria-hidden="true">"</span>
+                    <blockquote class="brand-story__quote-text">
+                        Technology should simplify business, inspire innovation, and create opportunities for growth.
+                    </blockquote>
+                    <div class="brand-story__quote-author">
+                        <span class="brand-story__quote-name">Muhammad Hamza — Founder</span>
+                        <span class="brand-story__quote-title">XoHub Solutions</span>
+                    </div>
+                    <div class="brand-story__quote-decoration"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ==================================================
+END: Hero & Brand Story
+================================================== -->
+
+<!-- ==================================================
+START: Logo Meaning & Symbolism
+================================================== -->
+<section id="brand-symbolism" class="brand-symbolism" aria-label="Logo Meaning and Symbolism - XoHub Solutions">
+    <!-- Background Decorations -->
+    <div class="brand-symbolism__bg" aria-hidden="true">
+        <div class="brand-symbolism__glow brand-symbolism__glow--1"></div>
+        <div class="brand-symbolism__glow brand-symbolism__glow--2"></div>
+        <div class="brand-symbolism__glow brand-symbolism__glow--3"></div>
+        <div class="brand-symbolism__orb brand-symbolism__orb--1"></div>
+        <div class="brand-symbolism__orb brand-symbolism__orb--2"></div>
+        <svg class="brand-symbolism__grid" viewBox="0 0 1000 800" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="160" cy="160" r="130" stroke="rgba(192,227,74,0.025)" stroke-width="1" stroke-dasharray="6 6"/>
+            <circle cx="840" cy="640" r="150" stroke="rgba(124,58,237,0.025)" stroke-width="1" stroke-dasharray="8 8"/>
+            <circle cx="500" cy="400" r="230" stroke="rgba(192,227,74,0.015)" stroke-width="1"/>
+            <path d="M220 0 L220 800" stroke="rgba(124,58,237,0.015)" stroke-width="1"/>
+            <path d="M780 0 L780 800" stroke="rgba(192,227,74,0.015)" stroke-width="1"/>
+        </svg>
+        <div class="particle particle--1"></div>
+        <div class="particle particle--2"></div>
+        <div class="particle particle--3"></div>
+        <div class="particle particle--4"></div>
+        <div class="particle particle--5"></div>
+        <div class="particle particle--6"></div>
+    </div>
+
+    <div class="container brand-symbolism__inner">
+        <!-- Section Header -->
+        <div class="brand-symbolism__header">
+            <span class="brand-symbolism__badge">LOGO SYMBOLISM</span>
+            <h2 class="brand-symbolism__title">Every Element Has a <span class="highlight-text">Purpose</span></h2>
+            <p class="brand-symbolism__subtitle">
+                Our logo is more than a visual identity—it represents our journey, values, innovation, and commitment
+                to helping businesses grow through technology.
+            </p>
+        </div>
+
+        <!-- Interactive Logo Showcase -->
+        <div class="brand-symbolism__showcase" aria-label="Interactive logo showcase">
+            <div class="brand-symbolism__logo-display">
+                <!-- Logo -->
+                <div class="brand-symbolism__logo" data-element="logo">
+                    <span class="brand-symbolism__logo-icon">◆</span>
+                    <span class="brand-symbolism__logo-text">XoHub</span>
+                    <span class="brand-symbolism__logo-solutions">Solutions</span>
+                    <span class="brand-symbolism__logo-tagline">Your Digital Growth Partner</span>
+                </div>
+
+                <!-- Hotspot Indicators -->
+                <button class="brand-symbolism__hotspot brand-symbolism__hotspot--xo" data-target="card-xo" aria-label="Learn about Xo" title="Xo — Personal dedication and vision">
+                    <span class="brand-symbolism__hotspot-dot"></span>
+                    <span class="brand-symbolism__hotspot-label">Xo</span>
+                    <span class="brand-symbolism__hotspot-line"></span>
+                </button>
+
+                <button class="brand-symbolism__hotspot brand-symbolism__hotspot--hub" data-target="card-hub" aria-label="Learn about Hub" title="Hub — Central digital solutions">
+                    <span class="brand-symbolism__hotspot-dot"></span>
+                    <span class="brand-symbolism__hotspot-label">Hub</span>
+                    <span class="brand-symbolism__hotspot-line"></span>
+                </button>
+
+                <button class="brand-symbolism__hotspot brand-symbolism__hotspot--circuit" data-target="card-circuit" aria-label="Learn about the circuit design" title="Circuit — Technology and innovation">
+                    <span class="brand-symbolism__hotspot-dot"></span>
+                    <span class="brand-symbolism__hotspot-label">Circuit</span>
+                    <span class="brand-symbolism__hotspot-line"></span>
+                </button>
+
+                <button class="brand-symbolism__hotspot brand-symbolism__hotspot--green" data-target="card-green" aria-label="Learn about the green color" title="Green — Growth and success">
+                    <span class="brand-symbolism__hotspot-dot"></span>
+                    <span class="brand-symbolism__hotspot-label">Green</span>
+                    <span class="brand-symbolism__hotspot-line"></span>
+                </button>
+
+                <button class="brand-symbolism__hotspot brand-symbolism__hotspot--purple" data-target="card-purple" aria-label="Learn about the purple color" title="Purple — Creativity and premium quality">
+                    <span class="brand-symbolism__hotspot-dot"></span>
+                    <span class="brand-symbolism__hotspot-label">Purple</span>
+                    <span class="brand-symbolism__hotspot-line"></span>
+                </button>
+
+                <button class="brand-symbolism__hotspot brand-symbolism__hotspot--typography" data-target="card-typography" aria-label="Learn about the typography" title="Typography — Strength and flexibility">
+                    <span class="brand-symbolism__hotspot-dot"></span>
+                    <span class="brand-symbolism__hotspot-label">Type</span>
+                    <span class="brand-symbolism__hotspot-line"></span>
+                </button>
+
+                <button class="brand-symbolism__hotspot brand-symbolism__hotspot--tagline" data-target="card-tagline" aria-label="Learn about the tagline" title="Tagline — Your Digital Growth Partner">
+                    <span class="brand-symbolism__hotspot-dot"></span>
+                    <span class="brand-symbolism__hotspot-label">Tagline</span>
+                    <span class="brand-symbolism__hotspot-line"></span>
+                </button>
+
+                <!-- Connection Nodes -->
+                <span class="brand-symbolism__node brand-symbolism__node--1"></span>
+                <span class="brand-symbolism__node brand-symbolism__node--2"></span>
+                <span class="brand-symbolism__node brand-symbolism__node--3"></span>
+                <span class="brand-symbolism__node brand-symbolism__node--4"></span>
+                <span class="brand-symbolism__node brand-symbolism__node--5"></span>
+                <span class="brand-symbolism__node brand-symbolism__node--6"></span>
+            </div>
+
+            <!-- Active Card Indicator -->
+            <div class="brand-symbolism__active-indicator" role="status" aria-live="polite">
+                <span class="brand-symbolism__active-label">Hover a hotspot to learn more</span>
+            </div>
+        </div>
+
+        <!-- Meaning Cards Grid -->
+        <div class="brand-symbolism__cards">
+            <div class="brand-symbolism__cards-grid">
+                <!-- Xo Card -->
+                <div class="brand-symbolism__card" id="card-xo" data-element="xo">
+                    <span class="brand-symbolism__card-icon">✦</span>
+                    <h3 class="brand-symbolism__card-title">Xo</h3>
+                    <p class="brand-symbolism__card-text">
+                        <span class="brand-symbolism__card-highlight">"Xo"</span> comes from the founder's nickname,
+                        <span class="brand-symbolism__card-highlight">HamXo</span>, representing personal dedication,
+                        passion, creativity, and the vision behind the company.
+                    </p>
+                    <span class="brand-symbolism__card-number">01</span>
+                </div>
+
+                <!-- Hub Card -->
+                <div class="brand-symbolism__card" id="card-hub" data-element="hub">
+                    <span class="brand-symbolism__card-icon">◈</span>
+                    <h3 class="brand-symbolism__card-title">Hub</h3>
+                    <p class="brand-symbolism__card-text">
+                        <span class="brand-symbolism__card-highlight">"Hub"</span> represents a central place where
+                        businesses can access complete digital solutions — from custom software and websites to AI
+                        automation, digital marketing, and business growth strategies — all under one roof.
+                    </p>
+                    <span class="brand-symbolism__card-number">02</span>
+                </div>
+
+                <!-- Circuit Design Card -->
+                <div class="brand-symbolism__card" id="card-circuit" data-element="circuit">
+                    <span class="brand-symbolism__card-icon">⚡</span>
+                    <h3 class="brand-symbolism__card-title">Circuit Design</h3>
+                    <p class="brand-symbolism__card-text">
+                        The surrounding circuits symbolize the core pillars of our expertise:
+                        <span class="brand-symbolism__card-highlight">Software Development</span>,
+                        <span class="brand-symbolism__card-highlight">Artificial Intelligence</span>,
+                        <span class="brand-symbolism__card-highlight">Automation</span>,
+                        <span class="brand-symbolism__card-highlight">Connectivity</span>,
+                        <span class="brand-symbolism__card-highlight">Innovation</span>, and
+                        <span class="brand-symbolism__card-highlight">Digital Transformation</span>.
+                    </p>
+                    <span class="brand-symbolism__card-number">03</span>
+                </div>
+
+                <!-- Green Card -->
+                <div class="brand-symbolism__card" id="card-green" data-element="green">
+                    <span class="brand-symbolism__card-icon">🌱</span>
+                    <h3 class="brand-symbolism__card-title">Green</h3>
+                    <p class="brand-symbolism__card-text">
+                        The color <span class="brand-symbolism__card-highlight">Green (#81c752)</span> represents:
+                        <span class="brand-symbolism__card-highlight">Growth</span> —
+                        <span class="brand-symbolism__card-highlight">Opportunity</span> —
+                        <span class="brand-symbolism__card-highlight">Success</span> —
+                        <span class="brand-symbolism__card-highlight">Innovation</span> —
+                        <span class="brand-symbolism__card-highlight">Sustainability</span>.
+                        It reflects our commitment to helping businesses thrive.
+                    </p>
+                    <div class="brand-symbolism__card-color brand-symbolism__card-color--green"></div>
+                    <span class="brand-symbolism__card-number">04</span>
+                </div>
+
+                <!-- Purple Card -->
+                <div class="brand-symbolism__card" id="card-purple" data-element="purple">
+                    <span class="brand-symbolism__card-icon">◆</span>
+                    <h3 class="brand-symbolism__card-title">Purple</h3>
+                    <p class="brand-symbolism__card-text">
+                        The color <span class="brand-symbolism__card-highlight">Purple (#7c50cc)</span> represents:
+                        <span class="brand-symbolism__card-highlight">Creativity</span> —
+                        <span class="brand-symbolism__card-highlight">Intelligence</span> —
+                        <span class="brand-symbolism__card-highlight">Premium Quality</span> —
+                        <span class="brand-symbolism__card-highlight">Technology</span> —
+                        <span class="brand-symbolism__card-highlight">Vision</span>.
+                        It embodies the premium, forward-thinking nature of our brand.
+                    </p>
+                    <div class="brand-symbolism__card-color brand-symbolism__card-color--purple"></div>
+                    <span class="brand-symbolism__card-number">05</span>
+                </div>
+
+                <!-- Typography Card -->
+                <div class="brand-symbolism__card" id="card-typography" data-element="typography">
+                    <span class="brand-symbolism__card-icon">Aa</span>
+                    <h3 class="brand-symbolism__card-title">Typography</h3>
+                    <p class="brand-symbolism__card-text">
+                        The bold <span class="brand-symbolism__card-highlight">XOHUB</span> communicates
+                        <span class="brand-symbolism__card-highlight">strength</span> and
+                        <span class="brand-symbolism__card-highlight">trust</span>, while the lighter
+                        <span class="brand-symbolism__card-highlight">SOLUTIONS</span> reflects
+                        <span class="brand-symbolism__card-highlight">flexibility</span>,
+                        <span class="brand-symbolism__card-highlight">innovation</span>, and a broad
+                        range of services.
+                    </p>
+                    <span class="brand-symbolism__card-number">06</span>
+                </div>
+
+                <!-- Tagline Card -->
+                <div class="brand-symbolism__card" id="card-tagline" data-element="tagline">
+                    <span class="brand-symbolism__card-icon">❝</span>
+                    <h3 class="brand-symbolism__card-title">Tagline</h3>
+                    <p class="brand-symbolism__card-text">
+                        <span class="brand-symbolism__card-highlight">"Your Digital Growth Partner"</span>
+                        — This tagline reflects our commitment to working alongside businesses to support
+                        long-term growth, not just delivering projects. We are a partner in your digital
+                        journey.
+                    </p>
+                    <span class="brand-symbolism__card-number">07</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Brand Philosophy Timeline -->
+        <div class="brand-symbolism__timeline">
+            <div class="section-header">
+                <span class="section-header__icon"><i class="fas fa-route"></i></span>
+                <h4 class="section-header__title">Brand Philosophy</h4>
+                <span class="section-header__count">6 pillars</span>
+            </div>
+            <div class="brand-symbolism__timeline-flow">
+                <div class="brand-symbolism__timeline-node">
+                    <span class="brand-symbolism__timeline-icon"><i class="fas fa-heart"></i></span>
+                    <span class="brand-symbolism__timeline-label">Personal Vision</span>
+                    <span class="brand-symbolism__timeline-connector"></span>
+                </div>
+                <div class="brand-symbolism__timeline-node">
+                    <span class="brand-symbolism__timeline-icon"><i class="fas fa-pen-fancy"></i></span>
+                    <span class="brand-symbolism__timeline-label">Brand Identity</span>
+                    <span class="brand-symbolism__timeline-connector"></span>
+                </div>
+                <div class="brand-symbolism__timeline-node">
+                    <span class="brand-symbolism__timeline-icon"><i class="fas fa-microchip"></i></span>
+                    <span class="brand-symbolism__timeline-label">Technology</span>
+                    <span class="brand-symbolism__timeline-connector"></span>
+                </div>
+                <div class="brand-symbolism__timeline-node">
+                    <span class="brand-symbolism__timeline-icon"><i class="fas fa-lightbulb"></i></span>
+                    <span class="brand-symbolism__timeline-label">Innovation</span>
+                    <span class="brand-symbolism__timeline-connector"></span>
+                </div>
+                <div class="brand-symbolism__timeline-node">
+                    <span class="brand-symbolism__timeline-icon"><i class="fas fa-chart-line"></i></span>
+                    <span class="brand-symbolism__timeline-label">Business Growth</span>
+                    <span class="brand-symbolism__timeline-connector"></span>
+                </div>
+                <div class="brand-symbolism__timeline-node brand-symbolism__timeline-node--end">
+                    <span class="brand-symbolism__timeline-icon"><i class="fas fa-globe-americas"></i></span>
+                    <span class="brand-symbolism__timeline-label">Global Impact</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quote Banner -->
+        <div class="brand-symbolism__quote">
+            <div class="brand-symbolism__quote-banner">
+                <div class="brand-symbolism__quote-content">
+                    <span class="brand-symbolism__quote-icon" aria-hidden="true">"</span>
+                    <blockquote class="brand-symbolism__quote-text">
+                        Behind every great logo is a story. Behind every XoHub Solutions project is a commitment
+                        to innovation, trust, and digital growth.
+                    </blockquote>
+                    <div class="brand-symbolism__quote-author">
+                        <span class="brand-symbolism__quote-name">Hamza — Founder</span>
+                        <span class="brand-symbolism__quote-title">XoHub Solutions</span>
+                    </div>
+                </div>
+                <div class="brand-symbolism__quote-decoration"></div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ==================================================
+END: Logo Meaning & Symbolism
+================================================== -->
+
+<!-- ==================================================
+START: Brand Colors, Typography & Design Language
+================================================== -->
+<section id="brand-identity" class="brand-identity" aria-label="Brand Colors, Typography and Design Language - XoHub Solutions">
+    <!-- Background Decorations -->
+    <div class="brand-identity__bg" aria-hidden="true">
+        <div class="brand-identity__glow brand-identity__glow--1"></div>
+        <div class="brand-identity__glow brand-identity__glow--2"></div>
+        <div class="brand-identity__glow brand-identity__glow--3"></div>
+        <div class="brand-identity__orb brand-identity__orb--1"></div>
+        <div class="brand-identity__orb brand-identity__orb--2"></div>
+        <svg class="brand-identity__grid" viewBox="0 0 1000 800" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="160" cy="160" r="130" stroke="rgba(192,227,74,0.025)" stroke-width="1" stroke-dasharray="6 6"/>
+            <circle cx="840" cy="640" r="150" stroke="rgba(124,58,237,0.025)" stroke-width="1" stroke-dasharray="8 8"/>
+            <circle cx="500" cy="400" r="230" stroke="rgba(192,227,74,0.015)" stroke-width="1"/>
+            <path d="M220 0 L220 800" stroke="rgba(124,58,237,0.015)" stroke-width="1"/>
+            <path d="M780 0 L780 800" stroke="rgba(192,227,74,0.015)" stroke-width="1"/>
+        </svg>
+        <div class="particle particle--1"></div>
+        <div class="particle particle--2"></div>
+        <div class="particle particle--3"></div>
+        <div class="particle particle--4"></div>
+        <div class="particle particle--5"></div>
+        <div class="particle particle--6"></div>
+    </div>
+
+    <div class="container brand-identity__inner">
+        <!-- Section Header -->
+        <div class="brand-identity__header">
+            <span class="brand-identity__badge">VISUAL IDENTITY</span>
+            <h2 class="brand-identity__title">A Design Language Built for <span class="highlight-text">Innovation</span></h2>
+            <p class="brand-identity__subtitle">
+                Our visual identity reflects the values we bring to every project—clarity, innovation, trust,
+                consistency, and digital excellence.
+            </p>
+        </div>
+
+        <!-- Brand Identity Showcase -->
+        <div class="brand-identity__showcase" aria-label="Brand identity showcase">
+            <div class="brand-identity__showcase-inner">
+                <!-- Logo Lockup -->
+                <div class="brand-identity__logo-lockup">
+                    <span class="brand-identity__logo-icon">◆</span>
+                    <span class="brand-identity__logo-text">XoHub</span>
+                    <span class="brand-identity__logo-solutions">Solutions</span>
+                </div>
+
+                <!-- Color Palette -->
+                <div class="brand-identity__palette">
+                    <span class="brand-identity__palette-swatch brand-identity__palette-swatch--green" style="background: #81c752;" title="Green #81c752"></span>
+                    <span class="brand-identity__palette-swatch brand-identity__palette-swatch--purple" style="background: #7c50cc;" title="Purple #7c50cc"></span>
+                    <span class="brand-identity__palette-swatch brand-identity__palette-swatch--dark" style="background: #000000;" title="Black #000000"></span>
+                    <span class="brand-identity__palette-swatch brand-identity__palette-swatch--light" style="background: #FFFFFF; border-color: #E8ECF0;" title="White #FFFFFF"></span>
+                </div>
+
+                <!-- UI Component Previews -->
+                <div class="brand-identity__ui-preview">
+                    <div class="brand-identity__ui-card">
+                        <span class="brand-identity__ui-card-icon"><i class="fas fa-rocket"></i></span>
+                        <span class="brand-identity__ui-card-title">Premium Card</span>
+                        <span class="brand-identity__ui-card-desc">Glassmorphism design</span>
+                        <span class="brand-identity__ui-card-badge">New</span>
+                    </div>
+                    <div class="brand-identity__ui-buttons">
+                        <button class="brand-identity__ui-btn brand-identity__ui-btn--primary">Primary</button>
+                        <button class="brand-identity__ui-btn brand-identity__ui-btn--secondary">Secondary</button>
+                    </div>
+                    <div class="brand-identity__ui-icons">
+                        <span class="brand-identity__ui-icon"><i class="fas fa-home"></i></span>
+                        <span class="brand-identity__ui-icon"><i class="fas fa-cogs"></i></span>
+                        <span class="brand-identity__ui-icon"><i class="fas fa-user"></i></span>
+                        <span class="brand-identity__ui-icon"><i class="fas fa-envelope"></i></span>
+                    </div>
+                    <div class="brand-identity__ui-gradient">
+                        <span class="brand-identity__ui-gradient-label">Gradient</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Brand Color Cards -->
+        <div class="brand-identity__colors">
+            <div class="section-header">
+                <span class="section-header__icon"><i class="fas fa-palette"></i></span>
+                <h4 class="section-header__title">Brand Color Palette</h4>
+                <span class="section-header__count">4 colors</span>
+            </div>
+            <div class="brand-identity__colors-grid">
+                <!-- Green -->
+                <div class="brand-identity__color-card brand-identity__color-card--green">
+                    <div class="brand-identity__color-swatch">
+                        <div class="brand-identity__color-swatch-inner" style="background: #81c752;"></div>
+                    </div>
+                    <div class="brand-identity__color-info">
+                        <span class="brand-identity__color-name">Green</span>
+                        <span class="brand-identity__color-hex">#81c752</span>
+                        <p class="brand-identity__color-desc">
+                            Represents <span class="brand-identity__color-highlight">Growth</span>,
+                            <span class="brand-identity__color-highlight">Opportunity</span>,
+                            <span class="brand-identity__color-highlight">Innovation</span>,
+                            <span class="brand-identity__color-highlight">Success</span>, and
+                            <span class="brand-identity__color-highlight">Progress</span>.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Purple -->
+                <div class="brand-identity__color-card brand-identity__color-card--purple">
+                    <div class="brand-identity__color-swatch">
+                        <div class="brand-identity__color-swatch-inner" style="background: #7c50cc;"></div>
+                    </div>
+                    <div class="brand-identity__color-info">
+                        <span class="brand-identity__color-name">Purple</span>
+                        <span class="brand-identity__color-hex">#7c50cc</span>
+                        <p class="brand-identity__color-desc">
+                            Represents <span class="brand-identity__color-highlight">Creativity</span>,
+                            <span class="brand-identity__color-highlight">Intelligence</span>,
+                            <span class="brand-identity__color-highlight">Technology</span>,
+                            <span class="brand-identity__color-highlight">Vision</span>, and
+                            <span class="brand-identity__color-highlight">Premium Quality</span>.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Dark Navy -->
+                <div class="brand-identity__color-card brand-identity__color-card--dark">
+                    <div class="brand-identity__color-swatch">
+                        <div class="brand-identity__color-swatch-inner" style="background: #0B1020;"></div>
+                    </div>
+                    <div class="brand-identity__color-info">
+                        <span class="brand-identity__color-name">Dark Navy</span>
+                        <span class="brand-identity__color-hex">#0B1020</span>
+                        <p class="brand-identity__color-desc">
+                            Represents <span class="brand-identity__color-highlight">Trust</span>,
+                            <span class="brand-identity__color-highlight">Stability</span>,
+                            <span class="brand-identity__color-highlight">Security</span>, and
+                            <span class="brand-identity__color-highlight">Professionalism</span>.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- White & Neutrals -->
+                <div class="brand-identity__color-card brand-identity__color-card--neutral">
+                    <div class="brand-identity__color-swatch brand-identity__color-swatch--neutral">
+                        <div class="brand-identity__color-swatch-inner" style="background: #F8F8FC;"></div>
+                        <div class="brand-identity__color-swatch-inner" style="background: #FFFFFF; border: 1px solid #E8E8F0;"></div>
+                    </div>
+                    <div class="brand-identity__color-info">
+                        <span class="brand-identity__color-name">White &amp; Neutrals</span>
+                        <span class="brand-identity__color-hex">#FFFFFF · #F8F8FC</span>
+                        <p class="brand-identity__color-desc">
+                            Provide <span class="brand-identity__color-highlight">Readability</span>,
+                            <span class="brand-identity__color-highlight">Simplicity</span>,
+                            <span class="brand-identity__color-highlight">Balance</span>, and
+                            <span class="brand-identity__color-highlight">Accessibility</span>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Typography Showcase -->
+        <div class="brand-identity__typography">
+            <div class="section-header">
+                <span class="section-header__icon"><i class="fas fa-font"></i></span>
+                <h4 class="section-header__title">Typography</h4>
+                <span class="section-header__count">4 styles</span>
+            </div>
+            <div class="brand-identity__typography-grid">
+                <!-- Headings -->
+                <div class="brand-identity__type-card">
+                    <span class="brand-identity__type-label">Headings</span>
+                    <div class="brand-identity__type-demo">
+                        <span class="brand-identity__type-heading">Inter</span>
+                        <div class="brand-identity__type-samples">
+                            <span class="brand-identity__type-sample brand-identity__type-sample--h1">H1 — Bold · 3rem</span>
+                            <span class="brand-identity__type-sample brand-identity__type-sample--h2">H2 — Bold · 2.4rem</span>
+                            <span class="brand-identity__type-sample brand-identity__type-sample--h3">H3 — Semibold · 1.8rem</span>
+                        </div>
+                    </div>
+                    <span class="brand-identity__type-desc">Bold · Modern · Professional</span>
+                </div>
+
+                <!-- Body Text -->
+                <div class="brand-identity__type-card">
+                    <span class="brand-identity__type-label">Body Text</span>
+                    <div class="brand-identity__type-demo">
+                        <span class="brand-identity__type-heading">Inter</span>
+                        <div class="brand-identity__type-samples">
+                            <span class="brand-identity__type-sample brand-identity__type-sample--body">Regular · 1.05rem · 1.7 line-height</span>
+                            <span class="brand-identity__type-sample brand-identity__type-sample--body-sm">Small · 0.85rem · 1.5 line-height</span>
+                        </div>
+                    </div>
+                    <span class="brand-identity__type-desc">Clean · Readable · Accessible</span>
+                </div>
+
+                <!-- Buttons -->
+                <div class="brand-identity__type-card">
+                    <span class="brand-identity__type-label">Buttons</span>
+                    <div class="brand-identity__type-demo">
+                        <span class="brand-identity__type-heading">Inter</span>
+                        <div class="brand-identity__type-samples">
+                            <div class="brand-identity__type-buttons">
+                                <button class="brand-identity__type-btn brand-identity__type-btn--primary">Primary</button>
+                                <button class="brand-identity__type-btn brand-identity__type-btn--secondary">Secondary</button>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="brand-identity__type-desc">Confident · Clear · Action-oriented</span>
+                </div>
+
+                <!-- UI Labels -->
+                <div class="brand-identity__type-card">
+                    <span class="brand-identity__type-label">UI Labels</span>
+                    <div class="brand-identity__type-demo">
+                        <span class="brand-identity__type-heading">Inter</span>
+                        <div class="brand-identity__type-samples">
+                            <span class="brand-identity__type-sample brand-identity__type-sample--label">Label · 0.7rem · Uppercase</span>
+                            <span class="brand-identity__type-sample brand-identity__type-sample--badge">Badge · 0.55rem · Semibold</span>
+                        </div>
+                    </div>
+                    <span class="brand-identity__type-desc">Minimal · Consistent · Scalable</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Design Principles Grid -->
+        <div class="brand-identity__principles">
+            <div class="section-header">
+                <span class="section-header__icon"><i class="fas fa-gem"></i></span>
+                <h4 class="section-header__title">Design Principles</h4>
+                <span class="section-header__count">6 principles</span>
+            </div>
+            <div class="brand-identity__principles-grid">
+                <!-- Simplicity -->
+                <div class="brand-identity__principle">
+                    <span class="brand-identity__principle-icon"><i class="fas fa-circle"></i></span>
+                    <h5 class="brand-identity__principle-title">Simplicity</h5>
+                    <p class="brand-identity__principle-desc">Clean interfaces that remove friction and make every action intuitive.</p>
+                </div>
+
+                <!-- Consistency -->
+                <div class="brand-identity__principle">
+                    <span class="brand-identity__principle-icon"><i class="fas fa-circle"></i></span>
+                    <h5 class="brand-identity__principle-title">Consistency</h5>
+                    <p class="brand-identity__principle-desc">Unified design language across every page, product, and touchpoint.</p>
+                </div>
+
+                <!-- Accessibility -->
+                <div class="brand-identity__principle">
+                    <span class="brand-identity__principle-icon"><i class="fas fa-circle"></i></span>
+                    <h5 class="brand-identity__principle-title">Accessibility</h5>
+                    <p class="brand-identity__principle-desc">Designed for everyone with WCAG AA standards, keyboard support, and ARIA labels.</p>
+                </div>
+
+                <!-- Scalability -->
+                <div class="brand-identity__principle">
+                    <span class="brand-identity__principle-icon"><i class="fas fa-circle"></i></span>
+                    <h5 class="brand-identity__principle-title">Scalability</h5>
+                    <p class="brand-identity__principle-desc">Flexible components that grow with your business and adapt to new needs.</p>
+                </div>
+
+                <!-- Performance -->
+                <div class="brand-identity__principle">
+                    <span class="brand-identity__principle-icon"><i class="fas fa-circle"></i></span>
+                    <h5 class="brand-identity__principle-title">Performance</h5>
+                    <p class="brand-identity__principle-desc">Optimized code, lightweight assets, and fast experiences on every device.</p>
+                </div>
+
+                <!-- User Experience -->
+                <div class="brand-identity__principle">
+                    <span class="brand-identity__principle-icon"><i class="fas fa-circle"></i></span>
+                    <h5 class="brand-identity__principle-title">User Experience</h5>
+                    <p class="brand-identity__principle-desc">Every decision prioritizes the user journey, making interactions seamless and enjoyable.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Brand Guidelines Banner -->
+        <div class="brand-identity__guidelines">
+            <div class="brand-identity__guidelines-banner">
+                <div class="brand-identity__guidelines-content">
+                    <span class="brand-identity__guidelines-icon" aria-hidden="true">◆</span>
+                    <div class="brand-identity__guidelines-text">
+                        <h3 class="brand-identity__guidelines-title">Designed for Consistency Across Every Experience</h3>
+                        <p class="brand-identity__guidelines-desc">
+                            From websites and dashboards to mobile applications and marketing materials, every
+                            XoHub Solutions product follows a unified visual language to deliver a consistent,
+                            recognizable, and premium experience.
+                        </p>
+                    </div>
+                </div>
+                <div class="brand-identity__guidelines-decoration"></div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ==================================================
+END: Brand Colors, Typography & Design Language
+================================================== -->
+
+<!-- ==================================================
+START: Mission, Vision & Core Values
+================================================== -->
+<section id="brand-purpose" class="brand-purpose" aria-label="Mission, Vision and Core Values - XoHub Solutions">
+    <!-- Background Decorations -->
+    <div class="brand-purpose__bg" aria-hidden="true">
+        <div class="brand-purpose__glow brand-purpose__glow--1"></div>
+        <div class="brand-purpose__glow brand-purpose__glow--2"></div>
+        <div class="brand-purpose__glow brand-purpose__glow--3"></div>
+        <div class="brand-purpose__orb brand-purpose__orb--1"></div>
+        <div class="brand-purpose__orb brand-purpose__orb--2"></div>
+        <svg class="brand-purpose__grid" viewBox="0 0 1000 800" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="160" cy="160" r="130" stroke="rgba(192,227,74,0.025)" stroke-width="1" stroke-dasharray="6 6"/>
+            <circle cx="840" cy="640" r="150" stroke="rgba(124,58,237,0.025)" stroke-width="1" stroke-dasharray="8 8"/>
+            <circle cx="500" cy="400" r="230" stroke="rgba(192,227,74,0.015)" stroke-width="1"/>
+            <path d="M220 0 L220 800" stroke="rgba(124,58,237,0.015)" stroke-width="1"/>
+            <path d="M780 0 L780 800" stroke="rgba(192,227,74,0.015)" stroke-width="1"/>
+        </svg>
+        <div class="particle particle--1"></div>
+        <div class="particle particle--2"></div>
+        <div class="particle particle--3"></div>
+        <div class="particle particle--4"></div>
+        <div class="particle particle--5"></div>
+        <div class="particle particle--6"></div>
+    </div>
+
+    <div class="container brand-purpose__inner">
+        <!-- Section Header -->
+        <div class="brand-purpose__header">
+            <span class="brand-purpose__badge">OUR PURPOSE</span>
+            <h2 class="brand-purpose__title">Driven by Purpose. <span class="highlight-text">Inspired by Innovation.</span></h2>
+            <p class="brand-purpose__subtitle">
+                Our mission, vision, and values shape every solution we build, every partnership we form,
+                and every business we help grow.
+            </p>
+        </div>
+
+        <!-- Mission & Vision Showcase -->
+        <div class="brand-purpose__showcase">
+            <!-- Mission Card -->
+            <div class="brand-purpose__card brand-purpose__card--mission">
+                <div class="brand-purpose__card-icon">
+                    <i class="fas fa-bullseye" aria-hidden="true"></i>
+                </div>
+                <span class="brand-purpose__card-badge">MISSION</span>
+                <h3 class="brand-purpose__card-title">Our Mission</h3>
+                <p class="brand-purpose__card-text">
+                    Our mission is to empower businesses with innovative, reliable, and scalable digital
+                    solutions that simplify operations, strengthen online presence, and accelerate
+                    sustainable growth through technology.
+                </p>
+                <div class="brand-purpose__card-accent"></div>
+            </div>
+
+            <!-- Vision Card -->
+            <div class="brand-purpose__card brand-purpose__card--vision">
+                <div class="brand-purpose__card-icon">
+                    <i class="fas fa-rocket" aria-hidden="true"></i>
+                </div>
+                <span class="brand-purpose__card-badge">VISION</span>
+                <h3 class="brand-purpose__card-title">Our Vision</h3>
+                <p class="brand-purpose__card-text">
+                    Our vision is to become a globally trusted digital growth partner, recognized for
+                    delivering innovative technology, exceptional experiences, and long-term value for
+                    businesses of every size.
+                </p>
+                <div class="brand-purpose__card-glow"></div>
+            </div>
+        </div>
+
+        <!-- Core Values Grid -->
+        <div class="brand-purpose__values">
+            <div class="section-header">
+                <span class="section-header__icon"><i class="fas fa-heart"></i></span>
+                <h4 class="section-header__title">Core Values</h4>
+                <span class="section-header__count">6 values</span>
+            </div>
+            <div class="brand-purpose__values-grid">
+                <!-- Innovation -->
+                <div class="brand-purpose__value">
+                    <span class="brand-purpose__value-icon"><i class="fas fa-lightbulb"></i></span>
+                    <h5 class="brand-purpose__value-title">Innovation</h5>
+                    <p class="brand-purpose__value-desc">
+                        We embrace modern technologies and continuously seek better solutions to solve complex challenges.
+                    </p>
+                    <span class="brand-purpose__value-line"></span>
+                </div>
+
+                <!-- Integrity -->
+                <div class="brand-purpose__value">
+                    <span class="brand-purpose__value-icon"><i class="fas fa-shield-alt"></i></span>
+                    <h5 class="brand-purpose__value-title">Integrity</h5>
+                    <p class="brand-purpose__value-desc">
+                        We build lasting relationships through honesty, transparency, and accountability in everything we do.
+                    </p>
+                    <span class="brand-purpose__value-line"></span>
+                </div>
+
+                <!-- Excellence -->
+                <div class="brand-purpose__value">
+                    <span class="brand-purpose__value-icon"><i class="fas fa-star"></i></span>
+                    <h5 class="brand-purpose__value-title">Excellence</h5>
+                    <p class="brand-purpose__value-desc">
+                        We strive to deliver quality, precision, and tangible value in every project and client interaction.
+                    </p>
+                    <span class="brand-purpose__value-line"></span>
+                </div>
+
+                <!-- Collaboration -->
+                <div class="brand-purpose__value">
+                    <span class="brand-purpose__value-icon"><i class="fas fa-handshake"></i></span>
+                    <h5 class="brand-purpose__value-title">Collaboration</h5>
+                    <p class="brand-purpose__value-desc">
+                        We believe successful projects are built through partnership, open communication, and shared goals.
+                    </p>
+                    <span class="brand-purpose__value-line"></span>
+                </div>
+
+                <!-- Continuous Learning -->
+                <div class="brand-purpose__value">
+                    <span class="brand-purpose__value-icon"><i class="fas fa-graduation-cap"></i></span>
+                    <h5 class="brand-purpose__value-title">Continuous Learning</h5>
+                    <p class="brand-purpose__value-desc">
+                        Technology evolves rapidly, and so do we. We invest in growth, knowledge, and staying ahead of the curve.
+                    </p>
+                    <span class="brand-purpose__value-line"></span>
+                </div>
+
+                <!-- Customer Success -->
+                <div class="brand-purpose__value">
+                    <span class="brand-purpose__value-icon"><i class="fas fa-users"></i></span>
+                    <h5 class="brand-purpose__value-title">Customer Success</h5>
+                    <p class="brand-purpose__value-desc">
+                        Our success is measured by the growth, achievements, and satisfaction of the clients we serve.
+                    </p>
+                    <span class="brand-purpose__value-line"></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Brand Philosophy Timeline -->
+        <div class="brand-purpose__timeline">
+            <div class="section-header">
+                <span class="section-header__icon"><i class="fas fa-route"></i></span>
+                <h4 class="section-header__title">Brand Philosophy</h4>
+                <span class="section-header__count">6 pillars</span>
+            </div>
+            <div class="brand-purpose__timeline-flow">
+                <div class="brand-purpose__timeline-node">
+                    <span class="brand-purpose__timeline-icon"><i class="fas fa-eye"></i></span>
+                    <span class="brand-purpose__timeline-label">Vision</span>
+                    <span class="brand-purpose__timeline-connector"></span>
+                </div>
+                <div class="brand-purpose__timeline-node">
+                    <span class="brand-purpose__timeline-icon"><i class="fas fa-lightbulb"></i></span>
+                    <span class="brand-purpose__timeline-label">Innovation</span>
+                    <span class="brand-purpose__timeline-connector"></span>
+                </div>
+                <div class="brand-purpose__timeline-node">
+                    <span class="brand-purpose__timeline-icon"><i class="fas fa-handshake"></i></span>
+                    <span class="brand-purpose__timeline-label">Collaboration</span>
+                    <span class="brand-purpose__timeline-connector"></span>
+                </div>
+                <div class="brand-purpose__timeline-node">
+                    <span class="brand-purpose__timeline-icon"><i class="fas fa-play"></i></span>
+                    <span class="brand-purpose__timeline-label">Execution</span>
+                    <span class="brand-purpose__timeline-connector"></span>
+                </div>
+                <div class="brand-purpose__timeline-node">
+                    <span class="brand-purpose__timeline-icon"><i class="fas fa-chart-line"></i></span>
+                    <span class="brand-purpose__timeline-label">Business Growth</span>
+                    <span class="brand-purpose__timeline-connector"></span>
+                </div>
+                <div class="brand-purpose__timeline-node brand-purpose__timeline-node--end">
+                    <span class="brand-purpose__timeline-icon"><i class="fas fa-handshake"></i></span>
+                    <span class="brand-purpose__timeline-label">Long-Term Partnership</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Commitment Banner -->
+        <div class="brand-purpose__commitment">
+            <div class="brand-purpose__commitment-banner">
+                <div class="brand-purpose__commitment-content">
+                    <span class="brand-purpose__commitment-icon" aria-hidden="true">◆</span>
+                    <div class="brand-purpose__commitment-text">
+                        <h3 class="brand-purpose__commitment-title">Committed to Building Lasting Digital Partnerships</h3>
+                        <p class="brand-purpose__commitment-desc">
+                            Every website, application, automation, marketing campaign, and digital solution we
+                            deliver is built with one goal—to help businesses grow confidently in a rapidly
+                            evolving digital world.
+                        </p>
+                    </div>
+                </div>
+                <div class="brand-purpose__commitment-actions">
+                    <a href="#" class="btn-primary btn-commitment-services">
+                        Explore Our Services
+                        <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                    </a>
+                    <a href="#" class="btn-secondary btn-commitment-project">
+                        <i class="fas fa-rocket" aria-hidden="true"></i> Start Your Project
+                    </a>
+                </div>
+                <div class="brand-purpose__commitment-decoration"></div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ==================================================
+END: Mission, Vision & Core Values
+================================================== -->
+
+<!-- ==================================================
+START: Final CTA – Join Our Journey
+================================================== -->
+<section id="brand-final" class="brand-final" aria-label="Join Our Journey - XoHub Solutions">
+    <!-- Background Decorations -->
+    <div class="brand-final__bg" aria-hidden="true">
+        <div class="brand-final__glow brand-final__glow--1"></div>
+        <div class="brand-final__glow brand-final__glow--2"></div>
+        <div class="brand-final__glow brand-final__glow--3"></div>
+        <div class="brand-final__orb brand-final__orb--1"></div>
+        <div class="brand-final__orb brand-final__orb--2"></div>
+        <svg class="brand-final__grid" viewBox="0 0 1000 800" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="160" cy="160" r="130" stroke="rgba(192,227,74,0.025)" stroke-width="1" stroke-dasharray="6 6"/>
+            <circle cx="840" cy="640" r="150" stroke="rgba(124,58,237,0.025)" stroke-width="1" stroke-dasharray="8 8"/>
+            <circle cx="500" cy="400" r="230" stroke="rgba(192,227,74,0.015)" stroke-width="1"/>
+            <path d="M220 0 L220 800" stroke="rgba(124,58,237,0.015)" stroke-width="1"/>
+            <path d="M780 0 L780 800" stroke="rgba(192,227,74,0.015)" stroke-width="1"/>
+        </svg>
+        <div class="particle particle--1"></div>
+        <div class="particle particle--2"></div>
+        <div class="particle particle--3"></div>
+        <div class="particle particle--4"></div>
+        <div class="particle particle--5"></div>
+        <div class="particle particle--6"></div>
+    </div>
+
+    <div class="container brand-final__inner">
+        <!-- Section Header -->
+        <div class="brand-final__header">
+            <span class="brand-final__badge">JOIN OUR JOURNEY</span>
+            <h2 class="brand-final__title">Let's Build the <span class="highlight-text">Future Together</span></h2>
+            <p class="brand-final__subtitle">
+                Every great partnership begins with a conversation. Whether you're launching a startup, growing
+                an established business, or transforming your digital presence, XoHub Solutions is ready to help
+                you move forward with confidence.
+            </p>
+        </div>
+
+        <!-- Brand Legacy Banner -->
+        <div class="brand-final__legacy">
+            <div class="brand-final__legacy-banner">
+                <div class="brand-final__legacy-content">
+                    <span class="brand-final__legacy-icon" aria-hidden="true">◆</span>
+                    <div class="brand-final__legacy-text">
+                        <h3 class="brand-final__legacy-title">More Than a Logo. More Than a Company.</h3>
+                        <p class="brand-final__legacy-desc">
+                            XoHub Solutions represents a vision built on passion, innovation, trust, and long-term
+                            partnerships. Every project we undertake reflects our commitment to delivering meaningful
+                            digital solutions that create lasting impact.
+                        </p>
+                    </div>
+                </div>
+                <div class="brand-final__legacy-actions">
+                    <a href="#" class="btn-primary btn-legacy-services">
+                        Explore Our Services
+                        <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                    </a>
+                    <a href="#" class="btn-secondary btn-legacy-contact">
+                        <i class="fas fa-headset" aria-hidden="true"></i> Contact Our Team
+                    </a>
+                </div>
+                <div class="brand-final__legacy-decoration"></div>
+            </div>
+        </div>
+
+        <!-- Journey Highlights Grid -->
+        <div class="brand-final__highlights">
+            <div class="section-header">
+                <span class="section-header__icon"><i class="fas fa-star"></i></span>
+                <h4 class="section-header__title">Our Journey Highlights</h4>
+                <span class="section-header__count">6 pillars</span>
+            </div>
+            <div class="brand-final__highlights-grid">
+                <!-- Our Story -->
+                <div class="brand-final__highlight">
+                    <span class="brand-final__highlight-icon"><i class="fas fa-book-open"></i></span>
+                    <h5 class="brand-final__highlight-title">Our Story</h5>
+                    <p class="brand-final__highlight-desc">A brand inspired by purpose and passion.</p>
+                    <span class="brand-final__highlight-line"></span>
+                </div>
+
+                <!-- Our Mission -->
+                <div class="brand-final__highlight">
+                    <span class="brand-final__highlight-icon"><i class="fas fa-bullseye"></i></span>
+                    <h5 class="brand-final__highlight-title">Our Mission</h5>
+                    <p class="brand-final__highlight-desc">Helping businesses grow through technology.</p>
+                    <span class="brand-final__highlight-line"></span>
+                </div>
+
+                <!-- Our Vision -->
+                <div class="brand-final__highlight">
+                    <span class="brand-final__highlight-icon"><i class="fas fa-eye"></i></span>
+                    <h5 class="brand-final__highlight-title">Our Vision</h5>
+                    <p class="brand-final__highlight-desc">Creating lasting digital impact worldwide.</p>
+                    <span class="brand-final__highlight-line"></span>
+                </div>
+
+                <!-- Our Values -->
+                <div class="brand-final__highlight">
+                    <span class="brand-final__highlight-icon"><i class="fas fa-heart"></i></span>
+                    <h5 class="brand-final__highlight-title">Our Values</h5>
+                    <p class="brand-final__highlight-desc">Innovation, integrity, excellence, collaboration, and continuous learning.</p>
+                    <span class="brand-final__highlight-line"></span>
+                </div>
+
+                <!-- Our Promise -->
+                <div class="brand-final__highlight">
+                    <span class="brand-final__highlight-icon"><i class="fas fa-handshake"></i></span>
+                    <h5 class="brand-final__highlight-title">Our Promise</h5>
+                    <p class="brand-final__highlight-desc">Delivering reliable, scalable, and future-ready solutions.</p>
+                    <span class="brand-final__highlight-line"></span>
+                </div>
+
+                <!-- Our Community -->
+                <div class="brand-final__highlight">
+                    <span class="brand-final__highlight-icon"><i class="fas fa-globe-americas"></i></span>
+                    <h5 class="brand-final__highlight-title">Our Community</h5>
+                    <p class="brand-final__highlight-desc">Building long-term partnerships with businesses around the world.</p>
+                    <span class="brand-final__highlight-line"></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Growth Timeline -->
+        <div class="brand-final__timeline">
+            <div class="section-header">
+                <span class="section-header__icon"><i class="fas fa-route"></i></span>
+                <h4 class="section-header__title">Our Growth Journey</h4>
+                <span class="section-header__count">6 milestones</span>
+            </div>
+            <div class="brand-final__timeline-flow">
+                <div class="brand-final__timeline-node">
+                    <span class="brand-final__timeline-icon"><i class="fas fa-heart"></i></span>
+                    <span class="brand-final__timeline-label">Personal Passion</span>
+                    <span class="brand-final__timeline-connector"></span>
+                </div>
+                <div class="brand-final__timeline-node">
+                    <span class="brand-final__timeline-icon"><i class="fas fa-pen-fancy"></i></span>
+                    <span class="brand-final__timeline-label">Brand Creation</span>
+                    <span class="brand-final__timeline-connector"></span>
+                </div>
+                <div class="brand-final__timeline-node">
+                    <span class="brand-final__timeline-icon"><i class="fas fa-microchip"></i></span>
+                    <span class="brand-final__timeline-label">Innovation</span>
+                    <span class="brand-final__timeline-connector"></span>
+                </div>
+                <div class="brand-final__timeline-node">
+                    <span class="brand-final__timeline-icon"><i class="fas fa-users"></i></span>
+                    <span class="brand-final__timeline-label">Client Success</span>
+                    <span class="brand-final__timeline-connector"></span>
+                </div>
+                <div class="brand-final__timeline-node">
+                    <span class="brand-final__timeline-icon"><i class="fas fa-chart-line"></i></span>
+                    <span class="brand-final__timeline-label">Business Growth</span>
+                    <span class="brand-final__timeline-connector"></span>
+                </div>
+                <div class="brand-final__timeline-node brand-final__timeline-node--end">
+                    <span class="brand-final__timeline-icon"><i class="fas fa-globe-americas"></i></span>
+                    <span class="brand-final__timeline-label">Global Digital Impact</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Final CTA Banner -->
+        <div class="brand-final__cta">
+            <div class="brand-final__cta-banner">
+                <div class="brand-final__cta-content">
+                    <span class="brand-final__cta-badge">🚀 START YOUR JOURNEY</span>
+                    <h3 class="brand-final__cta-title">Ready to Grow with XoHub Solutions?</h3>
+                    <p class="brand-final__cta-desc">
+                        Let's transform your ideas into powerful digital experiences through innovative technology,
+                        strategic thinking, and a partnership focused on long-term success.
+                    </p>
+                    <div class="brand-final__cta-actions">
+                        <a href="#" class="btn-primary btn-cta-final-project">
+                            Start Your Project
+                            <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                        <a href="#" class="btn-secondary btn-cta-final-portfolio">
+                            <i class="fas fa-folder-open" aria-hidden="true"></i> View Our Portfolio
+                        </a>
+                    </div>
+                </div>
+                <div class="brand-final__cta-visual">
+                    <div class="brand-final__cta-icon-ring">
+                        <span><i class="fas fa-code"></i></span>
+                        <span><i class="fas fa-robot"></i></span>
+                        <span><i class="fas fa-bullhorn"></i></span>
+                        <span><i class="fas fa-cogs"></i></span>
+                    </div>
+                    <div class="brand-final__cta-pulse"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Transition -->
+        <div class="brand-final__transition" aria-hidden="true">
+            <div class="footer-transition-brand">
+                <div class="footer-transition-brand__line"></div>
+                <div class="footer-transition-brand__glow footer-transition-brand__glow--1"></div>
+                <div class="footer-transition-brand__glow footer-transition-brand__glow--2"></div>
+                <div class="footer-transition-brand__nodes">
+                    <span class="ftb-node"></span>
+                    <span class="ftb-node"></span>
+                    <span class="ftb-node"></span>
+                    <span class="ftb-node"></span>
+                    <span class="ftb-node"></span>
+                </div>
+                <div class="footer-transition-brand__text">
+                    <span>Continue exploring</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ==================================================
+END: Final CTA – Join Our Journey
+================================================== -->
+
+
+
+
+  <!-- ============================================================
+    PREMIUM FOOTER — Phase 13 (Final)
+    ============================================================ -->
+    <footer id="main-footer" class="main-footer" role="contentinfo" aria-label="Site footer">
+        <!-- Background Decorations -->
+        <div class="footer__bg" aria-hidden="true">
+            <div class="footer-bg__glow footer-bg__glow--1"></div>
+            <div class="footer-bg__glow footer-bg__glow--2"></div>
+            <div class="footer-bg__glow footer-bg__glow--3"></div>
+            <div class="footer-bg__orb footer-bg__orb--1"></div>
+            <div class="footer-bg__orb footer-bg__orb--2"></div>
+            <div class="footer-bg__shape footer-bg__shape--1"></div>
+            <div class="footer-bg__shape footer-bg__shape--2"></div>
+            <div class="footer-bg__shape footer-bg__shape--3"></div>
+            <!-- Decorative grid -->
+            <svg class="footer-bg__grid" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true">
+                <path d="M0 400 L1200 400" stroke="rgba(255,255,255,0.02)" stroke-width="1" />
+                <path d="M300 0 L300 800" stroke="rgba(255,255,255,0.02)" stroke-width="1" />
+                <path d="M600 0 L600 800" stroke="rgba(255,255,255,0.02)" stroke-width="1" />
+                <path d="M900 0 L900 800" stroke="rgba(255,255,255,0.02)" stroke-width="1" />
+                <circle cx="300" cy="250" r="180" stroke="rgba(192,227,74,0.03)" stroke-width="1"
+                    stroke-dasharray="8 8" />
+                <circle cx="900" cy="550" r="200" stroke="rgba(124,58,237,0.03)" stroke-width="1"
+                    stroke-dasharray="6 10" />
+                <circle cx="600" cy="400" r="280" stroke="rgba(192,227,74,0.02)" stroke-width="1" />
+            </svg>
+        </div>
+
+        <div class="container footer__inner">
+            <!-- ====== TOP FOOTER ====== -->
+            <div class="footer__top">
+                <!-- Column 1: Brand Area -->
+                <div class="footer__column footer__column--brand">
+                    <a href="http://127.0.0.1:5500/" class="footer__logo" aria-label="XoHub Solutions Home">
+                        <img src="assets/public/images/XoHub_Solutions_Logo.jpeg" alt="XoHub Solutions Logo"
+                            class="footer__logo-image" width="150" height="150" loading="lazy" />
+                        <!-- <span class="footer__logo-text">XoHub <span class="footer__logo-highlight">Solutions</span></span> -->
+                    </a>
+                    <!-- <p class="footer__tagline">Your Digital Growth Partner</p> -->
+                    <p class="footer__description">
+                        XoHub Solutions is a modern software company specializing in scalable web applications,
+                        enterprise software, AI-powered solutions, cloud technologies, and digital transformation.
+                    </p>
+                </div>
+
+                <!-- Column 2: Company -->
+                <div class="footer__column">
+                    <h4 class="footer__column-title">Company</h4>
+                    <ul class="footer__links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Our Team</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Services -->
+                <div class="footer__column">
+                    <h4 class="footer__column-title">Services</h4>
+                    <ul class="footer__links">
+                        <li><a href="#">Web Development</a></li>
+                        <li><a href="#">Custom Software</a></li>
+                        <li><a href="#">UI/UX Design</a></li>
+                        <li><a href="#">E-Commerce Solutions</a></li>
+                        <li><a href="#">Cloud Solutions</a></li>
+                        <li><a href="#">AI Automation</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Products -->
+                <div class="footer__column">
+                    <h4 class="footer__column-title">Products</h4>
+                    <ul class="footer__links">
+                        <li><a href="#">Business Management System</a></li>
+                        <li><a href="#">CRM Platform</a></li>
+                        <li><a href="#">HR Management</a></li>
+                        <li><a href="#">E-Commerce Platform</a></li>
+                        <li><a href="#">AI Business Assistant</a></li>
+                        <li><a href="#">Custom Enterprise Software</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 5: Resources -->
+                <div class="footer__column">
+                    <h4 class="footer__column-title">Resources</h4>
+                    <ul class="footer__links">
+                        <li><a href="http://127.0.0.1:5500/case-studies.html">Case Studies</a></li>
+                        <li><a href="http://127.0.0.1:5500/documentation.html">Documentation</a></li>
+                        <li><a href="http://127.0.0.1:5500/faqs.html">FAQs</a></li>
+                        <li><a href="http://127.0.0.1:5500/support-center.html">Support Center</a></li>
+                        <li><a href="http://127.0.0.1:5500/privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="http://127.0.0.1:5500/terms-conditions.html">Terms &amp; Conditions</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 6: Contact & Social -->
+                <div class="footer__column footer__column--contact">
+                    <h4 class="footer__column-title">Contact</h4>
+                    <ul class="footer__contact-list">
+                        <li>
+                            <span class="contact-icon"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></span>
+                            <span>Pakistan, Peshawar, IT Park</span>
+                        </li>
+                        <li>
+                            <span class="contact-icon"><i class="fas fa-envelope" aria-hidden="true"></i></span>
+                            <a href="mailto:info@xohubsolutions.com">info@xohubsolutions.com</a>
+                        </li>
+                        <li>
+                            <span class="contact-icon"><i class="fas fa-phone" aria-hidden="true"></i></span>
+                            <a href="tel:+923477300226">+92 347 7300226</a>
+                        </li>
+                        <li>
+                            <span class="contact-icon"><i class="fas fa-clock" aria-hidden="true"></i></span>
+                            <span>Mon – Fri, 9:00 AM – 6:00 PM</span>
+                        </li>
+                    </ul>
+                    <!-- Social Icons -->
+                    <div class="footer__social">
+                        <a href="https://www.facebook.com/xohubsolutions" aria-label="Facebook" class="social-link"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/xohubsolutions" aria-label="Instagram" class="social-link"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/xohubsolutions" aria-label="LinkedIn"
+                            class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.youtube.com/c/XohubSolutions" aria-label="YouTube" class="social-link"><i
+                                class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ====== NEWSLETTER & TRUST BADGES ====== -->
+            <div class="footer__newsletter">
+                <div class="newsletter__content">
+                    <div class="newsletter__header">
+                        <span class="newsletter__icon"><i class="fas fa-envelope" aria-hidden="true"></i></span>
+                        <div>
+                            <h4 class="newsletter__title">Stay Updated</h4>
+                            <p class="newsletter__description">
+                                Subscribe to receive the latest technology insights, product updates, development tips,
+                                and company news.
+                            </p>
+                        </div>
+                    </div>
+                    <form class="newsletter__form" id="newsletter-form" novalidate>
+                        <div class="newsletter__input-group">
+                            <input type="email" class="newsletter__input" id="newsletter-email"
+                                placeholder="Enter your email address" aria-label="Email address for newsletter"
+                                required />
+                            <button type="submit" class="newsletter__button">
+                                Subscribe
+                                <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <div class="newsletter__error" id="newsletter-error" role="alert" aria-live="polite"></div>
+                        <div class="newsletter__success" id="newsletter-success" role="alert" aria-live="polite">
+                            Thank you for subscribing!
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Trust Badges -->
+                <div class="footer__trust-badges">
+                    <div class="trust-badge">
+                        <span class="trust-badge__icon"><i class="fas fa-microchip" aria-hidden="true"></i></span>
+                        <span class="trust-badge__text">Modern Technologies</span>
+                    </div>
+                    <div class="trust-badge">
+                        <span class="trust-badge__icon"><i class="fas fa-shield-alt" aria-hidden="true"></i></span>
+                        <span class="trust-badge__text">Secure Development</span>
+                    </div>
+                    <div class="trust-badge">
+                        <span class="trust-badge__icon"><i class="fas fa-expand-arrows-alt"
+                                aria-hidden="true"></i></span>
+                        <span class="trust-badge__text">Scalable Solutions</span>
+                    </div>
+                    <div class="trust-badge">
+                        <span class="trust-badge__icon"><i class="fas fa-handshake" aria-hidden="true"></i></span>
+                        <span class="trust-badge__text">Long-Term Support</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ====== BOTTOM FOOTER ====== -->
+        <div class="footer__bottom">
+            <div class="container footer__bottom-inner">
+                <div class="footer__copyright">
+                    <p>&copy; 2026 XoHub Solutions. All Rights Reserved.</p>
+                </div>
+                <div class="footer__credit">
+                    <p>Designed &amp; Developed with <span class="credit-heart">❤️</span> by XoHub Solutions</p>
+                </div>
+                <div class="footer__bottom-links">
+                    <a href="#">Privacy</a>
+                    <span class="footer__bottom-divider">|</span>
+                    <a href="#">Terms</a>
+                    <span class="footer__bottom-divider">|</span>
+                    <a href="#">Cookies</a>
+                    <span class="footer__bottom-divider">|</span>
+                    <a href="#">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ====== BACK TO TOP BUTTON ====== -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+    <!-- ================ END FOOTER ================ -->
+
+    <!-- ================== JAVASCRIPT ================== -->
+    <script src="assets/js/main.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,2589 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>XoHub Solutions — Your Digital Growth Partner</title>
+
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;5000;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome 6 (Free) — Updated to stable version for fa-x-twitter support -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="assets/public/images/XoHub_Solutions_Logo.png" />
+    <link rel="apple-touch-icon" href="assets/public/images/XoHub_Solutions_Logo.png" />
+
+    <!-- Primary Stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- Responsive Stylesheet -->
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+</head>
+
+<body>
+    <!-- ============================================================
+    MAIN HEADER — Sticky, contains Top Bar + Navigation
+    ============================================================ -->
+    <header id="main-header" role="banner" aria-label="Site header">
+        <!-- ================== TOP ANNOUNCEMENT BAR ================== -->
+        <div id="top-bar" role="complementary" aria-label="Announcement bar">
+            <div class="container top-bar__inner">
+                <!-- Left: Rocket icon + tagline -->
+                <div class="top-bar__left">
+                    <span class="top-bar__icon" aria-hidden="true">
+                        <i class="fas fa-rocket"></i>
+                    </span>
+                    <p class="top-bar__text">
+                        We help brands
+                        <span class="highlight-lime">grow digitally</span>
+                        with innovative solutions
+                    </p>
+                </div>
+
+                <!-- Right: Quick links & social icons -->
+                <div class="top-bar__right">
+                    <nav class="top-bar__nav" aria-label="Quick links">
+                        <a href="#" class="top-bar__link">Career</a>
+                        <a href="#" class="top-bar__link">Blog</a>
+                        <a href="#" class="top-bar__link">Contact Us</a>
+                    </nav>
+                    <div class="top-bar__socials">
+                        <a href="https://www.linkedin.com/in/xohubsolutions" aria-label="LinkedIn" class="social-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.youtube.com/c/XohubSolutions" aria-label="YouTube" class="social-icon">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@xohubsolutions" aria-label="TikTok" class="social-icon">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
+                            <a href="https://www.instagram.com/xohubsolutions" aria-label="Instagram" class="social-icon">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://www.facebook.com/xohubsolutions" aria-label="Facebook" class="social-icon">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ================ END TOP BAR ================ -->
+
+        <!-- ================== MAIN NAVIGATION ================== -->
+        <nav id="main-nav" class="main-nav" role="navigation" aria-label="Primary navigation" data-scroll="false">
+            <div class="container main-nav__inner">
+                <!-- Logo — FIXED: proper dimensions + text uncommented -->
+                <div class="logo">
+                    <a href="http://127.0.0.1:5500/" aria-label="XoHub Solutions — Home">
+                        <img src="assets/public/images/XoHub_Solutions_Logo.png" alt="XoHub Solutions Logo"
+                            class="logo__image" width="180" height="180" loading="lazy" />
+                        <!-- <span class="logo__text">XoHub <span class="logo__highlight">Solutions</span></span> -->
+                    </a>
+                </div>
+
+                <!-- Center Navigation Links (desktop) — Restructured for cleaner IA -->
+                <ul class="nav-links" id="nav-links" role="menubar">
+                    <li role="none"><a href="http://127.0.0.1:5500/" role="menuitem" class="nav-link">Home</a></li>
+
+                    <!-- Company dropdown -->
+                    <li role="none" class="dropdown">
+                        <a href="#" role="menuitem" class="nav-link dropdown-toggle" aria-haspopup="true"
+                            aria-expanded="false">
+                            Company
+                            <i class="fas fa-chevron-down dropdown-icon" aria-hidden="true"></i>
+                        </a>
+                        <ul class="dropdown-menu" role="menu" aria-label="Company">
+                            <li role="none"><a href="about.html" role="menuitem" class="dropdown-link">About Us</a></li>
+                            <li role="none"><a href="#" role="menuitem" class="dropdown-link">Careers</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Services dropdown — Expanded -->
+                    <li role="none" class="dropdown">
+                        <a href="#" role="menuitem" class="nav-link dropdown-toggle" aria-haspopup="true"
+                            aria-expanded="false">
+                            Services
+                            <i class="fas fa-chevron-down dropdown-icon" aria-hidden="true"></i>
+                        </a>
+                        <ul class="dropdown-menu" role="menu" aria-label="Services">
+                            <li role="none"><a href="#" role="menuitem" class="dropdown-link">Web Development</a></li>
+                            <li role="none"><a href="#" role="menuitem" class="dropdown-link">Mobile Development</a>
+                            </li>
+                            <li role="none"><a href="#" role="menuitem" class="dropdown-link">UI/UX Design</a></li>
+                            <li role="none"><a href="#" role="menuitem" class="dropdown-link">AI Solutions</a></li>
+                            <li role="none"><a href="#" role="menuitem" class="dropdown-link">Cloud Solutions</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Products dropdown -->
+                    <li role="none" class="dropdown">
+                        <a href="#" role="menuitem" class="nav-link dropdown-toggle" aria-haspopup="true"
+                            aria-expanded="false">
+                            Products
+                            <i class="fas fa-chevron-down dropdown-icon" aria-hidden="true"></i>
+                        </a>
+                        <ul class="dropdown-menu" role="menu" aria-label="Products">
+                            <li role="none"><a href="#" role="menuitem" class="dropdown-link">HubCRM</a></li>
+                            <li role="none"><a href="#" role="menuitem" class="dropdown-link">Analytics Pro</a></li>
+                            <li role="none"><a href="#" role="menuitem" class="dropdown-link">AI Assistant</a></li>
+                            <li role="none"><a href="#" role="menuitem" class="dropdown-link">Cloud Platform</a></li>
+                        </ul>
+                    </li>
+
+                    <li role="none"><a href="#" role="menuitem" class="nav-link">Portfolio</a></li>
+
+                    <!-- Resources dropdown -->
+                    <li role="none" class="dropdown">
+                        <a href="#" role="menuitem" class="nav-link dropdown-toggle" aria-haspopup="true"
+                            aria-expanded="false">
+                            Resources
+                            <i class="fas fa-chevron-down dropdown-icon" aria-hidden="true"></i>
+                        </a>
+                        <ul class="dropdown-menu" role="menu" aria-label="Resources">
+                            <li role="none"><a href="#" role="menuitem" class="dropdown-link">Blog</a></li>
+                            <li role="none"><a href="http://127.0.0.1:5500/case_studies.html" role="menuitem" class="dropdown-link">Case Studies</a></li>
+                            <li role="none"><a href="#" role="menuitem" class="dropdown-link">Documentation</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- <li role="none"><a href="#" role="menuitem" class="nav-link">Contact</a></li> -->
+                </ul>
+
+                <!-- Right side: Search + CTA -->
+                <div class="nav-actions">
+                    <button class="search-btn" aria-label="Search" id="search-toggle">
+                        <i class="fas fa-search" aria-hidden="true"></i>
+                    </button>
+                    <a href="#" class="btn-primary">
+                        Get a Free Quote
+                        <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                    </a>
+                </div>
+
+                <!-- Hamburger (mobile) -->
+                <button class="hamburger" id="hamburger" aria-label="Open main menu" aria-expanded="false"
+                    aria-controls="mobile-menu">
+                    <span class="hamburger__line"></span>
+                    <span class="hamburger__line"></span>
+                    <span class="hamburger__line"></span>
+                </button>
+            </div>
+        </nav>
+        <!-- ================ END MAIN NAV ================ -->
+    </header>
+    <!-- ================ END HEADER ================ -->
+
+<!-- ==================== START HTML ==================== -->
+<section class="case-studies-hero" id="case-studies-hero" aria-labelledby="hero-heading">
+  <!-- Background Layer -->
+  <div class="hero-bg" aria-hidden="true">
+    <div class="bg-mesh-gradient"></div>
+    <div class="bg-tech-grid"></div>
+    <div class="bg-circuit-lines"></div>
+    <div class="bg-hexagon-outlines"></div>
+    <div class="bg-radial-glow bg-radial-glow--green"></div>
+    <div class="bg-radial-glow bg-radial-glow--purple"></div>
+    <div class="bg-particles" id="bgParticles"></div>
+  </div>
+
+  <!-- Main Content Container -->
+  <div class="hero-container">
+    <div class="hero-grid">
+
+      <!-- Left Content Column -->
+      <div class="hero-content">
+        <span class="hero-label" aria-label="Section label">Case Studies</span>
+
+        <h1 class="hero-heading" id="hero-heading">
+          Real Solutions. <span class="text-gradient">Real Results.</span> Real Business Growth.
+        </h1>
+
+        <p class="hero-description">
+          Discover how XoHub Solutions partners with businesses to solve complex challenges through modern web
+          development, AI-powered automation, cloud technologies, and scalable digital solutions. Every project reflects
+          our commitment to innovation, quality, and measurable success.
+        </p>
+
+        <div class="hero-cta-group">
+          <button class="btn btn--primary" onclick="document.getElementById('trust-indicators').scrollIntoView({behavior:'smooth'})" aria-label="Explore case studies">
+            <span>Explore Case Studies</span>
+            <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+          <button class="btn btn--secondary" aria-label="Start your project">
+            <span>Start Your Project</span>
+            <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="16"></line>
+              <line x1="8" y1="12" x2="16" y2="12"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Right Visual Column - HTML/CSS Illustration -->
+      <div class="hero-visual" aria-hidden="true">
+        <div class="illustration-container">
+
+          <!-- Floating Dashboard Panel - Top Left -->
+          <div class="float-card float-card--dashboard float-card--1">
+            <div class="glass-card-inner">
+              <div class="dashboard-header">
+                <div class="dashboard-dots">
+                  <span class="dot dot--red"></span>
+                  <span class="dot dot--yellow"></span>
+                  <span class="dot dot--green"></span>
+                </div>
+                <span class="dashboard-title">Analytics Dashboard</span>
+              </div>
+              <div class="dashboard-chart">
+                <div class="chart-bar" style="--h:55%;--delay:0s;"></div>
+                <div class="chart-bar" style="--h:72%;--delay:0.1s;"></div>
+                <div class="chart-bar" style="--h:38%;--delay:0.2s;"></div>
+                <div class="chart-bar" style="--h:90%;--delay:0.3s;"></div>
+                <div class="chart-bar" style="--h:65%;--delay:0.4s;"></div>
+                <div class="chart-bar" style="--h:48%;--delay:0.5s;"></div>
+                <div class="chart-bar" style="--h:85%;--delay:0.6s;"></div>
+              </div>
+              <div class="dashboard-stats">
+                <div class="mini-stat">
+                  <span class="mini-stat-value">+24.8%</span>
+                  <span class="mini-stat-label">Revenue</span>
+                </div>
+                <div class="mini-stat">
+                  <span class="mini-stat-value">+18.2%</span>
+                  <span class="mini-stat-label">Users</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Floating Browser Window - Top Right -->
+          <div class="float-card float-card--browser float-card--2">
+            <div class="glass-card-inner">
+              <div class="browser-topbar">
+                <div class="browser-dots">
+                  <span class="dot dot--red"></span>
+                  <span class="dot dot--yellow"></span>
+                  <span class="dot dot--green"></span>
+                </div>
+                <div class="browser-url">app.xohubsolutions.io</div>
+              </div>
+              <div class="browser-content">
+                <div class="code-line code-line--1"></div>
+                <div class="code-line code-line--2"></div>
+                <div class="code-line code-line--3"></div>
+                <div class="code-line code-line--4"></div>
+                <div class="code-snippet">
+                  <span class="code-keyword">const</span>
+                  <span class="code-var">deploy</span> =
+                  <span class="code-string">"success"</span>;
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Floating Mobile Mockup - Center Right -->
+          <div class="float-card float-card--mobile float-card--3">
+            <div class="glass-card-inner">
+              <div class="mobile-notch"></div>
+              <div class="mobile-screen">
+                <div class="mobile-app-header">
+                  <div class="mobile-avatar"></div>
+                  <div class="mobile-app-info">
+                    <div class="mobile-app-line mobile-app-line--short"></div>
+                    <div class="mobile-app-line mobile-app-line--tiny"></div>
+                  </div>
+                </div>
+                <div class="mobile-card mobile-card--1"></div>
+                <div class="mobile-card mobile-card--2"></div>
+                <div class="mobile-chart-ring">
+                  <svg viewBox="0 0 60 60" width="60" height="60">
+                    <circle cx="30" cy="30" r="24" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="6"/>
+                    <circle cx="30" cy="30" r="24" fill="none" stroke="url(#ringGrad)" stroke-width="6" stroke-dasharray="110 40" stroke-linecap="round" transform="rotate(-90 30 30)"/>
+                    <defs>
+                      <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#A3E635"/>
+                        <stop offset="100%" stop-color="#A855F7"/>
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Floating AI / Tech Card - Bottom Left -->
+          <div class="float-card float-card--ai float-card--4">
+            <div class="glass-card-inner">
+              <div class="ai-icon-wrapper">
+                <div class="ai-hexagon">
+                  <svg viewBox="0 0 40 46" width="28" height="32" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 3L3 13v20l17 10 17-10V13L20 3z" fill="rgba(168,85,247,0.15)"/>
+                    <circle cx="14" cy="20" r="3" fill="#A3E635" stroke="none"/>
+                    <circle cx="20" cy="20" r="3" fill="#A3E635" stroke="none"/>
+                    <circle cx="26" cy="20" r="3" fill="#A3E635" stroke="none"/>
+                    <line x1="17" y1="20" x2="23" y2="20" stroke="#A855F7" stroke-width="2"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="ai-label">AI-Powered</div>
+              <div class="ai-pulse-ring"></div>
+            </div>
+          </div>
+
+          <!-- Floating Technology Card - Bottom -->
+          <div class="float-card float-card--tech float-card--5">
+            <div class="glass-card-inner">
+              <div class="tech-icons-row">
+                <div class="tech-icon-circle tech-icon-circle--green"></div>
+                <div class="tech-icon-circle tech-icon-circle--purple"></div>
+                <div class="tech-icon-circle tech-icon-circle--green"></div>
+                <div class="tech-icon-circle tech-icon-circle--purple"></div>
+              </div>
+              <div class="tech-label">Cloud • AI • Web</div>
+            </div>
+          </div>
+
+          <!-- Connection Lines between cards (SVG overlay) -->
+          <svg class="connection-lines" viewBox="0 0 500 440" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+            <!-- Circuit-like connections -->
+            <path d="M120 90 Q200 130 250 80" fill="none" stroke="rgba(168,85,247,0.25)" stroke-width="1.5" stroke-dasharray="6 4"/>
+            <path d="M320 60 Q280 130 350 170" fill="none" stroke="rgba(163,230,53,0.2)" stroke-width="1.5" stroke-dasharray="4 6"/>
+            <path d="M100 250 Q180 200 160 320" fill="none" stroke="rgba(168,85,247,0.2)" stroke-width="1.2" stroke-dasharray="5 5"/>
+            <path d="M300 280 Q250 340 280 400" fill="none" stroke="rgba(163,230,53,0.18)" stroke-width="1.2" stroke-dasharray="3 7"/>
+            <path d="M400 130 Q350 200 390 260" fill="none" stroke="rgba(168,85,247,0.2)" stroke-width="1" stroke-dasharray="8 4"/>
+            <!-- Small hexagon node -->
+            <polygon points="200,175 208,180 208,190 200,195 192,190 192,180" fill="none" stroke="rgba(163,230,53,0.4)" stroke-width="1.5"/>
+            <polygon points="340,240 346,244 346,252 340,256 334,252 334,244" fill="none" stroke="rgba(168,85,247,0.4)" stroke-width="1.5"/>
+            <circle cx="130" cy="300" r="3" fill="rgba(163,230,53,0.5)"/>
+            <circle cx="370" cy="180" r="2.5" fill="rgba(168,85,247,0.5)"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Trust Indicators -->
+    <div class="trust-indicators" id="trust-indicators" aria-label="Trust indicators">
+      <div class="trust-card">
+        <div class="trust-icon-wrapper">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+          </svg>
+        </div>
+        <span class="trust-number" data-target="50" data-suffix="+">0+</span>
+        <span class="trust-label">Projects Delivered</span>
+      </div>
+      <div class="trust-card">
+        <div class="trust-icon-wrapper">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+          </svg>
+        </div>
+        <span class="trust-number" data-target="98" data-suffix="%">0%</span>
+        <span class="trust-label">Client Satisfaction</span>
+      </div>
+      <div class="trust-card">
+        <div class="trust-icon-wrapper">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="16 18 22 12 16 6"></polyline>
+            <polyline points="8 6 2 12 8 18"></polyline>
+          </svg>
+        </div>
+        <span class="trust-number" data-target="20" data-suffix="+">0+</span>
+        <span class="trust-label">Technologies</span>
+      </div>
+      <div class="trust-card">
+        <div class="trust-icon-wrapper">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+          </svg>
+        </div>
+        <span class="trust-number" data-target="10" data-suffix="+">0+</span>
+        <span class="trust-label">Industries Served</span>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ==================== END HTML ==================== -->
+
+
+<!-- ==================== START HTML ==================== -->
+<section class="success-metrics" id="success-metrics" aria-labelledby="metrics-heading">
+  <!-- Background Layer -->
+  <div class="metrics-bg" aria-hidden="true">
+    <div class="metrics-mesh-gradient"></div>
+    <div class="metrics-tech-grid"></div>
+    <div class="metrics-circuit-lines"></div>
+    <div class="metrics-hexagon-outlines"></div>
+    <div class="metrics-radial-glow metrics-radial-glow--green"></div>
+    <div class="metrics-radial-glow metrics-radial-glow--purple"></div>
+    <div class="metrics-particles" id="metricsParticles"></div>
+  </div>
+
+  <div class="metrics-container">
+    <!-- Section Header -->
+    <div class="metrics-header">
+      <span class="metrics-label">Success in Numbers</span>
+      <h2 class="metrics-heading" id="metrics-heading">
+        Delivering <span class="text-gradient">Measurable</span> Digital Success
+      </h2>
+      <p class="metrics-description">
+        Every successful project represents a partnership built on innovation, quality, and measurable business
+        outcomes. Our commitment is to deliver scalable digital solutions that help businesses grow with confidence.
+      </p>
+    </div>
+
+    <!-- Statistics Grid -->
+    <div class="metrics-grid" aria-label="Key achievements and statistics">
+      <!-- Card 1 -->
+      <div class="metric-card">
+        <div class="metric-icon-wrap">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+          </svg>
+        </div>
+        <span class="metric-number" data-target="50" data-suffix="+">0+</span>
+        <span class="metric-title">Projects Delivered</span>
+        <span class="metric-desc">End-to-end solutions shipped</span>
+        <div class="metric-glow"></div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="metric-card">
+        <div class="metric-icon-wrap">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+          </svg>
+        </div>
+        <span class="metric-number" data-target="98" data-suffix="%">0%</span>
+        <span class="metric-title">Client Satisfaction</span>
+        <span class="metric-desc">Consistently rated excellent</span>
+        <div class="metric-glow"></div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="metric-card">
+        <div class="metric-icon-wrap">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="16 18 22 12 16 6"></polyline>
+            <polyline points="8 6 2 12 8 18"></polyline>
+          </svg>
+        </div>
+        <span class="metric-number" data-target="20" data-suffix="+">0+</span>
+        <span class="metric-title">Technologies Used</span>
+        <span class="metric-desc">Modern stack expertise</span>
+        <div class="metric-glow"></div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="metric-card">
+        <div class="metric-icon-wrap">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+          </svg>
+        </div>
+        <span class="metric-number" data-target="10" data-suffix="+">0+</span>
+        <span class="metric-title">Industries Served</span>
+        <span class="metric-desc">Cross-domain experience</span>
+        <div class="metric-glow"></div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="metric-card">
+        <div class="metric-icon-wrap">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 16 14"></polyline>
+          </svg>
+        </div>
+        <span class="metric-number" data-target="5" data-suffix="+">0+</span>
+        <span class="metric-title">Years of Innovation</span>
+        <span class="metric-desc">Proven track record</span>
+        <div class="metric-glow"></div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="metric-card">
+        <div class="metric-icon-wrap">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </div>
+        <span class="metric-number" data-target="24" data-suffix="/7">0/7</span>
+        <span class="metric-title">Client Support</span>
+        <span class="metric-desc">Round-the-clock assistance</span>
+        <div class="metric-glow"></div>
+      </div>
+
+      <!-- Card 7 -->
+      <div class="metric-card">
+        <div class="metric-icon-wrap">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+          </svg>
+        </div>
+        <span class="metric-number" data-target="99.9" data-suffix="%">0%</span>
+        <span class="metric-title">System Reliability</span>
+        <span class="metric-desc">Enterprise-grade uptime</span>
+        <div class="metric-glow"></div>
+      </div>
+
+      <!-- Card 8 -->
+      <div class="metric-card">
+        <div class="metric-icon-wrap">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+        </div>
+        <span class="metric-number" data-target="100" data-suffix="%">0%</span>
+        <span class="metric-title">Commitment to Quality</span>
+        <span class="metric-desc">Zero-compromise delivery</span>
+        <div class="metric-glow"></div>
+      </div>
+    </div>
+
+    <!-- Achievement Highlight Banner -->
+    <div class="achievement-banner">
+      <div class="achievement-banner-bg" aria-hidden="true">
+        <div class="banner-glow banner-glow--left"></div>
+        <div class="banner-glow banner-glow--right"></div>
+      </div>
+      <div class="achievement-banner-content">
+        <div class="achievement-banner-text">
+          <h3 class="achievement-banner-heading">Building Digital Solutions That Create Lasting Impact</h3>
+          <p class="achievement-banner-description">
+            From startup MVPs to enterprise platforms, every project is designed to deliver performance, scalability,
+            security, and long-term business value.
+          </p>
+        </div>
+        <button class="achievement-banner-btn" onclick="document.getElementById('featured-case-studies')?.scrollIntoView({behavior:'smooth'})" aria-label="View our projects">
+          <span>View Our Projects</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ==================== END HTML ==================== -->
+
+<!-- ==================================================
+START: Featured Case Studies Section
+================================================== -->
+<section class="featured-case-studies" id="featured-case-studies" aria-labelledby="featured-heading">
+  <!-- Background Layer -->
+  <div class="featured-bg" aria-hidden="true">
+    <div class="featured-mesh-gradient"></div>
+    <div class="featured-tech-grid"></div>
+    <div class="featured-circuit-lines"></div>
+    <div class="featured-hexagon-outlines"></div>
+    <div class="featured-radial-glow featured-radial-glow--green"></div>
+    <div class="featured-radial-glow featured-radial-glow--purple"></div>
+    <div class="featured-particles" id="featuredParticles"></div>
+  </div>
+
+  <div class="featured-container">
+    <!-- Section Header -->
+    <div class="featured-header">
+      <span class="featured-label">Featured Case Studies</span>
+      <h2 class="featured-heading" id="featured-heading">
+        Real Projects. <span class="text-gradient">Real Challenges.</span> Real Impact.
+      </h2>
+      <p class="featured-description">
+        Explore a selection of projects that demonstrate how XoHub Solutions transforms ideas into scalable, secure,
+        and high-performing digital solutions for businesses across multiple industries.
+      </p>
+    </div>
+
+    <!-- Projects Grid -->
+    <div class="featured-grid" aria-label="Featured case studies">
+      <!-- Card 1: Healthcare Management Platform -->
+      <article class="project-card">
+        <div class="project-thumb">
+          <div class="thumb-placeholder">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+            </svg>
+          </div>
+          <span class="project-badge">Healthcare</span>
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">Healthcare Management Platform</h3>
+          <p class="project-excerpt">A HIPAA-compliant platform streamlining patient records, telemedicine, and real-time analytics for 12+ hospitals.</p>
+          <div class="project-tech">
+            <span class="tech-chip">React</span>
+            <span class="tech-chip">Node.js</span>
+            <span class="tech-chip">AWS</span>
+            <span class="tech-chip">AI</span>
+          </div>
+          <div class="project-result">
+            <span class="result-highlight">40% faster patient processing</span>
+          </div>
+          <a href="#" class="project-link" aria-label="View case study: Healthcare Management Platform">
+            View Case Study
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- Card 2: AI Customer Support Assistant -->
+      <article class="project-card">
+        <div class="project-thumb">
+          <div class="thumb-placeholder">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+              <line x1="9" y1="9" x2="9.01" y2="9"></line>
+              <line x1="15" y1="9" x2="15.01" y2="9"></line>
+            </svg>
+          </div>
+          <span class="project-badge">AI / ML</span>
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">AI Customer Support Assistant</h3>
+          <p class="project-excerpt">An intelligent chatbot handling 85% of tier-1 queries, reducing response time from hours to seconds.</p>
+          <div class="project-tech">
+            <span class="tech-chip">Python</span>
+            <span class="tech-chip">TensorFlow</span>
+            <span class="tech-chip">FastAPI</span>
+            <span class="tech-chip">Redis</span>
+          </div>
+          <div class="project-result">
+            <span class="result-highlight">85% query deflection rate</span>
+          </div>
+          <a href="#" class="project-link" aria-label="View case study: AI Customer Support Assistant">
+            View Case Study
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- Card 3: E-Commerce Solution -->
+      <article class="project-card">
+        <div class="project-thumb">
+          <div class="thumb-placeholder">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="9" cy="21" r="1"></circle>
+              <circle cx="20" cy="21" r="1"></circle>
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+            </svg>
+          </div>
+          <span class="project-badge">E-Commerce</span>
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">E-Commerce Solution</h3>
+          <p class="project-excerpt">A headless commerce platform with real-time inventory, personalized recommendations, and 3x conversion uplift.</p>
+          <div class="project-tech">
+            <span class="tech-chip">Next.js</span>
+            <span class="tech-chip">Shopify</span>
+            <span class="tech-chip">PostgreSQL</span>
+            <span class="tech-chip">Stripe</span>
+          </div>
+          <div class="project-result">
+            <span class="result-highlight">3x increase in sales</span>
+          </div>
+          <a href="#" class="project-link" aria-label="View case study: E-Commerce Solution">
+            View Case Study
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- Card 4: School Management System -->
+      <article class="project-card">
+        <div class="project-thumb">
+          <div class="thumb-placeholder">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+              <path d="M6 12v5c0 2 3 4 6 4s6-2 6-4v-5"></path>
+            </svg>
+          </div>
+          <span class="project-badge">Education</span>
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">School Management System</h3>
+          <p class="project-excerpt">Centralized platform for 50+ schools managing admissions, attendance, grades, and parent communication.</p>
+          <div class="project-tech">
+            <span class="tech-chip">Vue.js</span>
+            <span class="tech-chip">Laravel</span>
+            <span class="tech-chip">MySQL</span>
+            <span class="tech-chip">Docker</span>
+          </div>
+          <div class="project-result">
+            <span class="result-highlight">60% admin time saved</span>
+          </div>
+          <a href="#" class="project-link" aria-label="View case study: School Management System">
+            View Case Study
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- Card 5: Construction ERP -->
+      <article class="project-card">
+        <div class="project-thumb">
+          <div class="thumb-placeholder">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+              <line x1="8" y1="21" x2="16" y2="21"></line>
+              <line x1="12" y1="17" x2="12" y2="21"></line>
+            </svg>
+          </div>
+          <span class="project-badge">Construction</span>
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">Construction ERP</h3>
+          <p class="project-excerpt">End-to-end project management, procurement, and workforce tracking for a $200M construction firm.</p>
+          <div class="project-tech">
+            <span class="tech-chip">Angular</span>
+            <span class="tech-chip">.NET</span>
+            <span class="tech-chip">Azure</span>
+            <span class="tech-chip">SQL Server</span>
+          </div>
+          <div class="project-result">
+            <span class="result-highlight">35% cost reduction</span>
+          </div>
+          <a href="#" class="project-link" aria-label="View case study: Construction ERP">
+            View Case Study
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- Card 6: Business Automation Platform -->
+      <article class="project-card">
+        <div class="project-thumb">
+          <div class="thumb-placeholder">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="16 18 22 12 16 6"></polyline>
+              <polyline points="8 6 2 12 8 18"></polyline>
+            </svg>
+          </div>
+          <span class="project-badge">Automation</span>
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">Business Automation Platform</h3>
+          <p class="project-excerpt">Custom workflow engine automating 200+ monthly processes, integrating CRM, billing, and HR systems.</p>
+          <div class="project-tech">
+            <span class="tech-chip">React</span>
+            <span class="tech-chip">Python</span>
+            <span class="tech-chip">Kubernetes</span>
+            <span class="tech-chip">RabbitMQ</span>
+          </div>
+          <div class="project-result">
+            <span class="result-highlight">70% faster workflows</span>
+          </div>
+          <a href="#" class="project-link" aria-label="View case study: Business Automation Platform">
+            View Case Study
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+      </article>
+    </div>
+
+    <!-- View All Button -->
+    <div class="featured-action">
+      <a href="#" class="featured-view-all" aria-label="View all case studies">
+        View All Case Studies
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+<!-- ==================================================
+END: Featured Case Studies Section
+================================================== -->
+
+<!-- ==================================================
+START: Project Categories Filter Section
+================================================== -->
+<section class="project-filter" id="project-filter" aria-labelledby="filter-heading">
+  <!-- Background Layer -->
+  <div class="filter-bg" aria-hidden="true">
+    <div class="filter-mesh-gradient"></div>
+    <div class="filter-tech-grid"></div>
+    <div class="filter-circuit-lines"></div>
+    <div class="filter-hexagon-outlines"></div>
+    <div class="filter-radial-glow filter-radial-glow--green"></div>
+    <div class="filter-radial-glow filter-radial-glow--purple"></div>
+    <div class="filter-particles" id="filterParticles"></div>
+  </div>
+
+  <div class="filter-container">
+    <!-- Section Header -->
+    <div class="filter-header">
+      <span class="filter-label">Explore Our Work</span>
+      <h2 class="filter-heading" id="filter-heading">
+        Browse Projects by <span class="text-gradient">Category</span>
+      </h2>
+      <p class="filter-description">
+        Explore our portfolio by technology, industry, or business solution to discover how XoHub Solutions helps
+        organizations achieve digital transformation through modern software development.
+      </p>
+    </div>
+
+    <!-- Filter Controls -->
+    <div class="filter-controls" role="group" aria-label="Filter projects by category">
+      <button class="filter-chip is-active" data-filter="all" aria-pressed="true">
+        <span class="filter-chip-icon" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="7" height="7"></rect>
+            <rect x="14" y="3" width="7" height="7"></rect>
+            <rect x="14" y="14" width="7" height="7"></rect>
+            <rect x="3" y="14" width="7" height="7"></rect>
+          </svg>
+        </span>
+        All Projects
+      </button>
+
+      <button class="filter-chip" data-filter="web-development" aria-pressed="false">
+        <span class="filter-chip-icon" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="16 18 22 12 16 6"></polyline>
+            <polyline points="8 6 2 12 8 18"></polyline>
+          </svg>
+        </span>
+        Web Development
+      </button>
+
+      <button class="filter-chip" data-filter="mobile-apps" aria-pressed="false">
+        <span class="filter-chip-icon" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+            <line x1="12" y1="18" x2="12.01" y2="18"></line>
+          </svg>
+        </span>
+        Mobile Apps
+      </button>
+
+      <button class="filter-chip" data-filter="ui-ux-design" aria-pressed="false">
+        <span class="filter-chip-icon" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
+            <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
+            <path d="M2 2l7.586 7.586"></path>
+            <circle cx="11" cy="11" r="2"></circle>
+          </svg>
+        </span>
+        UI/UX Design
+      </button>
+
+      <button class="filter-chip" data-filter="ai-solutions" aria-pressed="false">
+        <span class="filter-chip-icon" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+            <line x1="12" y1="17" x2="12.01" y2="17"></line>
+          </svg>
+        </span>
+        AI Solutions
+      </button>
+
+      <button class="filter-chip" data-filter="cloud-solutions" aria-pressed="false">
+        <span class="filter-chip-icon" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"></path>
+          </svg>
+        </span>
+        Cloud Solutions
+      </button>
+
+      <button class="filter-chip" data-filter="business-automation" aria-pressed="false">
+        <span class="filter-chip-icon" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="3"></circle>
+            <path d="M12 1v2"></path>
+            <path d="M12 21v2"></path>
+            <path d="M4.22 4.22l1.42 1.42"></path>
+            <path d="M18.36 18.36l1.42 1.42"></path>
+            <path d="M1 12h2"></path>
+            <path d="M21 12h2"></path>
+            <path d="M4.22 19.78l1.42-1.42"></path>
+            <path d="M18.36 5.64l1.42-1.42"></path>
+          </svg>
+        </span>
+        Business Automation
+      </button>
+
+      <button class="filter-chip" data-filter="e-commerce" aria-pressed="false">
+        <span class="filter-chip-icon" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+        </span>
+        E-Commerce
+      </button>
+
+      <button class="filter-chip" data-filter="enterprise-systems" aria-pressed="false">
+        <span class="filter-chip-icon" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+          </svg>
+        </span>
+        Enterprise Systems
+      </button>
+
+      <button class="filter-chip" data-filter="saas-platforms" aria-pressed="false">
+        <span class="filter-chip-icon" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="16 16 12 12 8 16"></polyline>
+            <line x1="12" y1="12" x2="12" y2="21"></line>
+            <path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"></path>
+            <polyline points="16 16 12 12 8 16"></polyline>
+          </svg>
+        </span>
+        SaaS Platforms
+      </button>
+    </div>
+
+    <!-- Active filter description -->
+    <p class="filter-active-count" id="filterActiveCount" aria-live="polite">
+      Showing <strong>6</strong> projects
+    </p>
+  </div>
+</section>
+<!-- ==================================================
+END: Project Categories Filter Section
+================================================== -->
+
+<!-- ==================================================
+START: Detailed Case Study Showcase Section
+================================================== -->
+<section class="case-showcase" id="case-showcase" aria-labelledby="showcase-heading">
+  <!-- Background Layer -->
+  <div class="showcase-bg" aria-hidden="true">
+    <div class="showcase-mesh-gradient"></div>
+    <div class="showcase-tech-grid"></div>
+    <div class="showcase-circuit-lines"></div>
+    <div class="showcase-hexagon-outlines"></div>
+    <div class="showcase-radial-glow showcase-radial-glow--green"></div>
+    <div class="showcase-radial-glow showcase-radial-glow--purple"></div>
+    <div class="showcase-particles" id="showcaseParticles"></div>
+  </div>
+
+  <div class="showcase-container">
+    <!-- Section Header -->
+    <div class="showcase-header">
+      <span class="showcase-label">Featured Success Story</span>
+      <h2 class="showcase-heading" id="showcase-heading">
+        From Challenge to <span class="text-gradient">Digital Success</span>
+      </h2>
+      <p class="showcase-description">
+        Every project is more than code—it's a partnership focused on solving business challenges, improving efficiency, and delivering measurable results.
+      </p>
+    </div>
+
+    <!-- Main Showcase Layout -->
+    <div class="showcase-layout">
+      <!-- Left: Project Image -->
+      <div class="showcase-image-area">
+        <div class="showcase-image-placeholder">
+          <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+          </svg>
+          <span class="showcase-image-text">Healthcare Platform</span>
+        </div>
+        <span class="showcase-industry-badge">Healthcare</span>
+      </div>
+
+      <!-- Right: Project Details -->
+      <div class="showcase-content">
+        <h3 class="showcase-project-title">Healthcare Management Platform</h3>
+        <p class="showcase-overview">
+          A HIPAA-compliant digital ecosystem that replaced fragmented manual workflows with a unified, intelligent platform. From patient scheduling to real-time analytics, every module was designed for speed, security, and seamless collaboration.
+        </p>
+
+        <!-- Information Cards Grid -->
+        <div class="showcase-info-grid">
+          <div class="info-card">
+            <div class="info-card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="8" x2="12" y2="12"></line>
+                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+              </svg>
+            </div>
+            <h4 class="info-card-title">Client Challenge</h4>
+            <p class="info-card-text">Manual workflows causing delays, data silos, and compliance risks across 12 hospital departments.</p>
+          </div>
+
+          <div class="info-card">
+            <div class="info-card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+              </svg>
+            </div>
+            <h4 class="info-card-title">Our Solution</h4>
+            <p class="info-card-text">Modern cloud-based platform with automation, real-time analytics, telemedicine, and role-based dashboards.</p>
+          </div>
+
+          <div class="info-card">
+            <div class="info-card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+              </svg>
+            </div>
+            <h4 class="info-card-title">Technologies Used</h4>
+            <div class="info-card-tech">
+              <span class="tech-tag">Laravel</span>
+              <span class="tech-tag">Next.js</span>
+              <span class="tech-tag">MySQL</span>
+              <span class="tech-tag">REST API</span>
+              <span class="tech-tag">AWS</span>
+              <span class="tech-tag">Docker</span>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <div class="info-card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+            </div>
+            <h4 class="info-card-title">Business Results</h4>
+            <ul class="info-card-results">
+              <li>40% Faster Operations</li>
+              <li>60% Less Manual Work</li>
+              <li>99.9% Uptime</li>
+              <li>Improved Satisfaction</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Key Metrics Row -->
+    <div class="showcase-metrics" aria-label="Key project metrics">
+      <div class="metric-item">
+        <span class="metric-value" data-target="40" data-suffix="%">0%</span>
+        <span class="metric-label">Operational Improvement</span>
+      </div>
+      <div class="metric-item">
+        <span class="metric-value" data-target="60" data-suffix="%">0%</span>
+        <span class="metric-label">Automation Increase</span>
+      </div>
+      <div class="metric-item">
+        <span class="metric-value" data-target="99.9" data-suffix="%">0%</span>
+        <span class="metric-label">System Availability</span>
+      </div>
+      <div class="metric-item">
+        <span class="metric-value" data-target="24" data-suffix="/7">0/7</span>
+        <span class="metric-label">Business Accessibility</span>
+      </div>
+    </div>
+
+    <!-- CTA Buttons -->
+    <div class="showcase-cta">
+      <a href="#" class="btn-showcase btn-showcase--primary" aria-label="View full case study for Healthcare Management Platform">
+        View Full Case Study
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </a>
+      <a href="#" class="btn-showcase btn-showcase--secondary" aria-label="Start a similar project">
+        Start Similar Project
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="12" y1="8" x2="12" y2="16"></line>
+          <line x1="8" y1="12" x2="16" y2="12"></line>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+<!-- ==================================================
+END: Detailed Case Study Showcase Section
+================================================== -->
+
+<!-- ==================================================
+START: Our Development Approach Section
+================================================== -->
+<section class="dev-approach" id="dev-approach" aria-labelledby="approach-heading">
+  <!-- Background Layer -->
+  <div class="approach-bg" aria-hidden="true">
+    <div class="approach-mesh-gradient"></div>
+    <div class="approach-tech-grid"></div>
+    <div class="approach-circuit-lines"></div>
+    <div class="approach-hexagon-outlines"></div>
+    <div class="approach-radial-glow approach-radial-glow--green"></div>
+    <div class="approach-radial-glow approach-radial-glow--purple"></div>
+    <div class="approach-particles" id="approachParticles"></div>
+  </div>
+
+  <div class="approach-container">
+    <!-- Section Header -->
+    <div class="approach-header">
+      <span class="approach-label">Our Development Approach</span>
+      <h2 class="approach-heading" id="approach-heading">
+        A Proven Process That <span class="text-gradient">Delivers Exceptional</span> Results
+      </h2>
+      <p class="approach-description">
+        Every successful digital product begins with a clear strategy. Our collaborative development process ensures
+        transparency, quality, and continuous improvement from discovery to deployment and beyond.
+      </p>
+    </div>
+
+    <!-- Process Steps Grid -->
+    <div class="approach-steps" aria-label="Development process steps">
+      <!-- Step 01 -->
+      <div class="step-card">
+        <div class="step-number">01</div>
+        <div class="step-icon-wrap">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+            <line x1="12" y1="17" x2="12.01" y2="17"></line>
+          </svg>
+        </div>
+        <h3 class="step-title">Discovery & Consultation</h3>
+        <p class="step-desc">Understand business goals, users, challenges, and project requirements.</p>
+      </div>
+
+      <!-- Step 02 -->
+      <div class="step-card">
+        <div class="step-number">02</div>
+        <div class="step-icon-wrap">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+            <path d="M2 17l10 5 10-5"></path>
+            <path d="M2 12l10 5 10-5"></path>
+          </svg>
+        </div>
+        <h3 class="step-title">Planning & Strategy</h3>
+        <p class="step-desc">Create technical architecture, roadmap, timelines, and execution plan.</p>
+      </div>
+
+      <!-- Step 03 -->
+      <div class="step-card">
+        <div class="step-number">03</div>
+        <div class="step-icon-wrap">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
+            <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
+            <path d="M2 2l7.586 7.586"></path>
+            <circle cx="11" cy="11" r="2"></circle>
+          </svg>
+        </div>
+        <h3 class="step-title">UI/UX Design</h3>
+        <p class="step-desc">Design intuitive, modern, and engaging user experiences.</p>
+      </div>
+
+      <!-- Step 04 -->
+      <div class="step-card">
+        <div class="step-number">04</div>
+        <div class="step-icon-wrap">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="16 18 22 12 16 6"></polyline>
+            <polyline points="8 6 2 12 8 18"></polyline>
+          </svg>
+        </div>
+        <h3 class="step-title">Development</h3>
+        <p class="step-desc">Build scalable, secure, and high-performance software using modern technologies.</p>
+      </div>
+
+      <!-- Step 05 -->
+      <div class="step-card">
+        <div class="step-number">05</div>
+        <div class="step-icon-wrap">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+          </svg>
+        </div>
+        <h3 class="step-title">Testing & Quality Assurance</h3>
+        <p class="step-desc">Ensure reliability through comprehensive testing, optimization, and validation.</p>
+      </div>
+
+      <!-- Step 06 -->
+      <div class="step-card">
+        <div class="step-number">06</div>
+        <div class="step-icon-wrap">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 20h9"></path>
+            <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+          </svg>
+        </div>
+        <h3 class="step-title">Launch & Continuous Support</h3>
+        <p class="step-desc">Deploy confidently and provide ongoing improvements, maintenance, and growth support.</p>
+      </div>
+    </div>
+
+    <!-- Summary Banner -->
+    <div class="approach-banner">
+      <div class="approach-banner-bg" aria-hidden="true">
+        <div class="banner-ambient banner-ambient--left"></div>
+        <div class="banner-ambient banner-ambient--right"></div>
+      </div>
+      <div class="approach-banner-content">
+        <div class="approach-banner-text">
+          <h3 class="approach-banner-title">From Vision to Success — Every Step Matters</h3>
+          <p class="approach-banner-desc">
+            Our structured development process helps businesses reduce risks, accelerate delivery, and build scalable digital
+            products designed for long-term success.
+          </p>
+        </div>
+        <div class="approach-banner-actions">
+          <a href="#" class="approach-btn approach-btn--primary" aria-label="Start your project">
+            Start Your Project
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+          <a href="#" class="approach-btn approach-btn--secondary" aria-label="Schedule a consultation">
+            Schedule a Consultation
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="16"></line>
+              <line x1="8" y1="12" x2="16" y2="12"></line>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ==================================================
+END: Our Development Approach Section
+================================================== -->
+
+<!-- ==================================================
+START: Technologies Used Across Projects Section
+================================================== -->
+<section class="tech-stack" id="tech-stack" aria-labelledby="techstack-heading">
+  <!-- Background Layer -->
+  <div class="tech-stack-bg" aria-hidden="true">
+    <div class="ts-mesh-gradient"></div>
+    <div class="ts-tech-grid"></div>
+    <div class="ts-circuit-lines"></div>
+    <div class="ts-hexagon-outlines"></div>
+    <div class="ts-radial-glow ts-radial-glow--green"></div>
+    <div class="ts-radial-glow ts-radial-glow--purple"></div>
+    <div class="ts-particles" id="techStackParticles"></div>
+  </div>
+
+  <div class="tech-stack-container">
+    <!-- Section Header -->
+    <div class="tech-stack-header">
+      <span class="ts-label">Our Technology Stack</span>
+      <h2 class="ts-heading" id="techstack-heading">
+        Modern Technologies Behind <span class="text-gradient">Every Successful Project</span>
+      </h2>
+      <p class="ts-description">
+        We combine powerful frontend, backend, cloud, AI, DevOps, and database technologies to build secure, scalable, and future-ready digital solutions tailored to every client's business needs.
+      </p>
+    </div>
+
+    <!-- Technology Categories Grid -->
+    <div class="ts-categories" aria-label="Technology categories">
+      <!-- Frontend -->
+      <div class="ts-category">
+        <div class="ts-cat-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="16 18 22 12 16 6"></polyline>
+            <polyline points="8 6 2 12 8 18"></polyline>
+          </svg>
+        </div>
+        <h3 class="ts-cat-title">Frontend</h3>
+        <div class="ts-badges">
+          <span class="ts-badge">HTML5</span>
+          <span class="ts-badge">CSS3</span>
+          <span class="ts-badge">JavaScript</span>
+          <span class="ts-badge">TypeScript</span>
+          <span class="ts-badge">Next.js</span>
+          <span class="ts-badge">React</span>
+        </div>
+      </div>
+
+      <!-- Backend -->
+      <div class="ts-category">
+        <div class="ts-cat-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+            <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+            <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+          </svg>
+        </div>
+        <h3 class="ts-cat-title">Backend</h3>
+        <div class="ts-badges">
+          <span class="ts-badge">Laravel</span>
+          <span class="ts-badge">PHP</span>
+          <span class="ts-badge">REST API</span>
+          <span class="ts-badge">Node.js (Future)</span>
+        </div>
+      </div>
+
+      <!-- Database -->
+      <div class="ts-category">
+        <div class="ts-cat-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+            <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+            <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+          </svg>
+        </div>
+        <h3 class="ts-cat-title">Database</h3>
+        <div class="ts-badges">
+          <span class="ts-badge">MySQL</span>
+          <span class="ts-badge">PostgreSQL</span>
+          <span class="ts-badge">MongoDB</span>
+        </div>
+      </div>
+
+      <!-- Cloud & Hosting -->
+      <div class="ts-category">
+        <div class="ts-cat-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"></path>
+          </svg>
+        </div>
+        <h3 class="ts-cat-title">Cloud & Hosting</h3>
+        <div class="ts-badges">
+          <span class="ts-badge">Vercel</span>
+          <span class="ts-badge">Cloudflare</span>
+          <span class="ts-badge">Hostinger</span>
+          <span class="ts-badge">Docker</span>
+        </div>
+      </div>
+
+      <!-- AI & Automation -->
+      <div class="ts-category">
+        <div class="ts-cat-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+            <line x1="12" y1="17" x2="12.01" y2="17"></line>
+          </svg>
+        </div>
+        <h3 class="ts-cat-title">AI & Automation</h3>
+        <div class="ts-badges">
+          <span class="ts-badge">OpenAI</span>
+          <span class="ts-badge">n8n</span>
+          <span class="ts-badge">LangChain (Future)</span>
+        </div>
+      </div>
+
+      <!-- Tools -->
+      <div class="ts-category">
+        <div class="ts-cat-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="3"></circle>
+            <path d="M12 1v2"></path>
+            <path d="M12 21v2"></path>
+            <path d="M4.22 4.22l1.42 1.42"></path>
+            <path d="M18.36 18.36l1.42 1.42"></path>
+            <path d="M1 12h2"></path>
+            <path d="M21 12h2"></path>
+            <path d="M4.22 19.78l1.42-1.42"></path>
+            <path d="M18.36 5.64l1.42-1.42"></path>
+          </svg>
+        </div>
+        <h3 class="ts-cat-title">Tools</h3>
+        <div class="ts-badges">
+          <span class="ts-badge">Git</span>
+          <span class="ts-badge">GitHub</span>
+          <span class="ts-badge">Figma</span>
+          <span class="ts-badge">Postman</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Trust Banner -->
+    <div class="ts-banner">
+      <div class="ts-banner-bg" aria-hidden="true">
+        <div class="ts-banner-glow ts-banner-glow--left"></div>
+        <div class="ts-banner-glow ts-banner-glow--right"></div>
+      </div>
+      <div class="ts-banner-content">
+        <div class="ts-banner-text">
+          <h3 class="ts-banner-title">Choosing the Right Technology for Every Business</h3>
+          <p class="ts-banner-desc">
+            Rather than forcing one technology stack, we carefully select the best tools and frameworks based on your business goals, scalability requirements, performance expectations, and future growth.
+          </p>
+        </div>
+        <div class="ts-banner-actions">
+          <a href="#" class="ts-btn ts-btn--primary" aria-label="Discuss your project">
+            Discuss Your Project
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+          <a href="#" class="ts-btn ts-btn--secondary" aria-label="View our services">
+            View Our Services
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="16"></line>
+              <line x1="8" y1="12" x2="16" y2="12"></line>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ==================================================
+END: Technologies Used Across Projects Section
+================================================== -->
+
+<!-- ==================================================
+START: Client Success Stories Section
+================================================== -->
+<section class="client-stories" id="client-stories" aria-labelledby="stories-heading">
+  <!-- Background Layer -->
+  <div class="stories-bg" aria-hidden="true">
+    <div class="stories-mesh-gradient"></div>
+    <div class="stories-tech-grid"></div>
+    <div class="stories-circuit-lines"></div>
+    <div class="stories-hexagon-outlines"></div>
+    <div class="stories-radial-glow stories-radial-glow--green"></div>
+    <div class="stories-radial-glow stories-radial-glow--purple"></div>
+    <div class="stories-particles" id="storiesParticles"></div>
+  </div>
+
+  <div class="stories-container">
+    <!-- Section Header -->
+    <div class="stories-header">
+      <span class="stories-label">Client Success Stories</span>
+      <h2 class="stories-heading" id="stories-heading">
+        Trusted by Businesses That <span class="text-gradient">Value Innovation</span>
+      </h2>
+      <p class="stories-description">
+        Every successful partnership reflects our commitment to delivering reliable, scalable, and business-focused
+        digital solutions that help organizations achieve long-term growth.
+      </p>
+    </div>
+
+    <!-- Success Story Carousel -->
+    <div class="stories-carousel" aria-label="Client success stories carousel">
+      <div class="carousel-viewport" id="carouselViewport">
+        <div class="carousel-track" id="carouselTrack">
+          <!-- Card 1 -->
+          <div class="story-card" role="group" aria-label="Success story 1">
+            <div class="story-card-inner">
+              <div class="story-client-logo" aria-hidden="true">
+                <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                </svg>
+              </div>
+              <span class="story-industry-badge">Healthcare</span>
+              <h3 class="story-client-name">HealthTech Innovations</h3>
+              <h4 class="story-project-title">Digitizing Patient Care</h4>
+              <p class="story-challenge">Legacy systems caused bottlenecks in patient data management and appointment scheduling.</p>
+              <p class="story-solution">We built a HIPAA-compliant web platform with real-time analytics and telemedicine integration.</p>
+              <div class="story-results">
+                <span class="result-tag">40% faster processing</span>
+                <span class="result-tag">99.9% uptime</span>
+                <span class="result-tag">60% less manual work</span>
+              </div>
+              <blockquote class="story-quote">
+                "XoHub Solutions transformed our operations. Their team delivered beyond expectations."
+              </blockquote>
+              <div class="story-rating" aria-label="5 out of 5 stars">
+                <span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span>
+              </div>
+              <div class="story-meta">
+                <span class="story-year">Completed 2025</span>
+                <div class="story-techs">
+                  <span class="mini-tech">Next.js</span>
+                  <span class="mini-tech">Laravel</span>
+                  <span class="mini-tech">AWS</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="story-card" role="group" aria-label="Success story 2">
+            <div class="story-card-inner">
+              <div class="story-client-logo" aria-hidden="true">
+                <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="9" cy="21" r="1"></circle>
+                  <circle cx="20" cy="21" r="1"></circle>
+                  <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                </svg>
+              </div>
+              <span class="story-industry-badge">E‑Commerce</span>
+              <h3 class="story-client-name">RetailFlow</h3>
+              <h4 class="story-project-title">Scaling Online Sales</h4>
+              <p class="story-challenge">Disconnected inventory and slow checkout led to high cart abandonment.</p>
+              <p class="story-solution">Headless commerce platform with real-time inventory sync and personalized AI recommendations.</p>
+              <div class="story-results">
+                <span class="result-tag">3x revenue growth</span>
+                <span class="result-tag">25% higher conversion</span>
+              </div>
+              <blockquote class="story-quote">
+                "Our online store now runs flawlessly. The impact on our bottom line was immediate."
+              </blockquote>
+              <div class="story-rating" aria-label="5 out of 5 stars">
+                <span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span>
+              </div>
+              <div class="story-meta">
+                <span class="story-year">Completed 2024</span>
+                <div class="story-techs">
+                  <span class="mini-tech">React</span>
+                  <span class="mini-tech">Node.js</span>
+                  <span class="mini-tech">MongoDB</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="story-card" role="group" aria-label="Success story 3">
+            <div class="story-card-inner">
+              <div class="story-client-logo" aria-hidden="true">
+                <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                  <line x1="8" y1="21" x2="16" y2="21"></line>
+                  <line x1="12" y1="17" x2="12" y2="21"></line>
+                </svg>
+              </div>
+              <span class="story-industry-badge">Construction</span>
+              <h3 class="story-client-name">BuildSmart Group</h3>
+              <h4 class="story-project-title">ERP Modernization</h4>
+              <p class="story-challenge">Outdated spreadsheets caused project delays and budget overruns across 30+ sites.</p>
+              <p class="story-solution">Custom ERP with real-time resource tracking, automated reporting, and mobile site access.</p>
+              <div class="story-results">
+                <span class="result-tag">35% cost reduction</span>
+                <span class="result-tag">50% faster reporting</span>
+              </div>
+              <blockquote class="story-quote">
+                "Finally, all our data is in one place. XoHub’s solution saved us months of coordination."
+              </blockquote>
+              <div class="story-rating" aria-label="5 out of 5 stars">
+                <span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span>
+              </div>
+              <div class="story-meta">
+                <span class="story-year">Completed 2024</span>
+                <div class="story-techs">
+                  <span class="mini-tech">Angular</span>
+                  <span class="mini-tech">.NET</span>
+                  <span class="mini-tech">Azure</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carousel Controls -->
+      <div class="carousel-controls">
+        <button class="carousel-btn carousel-btn--prev" id="carouselPrev" aria-label="Previous success story">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
+        <div class="carousel-dots" id="carouselDots" aria-hidden="true"></div>
+        <button class="carousel-btn carousel-btn--next" id="carouselNext" aria-label="Next success story">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Client Trust Banner -->
+    <div class="stories-banner">
+      <div class="stories-banner-bg" aria-hidden="true">
+        <div class="stories-banner-glow stories-banner-glow--left"></div>
+        <div class="stories-banner-glow stories-banner-glow--right"></div>
+      </div>
+      <div class="stories-banner-content">
+        <div class="stories-banner-text">
+          <h3 class="stories-banner-title">Your Success Is Our Greatest Achievement</h3>
+          <p class="stories-banner-desc">
+            Every project we deliver is built with one goal in mind: helping businesses grow through innovative technology, exceptional user experiences, and long-term partnerships.
+          </p>
+        </div>
+        <div class="stories-banner-actions">
+          <a href="#" class="stories-btn stories-btn--primary" aria-label="Become our next success story">
+            Become Our Next Success Story
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+          <a href="#" class="stories-btn stories-btn--secondary" aria-label="Request a consultation">
+            Request a Consultation
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="16"></line>
+              <line x1="8" y1="12" x2="16" y2="12"></line>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ==================================================
+END: Client Success Stories Section
+================================================== -->
+
+<!-- ==================================================
+START: Industries We've Helped Section
+================================================== -->
+<section class="industries-section" id="industries-section" aria-labelledby="industries-heading">
+  <!-- Background Layer -->
+  <div class="industries-bg" aria-hidden="true">
+    <div class="ind-mesh-gradient"></div>
+    <div class="ind-tech-grid"></div>
+    <div class="ind-circuit-lines"></div>
+    <div class="ind-hexagon-outlines"></div>
+    <div class="ind-radial-glow ind-radial-glow--green"></div>
+    <div class="ind-radial-glow ind-radial-glow--purple"></div>
+    <div class="ind-particles" id="industriesParticles"></div>
+  </div>
+
+  <div class="industries-container">
+    <!-- Section Header -->
+    <div class="industries-header">
+      <span class="ind-label">Industries We've Helped</span>
+      <h2 class="ind-heading" id="industries-heading">
+        Delivering Digital Success Across <span class="text-gradient">Multiple Industries</span>
+      </h2>
+      <p class="ind-description">
+        From startups to growing enterprises, we develop scalable, secure, and user-focused software solutions tailored to the unique challenges of every industry.
+      </p>
+    </div>
+
+    <!-- Industry Cards Grid -->
+    <div class="ind-grid" aria-label="Industries served">
+      <!-- Healthcare -->
+      <div class="industry-card">
+        <div class="ind-card-icon">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+          </svg>
+        </div>
+        <h3 class="ind-card-title">Healthcare</h3>
+        <p class="ind-card-desc">HIPAA-compliant platforms for patient management, telemedicine, and clinical analytics.</p>
+        <div class="ind-card-solutions">
+          <span class="ind-solution-tag">Patient Portals</span>
+          <span class="ind-solution-tag">EHR Systems</span>
+          <span class="ind-solution-tag">Telehealth Apps</span>
+        </div>
+        <a href="#" class="ind-card-link" aria-label="View healthcare case studies">
+          View Related Case Studies
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Education -->
+      <div class="industry-card">
+        <div class="ind-card-icon">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+          </svg>
+        </div>
+        <h3 class="ind-card-title">Education</h3>
+        <p class="ind-card-desc">Learning management systems, virtual classrooms, and student information portals.</p>
+        <div class="ind-card-solutions">
+          <span class="ind-solution-tag">LMS Platforms</span>
+          <span class="ind-solution-tag">EdTech Apps</span>
+          <span class="ind-solution-tag">Student Dashboards</span>
+        </div>
+        <a href="#" class="ind-card-link" aria-label="View education case studies">
+          View Related Case Studies
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+      </div>
+
+      <!-- E-Commerce -->
+      <div class="industry-card">
+        <div class="ind-card-icon">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+        </div>
+        <h3 class="ind-card-title">E-Commerce</h3>
+        <p class="ind-card-desc">Headless commerce, marketplace integrations, and personalized shopping experiences.</p>
+        <div class="ind-card-solutions">
+          <span class="ind-solution-tag">Online Stores</span>
+          <span class="ind-solution-tag">Marketplace APIs</span>
+          <span class="ind-solution-tag">Payment Gateways</span>
+        </div>
+        <a href="#" class="ind-card-link" aria-label="View e-commerce case studies">
+          View Related Case Studies
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Real Estate -->
+      <div class="industry-card">
+        <div class="ind-card-icon">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+          </svg>
+        </div>
+        <h3 class="ind-card-title">Real Estate</h3>
+        <p class="ind-card-desc">Property listing platforms, CRM solutions, and virtual tour experiences for real estate agencies.</p>
+        <div class="ind-card-solutions">
+          <span class="ind-solution-tag">Property Portals</span>
+          <span class="ind-solution-tag">CRM Systems</span>
+          <span class="ind-solution-tag">Virtual Tours</span>
+        </div>
+        <a href="#" class="ind-card-link" aria-label="View real estate case studies">
+          View Related Case Studies
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Finance & FinTech -->
+      <div class="industry-card">
+        <div class="ind-card-icon">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="12" y1="1" x2="12" y2="23"></line>
+            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+          </svg>
+        </div>
+        <h3 class="ind-card-title">Finance & FinTech</h3>
+        <p class="ind-card-desc">Secure banking dashboards, payment processing systems, and financial analytics tools.</p>
+        <div class="ind-card-solutions">
+          <span class="ind-solution-tag">Digital Banking</span>
+          <span class="ind-solution-tag">Payment APIs</span>
+          <span class="ind-solution-tag">Risk Analytics</span>
+        </div>
+        <a href="#" class="ind-card-link" aria-label="View fintech case studies">
+          View Related Case Studies
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Manufacturing -->
+      <div class="industry-card">
+        <div class="ind-card-icon">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+          </svg>
+        </div>
+        <h3 class="ind-card-title">Manufacturing</h3>
+        <p class="ind-card-desc">ERP systems, production tracking dashboards, and supply chain optimization tools.</p>
+        <div class="ind-card-solutions">
+          <span class="ind-solution-tag">ERP Solutions</span>
+          <span class="ind-solution-tag">IoT Dashboards</span>
+          <span class="ind-solution-tag">Quality Control</span>
+        </div>
+        <a href="#" class="ind-card-link" aria-label="View manufacturing case studies">
+          View Related Case Studies
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Logistics & Transportation -->
+      <div class="industry-card">
+        <div class="ind-card-icon">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="1" y="3" width="15" height="13"></rect>
+            <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+            <circle cx="5.5" cy="18.5" r="2.5"></circle>
+            <circle cx="18.5" cy="18.5" r="2.5"></circle>
+          </svg>
+        </div>
+        <h3 class="ind-card-title">Logistics & Transportation</h3>
+        <p class="ind-card-desc">Fleet management, route optimization, and real-time shipment tracking platforms.</p>
+        <div class="ind-card-solutions">
+          <span class="ind-solution-tag">Fleet Tracking</span>
+          <span class="ind-solution-tag">Route Optimization</span>
+          <span class="ind-solution-tag">Warehouse Systems</span>
+        </div>
+        <a href="#" class="ind-card-link" aria-label="View logistics case studies">
+          View Related Case Studies
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Corporate & Enterprise -->
+      <div class="industry-card">
+        <div class="ind-card-icon">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect>
+            <line x1="9" y1="6" x2="9" y2="10"></line>
+            <line x1="15" y1="6" x2="15" y2="10"></line>
+            <line x1="9" y1="14" x2="9" y2="18"></line>
+            <line x1="15" y1="14" x2="15" y2="18"></line>
+          </svg>
+        </div>
+        <h3 class="ind-card-title">Corporate & Enterprise</h3>
+        <p class="ind-card-desc">Intranet portals, enterprise automation, and large-scale digital transformation platforms.</p>
+        <div class="ind-card-solutions">
+          <span class="ind-solution-tag">Intranet Portals</span>
+          <span class="ind-solution-tag">Automation Tools</span>
+          <span class="ind-solution-tag">BI Dashboards</span>
+        </div>
+        <a href="#" class="ind-card-link" aria-label="View enterprise case studies">
+          View Related Case Studies
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Experience Summary Banner -->
+    <div class="industries-banner">
+      <div class="ind-banner-bg" aria-hidden="true">
+        <div class="ind-banner-glow ind-banner-glow--left"></div>
+        <div class="ind-banner-glow ind-banner-glow--right"></div>
+      </div>
+      <div class="industries-banner-content">
+        <div class="ind-banner-text">
+          <h3 class="ind-banner-title">Every Industry Has Different Challenges. We Build the Right Solution.</h3>
+          <p class="ind-banner-desc">
+            Our experience across diverse industries allows us to understand business requirements quickly and deliver reliable, scalable, and future-ready digital products that create measurable value.
+          </p>
+        </div>
+        <div class="ind-banner-actions">
+          <a href="#" class="ind-btn ind-btn--primary" aria-label="Explore our services">
+            Explore Our Services
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+          <a href="#" class="ind-btn ind-btn--secondary" aria-label="Start your project">
+            Start Your Project
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="16"></line>
+              <line x1="8" y1="12" x2="16" y2="12"></line>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ==================================================
+END: Industries We've Helped Section
+================================================== -->
+
+<!-- ==================================================
+START: Frequently Asked Questions Section
+================================================== -->
+<section class="faq-section" id="faq-section" aria-labelledby="faq-heading">
+  <!-- Background Layer -->
+  <div class="faq-bg" aria-hidden="true">
+    <div class="faq-mesh-gradient"></div>
+    <div class="faq-tech-grid"></div>
+    <div class="faq-circuit-lines"></div>
+    <div class="faq-hexagon-outlines"></div>
+    <div class="faq-radial-glow faq-radial-glow--green"></div>
+    <div class="faq-radial-glow faq-radial-glow--purple"></div>
+    <div class="faq-particles" id="faqParticles"></div>
+  </div>
+
+  <div class="faq-container">
+    <!-- Section Header -->
+    <div class="faq-header">
+      <span class="faq-label">Frequently Asked Questions</span>
+      <h2 class="faq-heading" id="faq-heading">
+        Questions Clients Commonly Ask <span class="text-gradient">Before Starting a Project</span>
+      </h2>
+      <p class="faq-description">
+        We've answered some of the most common questions about our services, development process, timelines, technologies, and ongoing support.
+      </p>
+    </div>
+
+    <!-- FAQ Accordion -->
+    <div class="faq-accordion" aria-label="Frequently asked questions" role="list">
+      <!-- Item 1 -->
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" id="faq-btn-1" aria-expanded="false" aria-controls="faq-answer-1">
+          <span class="faq-question-text">What industries do you work with?</span>
+          <svg class="faq-chevron" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <div class="faq-answer-wrapper" id="faq-answer-1" role="region" aria-labelledby="faq-btn-1" hidden>
+          <div class="faq-answer">
+            We work across a broad range of industries including healthcare, education, e-commerce, real estate, finance, manufacturing, logistics, and enterprise. Our team adapts to the unique challenges and compliance requirements of each sector.
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" id="faq-btn-2" aria-expanded="false" aria-controls="faq-answer-2">
+          <span class="faq-question-text">What technologies do you specialize in?</span>
+          <svg class="faq-chevron" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <div class="faq-answer-wrapper" id="faq-answer-2" role="region" aria-labelledby="faq-btn-2" hidden>
+          <div class="faq-answer">
+            We specialize in modern web technologies including Laravel, Next.js, React, and Node.js for backend and frontend. Our stack also covers databases like MySQL and MongoDB, cloud platforms (AWS, Vercel), and AI integrations via OpenAI and custom APIs.
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" id="faq-btn-3" aria-expanded="false" aria-controls="faq-answer-3">
+          <span class="faq-question-text">How long does a typical project take?</span>
+          <svg class="faq-chevron" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <div class="faq-answer-wrapper" id="faq-answer-3" role="region" aria-labelledby="faq-btn-3" hidden>
+          <div class="faq-answer">
+            Project timelines vary based on scope and complexity. A small business website may take 4–6 weeks, while a custom enterprise platform can range from 3 to 6 months. We provide a detailed roadmap during the planning phase so you know exactly what to expect.
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" id="faq-btn-4" aria-expanded="false" aria-controls="faq-answer-4">
+          <span class="faq-question-text">Can you redesign or modernize existing software?</span>
+          <svg class="faq-chevron" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <div class="faq-answer-wrapper" id="faq-answer-4" role="region" aria-labelledby="faq-btn-4" hidden>
+          <div class="faq-answer">
+            Absolutely. We frequently refactor legacy systems, migrate outdated codebases to modern frameworks, and redesign user interfaces to improve performance, security, and user experience. A thorough audit helps us build a step‑by‑step modernization strategy.
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 5 -->
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" id="faq-btn-5" aria-expanded="false" aria-controls="faq-answer-5">
+          <span class="faq-question-text">Do you provide ongoing support and maintenance?</span>
+          <svg class="faq-chevron" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <div class="faq-answer-wrapper" id="faq-answer-5" role="region" aria-labelledby="faq-btn-5" hidden>
+          <div class="faq-answer">
+            Yes, we offer flexible support plans after launch. These can include regular updates, security patches, performance monitoring, and feature enhancements. Our goal is to keep your application healthy and evolving with your business.
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 6 -->
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" id="faq-btn-6" aria-expanded="false" aria-controls="faq-answer-6">
+          <span class="faq-question-text">Will I own the source code?</span>
+          <svg class="faq-chevron" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <div class="faq-answer-wrapper" id="faq-answer-6" role="region" aria-labelledby="faq-btn-6" hidden>
+          <div class="faq-answer">
+            Absolutely. Once the project is complete and full payment is received, you own the source code and all related assets. We believe in complete transparency and client ownership.
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 7 -->
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" id="faq-btn-7" aria-expanded="false" aria-controls="faq-answer-7">
+          <span class="faq-question-text">Can you integrate third-party APIs?</span>
+          <svg class="faq-chevron" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <div class="faq-answer-wrapper" id="faq-answer-7" role="region" aria-labelledby="faq-btn-7" hidden>
+          <div class="faq-answer">
+            Yes, we have extensive experience integrating payment gateways (Stripe, PayPal), shipping APIs, CRM platforms, marketing tools, and custom REST/GraphQL APIs. If an API exists, we can make it work seamlessly with your application.
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 8 -->
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" id="faq-btn-8" aria-expanded="false" aria-controls="faq-answer-8">
+          <span class="faq-question-text">How do you manage project communication?</span>
+          <svg class="faq-chevron" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <div class="faq-answer-wrapper" id="faq-answer-8" role="region" aria-labelledby="faq-btn-8" hidden>
+          <div class="faq-answer">
+            We use a combination of dedicated Slack channels, weekly video calls, and project management tools like Linear or Jira. You'll have a direct point of contact throughout the project, and we share regular progress demos.
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 9 -->
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" id="faq-btn-9" aria-expanded="false" aria-controls="faq-answer-9">
+          <span class="faq-question-text">Do you sign NDAs (Non‑Disclosure Agreements)?</span>
+          <svg class="faq-chevron" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <div class="faq-answer-wrapper" id="faq-answer-9" role="region" aria-labelledby="faq-btn-9" hidden>
+          <div class="faq-answer">
+            Yes, we regularly sign NDAs to protect our clients' intellectual property and sensitive business information. We can provide our standard NDA or work with yours — whichever you prefer.
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 10 -->
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" id="faq-btn-10" aria-expanded="false" aria-controls="faq-answer-10">
+          <span class="faq-question-text">Can you scale applications in the future?</span>
+          <svg class="faq-chevron" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <div class="faq-answer-wrapper" id="faq-answer-10" role="region" aria-labelledby="faq-btn-10" hidden>
+          <div class="faq-answer">
+            Scalability is built into every project from day one. We design with cloud‑native architectures, database optimization, and load balancing in mind so your application can grow alongside your business without costly rebuilds.
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 11 -->
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" id="faq-btn-11" aria-expanded="false" aria-controls="faq-answer-11">
+          <span class="faq-question-text">How do I request a quotation?</span>
+          <svg class="faq-chevron" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <div class="faq-answer-wrapper" id="faq-answer-11" role="region" aria-labelledby="faq-btn-11" hidden>
+          <div class="faq-answer">
+            Simply reach out via our contact form or schedule a free consultation. After a quick discovery call, we'll provide a detailed proposal outlining scope, timeline, and investment. There's no obligation.
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 12 -->
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" id="faq-btn-12" aria-expanded="false" aria-controls="faq-answer-12">
+          <span class="faq-question-text">Do you work with international clients?</span>
+          <svg class="faq-chevron" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <div class="faq-answer-wrapper" id="faq-answer-12" role="region" aria-labelledby="faq-btn-12" hidden>
+          <div class="faq-answer">
+            Yes, we work with clients across multiple time zones. We use asynchronous communication and flexible meeting schedules to ensure smooth collaboration, no matter where you're located.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Support Banner -->
+    <div class="faq-banner">
+      <div class="faq-banner-bg" aria-hidden="true">
+        <div class="faq-banner-glow faq-banner-glow--left"></div>
+        <div class="faq-banner-glow faq-banner-glow--right"></div>
+      </div>
+      <div class="faq-banner-content">
+        <div class="faq-banner-text">
+          <h3 class="faq-banner-title">Didn't Find the Answer You're Looking For?</h3>
+          <p class="faq-banner-desc">
+            Our team is always ready to discuss your project requirements, answer your questions, and recommend the best technology solution for your business.
+          </p>
+        </div>
+        <div class="faq-banner-actions">
+          <a href="#" class="faq-btn faq-btn--primary" aria-label="Contact our team">
+            Contact Our Team
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+          <a href="#" class="faq-btn faq-btn--secondary" aria-label="Schedule a free consultation">
+            Schedule a Free Consultation
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="16"></line>
+              <line x1="8" y1="12" x2="16" y2="12"></line>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ==================================================
+END: Frequently Asked Questions Section
+================================================== -->
+
+<!-- ==================================================
+START: Final Call To Action Section
+================================================== -->
+<section class="cta-final" id="cta-final" aria-labelledby="cta-heading">
+  <!-- Background Layer -->
+  <div class="cta-bg" aria-hidden="true">
+    <div class="cta-mesh-gradient"></div>
+    <div class="cta-tech-grid"></div>
+    <div class="cta-circuit-lines"></div>
+    <div class="cta-hexagon-outlines"></div>
+    <div class="cta-radial-glow cta-radial-glow--green"></div>
+    <div class="cta-radial-glow cta-radial-glow--purple"></div>
+    <div class="cta-particles" id="ctaParticles"></div>
+  </div>
+
+  <div class="cta-container">
+    <!-- Section Header (optional, integrated into grid) -->
+    <div class="cta-grid">
+      <!-- Left Content -->
+      <div class="cta-content">
+        <span class="cta-label">Let's Build Something Amazing</span>
+        <h2 class="cta-heading" id="cta-heading">
+          Ready to Become Our Next <span class="text-gradient">Success Story?</span>
+        </h2>
+        <p class="cta-description">
+          Whether you're launching a startup, modernizing an existing platform, or building enterprise software,
+          XoHub Solutions is ready to transform your ideas into scalable, secure, and high-performing digital products.
+        </p>
+
+        <!-- Feature Checklist -->
+        <ul class="cta-checklist" aria-label="What you get">
+          <li class="cta-checklist-item">
+            <svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            Free Project Consultation
+          </li>
+          <li class="cta-checklist-item">
+            <svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            Transparent Development Process
+          </li>
+          <li class="cta-checklist-item">
+            <svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            Scalable Modern Technologies
+          </li>
+          <li class="cta-checklist-item">
+            <svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            Dedicated Project Support
+          </li>
+          <li class="cta-checklist-item">
+            <svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            Long‑Term Partnership
+          </li>
+          <li class="cta-checklist-item">
+            <svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            Secure & Future‑Ready Solutions
+          </li>
+        </ul>
+
+        <!-- CTA Buttons -->
+        <div class="cta-actions">
+          <a href="#" class="cta-btn cta-btn--primary" aria-label="Start your project">
+            Start Your Project
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+          <a href="#" class="cta-btn cta-btn--secondary" aria-label="Schedule a free consultation">
+            Schedule a Free Consultation
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="16"></line>
+              <line x1="8" y1="12" x2="16" y2="12"></line>
+            </svg>
+          </a>
+          <a href="#" class="cta-link" aria-label="View our services">
+            View Our Services
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Trust Badges -->
+        <div class="cta-trust" aria-label="Our guarantees">
+          <div class="trust-badge">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+            <span>100% Custom Development</span>
+          </div>
+          <div class="trust-badge">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+            <span>Transparent Communication</span>
+          </div>
+          <div class="trust-badge">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="16 18 22 12 16 6"></polyline>
+              <polyline points="8 6 2 12 8 18"></polyline>
+            </svg>
+            <span>Scalable Architecture</span>
+          </div>
+          <div class="trust-badge">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+              <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+            </svg>
+            <span>Business-Focused Solutions</span>
+          </div>
+          <div class="trust-badge">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 20h9"></path>
+              <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+            </svg>
+            <span>Future‑Proof Technology</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Visual Card -->
+      <div class="cta-visual" aria-hidden="true">
+        <div class="visual-card">
+          <div class="visual-dashboard">
+            <!-- Floating chart bars -->
+            <div class="dashboard-chart">
+              <div class="chart-bar" style="--h: 70%;"></div>
+              <div class="chart-bar" style="--h: 85%;"></div>
+              <div class="chart-bar" style="--h: 55%;"></div>
+              <div class="chart-bar" style="--h: 92%;"></div>
+              <div class="chart-bar" style="--h: 65%;"></div>
+            </div>
+            <!-- Circular progress -->
+            <div class="circle-progress">
+              <svg viewBox="0 0 100 100" width="80" height="80">
+                <circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="6"/>
+                <circle cx="50" cy="50" r="40" fill="none" stroke="url(#ctaGrad)" stroke-width="6" stroke-dasharray="160 90" stroke-linecap="round" transform="rotate(-90 50 50)"/>
+                <defs>
+                  <linearGradient id="ctaGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#A3E635"/>
+                    <stop offset="100%" stop-color="#A855F7"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <!-- Floating code snippet -->
+            <div class="code-snippet-card">
+              <code>
+                <span class="code-purple">const</span>
+                <span class="code-green"> deploy</span>
+                <span class="code-purple">=</span>
+                <span class="code-string">"success"</span>
+              </code>
+            </div>
+            <!-- Small hexagon -->
+            <div class="hex-decoration">
+              <svg width="40" height="46" viewBox="0 0 40 46" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <polygon points="20 3 37 12 37 34 20 43 3 34 3 12" fill="rgba(168,85,247,0.1)"/>
+                <circle cx="20" cy="20" r="4" fill="#A3E635" stroke="none"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ==================================================
+END: Final Call To Action Section
+================================================== -->
+
+
+
+
+
+
+
+ <!-- ============================================================
+    PREMIUM FOOTER — Phase 13 (Final)
+    ============================================================ -->
+    <footer id="main-footer" class="main-footer" role="contentinfo" aria-label="Site footer">
+        <!-- Background Decorations -->
+        <div class="footer__bg" aria-hidden="true">
+            <div class="footer-bg__glow footer-bg__glow--1"></div>
+            <div class="footer-bg__glow footer-bg__glow--2"></div>
+            <div class="footer-bg__glow footer-bg__glow--3"></div>
+            <div class="footer-bg__orb footer-bg__orb--1"></div>
+            <div class="footer-bg__orb footer-bg__orb--2"></div>
+            <div class="footer-bg__shape footer-bg__shape--1"></div>
+            <div class="footer-bg__shape footer-bg__shape--2"></div>
+            <div class="footer-bg__shape footer-bg__shape--3"></div>
+            <!-- Decorative grid -->
+            <svg class="footer-bg__grid" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M0 400 L1200 400" stroke="rgba(255,255,255,0.02)" stroke-width="1"/>
+                <path d="M300 0 L300 800" stroke="rgba(255,255,255,0.02)" stroke-width="1"/>
+                <path d="M600 0 L600 800" stroke="rgba(255,255,255,0.02)" stroke-width="1"/>
+                <path d="M900 0 L900 800" stroke="rgba(255,255,255,0.02)" stroke-width="1"/>
+                <circle cx="300" cy="250" r="180" stroke="rgba(192,227,74,0.03)" stroke-width="1" stroke-dasharray="8 8"/>
+                <circle cx="900" cy="550" r="200" stroke="rgba(124,58,237,0.03)" stroke-width="1" stroke-dasharray="6 10"/>
+                <circle cx="600" cy="400" r="280" stroke="rgba(192,227,74,0.02)" stroke-width="1"/>
+            </svg>
+        </div>
+
+        <div class="container footer__inner">
+            <!-- ====== TOP FOOTER ====== -->
+            <div class="footer__top">
+                <!-- Column 1: Brand Area -->
+                <div class="footer__column footer__column--brand">
+                    <a href="http://127.0.0.1:5500/" class="footer__logo" aria-label="XoHub Solutions Home">
+                        <img 
+                            src="assets/public/images/XoHub_Solutions_Logo.jpeg" 
+                            alt="XoHub Solutions Logo" 
+                            class="footer__logo-image"
+                            width="150" 
+                            height="150" 
+                            loading="lazy"
+                        />
+                        <!-- <span class="footer__logo-text">XoHub <span class="footer__logo-highlight">Solutions</span></span> -->
+                    </a>
+                    <!-- <p class="footer__tagline">Your Digital Growth Partner</p> -->
+                    <p class="footer__description">
+                        XoHub Solutions is a modern software company specializing in scalable web applications,
+                        enterprise software, AI-powered solutions, cloud technologies, and digital transformation.
+                    </p>
+                </div>
+
+                <!-- Column 2: Company -->
+                <div class="footer__column">
+                    <h4 class="footer__column-title">Company</h4>
+                    <ul class="footer__links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Our Team</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Services -->
+                <div class="footer__column">
+                    <h4 class="footer__column-title">Services</h4>
+                    <ul class="footer__links">
+                        <li><a href="#">Web Development</a></li>
+                        <li><a href="#">Custom Software</a></li>
+                        <li><a href="#">UI/UX Design</a></li>
+                        <li><a href="#">E-Commerce Solutions</a></li>
+                        <li><a href="#">Cloud Solutions</a></li>
+                        <li><a href="#">AI Automation</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Products -->
+                <div class="footer__column">
+                    <h4 class="footer__column-title">Products</h4>
+                    <ul class="footer__links">
+                        <li><a href="#">Business Management System</a></li>
+                        <li><a href="#">CRM Platform</a></li>
+                        <li><a href="#">HR Management</a></li>
+                        <li><a href="#">E-Commerce Platform</a></li>
+                        <li><a href="#">AI Business Assistant</a></li>
+                        <li><a href="#">Custom Enterprise Software</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 5: Resources -->
+                <div class="footer__column">
+                    <h4 class="footer__column-title">Resources</h4>
+                    <ul class="footer__links">
+                        <li><a href="http://127.0.0.1:5500/case_studies.html">Case Studies</a></li>
+                        <li><a href="http://127.0.0.1:5500/documentation.html">Documentation</a></li>
+                        <li><a href="http://127.0.0.1:5500/faqs.html">FAQs</a></li>
+                        <li><a href="http://127.0.0.1:5500/support-center.html">Support Center</a></li>
+                        <li><a href="http://127.0.0.1:5500/privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="http://127.0.0.1:5500/terms-conditions.html">Terms &amp; Conditions</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 6: Contact & Social -->
+                <div class="footer__column footer__column--contact">
+                    <h4 class="footer__column-title">Contact</h4>
+                    <ul class="footer__contact-list">
+                        <li>
+                            <span class="contact-icon"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></span>
+                            <span>Pakistan, Peshawar, IT Park</span>
+                        </li>
+                        <li>
+                            <span class="contact-icon"><i class="fas fa-envelope" aria-hidden="true"></i></span>
+                            <a href="mailto:info@xohubsolutions.com">info@xohubsolutions.com</a>
+                        </li>
+                        <li>
+                            <span class="contact-icon"><i class="fas fa-phone" aria-hidden="true"></i></span>
+                            <a href="tel:+923477300226">+92 347 7300226</a>
+                        </li>
+                        <li>
+                            <span class="contact-icon"><i class="fas fa-clock" aria-hidden="true"></i></span>
+                            <span>Mon – Fri, 9:00 AM – 6:00 PM</span>
+                        </li>
+                    </ul>
+                    <!-- Social Icons -->
+                    <div class="footer__social">
+                        <a href="https://www.facebook.com/xohubsolutions" aria-label="Facebook" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/xohubsolutions" aria-label="Instagram" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/xohubsolutions" aria-label="LinkedIn" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.youtube.com/c/XohubSolutions" aria-label="YouTube" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ====== NEWSLETTER & TRUST BADGES ====== -->
+            <div class="footer__newsletter">
+                <div class="newsletter__content">
+                    <div class="newsletter__header">
+                        <span class="newsletter__icon"><i class="fas fa-envelope" aria-hidden="true"></i></span>
+                        <div>
+                            <h4 class="newsletter__title">Stay Updated</h4>
+                            <p class="newsletter__description">
+                                Subscribe to receive the latest technology insights, product updates, development tips,
+                                and company news.
+                            </p>
+                        </div>
+                    </div>
+                    <form class="newsletter__form" id="newsletter-form" novalidate>
+                        <div class="newsletter__input-group">
+                            <input 
+                                type="email" 
+                                class="newsletter__input" 
+                                id="newsletter-email" 
+                                placeholder="Enter your email address"
+                                aria-label="Email address for newsletter"
+                                required
+                            />
+                            <button type="submit" class="newsletter__button">
+                                Subscribe
+                                <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <div class="newsletter__error" id="newsletter-error" role="alert" aria-live="polite"></div>
+                        <div class="newsletter__success" id="newsletter-success" role="alert" aria-live="polite">
+                            Thank you for subscribing!
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Trust Badges -->
+                <div class="footer__trust-badges">
+                    <div class="trust-badge">
+                        <span class="trust-badge__icon"><i class="fas fa-microchip" aria-hidden="true"></i></span>
+                        <span class="trust-badge__text">Modern Technologies</span>
+                    </div>
+                    <div class="trust-badge">
+                        <span class="trust-badge__icon"><i class="fas fa-shield-alt" aria-hidden="true"></i></span>
+                        <span class="trust-badge__text">Secure Development</span>
+                    </div>
+                    <div class="trust-badge">
+                        <span class="trust-badge__icon"><i class="fas fa-expand-arrows-alt" aria-hidden="true"></i></span>
+                        <span class="trust-badge__text">Scalable Solutions</span>
+                    </div>
+                    <div class="trust-badge">
+                        <span class="trust-badge__icon"><i class="fas fa-handshake" aria-hidden="true"></i></span>
+                        <span class="trust-badge__text">Long-Term Support</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ====== BOTTOM FOOTER ====== -->
+        <div class="footer__bottom">
+            <div class="container footer__bottom-inner">
+                <div class="footer__copyright">
+                    <p>&copy; 2026 XoHub Solutions. All Rights Reserved.</p>
+                </div>
+                <div class="footer__credit">
+                    <p>Designed &amp; Developed with <span class="credit-heart">❤️</span> by XoHub Solutions</p>
+                </div>
+                <div class="footer__bottom-links">
+                    <a href="#">Privacy</a>
+                    <span class="footer__bottom-divider">|</span>
+                    <a href="#">Terms</a>
+                    <span class="footer__bottom-divider">|</span>
+                    <a href="#">Cookies</a>
+                    <span class="footer__bottom-divider">|</span>
+                    <a href="#">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ====== BACK TO TOP BUTTON ====== -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+    <!-- ================ END FOOTER ================ -->
+
+    <!-- ================== JAVASCRIPT ================== -->
+    <script src="assets/js/main.js" defer></script>
+</body>
+
+</html>

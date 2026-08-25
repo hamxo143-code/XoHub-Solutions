@@ -1,0 +1,364 @@
+Name: XoHub Solutions
+Tagline: Your Digital Growth Partner
+Primary Brand Colors:
+1. HEX
+#81c752
+RGB
+rgba(129, 199, 82)
+HSL
+96, 51, 55
+
+2. HEX
+#7c50cc
+RGB
+rgba(124, 80, 204)
+HSL
+261, 55, 56
+
+3. Black 
+4. White 
+
+========================
+
+  /* Typography */
+    --font-primary: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+========================
+Services:
+1. Social media marketing 
+2. Paid advertising (Google Ads, Facebook Ads, Instagram Ads, LinkedIn Ads, Twitter Ads, YouTube Ads, TikTok Ads, etc.)
+3. Content management systems
+4. Enterprise resource planning
+5. SEO + Advance latest SEO Off page, On page, Technical SEO, Ai era SEO AEO, GEO etc
+6. Web development
+7. Mobile app development
+8. E-commerce solutions
+9. Cloud services (Hostinger, AWS, Google Cloud, Azure, GoDaddy, BlueHost, DigitalOcean etc)
+10. Data analytics and business intelligence
+11. Cybersecurity solutions
+12. IT consulting and strategy
+13. Digital transformation services
+14. Custom software development
+15. UI/UX design
+16. CRM solutions
+17. IT support and maintenance
+18. Freelancing services (Fiverr, Upwork, Freelancer, etc.)
+19. Chatbot development and AI integration
+20. Business process automation (Make.com, Zapier, Integromat, n8n, etc.)
+21. Wordpress web development and customization
+22. Shopify web development and customization
+23. Training and workshops (Digital marketing, SEO, Web development, AI tools, etc.)
+24. Internship and mentorship programs
+25. Teach and guide on latest demanding skills and technologies (AI tools, Business automation, Cybersecurity, etc.)
+26. Graphic design and branding
+27. Own products and services (XoHub Solutions products, tools, and services)
+
+===========================
+
+Social Media Handles:
+1. Facebook: https://www.facebook.com/XoHubSolutions/
+2. Instagram: https://www.instagram.com/xohubsolutions/
+3. LinkedIn: www.linkedin.com/in/xohubsolutions
+4. Twitter (X): https://twitter.com/@XoHubSolutions
+5. YouTube: https://www.youtube.com/@XoHubSolutions
+6. TikTok: https://www.tiktok.com/@xohubsolutions
+7. Pinterest: https://www.pinterest.com/xohubsolutions/
+8. Reddit: https://www.reddit.com/user/XoHubSolutions
+9. Quora: https://qr.ae/pFMlff or https://xohubsolutions.quora.com/
+10. GitHub: https://github.com/hamxo143-code/XoHub-Solutions
+
+===========================
+Contact Information:
+1. Email: info@xohubsolutions.com
+2. WhatsApp: +92 347 7300 226
+3. Address: Board Bazar, IT Park, Near: NIC Office, Peshawar, Khyber Pakhtunkhwa, Pakistan
+4. Phone: +92 336 9598 373
+5. Website: https://www.xohubsolutions.com/
+6. Support: https://www.xohubsolutions.com/support
+7. Mon – Fri, 24, Saturday 9:00 AM – 3:00 PM, Sunday closed
+===========================
+
+Company Overview:
+XoHub Solutions - Your Digital Growth Partner
+Owner: Muhammad Hamza - Nickname: Hamxo written (HamXo) or Mr HamXo
+
+Client and brands we work with:
+1. Mick (Repeat Buyer ) - Netherlands:
+
+   - Website: boarsandbucks.com | scanixx.com
+   - Platform: Shopify
+   - Category: E-commerce, Dropshipping
+   - Mick feedback on Fiverr: "Working with Hamxo in Website Development was a stellar experience! The DELIVERY was completely BUG-FREE, backed with comprehensive DOCUMENTATION, showcasing noteworthy PROFESSIONALISM. Hamxo's proactive communication and ability to go ABOVE AND BEYOND made the collaboration seamless and on time—truly impressive!"
+   - Rating: 5/5
+2. Guynaim (Repeat Buyer) - Isarael:
+   - Description: Guynaim is a repeat buyer from Israel who has worked with Hamxo on multiple projects. They have praised Hamxo for his excellent work in building and structuring their automation system. Guynaim has highlighted Hamxos responsiveness, professionalism, and clear communication throughout the entire process.
+
+   - Website: https://hula.co.il/
+   - Platform: n8n
+   - Category: E-commerce, Automation, Workflow, Business Process Automation
+   - Guynaim feedback on Fiverr: "Hamxo did an excellent job building and structuring our automation system. He was very responsive, professional, and easy to communicate with throughout the entire process. The workflow he delivered is well-organized, clear, and works reliably. He also provided detailed documentation and explanations, which makes it much easier for us to manage and expand the system moving forward. Highly recommended — great experience overall, and I'm looking forward to working together on the next phase."
+   - Rating: 5/5
+
+3. Robhoosein (Repeat Buyer) - Canada:
+   - Description: Robhoosein is a repeat buyer from Canada I worked with 8 different brands (https://bramaleacitycentre.ca/, https://www.cambridge-centre.com/, https://coquitlamcentre.com/, https://shopprairiemall.com/, https://shopsevenoaks.com/, https://shoppersmallbrandon.com/, https://shopstlaurent.com/, https://thecentremall.com/) 
+   - Website: https://www.cambridge-centre.com/stores/
+   - Platform: Zoho Creator, Zoho CRM, Zoho Flow, Zoho Desk, Zoho Analytics, Zoho Forms, ZoBot
+   - Category: E-commerce Shopify stores
+   - Robhoosein feedback on Fiverr: "HamXo is always a pleasure to work with; his attention to detail, his experience and knowledge always helps us work through what we want to accomplish and achieve. I have worked with him a few times ,and it s always top-notch service and expertise."
+   - Rating: 5/5
+
+4. Rachel (Repeat Buyer) - United Arab Emirates:
+
+   - Website: https://bizzangels.com/ | https://thebizzadvisors.com/
+   - Platform: WordPress, WooCommerce
+   - Category: E-commerce, Online Store
+   - Rachel feedback on Fiverr: "Hamxo is an exceptional professional! He delivered a flawless website with meticulous attention to detail. His expertise in WordPress and WooCommerce is evident, and he went above and beyond to ensure the project exceeded expectations. Communication was seamless, and he provided valuable insights throughout the process. I highly recommend Hamxo for anyone seeking top-notch web development services."
+   - Rating: 5/5
+
+5. Darrenfenton (Repeat Buyer) - United Kingdom:
+   - Description: Darrenfenton is a repeat buyer from the United Kingdom who has collaborated with Hamxo on multiple projects make.com. Darrenfenton has consistently praised Hamxo for his exceptional work, professionalism, and ability to deliver high-quality results. Their ongoing partnership reflects a strong working relationship built on trust and mutual respect.
+
+   - Website: https://www.outsourcecad.com/ | https://www.thefatbutcher.co.uk/
+   - Platform: make.com
+   - Category: E-commerce
+   - Darrenfenton feedback on Fiverr: "Great guy, did an amazing job, will be doing more jobs for me"
+   - Rating: 5/5
+
+6. Salvatore (Repeat Buyer) - Australia:
+   - Description: Salvatore is a repeat buyer from Australia who has worked with Hamxo on multiple projects. Salvatore has consistently praised Hamxo for his exceptional work, professionalism, and ability to deliver high-quality results. Their ongoing partnership reflects a strong working relationship built on trust and mutual respect.
+
+   - Website: https://matchmycommercialpropertyrequirements.com.au/
+   - Platform: WordPress, WooCommerce
+   - Category: E-commerce
+   - Salvatore feedback on Fiverr: "I have worked with several top-rated freelancers over the past three years while building my website, www.mmcpr.com.au⁠� — and Hamxo has been the best by far. He's polite, extremely knowledgeable, and consistently goes above and beyond. He fixed issues that others couldn't, cleaned up the site, and added impressive visual elements like sliders. I was particularly impressed with how he handled backend testing, bug fixes, theme improvements, and email notifications, just to name a few. Because of the quality of his work, I've already engaged him for additional updates ahead of our upcoming launch at the end of the week. Thank you, Hamxo — a true top freelancer. Sal, MMCPR"
+   - Rating: 5/5
+7. Pam (Repeat Buyer) - United States:
+   - Description: Pam is a repeat buyer from the United States who has collaborated with Hamxo on multiple projects. Pam has consistently praised Hamxo for his exceptional work, professionalism, and ability to deliver high-quality results. Their ongoing partnership reflects a strong working relationship built on trust and mutual respect.
+
+   - Website: http://landmarkrellc.com/
+   - Platform: WordPress
+   - Category: Real Estate
+   - Pam feedback on Fiverr: "I Highly recommend Mr Hamxo!!! He exceeded my expectations with my website creation and integrations within the website and more!!!! Every milestone was delivered on time!!! I look forward to continuing to work with Mr Hamxo on future projects !!!!"
+   - Rating: 5/5
+
+Other clients and brands we work with:
+   - Fiverr
+   - Upwork
+   - Freelancer
+   - PeoplePerHour
+   - Toptal
+   - Guru
+   - Workana
+   - Truelancer
+   - Local clients and businesses in Pakistan and worldwide
+
+We are have worked and have a lot of client postive feedback and done almost all type of projects we offering services in. We have a strong portfolio of successful projects and satisfied clients across various industries and platforms. But all client projects feedback we are not authorized to share publicly due to confidentiality agreements. Also there are many projects running on localhost
+
+============================
+
+800+
+Projects Delivered
+
+98%
+Client Satisfaction
+
+6+
+Years Experience
+
+76+
+Industries Served
+
+============================
+
+Rating Breakdown
+Communication level
+4.9
+Quality of delivery
+4.9
+Value of delivery
+4.9
+
+============================
+
+Our team:
+- Name: Muhammad Hamza
+Full stack developer, Digital marketing expert, SEO specialist, AI tools expert, Business automation expert, Cybersecurity expert, IT consultant, and founder of XoHub Solutions. With over 6 years of experience in the digital industry, Muhammad Hamza has successfully led numerous projects across various domains. His expertise spans web development, mobile app development, digital marketing, SEO, business automation, and cybersecurity. He is passionate about helping businesses grow and thrive in the digital landscape.
+
+- Name: Attiq Ullah
+Ai engineer, AI tools expert, Business automation expert, and digital marketing specialist. With a strong background in artificial intelligence and machine learning, Attiq Ullah has been instrumental in developing innovative solutions for clients. His expertise includes AI integration, chatbot development, and business process automation. He is dedicated to leveraging technology to drive efficiency and growth for businesses.
+
+- Name: Sania Khan
+Social media marketing specialist, content creator, and digital strategist. Sania Khan has a keen eye for trends and a deep understanding of social media platforms. She excels in creating engaging content, managing social media campaigns, and developing strategies that enhance brand visibility and engagement. Her creativity and strategic thinking have contributed to the success of numerous marketing initiatives.
+
+- Name: Adnan Khan 
+Wordpress developer, web designer, and UI/UX specialist. Adnan Khan has extensive experience in designing and developing user-friendly websites that provide seamless user experiences. His skills in WordPress customization, responsive design, and UI/UX principles have helped clients achieve their digital goals effectively.
+
+- Name: M Hamza 
+make.com, zapier, integromat, n8n expert, business automation specialist, and workflow optimization consultant. M Hamza has a proven track record of implementing efficient automation solutions that streamline business processes and enhance productivity. His expertise in various automation platforms enables him to create tailored solutions that meet the unique needs of each client.
+
+- Name: Rashid Khan
+Flutter developer, mobile app development specialist, and cross-platform application expert. Rashid Khan has a strong background in developing high-quality mobile applications for both Android and iOS platforms. His proficiency in Flutter allows him to create visually appealing and functional apps that cater to diverse business requirements.
+
+- Name: Mujtaba
+Shopify developer, e-commerce specialist, and online store optimization expert. Mujtaba has extensive experience in building and customizing Shopify stores, ensuring optimal performance and user experience. His skills in e-commerce strategy and conversion rate optimization have helped clients achieve significant growth in their online businesses.
+
+- Name: Maryam
+Graphic designer, branding specialist, and visual communication expert. Maryam has a talent for creating compelling visual identities that resonate with target audiences. Her expertise in graphic design, branding, and visual storytelling has contributed to the success of numerous marketing campaigns and brand initiatives.
+
+- Name: Abdul Aziz
+Flutter Developer + courses teacher, mobile app development specialist, and cross-platform application expert. Abdul Aziz has a strong background in developing high-quality mobile applications for both Android and iOS platforms. His proficiency in Flutter allows him to create visually appealing and functional apps that cater to diverse business requirements. Additionally, he is passionate about teaching and sharing his knowledge with aspiring developers through courses and workshops.
+
+- Name: Zahid 
+Project manager, business analyst, and team coordinator. Zahid has a wealth of experience in managing complex projects, ensuring timely delivery, and maintaining high-quality standards. His skills in project management methodologies, stakeholder communication, and risk management have been instrumental in the successful execution of numerous projects across various industries.
+
+- Name: Aftab Khan
+QA engineer, software tester, and quality assurance specialist. Aftab Khan has a keen eye for detail and a strong understanding of software testing methodologies. His expertise in identifying bugs, ensuring functionality, and maintaining software quality has contributed to the successful delivery of numerous projects.
+
+- Name: Ali Raza
+MERN stack developer, full-stack web development specialist, and JavaScript expert. Ali Raza has extensive experience in building dynamic and responsive web applications using the MERN stack (MongoDB, Express.js, React.js, Node.js). His skills in front-end and back-end development enable him to create seamless user experiences and robust application architectures.
+
+- Name: Waseem butt
+Python developer, data analyst, and machine learning specialist. Waseem Butt has a strong background in Python programming, data analysis, and machine learning algorithms. His expertise in data manipulation, statistical analysis, and predictive modeling has helped clients derive valuable insights and make informed business decisions.
+
+- Name: Muhammad Hamza (Owner of XoHub Solutions)
+Cybersecurity expert, ethical hacker, and IT security consultant. Muhammad Hamza has a deep understanding of cybersecurity principles, threat analysis, and vulnerability assessment. His skills in penetration testing, network security, and risk mitigation have been instrumental in safeguarding clients digital assets and ensuring compliance with industry standards.
+
+============================
+
+XoHub Solutions Muhammad Hamza Misson:
+My missin is to guide, train, make skillful youth (Specially Pakhtun - Pathan) of Kohat, Hangu, Karak, Peshawar and many more backworld areas make it, also make and do something for our country Pakistan and for Islam, also help to grow our country by exporting IT services to international customers to import different currency to our country Pakistan.
+
+Current Enrolled Internee:
+- Name: Aftab
+- Course: Automation (Make.com, Zapier, n8n)
+- Course duration: 3 months
+
+- Name: Sabir
+- Course: Automation (Make.com, Zapier, n8n)
+- Course duration: 3 months
+
+- Name: Attiq Ullah
+- Course: Automation (Make.com, Zapier, n8n)
+- Course duration: 3 months
+
+- Name: Hamna
+- Course: Automation (Make.com, Zapier, n8n)
+- Course duration: 3 months
+
+
+============================
+
+XoHub Solutions Logo Meaning
+The Name
+
+"Xo" comes from my nickname, HamXo.
+
+It represents my personal identity, passion, and journey as a developer and entrepreneur.
+
+"Hub" represents a central place where businesses can find all the digital solutions they need under one roof.
+
+Together,
+
+XoHub means:
+
+A central hub of technology, innovation, and digital growth built around my vision.
+
+The Circuit Design
+
+The green and purple circuit lines surrounding XO symbolize modern technology.
+
+They represent:
+
+Software Development
+Artificial Intelligence
+Automation
+Web Development
+Mobile Applications
+Digital Transformation
+Innovation
+Connectivity
+
+The symmetrical layout reflects structure, precision, scalability, and reliability—the qualities every technology partner should deliver.
+
+The Colors
+🟢 Green
+
+Represents:
+
+Growth
+Success
+Innovation
+Opportunity
+Progress
+Business Development
+
+It reflects our mission of helping businesses grow through technology.
+
+🟣 Purple
+
+Represents:
+
+Creativity
+Intelligence
+Premium Quality
+Technology
+Vision
+Innovation
+
+It highlights our commitment to delivering modern, high-quality digital solutions.
+
+⚫ Black
+
+The bold XOHUB typography represents:
+
+Strength
+Trust
+Professionalism
+Stability
+Confidence
+
+It communicates that XoHub Solutions is a dependable technology partner.
+
+Typography
+
+The logo uses two visual weights to communicate balance.
+
+XOHUB is bold and confident, representing a strong technical foundation.
+SOLUTIONS is lighter and modern, representing flexibility, innovation, and a wide range of services.
+
+Together they express:
+
+Strong technology with flexible digital solutions.
+
+Tagline
+
+"Your Digital Growth Partner"
+
+This reflects the company's philosophy.
+
+Rather than simply delivering websites or software, XoHub Solutions partners with businesses to support their long-term digital growth through technology, automation, marketing, and continuous innovation.
+
+Overall Brand Message
+
+The XoHub Solutions logo represents the connection between people, technology, and business growth.
+
+It reflects a company that combines creativity, technical expertise, and innovation to build digital solutions that help businesses grow, scale, and succeed in an increasingly connected world.
+
+Short Brand Story (Perfect for your About page)
+
+XoHub Solutions was built on a simple vision: to become a trusted digital growth partner for businesses worldwide. "Xo" comes from my personal nickname, HamXo, symbolizing the passion and dedication behind the brand, while "Hub" represents a central place where businesses can access innovative technology solutions. The circuit-inspired logo reflects connectivity, software, AI, automation, and digital transformation, while our green and purple identity represents growth, creativity, innovation, and trust. Every project we build is guided by one mission—helping businesses grow through technology.
+
+
+============================
+
+  
+
+
+
+
+
+

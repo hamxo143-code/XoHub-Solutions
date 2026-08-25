@@ -1,0 +1,1779 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>XoHub Solutions — Your Digital Growth Partner</title>
+
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;5000;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome 6 (Free) — Updated to stable version for fa-x-twitter support -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="assets/public/images/XoHub_Solutions_Logo.png" />
+    <link rel="apple-touch-icon" href="assets/public/images/XoHub_Solutions_Logo.png" />
+
+    <!-- Primary Stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- Responsive Stylesheet -->
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+</head>
+
+<body>
+    <!-- ============================================================
+    MAIN HEADER — Sticky, contains Top Bar + Navigation
+    ============================================================ -->
+    <header id="main-header" role="banner" aria-label="Site header">
+        <!-- ================== TOP ANNOUNCEMENT BAR ================== -->
+        <div id="top-bar" role="complementary" aria-label="Announcement bar">
+            <div class="container top-bar__inner">
+                <!-- Left: Rocket icon + tagline -->
+                <div class="top-bar__left">
+                    <span class="top-bar__icon" aria-hidden="true">
+                        <i class="fas fa-rocket"></i>
+                    </span>
+                    <p class="top-bar__text">
+                        We help brands
+                        <span class="highlight-lime">grow digitally</span>
+                        with innovative solutions
+                    </p>
+                </div>
+
+                <!-- Right: Quick links & social icons -->
+                <div class="top-bar__right">
+                    <nav class="top-bar__nav" aria-label="Quick links">
+                        <a href="#" class="top-bar__link">Career</a>
+                        <a href="127.0.0.1:5500/blog.html" class="top-bar__link">Blog</a>
+                        <a href="127.0.0.1:5500/contact.html" class="top-bar__link">Contact Us</a>
+                    </nav>
+                    <div class="top-bar__socials">
+                        <a href="https://www.linkedin.com/in/xohubsolutions" aria-label="LinkedIn" class="social-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.youtube.com/c/XohubSolutions" aria-label="YouTube" class="social-icon">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@xohubsolutions" aria-label="TikTok" class="social-icon">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="https://www.instagram.com/xohubsolutions" aria-label="Instagram" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.facebook.com/xohubsolutions" aria-label="Facebook" class="social-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ================ END TOP BAR ================ -->
+
+        <!-- ================== MAIN NAVIGATION ================== -->
+        <nav id="main-nav" class="main-nav" role="navigation" aria-label="Primary navigation" data-scroll="false">
+            <div class="container main-nav__inner">
+                <!-- Logo — FIXED: proper dimensions + text uncommented -->
+                <div class="logo">
+                    <a href="http://127.0.0.1:5500/" aria-label="XoHub Solutions — Home">
+                        <img src="assets/public/images/XoHub_Solutions_Logo.png" alt="XoHub Solutions Logo"
+                            class="logo__image" width="180" height="180" loading="lazy" />
+                        <!-- <span class="logo__text">XoHub <span class="logo__highlight">Solutions</span></span> -->
+                    </a>
+                </div>
+
+                <!-- Center Navigation Links (desktop) — Restructured for cleaner IA -->
+                <ul class="nav-links" id="nav-links" role="menubar">
+                    <li role="none"><a href="http://127.0.0.1:5500/" role="menuitem" class="nav-link">Home</a></li>
+
+                    <!-- Company dropdown -->
+                    <li role="none" class="dropdown">
+                        <a href="#" role="menuitem" class="nav-link dropdown-toggle" aria-haspopup="true"
+                            aria-expanded="false">
+                            Company
+                            <i class="fas fa-chevron-down dropdown-icon" aria-hidden="true"></i>
+                        </a>
+                        <ul class="dropdown-menu" role="menu" aria-label="Company">
+                            <li role="none"><a href="about.html" role="menuitem" class="dropdown-link">About Us</a></li>
+                            <li role="none"><a href="#" role="menuitem" class="dropdown-link">Careers</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Services dropdown — Expanded -->
+                    <li role="none" class="dropdown">
+                        <a href="http://127.0.0.1:5500/services.html" role="menuitem" class="nav-link dropdown-toggle"
+                            aria-haspopup="true" aria-expanded="false">
+                            Services
+                            <i class="fas fa-chevron-down dropdown-icon" aria-hidden="true"></i>
+                        </a>
+                        <ul class="dropdown-menu" role="menu" aria-label="Services">
+                            <li role="none"><a href="http://127.0.0.1:5500/web-development.html" role="menuitem"
+                                    class="dropdown-link">Web Development</a></li>
+                            <li role="none"><a href="#" role="menuitem" class="dropdown-link">Mobile Development</a>
+                            </li>
+                            <li role="none"><a href="#" role="menuitem" class="dropdown-link">UI/UX Design</a></li>
+                            <li role="none"><a href="#" role="menuitem" class="dropdown-link">AI Solutions</a></li>
+                            <li role="none"><a href="#" role="menuitem" class="dropdown-link">Cloud Solutions</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Products dropdown -->
+                    <li role="none" class="dropdown">
+                        <a href="#" role="menuitem" class="nav-link dropdown-toggle" aria-haspopup="true"
+                            aria-expanded="false">
+                            Products
+                            <i class="fas fa-chevron-down dropdown-icon" aria-hidden="true"></i>
+                        </a>
+                        <ul class="dropdown-menu" role="menu" aria-label="Products">
+                            <li role="none"><a href="#" role="menuitem" class="dropdown-link">HubCRM</a></li>
+                            <li role="none"><a href="#" role="menuitem" class="dropdown-link">Analytics Pro</a></li>
+                            <li role="none"><a href="#" role="menuitem" class="dropdown-link">AI Assistant</a></li>
+                            <li role="none"><a href="#" role="menuitem" class="dropdown-link">Cloud Platform</a></li>
+                        </ul>
+                    </li>
+
+                    <li role="none"><a href="http://127.0.0.1:5500/portfolio.html" role="menuitem"
+                            class="nav-link">Portfolio</a></li>
+
+                    <!-- Resources dropdown -->
+                    <li role="none" class="dropdown">
+                        <a href="#" role="menuitem" class="nav-link dropdown-toggle" aria-haspopup="true"
+                            aria-expanded="false">
+                            Resources
+                            <i class="fas fa-chevron-down dropdown-icon" aria-hidden="true"></i>
+                        </a>
+                        <ul class="dropdown-menu" role="menu" aria-label="Resources">
+                            <li role="none"><a href="http://127.0.0.1:5500/blog.html" role="menuitem"
+                                    class="dropdown-link">Blog</a></li>
+                            <li role="none"><a href="http://127.0.0.1:5500/case_studies.html" role="menuitem"
+                                    class="dropdown-link">Case Studies</a></li>
+                            <li role="none"><a href="http://127.0.0.1:5500/documentation.html" role="menuitem"
+                                    class="dropdown-link">Documentation</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- <li role="none"><a href="http://127.0.0.1:5500/contact.html" role="menuitem" class="nav-link">Contact</a></li> -->
+                </ul>
+
+                <!-- Right side: Search + CTA -->
+                <div class="nav-actions">
+                    <button class="search-btn" aria-label="Search" id="search-toggle">
+                        <i class="fas fa-search" aria-hidden="true"></i>
+                    </button>
+                    <a href="http://127.0.0.1:5500/contact.html" class="btn-primary">
+                        Get a Free Quote
+                        <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                    </a>
+                </div>
+
+                <!-- Hamburger (mobile) -->
+                <button class="hamburger" id="hamburger" aria-label="Open main menu" aria-expanded="false"
+                    aria-controls="mobile-menu">
+                    <span class="hamburger__line"></span>
+                    <span class="hamburger__line"></span>
+                    <span class="hamburger__line"></span>
+                </button>
+            </div>
+        </nav>
+        <!-- ================ END MAIN NAV ================ -->
+    </header>
+    <!-- ================ END HEADER ================ -->
+
+    <!-- ==================================================
+START: Cookie Policy Hero Banner
+================================================== -->
+    <section id="cookie-hero" class="cookie-hero" aria-label="Cookie Policy Hero Banner - XoHub Solutions">
+        <!-- Background Decorations -->
+        <div class="cookie-hero__bg" aria-hidden="true">
+            <div class="cookie-hero__glow cookie-hero__glow--1"></div>
+            <div class="cookie-hero__glow cookie-hero__glow--2"></div>
+            <div class="cookie-hero__glow cookie-hero__glow--3"></div>
+            <div class="cookie-hero__orb cookie-hero__orb--1"></div>
+            <div class="cookie-hero__orb cookie-hero__orb--2"></div>
+            <div class="cookie-hero__shape cookie-hero__shape--1"></div>
+            <div class="cookie-hero__shape cookie-hero__shape--2"></div>
+            <svg class="cookie-hero__grid" viewBox="0 0 1000 800" fill="none" xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true">
+                <circle cx="150" cy="150" r="120" stroke="rgba(124,58,237,0.03)" stroke-width="1"
+                    stroke-dasharray="6 6" />
+                <circle cx="850" cy="650" r="160" stroke="rgba(192,227,74,0.03)" stroke-width="1"
+                    stroke-dasharray="8 8" />
+                <circle cx="500" cy="400" r="240" stroke="rgba(124,58,237,0.02)" stroke-width="1" />
+                <path d="M250 0 L250 800" stroke="rgba(192,227,74,0.02)" stroke-width="1" />
+                <path d="M750 0 L750 800" stroke="rgba(124,58,237,0.02)" stroke-width="1" />
+                <line x1="350" y1="250" x2="500" y2="180" stroke="rgba(124,58,237,0.02)" stroke-width="1.5" />
+                <line x1="500" y1="180" x2="650" y2="250" stroke="rgba(192,227,74,0.02)" stroke-width="1.5" />
+                <line x1="650" y1="250" x2="500" y2="450" stroke="rgba(124,58,237,0.02)" stroke-width="1.5" />
+                <line x1="500" y1="450" x2="350" y2="250" stroke="rgba(192,227,74,0.02)" stroke-width="1.5" />
+            </svg>
+            <div class="particle particle--1"></div>
+            <div class="particle particle--2"></div>
+            <div class="particle particle--3"></div>
+            <div class="particle particle--4"></div>
+            <div class="particle particle--5"></div>
+            <div class="particle particle--6"></div>
+        </div>
+
+        <div class="container cookie-hero__inner">
+            <!-- Hero Content -->
+            <div class="cookie-hero__main">
+                <div class="cookie-hero__header">
+                    <span class="cookie-hero__badge">COOKIE POLICY</span>
+                    <h1 class="cookie-hero__title">Understanding How Cookies <span class="highlight-text">Improve Your
+                            Experience</span></h1>
+                    <p class="cookie-hero__subtitle">
+                        This Cookie Policy explains how XoHub Solutions uses cookies and similar technologies to support
+                        website functionality, enhance performance, improve security, analyze usage, and provide a
+                        better
+                        browsing experience. It also explains how you can manage your cookie preferences.
+                    </p>
+                </div>
+
+                <!-- Document Metadata -->
+                <div class="cookie-hero__meta">
+                    <div class="meta-card">
+                        <span class="meta-card__icon"><i class="fas fa-calendar-alt"></i></span>
+                        <div>
+                            <span class="meta-card__label">Effective Date</span>
+                            <span class="meta-card__value">January 1, 2025</span>
+                        </div>
+                    </div>
+                    <div class="meta-card">
+                        <span class="meta-card__icon"><i class="fas fa-clock"></i></span>
+                        <div>
+                            <span class="meta-card__label">Last Updated</span>
+                            <span class="meta-card__value">July 20, 2026</span>
+                        </div>
+                    </div>
+                    <div class="meta-card">
+                        <span class="meta-card__icon"><i class="fas fa-book-open"></i></span>
+                        <div>
+                            <span class="meta-card__label">Reading Time</span>
+                            <span class="meta-card__value">~4 minutes</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Actions -->
+                <div class="cookie-hero__actions">
+                    <a href="#" class="btn-primary btn-cookie-preferences">
+                        <i class="fas fa-sliders-h" aria-hidden="true"></i> Manage Cookie Preferences
+                    </a>
+                    <a href="#" class="btn-secondary btn-cookie-learn">
+                        <i class="fas fa-book" aria-hidden="true"></i> Learn More
+                    </a>
+                </div>
+
+                <!-- Trust Highlights -->
+                <div class="cookie-hero__trust">
+                    <span class="trust-badge"><i class="fas fa-check-circle" aria-hidden="true"></i> Privacy
+                        First</span>
+                    <span class="trust-badge"><i class="fas fa-eye" aria-hidden="true"></i> Transparent Cookie
+                        Usage</span>
+                    <span class="trust-badge"><i class="fas fa-user-check" aria-hidden="true"></i> User Choice</span>
+                    <span class="trust-badge"><i class="fas fa-shield-alt" aria-hidden="true"></i> Secure
+                        Browsing</span>
+                    <span class="trust-badge"><i class="fas fa-star" aria-hidden="true"></i> Better Experience</span>
+                </div>
+            </div>
+
+            <!-- Hero Visual -->
+            <div class="cookie-hero__visual" aria-hidden="true">
+                <div class="hero-visual">
+                    <!-- Glass Cookie Container -->
+                    <div class="glass-cookie">
+                        <div class="cookie-icon">
+                            <i class="fas fa-cookie-bite"></i>
+                        </div>
+                        <div class="cookie-shield">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="cookie-pulse"></div>
+                    </div>
+
+                    <!-- Browser Window -->
+                    <div class="visual-browser">
+                        <div class="browser-bar">
+                            <span class="dot dot--red"></span>
+                            <span class="dot dot--yellow"></span>
+                            <span class="dot dot--green"></span>
+                            <span class="browser-url">xohub.com/cookies</span>
+                        </div>
+                        <div class="browser-content">
+                            <span class="browser-cookie-icon"><i class="fas fa-cookie"></i></span>
+                            <span class="browser-text">🍪 Preferences</span>
+                        </div>
+                    </div>
+
+                    <!-- Preference Toggles -->
+                    <div class="toggle-group">
+                        <div class="toggle-item">
+                            <span class="toggle-label">Essential</span>
+                            <span class="toggle-switch toggle-switch--on"></span>
+                        </div>
+                        <div class="toggle-item">
+                            <span class="toggle-label">Analytics</span>
+                            <span class="toggle-switch toggle-switch--off"></span>
+                        </div>
+                        <div class="toggle-item">
+                            <span class="toggle-label">Marketing</span>
+                            <span class="toggle-switch toggle-switch--off"></span>
+                        </div>
+                    </div>
+
+                    <!-- Floating Elements -->
+                    <span class="float-icon float-icon--1"><i class="fas fa-cookie"></i></span>
+                    <span class="float-icon float-icon--2"><i class="fas fa-sliders-h"></i></span>
+                    <span class="float-icon float-icon--3"><i class="fas fa-shield-alt"></i></span>
+                    <span class="float-icon float-icon--4"><i class="fas fa-globe"></i></span>
+
+                    <!-- Connection Lines -->
+                    <svg class="visual-connections" viewBox="0 0 300 300" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M50 100 L150 50 L250 100" stroke="rgba(124,58,237,0.06)" stroke-width="2"
+                            stroke-dasharray="4 4" />
+                        <path d="M50 200 L150 250 L250 200" stroke="rgba(192,227,74,0.06)" stroke-width="2"
+                            stroke-dasharray="4 4" />
+                        <circle cx="50" cy="100" r="4" fill="rgba(124,58,237,0.08)" />
+                        <circle cx="150" cy="50" r="4" fill="rgba(192,227,74,0.08)" />
+                        <circle cx="250" cy="100" r="4" fill="rgba(124,58,237,0.08)" />
+                        <circle cx="50" cy="200" r="4" fill="rgba(192,227,74,0.08)" />
+                        <circle cx="150" cy="250" r="4" fill="rgba(124,58,237,0.08)" />
+                        <circle cx="250" cy="200" r="4" fill="rgba(192,227,74,0.08)" />
+                    </svg>
+
+                    <!-- Floating Orbs -->
+                    <div class="orb orb--1"></div>
+                    <div class="orb orb--2"></div>
+                    <div class="orb orb--3"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ==================================================
+END: Cookie Policy Hero Banner
+================================================== -->
+
+
+
+<!-- ==================================================
+START: What Are Cookies & Why We Use Them
+================================================== -->
+<section id="cookie-overview" class="cookie-overview" aria-label="What Are Cookies and Why We Use Them - XoHub Solutions">
+    <!-- Background Decorations -->
+    <div class="cookie-overview__bg" aria-hidden="true">
+        <div class="cookie-overview__glow cookie-overview__glow--1"></div>
+        <div class="cookie-overview__glow cookie-overview__glow--2"></div>
+        <div class="cookie-overview__glow cookie-overview__glow--3"></div>
+        <div class="cookie-overview__orb cookie-overview__orb--1"></div>
+        <div class="cookie-overview__orb cookie-overview__orb--2"></div>
+        <div class="cookie-overview__shape cookie-overview__shape--1"></div>
+        <div class="cookie-overview__shape cookie-overview__shape--2"></div>
+        <svg class="cookie-overview__grid" viewBox="0 0 1000 800" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="160" cy="160" r="130" stroke="rgba(192,227,74,0.025)" stroke-width="1" stroke-dasharray="6 6"/>
+            <circle cx="840" cy="640" r="150" stroke="rgba(124,58,237,0.025)" stroke-width="1" stroke-dasharray="8 8"/>
+            <circle cx="500" cy="400" r="230" stroke="rgba(192,227,74,0.015)" stroke-width="1"/>
+            <path d="M220 0 L220 800" stroke="rgba(124,58,237,0.015)" stroke-width="1"/>
+            <path d="M780 0 L780 800" stroke="rgba(192,227,74,0.015)" stroke-width="1"/>
+        </svg>
+        <div class="particle particle--1"></div>
+        <div class="particle particle--2"></div>
+        <div class="particle particle--3"></div>
+        <div class="particle particle--4"></div>
+        <div class="particle particle--5"></div>
+        <div class="particle particle--6"></div>
+    </div>
+
+    <div class="container cookie-overview__inner">
+        <!-- Section Header -->
+        <div class="cookie-overview__header">
+            <span class="cookie-overview__badge">COOKIE OVERVIEW</span>
+            <h2 class="cookie-overview__title">What Are Cookies and <span class="highlight-text">Why Do We Use Them?</span></h2>
+            <p class="cookie-overview__subtitle">
+                Cookies are small text files stored on your device when you visit a website. They help websites
+                remember useful information, improve functionality, enhance security, analyze performance, and
+                personalize certain aspects of your browsing experience.
+            </p>
+        </div>
+
+        <!-- Featured Explanation Banner -->
+        <div class="cookie-overview__banner">
+            <div class="explanation-banner">
+                <div class="explanation-banner__content">
+                    <span class="explanation-banner__badge">🍪 DESIGNED TO IMPROVE YOUR EXPERIENCE</span>
+                    <h3 class="explanation-banner__title">Designed to Improve Your Experience</h3>
+                    <p class="explanation-banner__desc">
+                        Cookies generally do not identify users personally on their own, but they help websites
+                        remember preferences, maintain secure sessions, optimize performance, and understand how
+                        visitors interact with the website to make continuous improvements.
+                    </p>
+                    <div class="explanation-banner__actions">
+                        <a href="#" class="btn-primary btn-banner-cookie-manage">
+                            <i class="fas fa-sliders-h" aria-hidden="true"></i> Manage Cookie Preferences
+                        </a>
+                        <a href="#" class="btn-secondary btn-banner-cookie-privacy">
+                            <i class="fas fa-shield-alt" aria-hidden="true"></i> Privacy Policy
+                        </a>
+                    </div>
+                </div>
+                <div class="explanation-banner__visual">
+                    <span class="ex-icon ex-icon--1"><i class="fas fa-cookie-bite"></i></span>
+                    <span class="ex-icon ex-icon--2"><i class="fas fa-sliders-h"></i></span>
+                    <span class="ex-icon ex-icon--3"><i class="fas fa-shield-alt"></i></span>
+                    <span class="ex-icon ex-icon--4"><i class="fas fa-user-check"></i></span>
+                    <div class="ex-shape ex-shape--1"></div>
+                    <div class="ex-shape ex-shape--2"></div>
+                    <div class="ex-shape ex-shape--3"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- How Cookies Work Flow -->
+        <div class="cookie-overview__flow">
+            <div class="section-header">
+                <span class="section-header__icon"><i class="fas fa-route"></i></span>
+                <h4 class="section-header__title">How Cookies Work</h4>
+                <span class="section-header__count">5 steps</span>
+            </div>
+            <div class="cookie-flow">
+                <div class="flow-node">
+                    <span class="flow-node__icon"><i class="fas fa-globe"></i></span>
+                    <span class="flow-node__label">Visit Website</span>
+                    <span class="flow-node__connector"></span>
+                </div>
+                <div class="flow-node">
+                    <span class="flow-node__icon"><i class="fas fa-cookie-bite"></i></span>
+                    <span class="flow-node__label">Cookie Created</span>
+                    <span class="flow-node__connector"></span>
+                </div>
+                <div class="flow-node">
+                    <span class="flow-node__icon"><i class="fas fa-flag"></i></span>
+                    <span class="flow-node__label">Remember Preferences</span>
+                    <span class="flow-node__connector"></span>
+                </div>
+                <div class="flow-node">
+                    <span class="flow-node__icon"><i class="fas fa-tachometer-alt"></i></span>
+                    <span class="flow-node__label">Improve Performance</span>
+                    <span class="flow-node__connector"></span>
+                </div>
+                <div class="flow-node flow-node--end">
+                    <span class="flow-node__icon"><i class="fas fa-smile"></i></span>
+                    <span class="flow-node__label">Better User Experience</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Reasons We Use Cookies Grid -->
+        <div class="cookie-overview__reasons">
+            <div class="section-header">
+                <span class="section-header__icon"><i class="fas fa-list"></i></span>
+                <h4 class="section-header__title">Why We Use Cookies</h4>
+                <span class="section-header__count">6 reasons</span>
+            </div>
+            <div class="reasons-grid">
+                <!-- Reason 1: Website Functionality -->
+                <div class="reason-card">
+                    <span class="reason-card__icon"><i class="fas fa-cogs"></i></span>
+                    <span class="reason-card__title">Website Functionality</span>
+                    <span class="reason-card__desc">Cookies help our website function properly by enabling essential features and operations.</span>
+                </div>
+
+                <!-- Reason 2: Security -->
+                <div class="reason-card">
+                    <span class="reason-card__icon"><i class="fas fa-shield-alt"></i></span>
+                    <span class="reason-card__title">Security</span>
+                    <span class="reason-card__desc">We use cookies to help protect your information and maintain secure browsing sessions.</span>
+                </div>
+
+                <!-- Reason 3: Performance Optimization -->
+                <div class="reason-card">
+                    <span class="reason-card__icon"><i class="fas fa-tachometer-alt"></i></span>
+                    <span class="reason-card__title">Performance Optimization</span>
+                    <span class="reason-card__desc">Cookies help us improve loading times and overall website performance.</span>
+                </div>
+
+                <!-- Reason 4: User Preferences -->
+                <div class="reason-card">
+                    <span class="reason-card__icon"><i class="fas fa-sliders-h"></i></span>
+                    <span class="reason-card__title">User Preferences</span>
+                    <span class="reason-card__desc">We remember your preferences and settings to personalize your browsing experience.</span>
+                </div>
+
+                <!-- Reason 5: Analytics & Insights -->
+                <div class="reason-card">
+                    <span class="reason-card__icon"><i class="fas fa-chart-bar"></i></span>
+                    <span class="reason-card__title">Analytics &amp; Insights</span>
+                    <span class="reason-card__desc">We analyze website usage to understand visitor behavior and improve our services.</span>
+                </div>
+
+                <!-- Reason 6: Continuous Improvement -->
+                <div class="reason-card">
+                    <span class="reason-card__icon"><i class="fas fa-sync-alt"></i></span>
+                    <span class="reason-card__title">Continuous Improvement</span>
+                    <span class="reason-card__desc">Data from cookies helps us make ongoing improvements to user experience and functionality.</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Important Notice Banner -->
+        <div class="cookie-overview__notice">
+            <div class="notice-banner-cookie">
+                <div class="notice-banner-cookie__content">
+                    <span class="notice-banner-cookie__icon"><i class="fas fa-sliders-h"></i></span>
+                    <div class="notice-banner-cookie__text">
+                        <h4 class="notice-banner-cookie__title">You Remain in Control</h4>
+                        <p class="notice-banner-cookie__desc">
+                            You can manage or disable certain cookies through your browser settings or available cookie
+                            preference tools. Please note that disabling certain cookies may affect some website
+                            functionality or features.
+                        </p>
+                    </div>
+                </div>
+                <div class="notice-banner-cookie__badge">
+                    <span>Your Choice</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ==================================================
+END: What Are Cookies & Why We Use Them
+================================================== -->
+
+<!-- ==================================================
+START: Types of Cookies We Use
+================================================== -->
+<section id="cookie-types" class="cookie-types" aria-label="Types of Cookies We Use - XoHub Solutions">
+    <!-- Background Decorations -->
+    <div class="cookie-types__bg" aria-hidden="true">
+        <div class="cookie-types__glow cookie-types__glow--1"></div>
+        <div class="cookie-types__glow cookie-types__glow--2"></div>
+        <div class="cookie-types__glow cookie-types__glow--3"></div>
+        <div class="cookie-types__orb cookie-types__orb--1"></div>
+        <div class="cookie-types__orb cookie-types__orb--2"></div>
+        <div class="cookie-types__shape cookie-types__shape--1"></div>
+        <div class="cookie-types__shape cookie-types__shape--2"></div>
+        <svg class="cookie-types__grid" viewBox="0 0 1000 800" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="160" cy="160" r="130" stroke="rgba(192,227,74,0.025)" stroke-width="1" stroke-dasharray="6 6"/>
+            <circle cx="840" cy="640" r="150" stroke="rgba(124,58,237,0.025)" stroke-width="1" stroke-dasharray="8 8"/>
+            <circle cx="500" cy="400" r="230" stroke="rgba(192,227,74,0.015)" stroke-width="1"/>
+            <path d="M220 0 L220 800" stroke="rgba(124,58,237,0.015)" stroke-width="1"/>
+            <path d="M780 0 L780 800" stroke="rgba(192,227,74,0.015)" stroke-width="1"/>
+        </svg>
+        <div class="particle particle--1"></div>
+        <div class="particle particle--2"></div>
+        <div class="particle particle--3"></div>
+        <div class="particle particle--4"></div>
+        <div class="particle particle--5"></div>
+        <div class="particle particle--6"></div>
+    </div>
+
+    <div class="container cookie-types__inner">
+        <!-- Section Header -->
+        <div class="cookie-types__header">
+            <span class="cookie-types__badge">COOKIE CATEGORIES</span>
+            <h2 class="cookie-types__title">Understanding the <span class="highlight-text">Different Types of Cookies</span></h2>
+            <p class="cookie-types__subtitle">
+                Different cookies serve different purposes. Some help the website function correctly, while others
+                may improve performance, remember preferences, or provide insights into website usage where implemented.
+            </p>
+        </div>
+
+        <!-- Featured Categories Banner -->
+        <div class="cookie-types__banner">
+            <div class="categories-banner">
+                <div class="categories-banner__content">
+                    <span class="categories-banner__badge">🍪 EACH COOKIE HAS A SPECIFIC PURPOSE</span>
+                    <h3 class="categories-banner__title">Each Cookie Has a Specific Purpose</h3>
+                    <p class="categories-banner__desc">
+                        Cookie categories may vary depending on website features, user preferences, and future
+                        functionality. Where required by law, optional cookies should only be used after appropriate
+                        consent is obtained.
+                    </p>
+                    <div class="categories-banner__actions">
+                        <a href="#" class="btn-primary btn-banner-categories-manage">
+                            <i class="fas fa-sliders-h" aria-hidden="true"></i> Manage Preferences
+                        </a>
+                        <a href="#" class="btn-secondary btn-banner-categories-privacy">
+                            <i class="fas fa-shield-alt" aria-hidden="true"></i> Privacy Policy
+                        </a>
+                    </div>
+                </div>
+                <div class="categories-banner__visual">
+                    <span class="ct-icon ct-icon--1"><i class="fas fa-cookie-bite"></i></span>
+                    <span class="ct-icon ct-icon--2"><i class="fas fa-list"></i></span>
+                    <span class="ct-icon ct-icon--3"><i class="fas fa-sliders-h"></i></span>
+                    <span class="ct-icon ct-icon--4"><i class="fas fa-shield-alt"></i></span>
+                    <div class="ct-shape ct-shape--1"></div>
+                    <div class="ct-shape ct-shape--2"></div>
+                    <div class="ct-shape ct-shape--3"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cookie Categories Grid -->
+        <div class="cookie-types__categories">
+            <div class="section-header">
+                <span class="section-header__icon"><i class="fas fa-th-list"></i></span>
+                <h4 class="section-header__title">Cookie Categories</h4>
+                <span class="section-header__count">6 categories</span>
+            </div>
+            <div class="categories-grid">
+                <!-- Category 1: Essential Cookies -->
+                <div class="category-card">
+                    <span class="category-card__icon"><i class="fas fa-shield-alt"></i></span>
+                    <span class="category-card__title">Essential Cookies</span>
+                    <span class="category-card__purpose">Enable core website functionality, security, and session management.</span>
+                    <div class="category-card__examples">
+                        <span class="cat-example">Session tokens</span>
+                        <span class="cat-example">Authentication</span>
+                        <span class="cat-example">Security</span>
+                    </div>
+                    <span class="category-card__badge category-card__badge--always">Always Active</span>
+                </div>
+
+                <!-- Category 2: Functional Cookies -->
+                <div class="category-card">
+                    <span class="category-card__icon"><i class="fas fa-sliders-h"></i></span>
+                    <span class="category-card__title">Functional Cookies</span>
+                    <span class="category-card__purpose">Remember user preferences, language, appearance, and saved settings.</span>
+                    <div class="category-card__examples">
+                        <span class="cat-example">Language</span>
+                        <span class="cat-example">Theme</span>
+                        <span class="cat-example">Preferences</span>
+                    </div>
+                    <span class="category-card__badge category-card__badge--optional">Optional</span>
+                </div>
+
+                <!-- Category 3: Performance Cookies -->
+                <div class="category-card">
+                    <span class="category-card__icon"><i class="fas fa-tachometer-alt"></i></span>
+                    <span class="category-card__title">Performance Cookies</span>
+                    <span class="category-card__purpose">Improve website speed, monitor performance, and enhance reliability.</span>
+                    <div class="category-card__examples">
+                        <span class="cat-example">Load times</span>
+                        <span class="cat-example">Error tracking</span>
+                        <span class="cat-example">Caching</span>
+                    </div>
+                    <span class="category-card__badge category-card__badge--optional">Optional</span>
+                </div>
+
+                <!-- Category 4: Analytics Cookies -->
+                <div class="category-card">
+                    <span class="category-card__icon"><i class="fas fa-chart-bar"></i></span>
+                    <span class="category-card__title">Analytics Cookies</span>
+                    <span class="category-card__purpose">Understand visitor behavior, improve services, and gain website insights where implemented.</span>
+                    <div class="category-card__examples">
+                        <span class="cat-example">Visitor count</span>
+                        <span class="cat-example">Page views</span>
+                        <span class="cat-example">User journeys</span>
+                    </div>
+                    <span class="category-card__badge category-card__badge--optional">Optional</span>
+                </div>
+
+                <!-- Category 5: Marketing Cookies -->
+                <div class="category-card">
+                    <span class="category-card__icon"><i class="fas fa-bullhorn"></i></span>
+                    <span class="category-card__title">Marketing Cookies</span>
+                    <span class="category-card__purpose">Support relevant content, campaign measurement, and advertising insights where applicable and with appropriate consent.</span>
+                    <div class="category-card__examples">
+                        <span class="cat-example">Campaigns</span>
+                        <span class="cat-example">Audience insights</span>
+                        <span class="cat-example">Relevant content</span>
+                    </div>
+                    <span class="category-card__badge category-card__badge--where">Where Applicable</span>
+                </div>
+
+                <!-- Category 6: Future Technologies -->
+                <div class="category-card">
+                    <span class="category-card__icon"><i class="fas fa-rocket"></i></span>
+                    <span class="category-card__title">Future Technologies</span>
+                    <span class="category-card__purpose">Support future website features and services while maintaining transparency about new technologies.</span>
+                    <div class="category-card__examples">
+                        <span class="cat-example">New features</span>
+                        <span class="cat-example">Emerging tech</span>
+                        <span class="cat-example">Transparency</span>
+                    </div>
+                    <span class="category-card__badge category-card__badge--future">Future Ready</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cookie Lifecycle Diagram -->
+        <div class="cookie-types__lifecycle">
+            <div class="section-header">
+                <span class="section-header__icon"><i class="fas fa-route"></i></span>
+                <h4 class="section-header__title">Cookie Lifecycle</h4>
+                <span class="section-header__count">5 stages</span>
+            </div>
+            <div class="lifecycle-flow">
+                <div class="lifecycle-node">
+                    <span class="lifecycle-node__icon"><i class="fas fa-globe"></i></span>
+                    <span class="lifecycle-node__label">Website Visit</span>
+                    <span class="lifecycle-node__connector"></span>
+                </div>
+                <div class="lifecycle-node">
+                    <span class="lifecycle-node__icon"><i class="fas fa-tags"></i></span>
+                    <span class="lifecycle-node__label">Cookie Category</span>
+                    <span class="lifecycle-node__connector"></span>
+                </div>
+                <div class="lifecycle-node">
+                    <span class="lifecycle-node__icon"><i class="fas fa-database"></i></span>
+                    <span class="lifecycle-node__label">Stored</span>
+                    <span class="lifecycle-node__connector"></span>
+                </div>
+                <div class="lifecycle-node">
+                    <span class="lifecycle-node__icon"><i class="fas fa-cogs"></i></span>
+                    <span class="lifecycle-node__label">Website Function</span>
+                    <span class="lifecycle-node__connector"></span>
+                </div>
+                <div class="lifecycle-node lifecycle-node--end">
+                    <span class="lifecycle-node__icon"><i class="fas fa-clock"></i></span>
+                    <span class="lifecycle-node__label">Expires or Removed</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cookie Summary Table -->
+        <div class="cookie-types__table">
+            <div class="section-header">
+                <span class="section-header__icon"><i class="fas fa-table"></i></span>
+                <h4 class="section-header__title">Cookie Summary</h4>
+                <span class="section-header__count">6 categories</span>
+            </div>
+            <div class="cookie-table-wrapper">
+                <table class="cookie-summary-table">
+                    <thead>
+                        <tr>
+                            <th>Cookie Category</th>
+                            <th>Purpose</th>
+                            <th>Typical Duration</th>
+                            <th>Consent Requirement</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="table-badge table-badge--essential">Essential</span></td>
+                            <td>Core functionality &amp; security</td>
+                            <td>Session</td>
+                            <td>Always Active</td>
+                            <td><span class="status-badge status-badge--active">Active</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="table-badge table-badge--functional">Functional</span></td>
+                            <td>User preferences &amp; settings</td>
+                            <td>Up to 1 year</td>
+                            <td>Optional</td>
+                            <td><span class="status-badge status-badge--optional">Optional</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="table-badge table-badge--performance">Performance</span></td>
+                            <td>Speed &amp; reliability</td>
+                            <td>Up to 1 year</td>
+                            <td>Optional</td>
+                            <td><span class="status-badge status-badge--optional">Optional</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="table-badge table-badge--analytics">Analytics</span></td>
+                            <td>Usage insights &amp; improvement</td>
+                            <td>Up to 2 years</td>
+                            <td>Optional</td>
+                            <td><span class="status-badge status-badge--optional">Optional</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="table-badge table-badge--marketing">Marketing</span></td>
+                            <td>Campaign measurement &amp; relevance</td>
+                            <td>Up to 2 years</td>
+                            <td>Where Applicable</td>
+                            <td><span class="status-badge status-badge--where">Where Applicable</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="table-badge table-badge--future">Future Technologies</span></td>
+                            <td>Emerging features &amp; services</td>
+                            <td>Varies</td>
+                            <td>Future Ready</td>
+                            <td><span class="status-badge status-badge--future">Future Ready</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Information Banner -->
+        <div class="cookie-types__notice">
+            <div class="notice-banner-categories">
+                <div class="notice-banner-categories__content">
+                    <span class="notice-banner-categories__icon"><i class="fas fa-sync-alt"></i></span>
+                    <div class="notice-banner-categories__text">
+                        <h4 class="notice-banner-categories__title">Cookie Categories May Evolve Over Time</h4>
+                        <p class="notice-banner-categories__desc">
+                            As XoHub Solutions introduces new features or technologies, cookie categories and purposes
+                            may be updated while maintaining transparency and user choice. We encourage you to review
+                            this page periodically.
+                        </p>
+                    </div>
+                </div>
+                <div class="notice-banner-categories__badge">
+                    <span>Transparent</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ==================================================
+END: Types of Cookies We Use
+================================================== -->
+
+<!-- ==================================================
+START: Managing Cookie Preferences
+================================================== -->
+<section id="cookie-preferences" class="cookie-preferences" aria-label="Managing Cookie Preferences - XoHub Solutions">
+    <!-- Background Decorations -->
+    <div class="cookie-preferences__bg" aria-hidden="true">
+        <div class="cookie-preferences__glow cookie-preferences__glow--1"></div>
+        <div class="cookie-preferences__glow cookie-preferences__glow--2"></div>
+        <div class="cookie-preferences__glow cookie-preferences__glow--3"></div>
+        <div class="cookie-preferences__orb cookie-preferences__orb--1"></div>
+        <div class="cookie-preferences__orb cookie-preferences__orb--2"></div>
+        <div class="cookie-preferences__shape cookie-preferences__shape--1"></div>
+        <div class="cookie-preferences__shape cookie-preferences__shape--2"></div>
+        <svg class="cookie-preferences__grid" viewBox="0 0 1000 800" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="160" cy="160" r="130" stroke="rgba(192,227,74,0.025)" stroke-width="1" stroke-dasharray="6 6"/>
+            <circle cx="840" cy="640" r="150" stroke="rgba(124,58,237,0.025)" stroke-width="1" stroke-dasharray="8 8"/>
+            <circle cx="500" cy="400" r="230" stroke="rgba(192,227,74,0.015)" stroke-width="1"/>
+            <path d="M220 0 L220 800" stroke="rgba(124,58,237,0.015)" stroke-width="1"/>
+            <path d="M780 0 L780 800" stroke="rgba(192,227,74,0.015)" stroke-width="1"/>
+        </svg>
+        <div class="particle particle--1"></div>
+        <div class="particle particle--2"></div>
+        <div class="particle particle--3"></div>
+        <div class="particle particle--4"></div>
+        <div class="particle particle--5"></div>
+        <div class="particle particle--6"></div>
+    </div>
+
+    <div class="container cookie-preferences__inner">
+        <!-- Section Header -->
+        <div class="cookie-preferences__header">
+            <span class="cookie-preferences__badge">COOKIE PREFERENCES</span>
+            <h2 class="cookie-preferences__title">You Control <span class="highlight-text">Your Cookie Preferences</span></h2>
+            <p class="cookie-preferences__subtitle">
+                You can choose how cookies are used on your device. Depending on the type of cookie, you may manage
+                preferences through browser settings, future cookie preference tools, or third-party controls where
+                applicable.
+            </p>
+        </div>
+
+        <!-- Preference Management Banner -->
+        <div class="cookie-preferences__banner">
+            <div class="pref-banner">
+                <div class="pref-banner__content">
+                    <span class="pref-banner__badge">🎯 YOU'RE IN CONTROL</span>
+                    <h3 class="pref-banner__title">Manage Cookies with Confidence</h3>
+                    <p class="pref-banner__desc">
+                        You can review or adjust cookie preferences at any time. Where required, future cookie consent
+                        banners or preference centers may allow you to customize optional cookie categories without
+                        affecting essential website functions.
+                    </p>
+                    <div class="pref-banner__actions">
+                        <a href="#" class="btn-primary btn-banner-pref-manage">
+                            <i class="fas fa-sliders-h" aria-hidden="true"></i> Manage Cookie Preferences
+                        </a>
+                        <a href="#" class="btn-secondary btn-banner-pref-privacy">
+                            <i class="fas fa-shield-alt" aria-hidden="true"></i> Privacy Policy
+                        </a>
+                    </div>
+                </div>
+                <div class="pref-banner__visual">
+                    <span class="pf-icon pf-icon--1"><i class="fas fa-sliders-h"></i></span>
+                    <span class="pf-icon pf-icon--2"><i class="fas fa-cookie-bite"></i></span>
+                    <span class="pf-icon pf-icon--3"><i class="fas fa-user-check"></i></span>
+                    <span class="pf-icon pf-icon--4"><i class="fas fa-shield-alt"></i></span>
+                    <div class="pf-shape pf-shape--1"></div>
+                    <div class="pf-shape pf-shape--2"></div>
+                    <div class="pf-shape pf-shape--3"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Preference Options Grid -->
+        <div class="cookie-preferences__options">
+            <div class="section-header">
+                <span class="section-header__icon"><i class="fas fa-list"></i></span>
+                <h4 class="section-header__title">Preference Options</h4>
+                <span class="section-header__count">6 options</span>
+            </div>
+            <div class="options-grid">
+                <!-- Option 1: Browser Settings -->
+                <div class="option-card">
+                    <span class="option-card__icon"><i class="fas fa-cog"></i></span>
+                    <span class="option-card__title">Browser Settings</span>
+                    <span class="option-card__desc">Adjust cookie preferences through your browser's privacy and security settings.</span>
+                </div>
+
+                <!-- Option 2: Delete Existing Cookies -->
+                <div class="option-card">
+                    <span class="option-card__icon"><i class="fas fa-trash-alt"></i></span>
+                    <span class="option-card__title">Delete Existing Cookies</span>
+                    <span class="option-card__desc">Remove cookies that are already stored on your device at any time.</span>
+                </div>
+
+                <!-- Option 3: Block Future Cookies -->
+                <div class="option-card">
+                    <span class="option-card__icon"><i class="fas fa-ban"></i></span>
+                    <span class="option-card__title">Block Future Cookies</span>
+                    <span class="option-card__desc">Prevent websites from storing new cookies on your device in the future.</span>
+                </div>
+
+                <!-- Option 4: Cookie Consent Preferences -->
+                <div class="option-card">
+                    <span class="option-card__icon"><i class="fas fa-check-double"></i></span>
+                    <span class="option-card__title">Cookie Consent Preferences</span>
+                    <span class="option-card__desc">Manage optional cookie categories through future preference tools or consent banners.</span>
+                </div>
+
+                <!-- Option 5: Third-Party Controls -->
+                <div class="option-card">
+                    <span class="option-card__icon"><i class="fas fa-plug"></i></span>
+                    <span class="option-card__title">Third-Party Controls</span>
+                    <span class="option-card__desc">Manage preferences for third-party services through their own privacy and consent tools.</span>
+                </div>
+
+                <!-- Option 6: Review Choices Anytime -->
+                <div class="option-card">
+                    <span class="option-card__icon"><i class="fas fa-sync-alt"></i></span>
+                    <span class="option-card__title">Review Choices Anytime</span>
+                    <span class="option-card__desc">You can review and update your cookie preferences as often as you like.</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Preference Management Flow -->
+        <div class="cookie-preferences__flow">
+            <div class="section-header">
+                <span class="section-header__icon"><i class="fas fa-route"></i></span>
+                <h4 class="section-header__title">How to Manage Your Preferences</h4>
+                <span class="section-header__count">5 steps</span>
+            </div>
+            <div class="pref-flow">
+                <div class="pref-flow-node">
+                    <span class="pref-flow-node__icon"><i class="fas fa-globe"></i></span>
+                    <span class="pref-flow-node__label">Visit Website</span>
+                    <span class="pref-flow-node__connector"></span>
+                </div>
+                <div class="pref-flow-node">
+                    <span class="pref-flow-node__icon"><i class="fas fa-eye"></i></span>
+                    <span class="pref-flow-node__label">Review Cookie Options</span>
+                    <span class="pref-flow-node__connector"></span>
+                </div>
+                <div class="pref-flow-node">
+                    <span class="pref-flow-node__icon"><i class="fas fa-sliders-h"></i></span>
+                    <span class="pref-flow-node__label">Select Preferences</span>
+                    <span class="pref-flow-node__connector"></span>
+                </div>
+                <div class="pref-flow-node">
+                    <span class="pref-flow-node__icon"><i class="fas fa-save"></i></span>
+                    <span class="pref-flow-node__label">Save Choices</span>
+                    <span class="pref-flow-node__connector"></span>
+                </div>
+                <div class="pref-flow-node pref-flow-node--end">
+                    <span class="pref-flow-node__icon"><i class="fas fa-smile"></i></span>
+                    <span class="pref-flow-node__label">Updated Browsing Experience</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Browser Support Cards -->
+        <div class="cookie-preferences__browsers">
+            <div class="section-header">
+                <span class="section-header__icon"><i class="fas fa-globe"></i></span>
+                <h4 class="section-header__title">Browser Support</h4>
+                <span class="section-header__count">6 browsers</span>
+            </div>
+            <div class="browsers-grid">
+                <!-- Chrome-Based Browsers -->
+                <div class="browser-card">
+                    <span class="browser-card__icon"><i class="fab fa-chrome"></i></span>
+                    <span class="browser-card__name">Chrome-Based Browsers</span>
+                    <span class="browser-card__desc">Cookie settings are available through the browser's privacy or security settings.</span>
+                </div>
+
+                <!-- Firefox -->
+                <div class="browser-card">
+                    <span class="browser-card__icon"><i class="fab fa-firefox"></i></span>
+                    <span class="browser-card__name">Firefox</span>
+                    <span class="browser-card__desc">Cookie preferences can be managed in the browser's privacy and security settings.</span>
+                </div>
+
+                <!-- Safari -->
+                <div class="browser-card">
+                    <span class="browser-card__icon"><i class="fab fa-safari"></i></span>
+                    <span class="browser-card__name">Safari</span>
+                    <span class="browser-card__desc">Adjust cookie settings through the browser's privacy preferences.</span>
+                </div>
+
+                <!-- Microsoft Edge -->
+                <div class="browser-card">
+                    <span class="browser-card__icon"><i class="fab fa-edge"></i></span>
+                    <span class="browser-card__name">Microsoft Edge</span>
+                    <span class="browser-card__desc">Cookie controls are available in the browser's privacy and security settings.</span>
+                </div>
+
+                <!-- Mobile Browsers -->
+                <div class="browser-card">
+                    <span class="browser-card__icon"><i class="fas fa-mobile-alt"></i></span>
+                    <span class="browser-card__name">Mobile Browsers</span>
+                    <span class="browser-card__desc">Mobile browsers also offer cookie preferences through their settings menus.</span>
+                </div>
+
+                <!-- Future Browser Compatibility -->
+                <div class="browser-card">
+                    <span class="browser-card__icon"><i class="fas fa-rocket"></i></span>
+                    <span class="browser-card__name">Future Browser Compatibility</span>
+                    <span class="browser-card__desc">We strive to remain compatible with evolving browser technologies and privacy features.</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Important Notice Banner -->
+        <div class="cookie-preferences__notice">
+            <div class="notice-banner-pref">
+                <div class="notice-banner-pref__content">
+                    <span class="notice-banner-pref__icon"><i class="fas fa-info-circle"></i></span>
+                    <div class="notice-banner-pref__text">
+                        <h4 class="notice-banner-pref__title">Some Cookies Help Essential Features Work Properly</h4>
+                        <p class="notice-banner-pref__desc">
+                            Disabling certain cookies may reduce website functionality, affect saved preferences,
+                            or limit access to some features. Essential cookies may remain necessary for core
+                            operations and security purposes.
+                        </p>
+                    </div>
+                </div>
+                <div class="notice-banner-pref__badge">
+                    <span>Essential</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ==================================================
+END: Managing Cookie Preferences
+================================================== -->
+
+<!-- ==================================================
+START: Third-Party Cookies & Technologies
+================================================== -->
+<section id="cookie-thirdparty" class="cookie-thirdparty" aria-label="Third-Party Cookies and Technologies - XoHub Solutions">
+    <!-- Background Decorations -->
+    <div class="cookie-thirdparty__bg" aria-hidden="true">
+        <div class="cookie-thirdparty__glow cookie-thirdparty__glow--1"></div>
+        <div class="cookie-thirdparty__glow cookie-thirdparty__glow--2"></div>
+        <div class="cookie-thirdparty__glow cookie-thirdparty__glow--3"></div>
+        <div class="cookie-thirdparty__orb cookie-thirdparty__orb--1"></div>
+        <div class="cookie-thirdparty__orb cookie-thirdparty__orb--2"></div>
+        <div class="cookie-thirdparty__shape cookie-thirdparty__shape--1"></div>
+        <div class="cookie-thirdparty__shape cookie-thirdparty__shape--2"></div>
+        <svg class="cookie-thirdparty__grid" viewBox="0 0 1000 800" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="160" cy="160" r="130" stroke="rgba(192,227,74,0.025)" stroke-width="1" stroke-dasharray="6 6"/>
+            <circle cx="840" cy="640" r="150" stroke="rgba(124,58,237,0.025)" stroke-width="1" stroke-dasharray="8 8"/>
+            <circle cx="500" cy="400" r="230" stroke="rgba(192,227,74,0.015)" stroke-width="1"/>
+            <path d="M220 0 L220 800" stroke="rgba(124,58,237,0.015)" stroke-width="1"/>
+            <path d="M780 0 L780 800" stroke="rgba(192,227,74,0.015)" stroke-width="1"/>
+        </svg>
+        <div class="particle particle--1"></div>
+        <div class="particle particle--2"></div>
+        <div class="particle particle--3"></div>
+        <div class="particle particle--4"></div>
+        <div class="particle particle--5"></div>
+        <div class="particle particle--6"></div>
+    </div>
+
+    <div class="container cookie-thirdparty__inner">
+        <!-- Section Header -->
+        <div class="cookie-thirdparty__header">
+            <span class="cookie-thirdparty__badge">THIRD-PARTY TECHNOLOGIES</span>
+            <h2 class="cookie-thirdparty__title">Trusted Third-Party Services and <span class="highlight-text">Cookie Technologies</span></h2>
+            <p class="cookie-thirdparty__subtitle">
+                Some website features may rely on trusted third-party technologies to support functionality,
+                analytics, communications, security, or other services. Where implemented, these providers may
+                use cookies or similar technologies in accordance with their own privacy practices.
+            </p>
+        </div>
+
+        <!-- Third-Party Transparency Banner -->
+        <div class="cookie-thirdparty__banner">
+            <div class="thirdparty-banner">
+                <div class="thirdparty-banner__content">
+                    <span class="thirdparty-banner__badge">🔗 WORKING WITH TRUSTED PARTNERS</span>
+                    <h3 class="thirdparty-banner__title">Working with Trusted Technology Partners</h3>
+                    <p class="thirdparty-banner__desc">
+                        Carefully selected third-party providers may help deliver certain website features or
+                        business services. These providers may process limited information or use cookies where
+                        necessary, subject to their own policies and applicable laws.
+                    </p>
+                    <div class="thirdparty-banner__actions">
+                        <a href="#" class="btn-primary btn-banner-thirdparty-privacy">
+                            <i class="fas fa-shield-alt" aria-hidden="true"></i> Privacy Policy
+                        </a>
+                        <a href="#" class="btn-secondary btn-banner-thirdparty-manage">
+                            <i class="fas fa-sliders-h" aria-hidden="true"></i> Manage Preferences
+                        </a>
+                    </div>
+                </div>
+                <div class="thirdparty-banner__visual">
+                    <span class="tp-icon tp-icon--1"><i class="fas fa-link"></i></span>
+                    <span class="tp-icon tp-icon--2"><i class="fas fa-shield-alt"></i></span>
+                    <span class="tp-icon tp-icon--3"><i class="fas fa-cloud"></i></span>
+                    <span class="tp-icon tp-icon--4"><i class="fas fa-plug"></i></span>
+                    <div class="tp-shape tp-shape--1"></div>
+                    <div class="tp-shape tp-shape--2"></div>
+                    <div class="tp-shape tp-shape--3"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Technology Categories Grid -->
+        <div class="cookie-thirdparty__categories">
+            <div class="section-header">
+                <span class="section-header__icon"><i class="fas fa-th-list"></i></span>
+                <h4 class="section-header__title">Technology Categories</h4>
+                <span class="section-header__count">6 categories</span>
+            </div>
+            <div class="thirdparty-categories-grid">
+                <!-- Category 1: Website Infrastructure -->
+                <div class="thirdparty-card">
+                    <span class="thirdparty-card__icon"><i class="fas fa-server"></i></span>
+                    <span class="thirdparty-card__title">Website Infrastructure</span>
+                    <span class="thirdparty-card__purpose">Support hosting, content delivery, and website performance where implemented.</span>
+                    <div class="thirdparty-card__examples">
+                        <span class="tp-example">Hosting</span>
+                        <span class="tp-example">CDN</span>
+                        <span class="tp-example">Performance</span>
+                    </div>
+                    <span class="thirdparty-card__badge thirdparty-card__badge--where">Where Implemented</span>
+                </div>
+
+                <!-- Category 2: Analytics Services -->
+                <div class="thirdparty-card">
+                    <span class="thirdparty-card__icon"><i class="fas fa-chart-bar"></i></span>
+                    <span class="thirdparty-card__title">Analytics Services</span>
+                    <span class="thirdparty-card__purpose">Provide website insights, performance measurement, and improvement data where implemented.</span>
+                    <div class="thirdparty-card__examples">
+                        <span class="tp-example">Usage insights</span>
+                        <span class="tp-example">Performance</span>
+                        <span class="tp-example">Improvement</span>
+                    </div>
+                    <span class="thirdparty-card__badge thirdparty-card__badge--where">Where Implemented</span>
+                </div>
+
+                <!-- Category 3: Communication Tools -->
+                <div class="thirdparty-card">
+                    <span class="thirdparty-card__icon"><i class="fas fa-envelope"></i></span>
+                    <span class="thirdparty-card__title">Communication Tools</span>
+                    <span class="thirdparty-card__purpose">Facilitate email, customer communication, and support systems where applicable.</span>
+                    <div class="thirdparty-card__examples">
+                        <span class="tp-example">Email</span>
+                        <span class="tp-example">Support</span>
+                        <span class="tp-example">Communication</span>
+                    </div>
+                    <span class="thirdparty-card__badge thirdparty-card__badge--where">Where Applicable</span>
+                </div>
+
+                <!-- Category 4: Security Technologies -->
+                <div class="thirdparty-card">
+                    <span class="thirdparty-card__icon"><i class="fas fa-shield-alt"></i></span>
+                    <span class="thirdparty-card__title">Security Technologies</span>
+                    <span class="thirdparty-card__purpose">Support fraud prevention, website protection, and authentication systems.</span>
+                    <div class="thirdparty-card__examples">
+                        <span class="tp-example">Fraud prevention</span>
+                        <span class="tp-example">Authentication</span>
+                        <span class="tp-example">Protection</span>
+                    </div>
+                    <span class="thirdparty-card__badge thirdparty-card__badge--essential">Essential</span>
+                </div>
+
+                <!-- Category 5: Embedded Content -->
+                <div class="thirdparty-card">
+                    <span class="thirdparty-card__icon"><i class="fas fa-code"></i></span>
+                    <span class="thirdparty-card__title">Embedded Content</span>
+                    <span class="thirdparty-card__purpose">Enable maps, videos, and external media where applicable on the website.</span>
+                    <div class="thirdparty-card__examples">
+                        <span class="tp-example">Maps</span>
+                        <span class="tp-example">Videos</span>
+                        <span class="tp-example">External media</span>
+                    </div>
+                    <span class="thirdparty-card__badge thirdparty-card__badge--where">Where Applicable</span>
+                </div>
+
+                <!-- Category 6: Future Integrations -->
+                <div class="thirdparty-card">
+                    <span class="thirdparty-card__icon"><i class="fas fa-rocket"></i></span>
+                    <span class="thirdparty-card__title">Future Integrations</span>
+                    <span class="thirdparty-card__purpose">Support new services and technologies while maintaining transparency and user choice.</span>
+                    <div class="thirdparty-card__examples">
+                        <span class="tp-example">New features</span>
+                        <span class="tp-example">Emerging tech</span>
+                        <span class="tp-example">Transparency</span>
+                    </div>
+                    <span class="thirdparty-card__badge thirdparty-card__badge--future">Future Ready</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Information Flow Diagram -->
+        <div class="cookie-thirdparty__flow">
+            <div class="section-header">
+                <span class="section-header__icon"><i class="fas fa-route"></i></span>
+                <h4 class="section-header__title">How Third-Party Services Interact</h4>
+                <span class="section-header__count">5 stages</span>
+            </div>
+            <div class="thirdparty-flow">
+                <div class="thirdparty-flow-node">
+                    <span class="thirdparty-flow-node__icon"><i class="fas fa-globe"></i></span>
+                    <span class="thirdparty-flow-node__label">Website Visit</span>
+                    <span class="thirdparty-flow-node__connector"></span>
+                </div>
+                <div class="thirdparty-flow-node">
+                    <span class="thirdparty-flow-node__icon"><i class="fas fa-cogs"></i></span>
+                    <span class="thirdparty-flow-node__label">Website Feature</span>
+                    <span class="thirdparty-flow-node__connector"></span>
+                </div>
+                <div class="thirdparty-flow-node">
+                    <span class="thirdparty-flow-node__icon"><i class="fas fa-plug"></i></span>
+                    <span class="thirdparty-flow-node__label">Trusted Third-Party Service</span>
+                    <span class="thirdparty-flow-node__connector"></span>
+                </div>
+                <div class="thirdparty-flow-node">
+                    <span class="thirdparty-flow-node__icon"><i class="fas fa-play"></i></span>
+                    <span class="thirdparty-flow-node__label">Requested Function</span>
+                    <span class="thirdparty-flow-node__connector"></span>
+                </div>
+                <div class="thirdparty-flow-node thirdparty-flow-node--end">
+                    <span class="thirdparty-flow-node__icon"><i class="fas fa-smile"></i></span>
+                    <span class="thirdparty-flow-node__label">Enhanced User Experience</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Transparency & User Choice Cards -->
+        <div class="cookie-thirdparty__transparency">
+            <div class="section-header">
+                <span class="section-header__icon"><i class="fas fa-eye"></i></span>
+                <h4 class="section-header__title">Transparency &amp; User Choice</h4>
+                <span class="section-header__count">6 principles</span>
+            </div>
+            <div class="transparency-grid">
+                <!-- Card 1: Independent Privacy Policies -->
+                <div class="transparency-card">
+                    <span class="transparency-card__icon"><i class="fas fa-file-alt"></i></span>
+                    <span class="transparency-card__title">Independent Privacy Policies</span>
+                    <span class="transparency-card__desc">Third-party providers operate under their own privacy policies and terms of service.</span>
+                </div>
+
+                <!-- Card 2: Cookie Consent -->
+                <div class="transparency-card">
+                    <span class="transparency-card__icon"><i class="fas fa-check-double"></i></span>
+                    <span class="transparency-card__title">Cookie Consent</span>
+                    <span class="transparency-card__desc">Where required, cookie consent applies to third-party cookies in accordance with applicable laws.</span>
+                </div>
+
+                <!-- Card 3: Data Minimization -->
+                <div class="transparency-card">
+                    <span class="transparency-card__icon"><i class="fas fa-compress-alt"></i></span>
+                    <span class="transparency-card__title">Data Minimization</span>
+                    <span class="transparency-card__desc">We strive to limit data shared with third parties to what is necessary for the specific service.</span>
+                </div>
+
+                <!-- Card 4: Trusted Providers -->
+                <div class="transparency-card">
+                    <span class="transparency-card__icon"><i class="fas fa-handshake"></i></span>
+                    <span class="transparency-card__title">Trusted Providers</span>
+                    <span class="transparency-card__desc">Third-party providers are selected based on their reputation, security, and privacy practices.</span>
+                </div>
+
+                <!-- Card 5: User Control -->
+                <div class="transparency-card">
+                    <span class="transparency-card__icon"><i class="fas fa-sliders-h"></i></span>
+                    <span class="transparency-card__title">User Control</span>
+                    <span class="transparency-card__desc">Users may manage preferences for optional third-party technologies where available.</span>
+                </div>
+
+                <!-- Card 6: Ongoing Transparency -->
+                <div class="transparency-card">
+                    <span class="transparency-card__icon"><i class="fas fa-sync-alt"></i></span>
+                    <span class="transparency-card__title">Ongoing Transparency</span>
+                    <span class="transparency-card__desc">We regularly review and update our third-party practices to maintain transparency.</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Important Notice Banner -->
+        <div class="cookie-thirdparty__notice">
+            <div class="notice-banner-thirdparty">
+                <div class="notice-banner-thirdparty__content">
+                    <span class="notice-banner-thirdparty__icon"><i class="fas fa-external-link-alt"></i></span>
+                    <div class="notice-banner-thirdparty__text">
+                        <h4 class="notice-banner-thirdparty__title">Third-Party Policies Apply Independently</h4>
+                        <p class="notice-banner-thirdparty__desc">
+                            Users should review the privacy and cookie policies of third-party providers where applicable,
+                            as those organizations operate under their own terms and privacy practices. We encourage you
+                            to stay informed about how your information is handled across services.
+                        </p>
+                    </div>
+                </div>
+                <div class="notice-banner-thirdparty__badge">
+                    <span>Independent</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ==================================================
+END: Third-Party Cookies & Technologies
+================================================== -->
+
+<!-- ==================================================
+START: Policy Updates & Your Choices
+================================================== -->
+<section id="cookie-updates" class="cookie-updates" aria-label="Policy Updates and Your Choices - XoHub Solutions">
+    <!-- Background Decorations -->
+    <div class="cookie-updates__bg" aria-hidden="true">
+        <div class="cookie-updates__glow cookie-updates__glow--1"></div>
+        <div class="cookie-updates__glow cookie-updates__glow--2"></div>
+        <div class="cookie-updates__glow cookie-updates__glow--3"></div>
+        <div class="cookie-updates__orb cookie-updates__orb--1"></div>
+        <div class="cookie-updates__orb cookie-updates__orb--2"></div>
+        <div class="cookie-updates__shape cookie-updates__shape--1"></div>
+        <div class="cookie-updates__shape cookie-updates__shape--2"></div>
+        <svg class="cookie-updates__grid" viewBox="0 0 1000 800" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="160" cy="160" r="130" stroke="rgba(192,227,74,0.025)" stroke-width="1" stroke-dasharray="6 6"/>
+            <circle cx="840" cy="640" r="150" stroke="rgba(124,58,237,0.025)" stroke-width="1" stroke-dasharray="8 8"/>
+            <circle cx="500" cy="400" r="230" stroke="rgba(192,227,74,0.015)" stroke-width="1"/>
+            <path d="M220 0 L220 800" stroke="rgba(124,58,237,0.015)" stroke-width="1"/>
+            <path d="M780 0 L780 800" stroke="rgba(192,227,74,0.015)" stroke-width="1"/>
+        </svg>
+        <div class="particle particle--1"></div>
+        <div class="particle particle--2"></div>
+        <div class="particle particle--3"></div>
+        <div class="particle particle--4"></div>
+        <div class="particle particle--5"></div>
+        <div class="particle particle--6"></div>
+    </div>
+
+    <div class="container cookie-updates__inner">
+        <!-- Section Header -->
+        <div class="cookie-updates__header">
+            <span class="cookie-updates__badge">POLICY UPDATES</span>
+            <h2 class="cookie-updates__title">Keeping You Informed <span class="highlight-text">and In Control</span></h2>
+            <p class="cookie-updates__subtitle">
+                As our website and services evolve, this Cookie Policy may be updated to reflect new technologies,
+                features, legal requirements, or business practices. We encourage visitors to review this page
+                periodically.
+            </p>
+        </div>
+
+        <!-- Policy Updates Banner -->
+        <div class="cookie-updates__banner">
+            <div class="updates-banner">
+                <div class="updates-banner__content">
+                    <span class="updates-banner__badge">🔄 TRANSPARENCY IS AN ONGOING COMMITMENT</span>
+                    <h3 class="updates-banner__title">Transparency Is an Ongoing Commitment</h3>
+                    <p class="updates-banner__desc">
+                        When significant updates are made to the Cookie Policy, the effective date and last updated
+                        date will be revised. Where appropriate, users may also be informed through website notices
+                        or updated cookie preference tools.
+                    </p>
+                    <div class="updates-banner__actions">
+                        <a href="#" class="btn-primary btn-banner-updates-privacy">
+                            <i class="fas fa-shield-alt" aria-hidden="true"></i> Review Privacy Policy
+                        </a>
+                        <a href="#" class="btn-secondary btn-banner-updates-manage">
+                            <i class="fas fa-sliders-h" aria-hidden="true"></i> Manage Preferences
+                        </a>
+                    </div>
+                </div>
+                <div class="updates-banner__visual">
+                    <span class="up-icon up-icon--1"><i class="fas fa-sync-alt"></i></span>
+                    <span class="up-icon up-icon--2"><i class="fas fa-file-alt"></i></span>
+                    <span class="up-icon up-icon--3"><i class="fas fa-calendar-alt"></i></span>
+                    <span class="up-icon up-icon--4"><i class="fas fa-shield-alt"></i></span>
+                    <div class="up-shape up-shape--1"></div>
+                    <div class="up-shape up-shape--2"></div>
+                    <div class="up-shape up-shape--3"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Policy Lifecycle Timeline -->
+        <div class="cookie-updates__lifecycle">
+            <div class="section-header">
+                <span class="section-header__icon"><i class="fas fa-history"></i></span>
+                <h4 class="section-header__title">Policy Lifecycle</h4>
+                <span class="section-header__count">5 milestones</span>
+            </div>
+            <div class="lifecycle-timeline">
+                <div class="lifecycle-step">
+                    <span class="lifecycle-step__number">01</span>
+                    <span class="lifecycle-step__label">Cookie Policy Published</span>
+                    <span class="lifecycle-step__desc">Initial version of our Cookie Policy is established</span>
+                    <span class="lifecycle-step__connector"></span>
+                </div>
+                <div class="lifecycle-step">
+                    <span class="lifecycle-step__number">02</span>
+                    <span class="lifecycle-step__label">Website Improvements</span>
+                    <span class="lifecycle-step__desc">Updates reflecting website enhancements and user feedback</span>
+                    <span class="lifecycle-step__connector"></span>
+                </div>
+                <div class="lifecycle-step">
+                    <span class="lifecycle-step__number">03</span>
+                    <span class="lifecycle-step__label">Technology Updates</span>
+                    <span class="lifecycle-step__desc">Revisions aligned with new technologies and integrations</span>
+                    <span class="lifecycle-step__connector"></span>
+                </div>
+                <div class="lifecycle-step">
+                    <span class="lifecycle-step__number">04</span>
+                    <span class="lifecycle-step__label">Policy Review</span>
+                    <span class="lifecycle-step__desc">Comprehensive review and refinement of cookie practices</span>
+                    <span class="lifecycle-step__connector"></span>
+                </div>
+                <div class="lifecycle-step lifecycle-step--end">
+                    <span class="lifecycle-step__number">05</span>
+                    <span class="lifecycle-step__label">Latest Version Available</span>
+                    <span class="lifecycle-step__desc">Current, up-to-date Cookie Policy reflecting latest practices</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Your Choices Grid -->
+        <div class="cookie-updates__choices">
+            <div class="section-header">
+                <span class="section-header__icon"><i class="fas fa-user-check"></i></span>
+                <h4 class="section-header__title">Your Choices</h4>
+                <span class="section-header__count">6 options</span>
+            </div>
+            <div class="choices-grid">
+                <!-- Choice 1: Review Preferences Anytime -->
+                <div class="choice-card">
+                    <span class="choice-card__icon"><i class="fas fa-eye"></i></span>
+                    <span class="choice-card__title">Review Preferences Anytime</span>
+                    <span class="choice-card__desc">You can review your cookie preferences at any time through available tools or browser settings.</span>
+                </div>
+
+                <!-- Choice 2: Update Consent Choices -->
+                <div class="choice-card">
+                    <span class="choice-card__icon"><i class="fas fa-check-double"></i></span>
+                    <span class="choice-card__title">Update Consent Choices</span>
+                    <span class="choice-card__desc">Where consent is required, you may update your choices regarding optional cookie categories.</span>
+                </div>
+
+                <!-- Choice 3: Browser Controls -->
+                <div class="choice-card">
+                    <span class="choice-card__icon"><i class="fas fa-cog"></i></span>
+                    <span class="choice-card__title">Browser Controls</span>
+                    <span class="choice-card__desc">Use your browser's privacy settings to manage cookies, delete existing ones, or block future cookies.</span>
+                </div>
+
+                <!-- Choice 4: Disable Optional Cookies -->
+                <div class="choice-card">
+                    <span class="choice-card__icon"><i class="fas fa-ban"></i></span>
+                    <span class="choice-card__title">Disable Optional Cookies</span>
+                    <span class="choice-card__desc">You can disable optional cookies without affecting essential website functionality.</span>
+                </div>
+
+                <!-- Choice 5: Contact Our Team -->
+                <div class="choice-card">
+                    <span class="choice-card__icon"><i class="fas fa-headset"></i></span>
+                    <span class="choice-card__title">Contact Our Team</span>
+                    <span class="choice-card__desc">Have questions about cookies or privacy? Our team is available to help.</span>
+                </div>
+
+                <!-- Choice 6: Stay Informed -->
+                <div class="choice-card">
+                    <span class="choice-card__icon"><i class="fas fa-bell"></i></span>
+                    <span class="choice-card__title">Stay Informed</span>
+                    <span class="choice-card__desc">We encourage you to review this policy periodically to stay informed about cookie practices.</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Important Notice Banner -->
+        <div class="cookie-updates__notice">
+            <div class="notice-banner-updates">
+                <div class="notice-banner-updates__content">
+                    <span class="notice-banner-updates__icon"><i class="fas fa-sliders-h"></i></span>
+                    <div class="notice-banner-updates__text">
+                        <h4 class="notice-banner-updates__title">Your Preferences Matter</h4>
+                        <p class="notice-banner-updates__desc">
+                            You can revisit cookie settings where available, use browser controls, or contact XoHub
+                            Solutions with questions regarding cookies or privacy-related concerns. We're here to help
+                            you make informed choices.
+                        </p>
+                    </div>
+                </div>
+                <div class="notice-banner-updates__badge">
+                    <span>Your Choice</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Closing CTA -->
+        <div class="cookie-updates__cta">
+            <div class="closing-updates-cta">
+                <div class="closing-updates-cta__content">
+                    <span class="closing-updates-cta__badge">💬 QUESTIONS ABOUT COOKIES OR PRIVACY?</span>
+                    <h3 class="closing-updates-cta__title">Questions About Cookies or Privacy?</h3>
+                    <p class="closing-updates-cta__desc">
+                        Our team is happy to help explain how cookies are used and how you can manage your preferences.
+                        Reach out to us for clarity and support.
+                    </p>
+                    <div class="closing-updates-cta__actions">
+                        <a href="#" class="btn-primary btn-cta-updates-contact">
+                            <i class="fas fa-headset" aria-hidden="true"></i> Contact Us
+                        </a>
+                        <a href="#" class="btn-secondary btn-cta-updates-privacy">
+                            <i class="fas fa-shield-alt" aria-hidden="true"></i> Privacy Policy
+                        </a>
+                    </div>
+                </div>
+                <div class="closing-updates-cta__visual">
+                    <span class="cu-icon cu-icon--1"><i class="fas fa-cookie-bite"></i></span>
+                    <span class="cu-icon cu-icon--2"><i class="fas fa-shield-alt"></i></span>
+                    <span class="cu-icon cu-icon--3"><i class="fas fa-sliders-h"></i></span>
+                    <span class="cu-icon cu-icon--4"><i class="fas fa-comment-dots"></i></span>
+                    <div class="cu-shape cu-shape--1"></div>
+                    <div class="cu-shape cu-shape--2"></div>
+                    <div class="cu-shape cu-shape--3"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ==================================================
+END: Policy Updates & Your Choices
+================================================== -->
+
+
+    <!-- ============================================================
+    PREMIUM FOOTER — Phase 13 (Final)
+    ============================================================ -->
+    <footer id="main-footer" class="main-footer" role="contentinfo" aria-label="Site footer">
+        <!-- Background Decorations -->
+        <div class="footer__bg" aria-hidden="true">
+            <div class="footer-bg__glow footer-bg__glow--1"></div>
+            <div class="footer-bg__glow footer-bg__glow--2"></div>
+            <div class="footer-bg__glow footer-bg__glow--3"></div>
+            <div class="footer-bg__orb footer-bg__orb--1"></div>
+            <div class="footer-bg__orb footer-bg__orb--2"></div>
+            <div class="footer-bg__shape footer-bg__shape--1"></div>
+            <div class="footer-bg__shape footer-bg__shape--2"></div>
+            <div class="footer-bg__shape footer-bg__shape--3"></div>
+            <!-- Decorative grid -->
+            <svg class="footer-bg__grid" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true">
+                <path d="M0 400 L1200 400" stroke="rgba(255,255,255,0.02)" stroke-width="1" />
+                <path d="M300 0 L300 800" stroke="rgba(255,255,255,0.02)" stroke-width="1" />
+                <path d="M600 0 L600 800" stroke="rgba(255,255,255,0.02)" stroke-width="1" />
+                <path d="M900 0 L900 800" stroke="rgba(255,255,255,0.02)" stroke-width="1" />
+                <circle cx="300" cy="250" r="180" stroke="rgba(192,227,74,0.03)" stroke-width="1"
+                    stroke-dasharray="8 8" />
+                <circle cx="900" cy="550" r="200" stroke="rgba(124,58,237,0.03)" stroke-width="1"
+                    stroke-dasharray="6 10" />
+                <circle cx="600" cy="400" r="280" stroke="rgba(192,227,74,0.02)" stroke-width="1" />
+            </svg>
+        </div>
+
+        <div class="container footer__inner">
+            <!-- ====== TOP FOOTER ====== -->
+            <div class="footer__top">
+                <!-- Column 1: Brand Area -->
+                <div class="footer__column footer__column--brand">
+                    <a href="http://127.0.0.1:5500/" class="footer__logo" aria-label="XoHub Solutions Home">
+                        <img src="assets/public/images/XoHub_Solutions_Logo.jpeg" alt="XoHub Solutions Logo"
+                            class="footer__logo-image" width="150" height="150" loading="lazy" />
+                        <!-- <span class="footer__logo-text">XoHub <span class="footer__logo-highlight">Solutions</span></span> -->
+                    </a>
+                    <!-- <p class="footer__tagline">Your Digital Growth Partner</p> -->
+                    <p class="footer__description">
+                        XoHub Solutions is a modern software company specializing in scalable web applications,
+                        enterprise software, AI-powered solutions, cloud technologies, and digital transformation.
+                    </p>
+                </div>
+
+                <!-- Column 2: Company -->
+                <div class="footer__column">
+                    <h4 class="footer__column-title">Company</h4>
+                    <ul class="footer__links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Our Team</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="http://127.0.0.1:5500/blog.html">Blog</a></li>
+                        <li><a href="http://127.0.0.1:5500/portfolio.html">Portfolio</a></li>
+                        <li><a href="http://127.0.0.1:5500/contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Services -->
+                <div class="footer__column">
+                    <h4 class="footer__column-title">Services</h4>
+                    <ul class="footer__links">
+                        <li><a href="#">Web Development</a></li>
+                        <li><a href="#">Custom Software</a></li>
+                        <li><a href="#">UI/UX Design</a></li>
+                        <li><a href="#">E-Commerce Solutions</a></li>
+                        <li><a href="#">Cloud Solutions</a></li>
+                        <li><a href="#">AI Automation</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Products -->
+                <div class="footer__column">
+                    <h4 class="footer__column-title">Products</h4>
+                    <ul class="footer__links">
+                        <li><a href="#">Business Management System</a></li>
+                        <li><a href="#">CRM Platform</a></li>
+                        <li><a href="#">HR Management</a></li>
+                        <li><a href="#">E-Commerce Platform</a></li>
+                        <li><a href="#">AI Business Assistant</a></li>
+                        <li><a href="#">Custom Enterprise Software</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 5: Resources -->
+                <div class="footer__column">
+                    <h4 class="footer__column-title">Resources</h4>
+                    <ul class="footer__links">
+                        <li><a href="http://127.0.0.1:5500/case-studies.html">Case Studies</a></li>
+                        <li><a href="http://127.0.0.1:5500/documentation.html">Documentation</a></li>
+                        <li><a href="http://127.0.0.1:5500/faqs.html">FAQs</a></li>
+                        <li><a href="http://127.0.0.1:5500/support-center.html">Support Center</a></li>
+                        <li><a href="http://127.0.0.1:5500/privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="http://127.0.0.1:5500/terms-conditions.html">Terms &amp; Conditions</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 6: Contact & Social -->
+                <div class="footer__column footer__column--contact">
+                    <h4 class="footer__column-title">Contact</h4>
+                    <ul class="footer__contact-list">
+                        <li>
+                            <span class="contact-icon"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></span>
+                            <span>Pakistan, Peshawar, IT Park</span>
+                        </li>
+                        <li>
+                            <span class="contact-icon"><i class="fas fa-envelope" aria-hidden="true"></i></span>
+                            <a href="mailto:info@xohubsolutions.com">info@xohubsolutions.com</a>
+                        </li>
+                        <li>
+                            <span class="contact-icon"><i class="fas fa-phone" aria-hidden="true"></i></span>
+                            <a href="tel:+923477300226">+92 347 7300226</a>
+                        </li>
+                        <li>
+                            <span class="contact-icon"><i class="fas fa-clock" aria-hidden="true"></i></span>
+                            <span>Mon – Fri, 9:00 AM – 6:00 PM</span>
+                        </li>
+                    </ul>
+                    <!-- Social Icons -->
+                    <div class="footer__social">
+                        <a href="https://www.facebook.com/xohubsolutions" aria-label="Facebook" class="social-link"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/xohubsolutions" aria-label="Instagram" class="social-link"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/xohubsolutions" aria-label="LinkedIn"
+                            class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.youtube.com/c/XohubSolutions" aria-label="YouTube" class="social-link"><i
+                                class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ====== NEWSLETTER & TRUST BADGES ====== -->
+            <div class="footer__newsletter">
+                <div class="newsletter__content">
+                    <div class="newsletter__header">
+                        <span class="newsletter__icon"><i class="fas fa-envelope" aria-hidden="true"></i></span>
+                        <div>
+                            <h4 class="newsletter__title">Stay Updated</h4>
+                            <p class="newsletter__description">
+                                Subscribe to receive the latest technology insights, product updates, development tips,
+                                and company news.
+                            </p>
+                        </div>
+                    </div>
+                    <form class="newsletter__form" id="newsletter-form" novalidate>
+                        <div class="newsletter__input-group">
+                            <input type="email" class="newsletter__input" id="newsletter-email"
+                                placeholder="Enter your email address" aria-label="Email address for newsletter"
+                                required />
+                            <button type="submit" class="newsletter__button">
+                                Subscribe
+                                <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <div class="newsletter__error" id="newsletter-error" role="alert" aria-live="polite"></div>
+                        <div class="newsletter__success" id="newsletter-success" role="alert" aria-live="polite">
+                            Thank you for subscribing!
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Trust Badges -->
+                <div class="footer__trust-badges">
+                    <div class="trust-badge">
+                        <span class="trust-badge__icon"><i class="fas fa-microchip" aria-hidden="true"></i></span>
+                        <span class="trust-badge__text">Modern Technologies</span>
+                    </div>
+                    <div class="trust-badge">
+                        <span class="trust-badge__icon"><i class="fas fa-shield-alt" aria-hidden="true"></i></span>
+                        <span class="trust-badge__text">Secure Development</span>
+                    </div>
+                    <div class="trust-badge">
+                        <span class="trust-badge__icon"><i class="fas fa-expand-arrows-alt"
+                                aria-hidden="true"></i></span>
+                        <span class="trust-badge__text">Scalable Solutions</span>
+                    </div>
+                    <div class="trust-badge">
+                        <span class="trust-badge__icon"><i class="fas fa-handshake" aria-hidden="true"></i></span>
+                        <span class="trust-badge__text">Long-Term Support</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ====== BOTTOM FOOTER ====== -->
+        <div class="footer__bottom">
+            <div class="container footer__bottom-inner">
+                <div class="footer__copyright">
+                    <p>&copy; 2026 XoHub Solutions. All Rights Reserved.</p>
+                </div>
+                <div class="footer__credit">
+                    <p>Designed &amp; Developed with <span class="credit-heart">❤️</span> by XoHub Solutions</p>
+                </div>
+                <div class="footer__bottom-links">
+                    <a href="#">Privacy</a>
+                    <span class="footer__bottom-divider">|</span>
+                    <a href="#">Terms</a>
+                    <span class="footer__bottom-divider">|</span>
+                    <a href="http://127.0.0.1:5500/cookie-policy.html">Cookies</a>
+                    <span class="footer__bottom-divider">|</span>
+                    <a href="#">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ====== BACK TO TOP BUTTON ====== -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+    <!-- ================ END FOOTER ================ -->
+
+    <!-- ================== JAVASCRIPT ================== -->
+    <script src="assets/js/main.js" defer></script>
+</body>
+
+</html>

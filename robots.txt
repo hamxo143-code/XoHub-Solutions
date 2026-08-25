@@ -1,0 +1,11 @@
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Disallow admin/private pages
+Disallow: /register-super-admin.html
+Disallow: /signin.html
+Disallow: /test-counter.html
+
+# Sitemap location
+Sitemap: https://xohubsolutions.com/sitemap.xml
