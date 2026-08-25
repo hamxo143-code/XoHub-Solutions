@@ -58,9 +58,6 @@
         isScrollingDown = scrollY > lastScrollY;
         lastScrollY = scrollY;
 
-        // Debug logging
-        console.log('📊 Scroll Y:', scrollY, 'Threshold:', topBarHeight, 'Scrolled?:', scrollY > topBarHeight);
-
         // Sticky behavior with Top Bar hide/show
         if (scrollY > topBarHeight) {
             // Scrolled past Top Bar - make nav sticky with glassmorphism
@@ -69,7 +66,6 @@
             // Hide Top Bar using CSS class
             if (topBar) {
                 topBar.classList.add('hidden');
-                console.log('✅ Top Bar hidden, classes:', topBar.className);
             }
         } else {
             // At top - show Top Bar, remove glassmorphism
@@ -78,7 +74,6 @@
             // Show Top Bar using CSS class
             if (topBar) {
                 topBar.classList.remove('hidden');
-                console.log('👁️ Top Bar visible, classes:', topBar.className);
             }
         }
     };

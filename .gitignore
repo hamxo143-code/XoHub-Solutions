@@ -3,6 +3,12 @@
 .env.local
 .env.*.local
 
+# Private/Confidential
+Requirements/
+*_PRIVATE/
+*.private.*
+confidential/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

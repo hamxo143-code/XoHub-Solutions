@@ -144,9 +144,11 @@ Then visit `http://localhost:8000`
 - **404 Error** (`404.html`) - Custom error page
 
 ### Development Pages (Not indexed)
-- **Sign In** (`signin.html`) - Admin sign-in demo
-- **Register** (`register-super-admin.html`) - Admin registration demo
-- **Test Counter** (`test-counter.html`) - Counter animation test page
+- **Sign In** (`signin.html`) - Demo admin UI (non-functional, no backend)
+- **Register** (`register-super-admin.html`) - Demo registration UI (non-functional, no backend)
+
+**⚠️ IMPORTANT SECURITY NOTE:**
+These pages are UI demos only and do NOT provide actual authentication or access control. They are excluded from search engine indexing via robots.txt but remain publicly accessible. For production admin systems, implement proper server-side authentication, authorization, and access controls.
 
 ## 🔄 Updates & Maintenance
 
