@@ -88,7 +88,7 @@
           </button>
 
           <!-- Small Footer Text -->
-          <p class="uc-footer-text">© 2025 XoHub Solutions — Premium Digital Innovation</p>
+          <p class="uc-footer-text">© 2026 XoHub Solutions — Premium Digital Innovation</p>
         </div>
       </div>
     </div>
@@ -3595,33 +3595,59 @@ END: Global Floating Cookie Settings Button
       const modalOverlay = document.getElementById('ucModal');
       const closeBtn = document.getElementById('ucCloseBtn');
       const continueBtn = document.getElementById('ucContinueBtn');
+      
       if (!modalOverlay || !closeBtn || !continueBtn) return;
-      const modalSeen = sessionStorage.getItem('xohub_modal_seen');
-      if (!modalSeen) {
-        setTimeout(() => {
-          modalOverlay.style.visibility = 'visible';
-          modalOverlay.style.opacity = '1';
-          closeBtn.focus();
-        }, 800);
-        sessionStorage.setItem('xohub_modal_seen', 'true');
-      } else {
+      
+      // Check if user has already dismissed the modal
+      const modalDismissed = sessionStorage.getItem('xohub_modal_dismissed');
+      
+      // If already dismissed, hide immediately
+      if (modalDismissed === 'true') {
         modalOverlay.style.display = 'none';
+        return;
       }
+      
+      // Show modal after delay
+      setTimeout(() => {
+        modalOverlay.style.visibility = 'visible';
+        modalOverlay.style.opacity = '1';
+        closeBtn.focus();
+      }, 800);
+      
+      // Close modal function
       function closeModal() {
+        // Mark as dismissed
+        sessionStorage.setItem('xohub_modal_dismissed', 'true');
+        
+        // Start closing animation
         modalOverlay.classList.add('is-closing');
+        
         setTimeout(() => {
+          modalOverlay.style.display = 'none';
           modalOverlay.style.visibility = 'hidden';
           modalOverlay.style.opacity = '0';
           modalOverlay.classList.remove('is-closing');
         }, 400);
       }
+      
+      // Close button click
       closeBtn.addEventListener('click', closeModal);
+      
+      // Continue button click
       continueBtn.addEventListener('click', closeModal);
+      
+      // Close on overlay click (outside modal)
       modalOverlay.addEventListener('click', function (e) {
-        if (e.target === modalOverlay) closeModal();
+        if (e.target === modalOverlay) {
+          closeModal();
+        }
       });
+      
+      // Close on Escape key
       document.addEventListener('keydown', function (e) {
-        if (e.key === 'Escape' && modalOverlay.style.visibility === 'visible') closeModal();
+        if (e.key === 'Escape' && modalOverlay.style.visibility === 'visible') {
+          closeModal();
+        }
       });
     })();
     </script>

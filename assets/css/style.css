@@ -100942,6 +100942,7 @@ START: Under Construction Modal
   visibility: hidden;
   transition: opacity 0.4s ease, visibility 0.4s ease;
   animation: ucFadeIn 0.5s ease forwards;
+  overflow-y: auto;
 }
 
 @keyframes ucFadeIn {
@@ -101218,6 +101219,7 @@ START: Under Construction Modal
 @media (max-width: 767px) {
   .uc-modal-container {
     border-radius: 22px;
+    max-width: 90%;
   }
   .uc-modal-container::before {
     border-radius: 22px;
@@ -101250,6 +101252,10 @@ START: Under Construction Modal
 @media (max-width: 575px) {
   .uc-modal-overlay {
     padding: 10px;
+    align-items: flex-end;
+  }
+  .uc-modal-container {
+    max-width: 100%;
   }
   .uc-modal-content {
     padding: 28px 16px 20px;
@@ -101259,6 +101265,7 @@ START: Under Construction Modal
   }
   .uc-modal-desc {
     font-size: 0.82rem;
+    line-height: 1.6;
   }
   .uc-notice-box {
     padding: 12px 14px;
@@ -101272,10 +101279,10 @@ START: Under Construction Modal
 
 @media (max-width: 424px) {
   .uc-modal-title {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
   }
   .uc-modal-desc {
-    font-size: 0.78rem;
+    font-size: 0.8rem;
   }
   .uc-icon-ring {
     width: 56px;
@@ -101285,6 +101292,16 @@ START: Under Construction Modal
     width: 32px;
     height: 32px;
   }
+  .uc-progress-wrapper {
+    margin-bottom: 16px;
+  }
+  .uc-notice-box {
+    gap: 10px;
+  }
+  .uc-notice-box svg {
+    width: 18px;
+    height: 18px;
+  }
 }
 
 @media (max-width: 374px) {
@@ -101292,11 +101309,49 @@ START: Under Construction Modal
     padding: 24px 12px 16px;
   }
   .uc-modal-title {
-    font-size: 1rem;
+    font-size: 1.05rem;
+  }
+  .uc-modal-desc {
+    font-size: 0.78rem;
   }
   .uc-notice-box {
     flex-direction: column;
     gap: 8px;
+    align-items: center;
+    text-align: center;
+  }
+  .uc-continue-btn {
+    padding: 12px 20px;
+    font-size: 0.85rem;
+  }
+  .uc-footer-text {
+    font-size: 0.65rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .uc-modal-overlay {
+    padding: 5px;
+  }
+  .uc-modal-content {
+    padding: 20px 10px 14px;
+  }
+  .uc-modal-title {
+    font-size: 0.95rem;
+  }
+  .uc-modal-desc {
+    font-size: 0.75rem;
+  }
+  .uc-icon-ring {
+    width: 48px;
+    height: 48px;
+  }
+  .uc-icon-ring svg {
+    width: 28px;
+    height: 28px;
+  }
+  .uc-progress-label {
+    font-size: 0.65rem;
   }
 }
 /* ==================================================
