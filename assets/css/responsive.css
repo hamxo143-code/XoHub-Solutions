@@ -1236,19 +1236,24 @@
     /* --- Top bar: show announcement text with animation on mobile --- */
     .XoHubSolutions-TopBarText,
     .top-bar__text {
-        font-size: 0.65rem;
+        font-size: 0.75rem;
         display: block;
+        text-align: center;
+        width: 100%;
+        line-height: 1.4;
     }
     
-    /* Show text rotator on mobile */
+    /* Show text rotator on mobile with better visibility */
     .XoHubSolutions-TextRotator {
         display: inline-block;
+        font-size: 0.75rem;
     }
 
     .top-bar__left,
     .XoHubSolutions-TopBarLeft {
         gap: 0;
         justify-content: center;
+        width: 100%;
     }
 
     .top-bar__icon,
@@ -1256,27 +1261,15 @@
         font-size: 0.75rem;
     }
 
-    /* Show all 5 social icons on mobile */
-    .XoHubSolutions-TopBarSocials .XoHubSolutions-SocialIcon,
-    .top-bar__socials .social-icon {
-        display: flex;
+    /* HIDE social icons from top bar on mobile (already in hamburger menu) */
+    .XoHubSolutions-TopBarSocials,
+    .top-bar__socials {
+        display: none !important;
     }
 
     /* Hide "Get a Free Quote" button on mobile */
     .XoHubSolutions-NavActions .XoHubSolutions-BtnPrimary {
         display: none;
-    }
-
-    .top-bar__socials,
-    .XoHubSolutions-TopBarSocials {
-        gap: 6px;
-    }
-
-    .top-bar__socials .social-icon,
-    .XoHubSolutions-TopBarSocials .XoHubSolutions-SocialIcon {
-        width: 20px;
-        height: 20px;
-        font-size: 0.65rem;
     }
 
     #top-bar,
@@ -1297,8 +1290,8 @@
 
     .logo__image,
     .XoHubSolutions-LogoImage {
-        width: 180px;
-        height: 180px;
+        width: 200px;
+        height: 200px;
     }
 
     .logo__icon svg {
@@ -1310,6 +1303,28 @@
     .XoHubSolutions-SearchBtn {
         font-size: 0.9rem;
         padding: 6px;
+    }
+
+    /* Mobile nav layout: Logo left | Search and Hamburger right */
+    .XoHubSolutions-MainNavInner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .XoHubSolutions-Logo {
+        order: 1;
+    }
+
+    .XoHubSolutions-NavActions {
+        order: 2;
+        display: flex;
+        gap: 12px;
+        margin-left: auto;
+    }
+
+    .XoHubSolutions-Hamburger {
+        order: 3;
     }
 
     .nav-actions .btn-primary,
@@ -1690,8 +1705,8 @@
 
     .logo__image,
     .XoHubSolutions-LogoImage {
-        width: 160px;
-        height: 160px;
+        width: 180px;
+        height: 180px;
     }
 
     .logo__icon svg {
@@ -2043,13 +2058,25 @@
 
     .logo__image,
     .XoHubSolutions-LogoImage {
-        width: 150px;
-        height: 150px;
+        width: 170px;
+        height: 170px;
     }
 
     .logo__icon svg {
         width: 18px;
         height: 18px;
+    }
+
+    /* Keep social icons hidden on very small screens too */
+    .XoHubSolutions-TopBarSocials,
+    .top-bar__socials {
+        display: none !important;
+    }
+
+    /* Optimize text rotator for very small screens */
+    .XoHubSolutions-TopBarText,
+    .top-bar__text {
+        font-size: 0.7rem;
     }
 
     .main-nav,
