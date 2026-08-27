@@ -939,7 +939,7 @@
     }
 
     .top-bar__socials {
-        gap: 8px;
+        gap: 6px;
         flex-shrink: 0;
     }
 
@@ -1263,7 +1263,7 @@
 
     .top-bar__socials,
     .XoHubSolutions-TopBarSocials {
-        gap: 8px;
+        gap: 6px;
     }
 
     .top-bar__socials .social-icon,
@@ -51756,7 +51756,7 @@ END: Final CTA – Join Our Journey Responsive
 @media (min-width: 1025px) and (max-width: 1440px) {
     .XoHubSolutions-TopBarSocials,
     .top-bar__socials {
-        gap: 10px;
+        gap: 6px;
     }
 
     .XoHubSolutions-TopBarNav,

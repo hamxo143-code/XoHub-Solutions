@@ -281,7 +281,7 @@ img {
 .XoHubSolutions-TopBarSocials {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 6px;
     padding-left: 16px;
     border-left: 1px solid var(--color-gray-light);
 }

@@ -10,6 +10,7 @@
     // Configuration
     const ROTATION_INTERVAL = 4500; // 4.5 seconds per message
     const ANIMATION_DURATION = 600; // Animation duration in ms
+    const INIT_DELAY = 1200; // Delay before starting rotation (wait for modal)
 
     // Messages to rotate
     const messages = [
@@ -24,13 +25,10 @@
     let rotationTimer = null;
     let isAnimating = false;
     let isPaused = false;
+    let initialized = false;
 
     // Check for reduced motion preference
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-    // Find the top bar text element
-    const topBarText = document.querySelector('.XoHubSolutions-TopBarText');
-    if (!topBarText) return;
 
     // If user prefers reduced motion, keep static text
     if (prefersReducedMotion) {
@@ -55,6 +53,15 @@
 
     // Initialize rotator
     const init = () => {
+        if (initialized) return;
+        
+        // Find the top bar text element
+        const topBarText = document.querySelector('.XoHubSolutions-TopBarText');
+        if (!topBarText) {
+            console.warn('XoHub Text Rotator: .XoHubSolutions-TopBarText not found');
+            return;
+        }
+        
         // Clear existing content
         topBarText.innerHTML = '';
         
@@ -78,8 +85,12 @@
         wrapper.appendChild(messageEl);
         topBarText.appendChild(wrapper);
         
-        // Start rotation
-        startRotation();
+        initialized = true;
+        
+        // Start rotation after brief delay
+        setTimeout(() => {
+            startRotation();
+        }, INIT_DELAY);
     };
 
     // Rotate to next message
@@ -88,7 +99,7 @@
         
         isAnimating = true;
         
-        const messageEl = topBarText.querySelector('.XoHubSolutions-RotatorMessage');
+        const messageEl = document.querySelector('.XoHubSolutions-RotatorMessage');
         
         if (!messageEl) {
             isAnimating = false;
@@ -147,15 +158,23 @@
             stopRotation();
         } else {
             isPaused = false;
-            startRotation();
+            if (initialized) {
+                startRotation();
+            }
         }
     });
 
     // Initialize on load
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', init);
-    } else {
-        init();
-    }
+    const initWhenReady = () => {
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', init);
+        } else {
+            // DOM already loaded, init immediately
+            init();
+        }
+    };
+
+    // Start initialization
+    initWhenReady();
 
 })();
