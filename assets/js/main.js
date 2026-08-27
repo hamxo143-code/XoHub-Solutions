@@ -839,11 +839,10 @@
 
         // Define the messages
         const messages = [
-            { text: 'We help businesses grow with innovative digital solutions.', highlight: 'grow' },
-            { text: 'Custom Web Development, Mobile Apps & AI Solutions.', highlight: 'Web Development' },
-            { text: 'Serving startups, SMEs and enterprises worldwide.', highlight: 'startups' },
-            { text: 'Free consultation for your next digital project.', highlight: 'Free consultation' },
-            { text: 'Your trusted partner for digital transformation.', highlight: 'digital transformation' }
+            { text: '🚀 Building something amazing', highlight: 'amazing' },
+            { text: 'Site under construction - Launching soon', highlight: 'Launching soon' },
+            { text: 'Premium experience coming soon', highlight: 'Premium' },
+            { text: '© 2026 XoHub Solutions', highlight: 'XoHub Solutions' }
         ];
 
         // Find the top bar text element
