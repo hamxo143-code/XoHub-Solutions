@@ -918,8 +918,17 @@
             nextItem.className = 'XoHubSolutions-RotatorItem XoHubSolutions-RotatorSlideIn XoHubSolutions-RotatorActive';
             currentItem.className = 'XoHubSolutions-RotatorItem XoHubSolutions-RotatorSlideOut';
 
+            // Create fallback timer reference
+            let fallbackTimer = null;
+
             // Cleanup after transition
             const cleanup = () => {
+                // Clear the fallback timer if it exists
+                if (fallbackTimer) {
+                    clearTimeout(fallbackTimer);
+                    fallbackTimer = null;
+                }
+
                 const activeItem = rotator.querySelector('.XoHubSolutions-RotatorItem.XoHubSolutions-RotatorSlideIn.XoHubSolutions-RotatorActive');
                 if (activeItem) {
                     activeItem.className = 'XoHubSolutions-RotatorItem XoHubSolutions-RotatorCurrent';
@@ -947,7 +956,8 @@
                 }
             };
 
-            const fallbackTimer = setTimeout(() => {
+            // Set fallback timer
+            fallbackTimer = setTimeout(() => {
                 currentItem.removeEventListener('transitionend', onTransitionEnd);
                 if (isAnimating) {
                     cleanup();
@@ -955,13 +965,6 @@
             }, 800);
 
             currentItem.addEventListener('transitionend', onTransitionEnd);
-
-            // Wrap cleanup to clear the fallback timer
-            const originalCleanup = cleanup;
-            cleanup = () => {
-                clearTimeout(fallbackTimer);
-                originalCleanup();
-            };
         };
 
         // Start the rotation loop
