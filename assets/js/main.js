@@ -1031,12 +1031,11 @@
     } else {
         initTextRotator();
     }
-})();
 
-// ============================================================
-// 13. SERVICES SECTION — SCROLL-TRIGGERED ANIMATIONS
-// ============================================================
-const initServicesAnimations = () => {
+    // ============================================================
+    // 13. SERVICES SECTION — SCROLL-TRIGGERED ANIMATIONS
+    // ============================================================
+    const initServicesAnimations = () => {
     const serviceCards = document.querySelectorAll('.service-card');
     const serviceBadge = document.querySelector('.services__badge');
     const serviceTitle = document.querySelector('.services__title');
