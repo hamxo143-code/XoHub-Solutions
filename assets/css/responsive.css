@@ -1243,6 +1243,11 @@
         line-height: 1.4;
     }
     
+    /* Hide rocket icon on mobile for cleaner look */
+    .XoHubSolutions-TopBarIcon {
+        display: none;
+    }
+    
     /* Show text rotator on mobile with better visibility */
     .XoHubSolutions-TextRotator {
         display: inline-block;
@@ -1314,17 +1319,28 @@
 
     .XoHubSolutions-Logo {
         order: 1;
+        display: flex;
+        align-items: center;
     }
 
     .XoHubSolutions-NavActions {
         order: 2;
         display: flex;
+        align-items: center;
         gap: 12px;
         margin-left: auto;
     }
 
+    .XoHubSolutions-SearchBtn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
     .XoHubSolutions-Hamburger {
         order: 3;
+        display: flex;
+        align-items: center;
     }
 
     .nav-actions .btn-primary,
