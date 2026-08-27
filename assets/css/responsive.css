@@ -1233,15 +1233,16 @@
    ============================================================ */
 @media (max-width: 576px) {
 
-    /* --- Top bar: hide tagline text, show only icon + minimal socials --- */
+    /* --- Top bar: show announcement text with animation on mobile --- */
     .XoHubSolutions-TopBarText,
     .top-bar__text {
-        display: none;
+        font-size: 0.65rem;
+        display: block;
     }
     
-    /* Hide text rotator on mobile */
+    /* Show text rotator on mobile */
     .XoHubSolutions-TextRotator {
-        display: none;
+        display: inline-block;
     }
 
     .top-bar__left,
@@ -1255,9 +1256,14 @@
         font-size: 0.75rem;
     }
 
-    /* Show only first 3 social icons on mobile */
-    .XoHubSolutions-TopBarSocials .XoHubSolutions-SocialIcon:nth-child(n+4),
-    .top-bar__socials .social-icon:nth-child(n+4) {
+    /* Show all 5 social icons on mobile */
+    .XoHubSolutions-TopBarSocials .XoHubSolutions-SocialIcon,
+    .top-bar__socials .social-icon {
+        display: flex;
+    }
+
+    /* Hide "Get a Free Quote" button on mobile */
+    .XoHubSolutions-NavActions .XoHubSolutions-BtnPrimary {
         display: none;
     }
 
@@ -51860,11 +51866,12 @@ END: Final CTA – Join Our Journey Responsive
     }
 }
 
-/* Mobile Landscape (576px) - Hide text, show limited socials */
+/* Mobile Landscape (576px) - Show announcement text and all social icons */
 @media (max-width: 576px) {
     .XoHubSolutions-TopBarText,
     .top-bar__text {
-        display: none;
+        font-size: 0.65rem;
+        display: block;
     }
 
     .XoHubSolutions-TopBarLeft,
@@ -51877,9 +51884,14 @@ END: Final CTA – Join Our Journey Responsive
         font-size: 0.7rem;
     }
 
-    /* Show only first 3 social icons */
-    .XoHubSolutions-TopBarSocials .XoHubSolutions-SocialIcon:nth-child(n+4),
-    .top-bar__socials .social-icon:nth-child(n+4) {
+    /* Show all 5 social icons */
+    .XoHubSolutions-TopBarSocials .XoHubSolutions-SocialIcon,
+    .top-bar__socials .social-icon {
+        display: flex;
+    }
+
+    /* Hide "Get a Free Quote" button on mobile */
+    .XoHubSolutions-NavActions .XoHubSolutions-BtnPrimary {
         display: none;
     }
 
