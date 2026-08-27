@@ -95,6 +95,10 @@
     // 2. MOBILE MENU — Enhanced with scroll lock and improved UX
     // ============================================================
     const openMenu = () => {
+        if (!hamburger || !mobileMenu || !overlay) {
+            console.warn('Mobile menu elements not found');
+            return;
+        }
         hamburger.classList.add('active');
         mobileMenu.classList.add('open');
         overlay.classList.add('active');
@@ -109,6 +113,7 @@
     };
 
     const closeMenu = () => {
+        if (!hamburger || !mobileMenu || !overlay) return;
         hamburger.classList.remove('active');
         mobileMenu.classList.remove('open');
         overlay.classList.remove('active');
@@ -119,13 +124,19 @@
         hamburger.focus();
     };
 
-    if (hamburger) {
+    if (hamburger && mobileMenu) {
         hamburger.addEventListener('click', () => {
             if (mobileMenu.classList.contains('open')) {
                 closeMenu();
             } else {
                 openMenu();
             }
+        });
+    } else {
+        console.warn('Hamburger or mobile menu not found:', {
+            hamburger: !!hamburger,
+            mobileMenu: !!mobileMenu,
+            overlay: !!overlay
         });
     }
 
@@ -138,7 +149,7 @@
     }
 
     document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
+        if (e.key === 'Escape' && mobileMenu && mobileMenu.classList.contains('open')) {
             closeMenu();
         }
     });
