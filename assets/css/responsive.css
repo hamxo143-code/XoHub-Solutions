@@ -44945,7 +44945,7 @@ START: Global Floating Cookie Settings Button Responsive
 
     /* If there's a WhatsApp or chat button on the right, ensure no overlap */
     .cookie-settings-btn {
-        z-index: 9998;
+        z-index: 1050;
     }
 }
 

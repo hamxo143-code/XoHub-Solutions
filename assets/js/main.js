@@ -402,29 +402,37 @@
 
                     .search-popup-input {
                         width: 100%;
-                        padding: 16px 0;
+                        padding: 20px 24px;
                         font-family: var(--font-primary);
                         font-size: 1.8rem;
                         font-weight: var(--font-weight-medium);
                         color: var(--color-charcoal);
-                        background: transparent;
-                        border: none;
-                        border-bottom: 3px solid var(--color-gray-light);
+                        background: #FFFFFF;
+                        border: 2px solid rgba(11, 16, 32, 0.12);
+                        border-radius: 16px;
                         outline: none;
-                        transition: border-color 0.25s ease;
-                        text-align: center;
+                        transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                        text-align: left;
                         letter-spacing: -0.02em;
+                        box-shadow: 0 4px 16px rgba(11, 16, 32, 0.04), 0 2px 8px rgba(11, 16, 32, 0.02);
                     }
 
                     .search-popup-input::placeholder {
                         color: var(--color-gray-mid);
                         font-weight: var(--font-weight-regular);
                         font-size: 1.2rem;
-                        opacity: 0.6;
+                        opacity: 0.5;
+                    }
+
+                    .search-popup-input:hover {
+                        border-color: rgba(122, 77, 255, 0.3);
+                        box-shadow: 0 6px 20px rgba(11, 16, 32, 0.06), 0 2px 10px rgba(122, 77, 255, 0.08);
                     }
 
                     .search-popup-input:focus {
-                        border-bottom-color: var(--color-purple);
+                        border-color: var(--color-purple);
+                        box-shadow: 0 8px 24px rgba(122, 77, 255, 0.12), 0 0 0 4px rgba(122, 77, 255, 0.08);
+                        transform: translateY(-1px);
                     }
 
                     .search-hint {
@@ -450,7 +458,8 @@
                         }
                         .search-popup-input {
                             font-size: 1.4rem;
-                            padding: 12px 0;
+                            padding: 16px 20px;
+                            border-radius: 14px;
                         }
                         .search-popup-input::placeholder {
                             font-size: 1rem;
@@ -468,6 +477,8 @@
                         }
                         .search-popup-input {
                             font-size: 1.1rem;
+                            padding: 14px 18px;
+                            border-radius: 12px;
                         }
                         .search-popup-input::placeholder {
                             font-size: 0.85rem;
