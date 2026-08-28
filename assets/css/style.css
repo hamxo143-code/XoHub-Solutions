@@ -1145,7 +1145,7 @@ img {
 
 /* Mobile Menu Logo Image */
 .mobile-menu__logo-img {
-    height: 45px;
+    height: 30px;
     width: auto;
     object-fit: contain;
     display: block;
@@ -84629,17 +84629,19 @@ START: Global Cookie Consent Banner
     position: relative;
     max-width: 1400px;
     width: 100%;
-    background: #0B1020;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px) saturate(1.2);
+    -webkit-backdrop-filter: blur(20px) saturate(1.2);
     border-radius: 20px;
-    border: 1px solid rgba(122, 77, 255, 0.15);
-    box-shadow: 0 16px 64px rgba(11, 16, 32, 0.6), 0 0 0 1px rgba(122, 77, 255, 0.08);
+    border: 1px solid rgba(122, 77, 255, 0.12);
+    box-shadow: 0 16px 64px rgba(11, 16, 32, 0.12), 0 0 0 1px rgba(255, 255, 255, 0.8);
     padding: 28px 36px;
     pointer-events: auto;
     transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .cookie-banner__container:hover {
-    box-shadow: 0 20px 80px rgba(122, 77, 255, 0.25), 0 0 0 1px rgba(122, 77, 255, 0.2);
+    box-shadow: 0 20px 80px rgba(122, 77, 255, 0.15), 0 0 0 1px rgba(122, 77, 255, 0.2);
 }
 
 /* ----- Banner Content ----- */
@@ -84655,13 +84657,13 @@ START: Global Cookie Consent Banner
     align-items: center;
     gap: 8px;
     padding: 4px 14px 4px 10px;
-    background: rgba(122, 77, 255, 0.15);
-    border: 1px solid rgba(122, 77, 255, 0.25);
+    background: rgba(122, 77, 255, 0.1);
+    border: 1px solid rgba(122, 77, 255, 0.2);
     border-radius: 50px;
     width: fit-content;
     font-size: 0.7rem;
     font-weight: var(--font-weight-medium);
-    color: #FFFFFF;
+    color: var(--color-purple);
 }
 
 .cookie-banner__badge-icon {
@@ -84672,7 +84674,7 @@ START: Global Cookie Consent Banner
 .cookie-banner__title {
     font-size: 1.15rem;
     font-weight: var(--font-weight-bold);
-    color: #FFFFFF;
+    color: var(--color-charcoal);
     margin: 0;
     letter-spacing: -0.02em;
     line-height: 1.3;
@@ -84682,14 +84684,14 @@ START: Global Cookie Consent Banner
 .cookie-banner__desc {
     font-size: 0.92rem;
     font-weight: var(--font-weight-regular);
-    color: rgba(255, 255, 255, 0.85);
+    color: var(--color-gray-mid);
     line-height: 1.6;
     margin: 0;
     max-width: 780px;
 }
 
 .cookie-banner__link {
-    color: #7A4DFF;
+    color: var(--color-purple);
     text-decoration: none;
     font-weight: var(--font-weight-medium);
     transition: color 0.2s ease;
@@ -84697,8 +84699,8 @@ START: Global Cookie Consent Banner
 }
 
 .cookie-banner__link:hover {
-    color: #9D7FFF;
-    border-bottom-color: #9D7FFF;
+    color: var(--color-purple);
+    border-bottom-color: var(--color-purple);
 }
 
 /* ----- Actions / Buttons ----- */

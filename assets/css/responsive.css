@@ -1286,6 +1286,8 @@
     .main-nav,
     .XoHubSolutions-MainNav {
         height: 64px;
+        border-bottom: 1px solid rgba(11, 16, 32, 0.06);
+        box-shadow: 0 1px 3px rgba(11, 16, 32, 0.03);
     }
 
     .logo__text,
