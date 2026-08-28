@@ -470,6 +470,8 @@ img {
     align-items: center;
     background: transparent;
     transition: var(--transition-smooth);
+    border-bottom: 1px solid rgba(11, 16, 32, 0.06);
+    box-shadow: 0 1px 3px rgba(11, 16, 32, 0.03);
 }
 
 #XoHubSolutions-MainHeader.scrolled .XoHubSolutions-MainNav,
@@ -1139,6 +1141,14 @@ img {
 
 .mobile-menu__logo .logo__highlight {
     color: var(--color-purple);
+}
+
+/* Mobile Menu Logo Image */
+.mobile-menu__logo-img {
+    height: 45px;
+    width: auto;
+    object-fit: contain;
+    display: block;
 }
 
 .mobile-menu__close {
@@ -84619,19 +84629,17 @@ START: Global Cookie Consent Banner
     position: relative;
     max-width: 1400px;
     width: 100%;
-    background: rgba(255, 255, 255, 0.75);
-    backdrop-filter: blur(20px) saturate(1.2);
-    -webkit-backdrop-filter: blur(20px) saturate(1.2);
+    background: #0B1020;
     border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 16px 64px rgba(0, 0, 0, 0.06), 0 0 0 1px rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(122, 77, 255, 0.15);
+    box-shadow: 0 16px 64px rgba(11, 16, 32, 0.6), 0 0 0 1px rgba(122, 77, 255, 0.08);
     padding: 28px 36px;
     pointer-events: auto;
     transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .cookie-banner__container:hover {
-    box-shadow: 0 20px 80px rgba(124, 58, 237, 0.04), 0 0 0 1px rgba(124, 58, 237, 0.04);
+    box-shadow: 0 20px 80px rgba(122, 77, 255, 0.25), 0 0 0 1px rgba(122, 77, 255, 0.2);
 }
 
 /* ----- Banner Content ----- */
@@ -84647,13 +84655,13 @@ START: Global Cookie Consent Banner
     align-items: center;
     gap: 8px;
     padding: 4px 14px 4px 10px;
-    background: rgba(124, 58, 237, 0.06);
-    border: 1px solid rgba(124, 58, 237, 0.08);
+    background: rgba(122, 77, 255, 0.15);
+    border: 1px solid rgba(122, 77, 255, 0.25);
     border-radius: 50px;
     width: fit-content;
     font-size: 0.7rem;
     font-weight: var(--font-weight-medium);
-    color: var(--color-purple);
+    color: #FFFFFF;
 }
 
 .cookie-banner__badge-icon {
@@ -84664,7 +84672,7 @@ START: Global Cookie Consent Banner
 .cookie-banner__title {
     font-size: 1.15rem;
     font-weight: var(--font-weight-bold);
-    color: var(--color-charcoal);
+    color: #FFFFFF;
     margin: 0;
     letter-spacing: -0.02em;
     line-height: 1.3;
@@ -84674,14 +84682,14 @@ START: Global Cookie Consent Banner
 .cookie-banner__desc {
     font-size: 0.92rem;
     font-weight: var(--font-weight-regular);
-    color: var(--color-gray-mid);
+    color: rgba(255, 255, 255, 0.85);
     line-height: 1.6;
     margin: 0;
     max-width: 780px;
 }
 
 .cookie-banner__link {
-    color: var(--color-purple);
+    color: #7A4DFF;
     text-decoration: none;
     font-weight: var(--font-weight-medium);
     transition: color 0.2s ease;
@@ -84689,8 +84697,8 @@ START: Global Cookie Consent Banner
 }
 
 .cookie-banner__link:hover {
-    color: var(--color-purple);
-    border-bottom-color: var(--color-purple);
+    color: #9D7FFF;
+    border-bottom-color: #9D7FFF;
 }
 
 /* ----- Actions / Buttons ----- */
