@@ -1873,6 +1873,7 @@ const initFooterInteractions = () => {
 
     // ----- Back to Top Button -----
     const backToTopBtn = document.getElementById('back-to-top');
+    const whatsappBtn = document.getElementById('whatsapp-float');
 
     if (backToTopBtn) {
         // Show/hide button based on scroll position
@@ -1880,8 +1881,14 @@ const initFooterInteractions = () => {
             const scrollY = window.scrollY;
             if (scrollY > 400) {
                 backToTopBtn.classList.add('visible');
+                if (whatsappBtn) {
+                    whatsappBtn.classList.add('visible');
+                }
             } else {
                 backToTopBtn.classList.remove('visible');
+                if (whatsappBtn) {
+                    whatsappBtn.classList.remove('visible');
+                }
             }
         };
 

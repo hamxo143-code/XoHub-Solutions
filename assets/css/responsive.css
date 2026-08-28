@@ -5142,6 +5142,18 @@ canvas {
         font-size: 1rem;
     }
 
+    .whatsapp-float {
+        bottom: 80px;
+        right: 24px;
+        width: 52px;
+        height: 52px;
+        font-size: 1.6rem;
+    }
+
+    .whatsapp-float .whatsapp-tooltip {
+        display: none;
+    }
+
     /* Hide some background decorations */
     .footer-bg__orb--2,
     .footer-bg__shape--2,
