@@ -17,7 +17,7 @@
     // ============================================================
     const header = document.getElementById('XoHubSolutions-MainHeader');
     const hamburger = document.getElementById('XoHubSolutions-Hamburger');
-    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileMenu = document.getElementById('XoHubSolutions-MobileMenu');
     const overlay = document.getElementById('mobile-overlay');
     const closeBtn = document.getElementById('mobile-close');
     const searchBtn = document.getElementById('XoHubSolutions-SearchToggle');
