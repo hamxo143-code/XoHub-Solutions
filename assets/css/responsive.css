@@ -12136,7 +12136,8 @@ canvas {
 }
 
 /* ---- FAQ: ensure expanded answers don't overflow container ---- */
-#careers-faq .faq-item.active .faq-item__answer {
+#careers-faq .faq-item.active .faq-item__answer,
+#program-faq .faq-item.active .faq-item__answer {
     /* Allow natural height up to a comfortable max */
     max-height: 300px;
     overflow-y: auto;
@@ -12189,8 +12190,128 @@ canvas {
     }
 }
 
+/* ============================================================
+   CAREERS PAGE — HOW-TO-JOIN & FAQ ID COMPATIBILITY FIXES
+   Ensures .hp-step elements are visible even if JS observer
+   misses the section due to ID differences
+   ============================================================ */
 
-/* --- 1400px - 1600px - 1920px (Large Desktops) --- */
+/* Ensure steps in #how-to-join are visible even without .visible class
+   JS will add .visible for the animated version; this is a CSS fallback */
+#how-to-join .hp-step {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ============================================================
+   CAREERS HERO — Heading size adjustment (premium balance)
+   ============================================================ */
+.careers-hero__title {
+    font-size: 3rem;
+}
+
+@media (max-width: 992px) {
+    .careers-hero__title {
+        font-size: 2.4rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .careers-hero__title {
+        font-size: 1.95rem;
+        line-height: 1.2;
+    }
+}
+
+@media (max-width: 430px) {
+    .careers-hero__title {
+        font-size: 1.75rem;
+    }
+}
+
+@media (max-width: 390px) {
+    .careers-hero__title {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 375px) {
+    .careers-hero__title {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .careers-hero__title {
+        font-size: 1.4rem;
+    }
+}
+
+/* ============================================================
+   CAREERS PAGE — PKR 15,000 FEE HIGHLIGHT
+   ============================================================ */
+.xohub-careers-fee-block {
+    background: linear-gradient(135deg, rgba(192, 227, 74, 0.08), rgba(124, 58, 237, 0.06));
+    border: 2px solid var(--color-lime);
+    border-radius: 16px;
+    padding: 28px 32px;
+    text-align: center;
+    margin: 32px 0;
+    position: relative;
+    z-index: 2;
+}
+
+.xohub-careers-fee-amount {
+    display: block;
+    font-size: 2.8rem;
+    font-weight: var(--font-weight-bold);
+    color: var(--color-charcoal);
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+}
+
+.xohub-careers-fee-label {
+    display: block;
+    font-size: 1rem;
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-purple);
+    margin-top: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.xohub-careers-fee-note {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: var(--font-weight-medium);
+    color: var(--color-gray-mid);
+    margin-top: 8px;
+    padding: 6px 12px;
+    background: rgba(124, 58, 237, 0.05);
+    border-radius: 50px;
+    display: inline-block;
+}
+
+@media (max-width: 576px) {
+    .xohub-careers-fee-block {
+        padding: 20px 20px;
+        border-radius: 12px;
+    }
+    .xohub-careers-fee-amount {
+        font-size: 2.2rem;
+    }
+    .xohub-careers-fee-label {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 375px) {
+    .xohub-careers-fee-amount {
+        font-size: 1.9rem;
+    }
+}
+
+
 @media (min-width: 1400px) {
   .hero-container {
     max-width: 1400px;

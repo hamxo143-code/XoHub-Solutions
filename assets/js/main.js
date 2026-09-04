@@ -3671,7 +3671,7 @@ if (document.getElementById('open-positions')) {
             rootMargin: '0px 0px -50px 0px'
         });
 
-        const hpSection = document.getElementById('hiring-process');
+        const hpSection = document.getElementById('hiring-process') || document.getElementById('how-to-join');
         if (hpSection) {
             hpObserver.observe(hpSection);
         }
@@ -3680,7 +3680,8 @@ if (document.getElementById('open-positions')) {
     };
 
     // Initialize Hiring Process animations — only on careers page
-    if (document.getElementById('hiring-process')) {
+    if (document.getElementById('hiring-process') || document.getElementById('how-to-join')) {
+        const hpTarget = document.getElementById('hiring-process') || document.getElementById('how-to-join');
         if (document.readyState === 'loading') {
             document.addEventListener('DOMContentLoaded', initHiringProcessAnimations);
         } else {
@@ -3814,7 +3815,7 @@ if (document.getElementById('open-positions')) {
             rootMargin: '0px 0px -50px 0px'
         });
 
-        const faqSection = document.getElementById('careers-faq');
+        const faqSection = document.getElementById('careers-faq') || document.getElementById('program-faq');
         if (faqSection) {
             faqObserver.observe(faqSection);
         }
@@ -3823,7 +3824,7 @@ if (document.getElementById('open-positions')) {
     };
 
     // Initialize Careers FAQ — only run on careers page
-    if (document.getElementById('careers-faq')) {
+    if (document.getElementById('careers-faq') || document.getElementById('program-faq')) {
         if (document.readyState === 'loading') {
             document.addEventListener('DOMContentLoaded', initCareersFaq);
         } else {

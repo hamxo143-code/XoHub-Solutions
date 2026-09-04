@@ -15595,7 +15595,8 @@ input:focus-visible {
 }
 
 /* ----- Answer ----- */
-#careers-faq .faq-item__answer {
+#careers-faq .faq-item__answer,
+#program-faq .faq-item__answer {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
@@ -15605,13 +15606,15 @@ input:focus-visible {
     padding: 0 20px 0 20px;
 }
 
-#careers-faq .faq-item.active .faq-item__answer {
+#careers-faq .faq-item.active .faq-item__answer,
+#program-faq .faq-item.active .faq-item__answer {
     max-height: 300px;
     opacity: 1;
     padding: 0 20px 20px 20px;
 }
 
-#careers-faq .faq-item__answer-content {
+#careers-faq .faq-item__answer-content,
+#program-faq .faq-item__answer-content {
     font-size: 0.85rem;
     font-weight: var(--font-weight-regular);
     color: var(--color-gray-mid);
@@ -15620,11 +15623,13 @@ input:focus-visible {
     border-top: 1px solid var(--color-gray-light);
 }
 
-#careers-faq .faq-item.active .faq-item__answer-content {
+#careers-faq .faq-item.active .faq-item__answer-content,
+#program-faq .faq-item.active .faq-item__answer-content {
     border-top-color: rgba(124, 58, 237, 0.06);
 }
 
-#careers-faq .faq-item--highlight.active .faq-item__answer-content {
+#careers-faq .faq-item--highlight.active .faq-item__answer-content,
+#program-faq .faq-item--highlight.active .faq-item__answer-content {
     border-top-color: rgba(192, 227, 74, 0.12);
 }
 

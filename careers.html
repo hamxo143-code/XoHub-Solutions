@@ -929,11 +929,41 @@
                 </p>
             </div>
 
+            <!-- Search & Filter Bar -->
+            <div class="open-positions__filters" role="search" aria-label="Search program information">
+                <div class="filters__row">
+                    <div class="filter-group filter-group--search">
+                        <i class="fas fa-search" aria-hidden="true"></i>
+                        <input type="text" class="filter-input" id="program-search" placeholder="Search program details..." aria-label="Search program details">
+                    </div>
+                    <div class="filter-group">
+                        <select class="filter-select" id="program-filter-topic" aria-label="Filter by topic">
+                            <option value="">All Topics</option>
+                            <option value="automation">Automation</option>
+                            <option value="format">Program Format</option>
+                            <option value="certificate">Certificate</option>
+                            <option value="freelancing">Freelancing</option>
+                        </select>
+                    </div>
+                    <div class="filter-actions">
+                        <button class="btn-filter-search" id="program-filter-btn" aria-label="Apply filter">
+                            <i class="fas fa-sliders-h" aria-hidden="true"></i> Filter
+                        </button>
+                        <button class="btn-filter-clear" id="program-filter-clear" aria-label="Clear filter">Clear</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Results count -->
+            <div class="open-positions__count" id="program-count">
+                <span class="jobs-count" id="program-visible-count">2</span> program details
+            </div>
+
             <!-- Two-column: Format + What You Get -->
             <div class="open-positions__grid" style="grid-template-columns: 1fr 1fr; margin-bottom: 40px;" id="jobs-grid">
 
                 <!-- Program Format Card -->
-                <div class="job-card" style="border-top: 3px solid var(--color-lime);">
+                <div class="job-card" data-topic="format automation" style="border-top: 3px solid var(--color-lime);">
                     <div class="job-card__header">
                         <div class="job-card__title-group">
                             <h4 class="job-card__title">Program Format</h4>
@@ -966,7 +996,7 @@
                 </div>
 
                 <!-- What You Get Card -->
-                <div class="job-card" style="border-top: 3px solid var(--color-purple);">
+                <div class="job-card" data-topic="certificate freelancing automation" style="border-top: 3px solid var(--color-purple);">
                     <div class="job-card__header">
                         <div class="job-card__title-group">
                             <h4 class="job-card__title">What You Get</h4>
@@ -998,10 +1028,19 @@
                 </div>
             </div>
 
-            <!-- Important note about fee and job opportunity -->
+            <!-- Fee Highlight Block -->
+            <div class="xohub-careers-fee-block">
+                <span class="xohub-careers-fee-amount">PKR 15,000</span>
+                <span class="xohub-careers-fee-label">One-Time Joining Fee</span>
+                <span class="xohub-careers-fee-note">
+                    <i class="fas fa-info-circle" aria-hidden="true"></i>
+                    Non-Refundable &nbsp;·&nbsp; Paid Once at Enrollment
+                </span>
+            </div>
+
+            <!-- Career opportunity note -->
             <div class="open-positions__count" style="font-size: 0.8rem; color: var(--color-gray-mid); margin-bottom: 32px; line-height: 1.6;">
                 <i class="fas fa-info-circle" aria-hidden="true" style="color: var(--color-purple); margin-right: 6px;"></i>
-                The PKR 15,000 joining fee is a one-time, non-refundable fee. &nbsp;|&nbsp;
                 * Career opportunity after completion is subject to performance, skills, professionalism, and available positions — it is not guaranteed.
             </div>
 
@@ -1573,8 +1612,7 @@
         </div>
     </section>
 
-
-
+    <!-- ============================================================
     PREMIUM FOOTER — Phase 13 (Final)
     ============================================================ -->
     <footer id="main-footer" class="main-footer" role="contentinfo" aria-label="Site footer">
@@ -1791,6 +1829,78 @@
     <!-- ================== JAVASCRIPT ================== -->
     <script src="assets/js/counter-fix.js?v=1" defer></script>
     <script src="assets/js/main.js?v=5" defer></script>
+
+    <!-- ================== PROGRAM SEARCH / FILTER ================== -->
+    <script>
+    (function () {
+        'use strict';
+
+        function initProgramFilter() {
+            var cards = document.querySelectorAll('#jobs-grid .job-card');
+            var searchInput = document.getElementById('program-search');
+            var topicSelect = document.getElementById('program-filter-topic');
+            var filterBtn = document.getElementById('program-filter-btn');
+            var clearBtn = document.getElementById('program-filter-clear');
+            var countEl = document.getElementById('program-visible-count');
+
+            if (!cards.length || !searchInput) return;
+
+            function filterCards() {
+                var term = searchInput.value.trim().toLowerCase();
+                var topic = topicSelect ? topicSelect.value.toLowerCase() : '';
+                var visible = 0;
+
+                cards.forEach(function (card) {
+                    var text = card.textContent.toLowerCase();
+                    var cardTopics = (card.dataset.topic || '').toLowerCase();
+                    var matchText = !term || text.includes(term);
+                    var matchTopic = !topic || cardTopics.includes(topic);
+
+                    if (matchText && matchTopic) {
+                        card.style.display = '';
+                        visible++;
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+
+                if (countEl) countEl.textContent = visible;
+
+                /* Show empty state if needed */
+                var grid = document.getElementById('jobs-grid');
+                var existingEmpty = document.getElementById('program-empty');
+                if (visible === 0 && grid) {
+                    if (!existingEmpty) {
+                        var empty = document.createElement('div');
+                        empty.id = 'program-empty';
+                        empty.style.cssText = 'grid-column:1/-1;text-align:center;padding:40px 20px;color:var(--color-gray-mid);font-size:0.9rem;';
+                        empty.innerHTML = '<i class="fas fa-search" style="font-size:1.5rem;margin-bottom:12px;display:block;color:var(--color-purple);"></i>No results. <a href="#" onclick="document.getElementById(\'program-filter-clear\').click();return false;" style="color:var(--color-purple);">Clear search</a>';
+                        grid.appendChild(empty);
+                    }
+                } else if (existingEmpty) {
+                    existingEmpty.remove();
+                }
+            }
+
+            if (searchInput) searchInput.addEventListener('input', filterCards);
+            if (topicSelect) topicSelect.addEventListener('change', filterCards);
+            if (filterBtn) filterBtn.addEventListener('click', function (e) { e.preventDefault(); filterCards(); });
+            if (clearBtn) {
+                clearBtn.addEventListener('click', function () {
+                    if (searchInput) searchInput.value = '';
+                    if (topicSelect) topicSelect.value = '';
+                    filterCards();
+                });
+            }
+        }
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initProgramFilter);
+        } else {
+            initProgramFilter();
+        }
+    })();
+    </script>
 </body>
 
 </html>
