@@ -9948,8 +9948,8 @@ canvas {
         display: none;
     }
 
-    .benefits-perks__grid {
-        opacity: 1;
+    .benefits-perks__bg-grid {
+        opacity: 0.1;
     }
 
     #benefits-perks .particle {
@@ -10355,8 +10355,8 @@ canvas {
         display: none;
     }
 
-    .open-positions__grid {
-        opacity: 1;
+    .open-positions__bg-grid {
+        opacity: 0.1;
     }
 
     #open-positions .particle {
@@ -11267,8 +11267,8 @@ canvas {
         display: none;
     }
 
-    .careers-faq__grid {
-        opacity: 1;
+    .careers-faq__bg-grid {
+        opacity: 0.1;
     }
 
     #careers-faq .particle {
@@ -11899,7 +11899,276 @@ canvas {
     }
 }
 
-/* ==================== START RESPONSIVE CSS ==================== */
+/* ============================================================
+   CAREERS PAGE — SUPPLEMENTAL RESPONSIVE FIXES
+   Covers: 768px tablet gap, mobile overflow/clipping issues,
+   visual containment, timeline line, and section-specific fixes
+   ============================================================ */
+
+/* ---- 768px: iPad portrait / wide tablet gap ---- */
+@media (max-width: 768px) {
+
+    /* Hero */
+    #careers-hero {
+        padding: calc(var(--top-bar-height) + var(--nav-height) + 28px) 0 44px;
+    }
+    .careers-hero__title {
+        font-size: 2.4rem;
+    }
+    .careers-hero__visual {
+        min-height: 360px;
+    }
+
+    /* Why Join */
+    #why-join {
+        padding: 52px 0 52px;
+    }
+    .why-join__title {
+        font-size: 2rem;
+    }
+    .why-join__visual {
+        min-height: 280px;
+        overflow: hidden;
+    }
+    /* Contain orbiting nodes so they don't overflow */
+    .join-visual__ring,
+    .join-visual__node,
+    .join-visual__float {
+        position: absolute;
+    }
+
+    /* Benefits */
+    #benefits-perks {
+        padding: 52px 0 52px;
+    }
+    .benefits-perks__title {
+        font-size: 2rem;
+    }
+    .benefits-perks__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+    }
+
+    /* Open Positions */
+    #open-positions {
+        padding: 52px 0 52px;
+    }
+    .open-positions__title {
+        font-size: 2rem;
+    }
+    /* Filters: allow wrapping at 768px */
+    .filters__row {
+        flex-wrap: wrap;
+        gap: 8px 10px;
+    }
+    .filter-group {
+        flex: 1 1 calc(50% - 10px);
+        min-width: 0;
+    }
+    .filter-group--search {
+        flex: 1 1 100%;
+    }
+    .filter-actions {
+        flex: 1 1 100%;
+        display: flex;
+        gap: 8px;
+    }
+    .open-positions__grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    /* Job card info wrap */
+    .job-card__info {
+        flex-wrap: wrap;
+        gap: 6px 10px;
+    }
+    .job-card__footer {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+    .btn-job-apply {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    /* Hiring Process */
+    #hiring-process {
+        padding: 52px 0 52px;
+    }
+    .hiring-process__title {
+        font-size: 2rem;
+    }
+
+    /* FAQ */
+    #careers-faq {
+        padding: 52px 0 52px;
+    }
+    .careers-faq__title {
+        font-size: 2rem;
+    }
+    .careers-faq__grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+    .careers-faq__intro {
+        position: static;
+        flex-direction: row;
+        gap: 16px;
+    }
+
+    /* CTA */
+    #careers-cta {
+        padding: 52px 0 52px;
+    }
+    .careers-cta__title {
+        font-size: 2.2rem;
+    }
+    .careers-cta__banner {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+    .careers-cta__visual {
+        min-height: 220px;
+        order: -1;
+    }
+    .careers-cta__highlights {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px 14px;
+    }
+    .careers-cta__buttons {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}
+
+/* ---- Hero visual: contain absolutely-positioned nodes ---- */
+@media (max-width: 992px) {
+    .careers-hero__visual {
+        overflow: hidden;
+    }
+}
+
+/* ---- Why Join visual: contain orbiting nodes on mobile ---- */
+@media (max-width: 576px) {
+    .why-join__visual {
+        overflow: hidden;
+    }
+}
+
+/* ---- Benefits grid: single column at 375px ---- */
+@media (max-width: 375px) {
+    .benefits-perks__grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    .benefits-perks__title {
+        font-size: 1.5rem;
+    }
+    .benefits-perks__subtitle {
+        font-size: 0.8rem;
+    }
+}
+
+/* ---- Benefits grid: single column at 320px ---- */
+@media (max-width: 320px) {
+    .benefits-perks__grid {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+    .benefits-perks__title {
+        font-size: 1.3rem;
+    }
+    .benefits-perks__subtitle {
+        font-size: 0.72rem;
+    }
+}
+
+/* ---- Hiring process: hide central line on mobile ---- */
+@media (max-width: 992px) {
+    .hp-timeline__line {
+        display: none;
+    }
+    .hp-timeline__line-fill {
+        display: none;
+    }
+}
+
+/* ---- Job card apply button: full-width at 375px ---- */
+@media (max-width: 375px) {
+    .btn-job-apply {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+    .job-card__footer {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+}
+
+/* ---- Horizontal overflow prevention ---- */
+/* Prevent decorative elements from causing page-level horizontal scroll */
+.careers-hero__bg,
+.why-join__bg,
+.benefits-perks__bg,
+.open-positions__bg,
+.hiring-process__bg,
+.careers-faq__bg,
+.careers-cta__bg {
+    overflow: hidden;
+}
+
+/* ---- FAQ: ensure expanded answers don't overflow container ---- */
+#careers-faq .faq-item.active .faq-item__answer {
+    /* Allow natural height up to a comfortable max */
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+/* ---- FAQ intro: full column on very small phones ---- */
+@media (max-width: 375px) {
+    .careers-faq__intro {
+        flex-direction: column;
+    }
+}
+
+/* ---- CTA highlights: single column at 375px ---- */
+@media (max-width: 375px) {
+    .careers-cta__highlights {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+    .careers-cta__buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .btn-cta-primary,
+    .btn-cta-secondary,
+    .btn-cta-outline {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+/* ---- Filters: full column on 375px ---- */
+@media (max-width: 375px) {
+    .filters__row {
+        flex-direction: column;
+        gap: 6px;
+    }
+    .filter-group,
+    .filter-group--search {
+        flex: none;
+        width: 100%;
+    }
+}
+
+
 /* --- 1400px - 1600px - 1920px (Large Desktops) --- */
 @media (min-width: 1400px) {
   .hero-container {

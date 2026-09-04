@@ -3160,11 +3160,13 @@ const initCareersHeroAnimations = () => {
     }
 };
 
-// Initialize Careers Hero animations
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initCareersHeroAnimations);
-} else {
-    initCareersHeroAnimations();
+// Initialize Careers Hero animations — only on careers page
+if (document.getElementById('careers-hero')) {
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initCareersHeroAnimations);
+    } else {
+        initCareersHeroAnimations();
+    }
 }
 
 // ============================================================
@@ -3267,11 +3269,13 @@ const initWhyJoinAnimations = () => {
     }
 };
 
-// Initialize Why Join animations
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initWhyJoinAnimations);
-} else {
-    initWhyJoinAnimations();
+// Initialize Why Join animations — only on careers page
+if (document.getElementById('why-join')) {
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initWhyJoinAnimations);
+    } else {
+        initWhyJoinAnimations();
+    }
 }
 
 // ============================================================
@@ -3358,11 +3362,13 @@ const initBenefitsPerksAnimations = () => {
     }
 };
 
-// Initialize Benefits & Perks animations
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initBenefitsPerksAnimations);
-} else {
-    initBenefitsPerksAnimations();
+// Initialize Benefits & Perks animations — only on careers page
+if (document.getElementById('benefits-perks')) {
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initBenefitsPerksAnimations);
+    } else {
+        initBenefitsPerksAnimations();
+    }
 }
 
 // ============================================================
@@ -3558,11 +3564,13 @@ const initOpenPositions = () => {
     console.log('💼 Open Positions initialized with', jobCards.length, 'jobs.');
 };
 
-// Initialize Open Positions
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initOpenPositions);
-} else {
-    initOpenPositions();
+// Initialize Open Positions — only on careers page
+if (document.getElementById('open-positions')) {
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initOpenPositions);
+    } else {
+        initOpenPositions();
+    }
 }
 
     // ============================================================
@@ -3671,11 +3679,13 @@ if (document.readyState === 'loading') {
         console.log('⏳ Hiring Process timeline initialized.');
     };
 
-    // Initialize Hiring Process animations
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', initHiringProcessAnimations);
-    } else {
-        initHiringProcessAnimations();
+    // Initialize Hiring Process animations — only on careers page
+    if (document.getElementById('hiring-process')) {
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initHiringProcessAnimations);
+        } else {
+            initHiringProcessAnimations();
+        }
     }
 
         // ============================================================
@@ -3812,11 +3822,13 @@ if (document.readyState === 'loading') {
         console.log('❓ Careers FAQ initialized with', faqItems.length, 'questions.');
     };
 
-    // Initialize Careers FAQ
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', initCareersFaq);
-    } else {
-        initCareersFaq();
+    // Initialize Careers FAQ — only run on careers page
+    if (document.getElementById('careers-faq')) {
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initCareersFaq);
+        } else {
+            initCareersFaq();
+        }
     }
 
         // ============================================================
@@ -3952,11 +3964,13 @@ if (document.readyState === 'loading') {
         console.log('🚀 Final CTA section initialized.');
     };
 
-    // Initialize Final CTA animations
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', initCareersCtaAnimations);
-    } else {
-        initCareersCtaAnimations();
+    // Initialize Final CTA animations — only on careers page
+    if (document.getElementById('careers-cta')) {
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initCareersCtaAnimations);
+        } else {
+            initCareersCtaAnimations();
+        }
     }
 
     // <!-- ==================== START JAVASCRIPT ==================== -->
@@ -5990,11 +6004,13 @@ START: Portfolio FAQ JavaScript
         console.log('❓ Portfolio FAQ initialized with', faqItems.length, 'questions.');
     };
 
-    // Initialize Portfolio FAQ
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', initPortfolioFaq);
-    } else {
-        initPortfolioFaq();
+    // Initialize Portfolio FAQ — only run on portfolio page
+    if (document.querySelector('.portfolio-faq__accordion, .portfolio-faq__grid')) {
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initPortfolioFaq);
+        } else {
+            initPortfolioFaq();
+        }
     }
 
 /* ==================================================
