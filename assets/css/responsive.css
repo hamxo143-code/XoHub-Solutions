@@ -10236,9 +10236,14 @@ canvas {
         flex: none;
     }
 
-    .filter-select,
+    /* Move search icon to the right on mobile so it never overlaps placeholder */
+    .filter-group--search i {
+        left: auto;
+        right: 12px;
+    }
+
     .filter-input {
-        padding: 8px 12px;
+        padding: 8px 38px 8px 12px;
         font-size: 0.75rem;
     }
 
@@ -10386,6 +10391,11 @@ canvas {
     .filter-input {
         font-size: 0.7rem;
         padding: 6px 10px;
+    }
+
+    /* Keep icon on right for search input at 375px */
+    .filter-input {
+        padding: 6px 36px 6px 10px;
     }
 
     .btn-filter-search,
@@ -12086,13 +12096,16 @@ canvas {
     }
 }
 
-/* ---- Hiring process: hide central line on mobile ---- */
+/* ---- Hiring process: mobile line repositioned (not hidden) ---- */
+/* The line stays visible; steps are already left-aligned at ≤992px via the
+   existing responsive rules. The line just needs to stay left-anchored. */
 @media (max-width: 992px) {
-    .hp-timeline__line {
-        display: none;
-    }
-    .hp-timeline__line-fill {
-        display: none;
+    /* Line is already repositioned to left: 24px in the 992px tablet block above.
+       Do NOT display:none — keep it visible on all viewports. */
+    .hp-step__number {
+        position: relative;
+        z-index: 4;
+        background: var(--color-white);
     }
 }
 
@@ -12165,6 +12178,14 @@ canvas {
     .filter-group--search {
         flex: none;
         width: 100%;
+    }
+    /* Ensure search icon stays on right at 375px */
+    .filter-group--search i {
+        left: auto;
+        right: 10px;
+    }
+    .filter-input {
+        padding: 6px 34px 6px 10px;
     }
 }
 
