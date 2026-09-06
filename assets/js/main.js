@@ -94,11 +94,15 @@
     // ============================================================
     // 2. MOBILE MENU — Enhanced with scroll lock and improved UX
     // ============================================================
+    let mobileMenuScrollY = 0;
+
     const openMenu = () => {
         if (!hamburger || !mobileMenu || !overlay) {
             console.warn('Mobile menu elements not found');
             return;
         }
+        // Save scroll position before locking
+        mobileMenuScrollY = window.scrollY;
         hamburger.classList.add('active');
         mobileMenu.classList.add('open');
         overlay.classList.add('active');
@@ -119,6 +123,8 @@
         overlay.classList.remove('active');
         hamburger.setAttribute('aria-expanded', 'false');
         document.body.classList.remove('mobile-menu-open');
+        // Restore scroll position so no blank space appears below footer
+        window.scrollTo(0, mobileMenuScrollY);
         
         // Return focus to hamburger
         hamburger.focus();
