@@ -7662,8 +7662,11 @@ input:focus-visible {
 
 /* ============================================================
    FEATURE HIGHLIGHTS GRID
+/* ============================================================
+   FEATURE HIGHLIGHTS GRID — scoped to #who-we-are to prevent
+   override by later global .features-grid and .feature-card rules
    ============================================================ */
-.who-we-are__features {
+#who-we-are .who-we-are__features {
     position: relative;
     z-index: 2;
     margin-top: 60px;
@@ -7671,13 +7674,13 @@ input:focus-visible {
     border-top: 1px solid var(--color-gray-light);
 }
 
-.features-grid {
+#who-we-are .features-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 24px;
 }
 
-.feature-card {
+#who-we-are .feature-card {
     padding: 28px 22px 24px;
     background: var(--color-off-white);
     border: 1px solid var(--color-gray-light);
@@ -7687,9 +7690,10 @@ input:focus-visible {
     box-shadow: var(--shadow-glass);
     position: relative;
     overflow: hidden;
+    display: block; /* override flex from later global rules */
 }
 
-.feature-card::before {
+#who-we-are .feature-card::before {
     content: '';
     position: absolute;
     top: 0;
@@ -7701,17 +7705,17 @@ input:focus-visible {
     transition: opacity 0.4s ease;
 }
 
-.feature-card:hover {
+#who-we-are .feature-card:hover {
     transform: translateY(-6px);
     border-color: rgba(124, 58, 237, 0.12);
     box-shadow: 0 16px 48px rgba(124, 58, 237, 0.06);
 }
 
-.feature-card:hover::before {
+#who-we-are .feature-card:hover::before {
     opacity: 1;
 }
 
-.feature-card__icon {
+#who-we-are .feature-card__icon {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -7725,20 +7729,20 @@ input:focus-visible {
     transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-.feature-card:hover .feature-card__icon {
+#who-we-are .feature-card:hover .feature-card__icon {
     background: var(--color-purple);
     color: var(--color-white);
     transform: scale(1.05) rotate(-3deg);
 }
 
-.feature-card__title {
+#who-we-are .feature-card__title {
     font-size: 1rem;
     font-weight: var(--font-weight-semibold);
     color: var(--color-charcoal);
     margin: 0 0 6px 0;
 }
 
-.feature-card__description {
+#who-we-are .feature-card__description {
     font-size: 0.82rem;
     font-weight: var(--font-weight-regular);
     color: var(--color-gray-mid);

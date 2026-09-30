@@ -5935,12 +5935,12 @@ canvas {
         left: -2%;
     }
 
-    .features-grid {
+    #who-we-are .features-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 16px;
     }
 
-    .who-we-are__features {
+    #who-we-are .who-we-are__features {
         margin-top: 40px;
         padding-top: 32px;
     }
@@ -6096,32 +6096,32 @@ canvas {
         height: 70px;
     }
 
-    .features-grid {
+    #who-we-are .features-grid {
         grid-template-columns: 1fr 1fr;
         gap: 12px;
     }
 
-    .feature-card {
+    #who-we-are .feature-card {
         padding: 20px 16px 18px;
         border-radius: 14px;
     }
 
-    .feature-card__icon {
+    #who-we-are .feature-card__icon {
         width: 42px;
         height: 42px;
         font-size: 1rem;
         margin-bottom: 10px;
     }
 
-    .feature-card__title {
+    #who-we-are .feature-card__title {
         font-size: 0.85rem;
     }
 
-    .feature-card__description {
+    #who-we-are .feature-card__description {
         font-size: 0.72rem;
     }
 
-    .who-we-are__features {
+    #who-we-are .who-we-are__features {
         margin-top: 32px;
         padding-top: 24px;
     }
@@ -6211,28 +6211,28 @@ canvas {
     }
 
     /* FIX: Single column on very small screens */
-    .features-grid {
+    #who-we-are .features-grid {
         grid-template-columns: 1fr;
         gap: 10px;
     }
 
-    .feature-card {
+    #who-we-are .feature-card {
         padding: 16px 14px 14px;
         border-radius: 12px;
     }
 
-    .feature-card__icon {
+    #who-we-are .feature-card__icon {
         width: 36px;
         height: 36px;
         font-size: 0.85rem;
         margin-bottom: 8px;
     }
 
-    .feature-card__title {
+    #who-we-are .feature-card__title {
         font-size: 0.78rem;
     }
 
-    .feature-card__description {
+    #who-we-are .feature-card__description {
         font-size: 0.65rem;
     }
 }
@@ -6285,27 +6285,27 @@ canvas {
         font-size: 0.45rem;
     }
 
-    .features-grid {
+    #who-we-are .features-grid {
         grid-template-columns: 1fr;
         gap: 8px;
     }
 
-    .feature-card {
+    #who-we-are .feature-card {
         padding: 12px 10px 10px;
         border-radius: 10px;
     }
 
-    .feature-card__icon {
+    #who-we-are .feature-card__icon {
         width: 30px;
         height: 30px;
         font-size: 0.7rem;
     }
 
-    .feature-card__title {
+    #who-we-are .feature-card__title {
         font-size: 0.68rem;
     }
 
-    .feature-card__description {
+    #who-we-are .feature-card__description {
         font-size: 0.58rem;
     }
 }
@@ -53557,66 +53557,4 @@ END: Final CTA – Join Our Journey Responsive
 #cta {
     overflow-x: hidden;
     max-width: 100%;
-}
-
-/* ============================================================
-   ABOUT PAGE LAYOUT FIXES
-   Targeted overrides to resolve CSS cascade conflicts on about.html
-   caused by later-declared global rules in style.css.
-   ============================================================ */
-
-/* ============================================================
-   FIX A: FOUR CORE PRINCIPLE CARDS — One row on desktop
-   Root cause: A later rule at line ~49115 in style.css declared
-   .features-grid { grid-template-columns: repeat(3, 1fr) } globally
-   (inside the "WHY BUSINESSES CHOOSE US" section). This overrode
-   the About page's .features-grid { repeat(4, 1fr) } at line ~7674,
-   collapsing the 4 cards into 3 columns.
-   Fix: The conflicting rule was scoped to .why-xohub__features .features-grid
-   in style.css. This block reinforces the 4-column layout on the About
-   page across all relevant breakpoints.
-   ============================================================ */
-
-/* Desktop: enforce 4-column layout for the feature highlights grid */
-#who-we-are .features-grid {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
-}
-
-/* Large tablet (≤ 1200px): keep 4 columns, reduce gap */
-@media (max-width: 1200px) {
-    #who-we-are .features-grid {
-        grid-template-columns: repeat(4, 1fr);
-        gap: 18px;
-    }
-}
-
-/* Tablet (≤ 992px): 2×2 grid */
-@media (max-width: 992px) {
-    #who-we-are .features-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 16px;
-    }
-}
-
-/* Mobile (≤ 576px): single column */
-@media (max-width: 576px) {
-    #who-we-are .features-grid {
-        grid-template-columns: 1fr;
-        gap: 12px;
-    }
-}
-
-/* Very small (≤ 375px) */
-@media (max-width: 375px) {
-    #who-we-are .features-grid {
-        gap: 10px;
-    }
-}
-
-/* Extra small (≤ 320px) */
-@media (max-width: 320px) {
-    #who-we-are .features-grid {
-        gap: 8px;
-    }
 }
