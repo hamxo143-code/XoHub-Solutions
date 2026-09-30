@@ -10380,8 +10380,10 @@ input:focus-visible {
     padding: 20px 0 40px;
 }
 
-/* ----- Central Line ----- */
-.timeline__line {
+/* ----- Central Line — scoped to #company-timeline (OUR JOURNEY section)
+   to prevent overriding the .our-story__timeline .timeline__line rule
+   (which uses left:14px) defined earlier in this file. ----- */
+#company-timeline .timeline__line {
     position: absolute;
     top: 40px;
     bottom: 40px;
@@ -10394,7 +10396,7 @@ input:focus-visible {
     z-index: 1;
 }
 
-.timeline__line-fill {
+#company-timeline .timeline__line-fill {
     height: 0%;
     width: 100%;
     background: linear-gradient(180deg, var(--color-lime), var(--color-purple));
@@ -10402,7 +10404,7 @@ input:focus-visible {
     transition: height 1.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-.timeline__line-fill.animated {
+#company-timeline .timeline__line-fill.animated {
     height: 100%;
 }
 
@@ -49112,7 +49114,9 @@ START: Why Contact XoHub Solutions & Client Success Highlights
     box-shadow: 0 12px 40px rgba(124, 58, 237, 0.04);
 }
 
-.features-grid {
+/* Scoped to this section only — prevents overriding the About page
+   .features-grid which correctly uses repeat(4, 1fr) */
+.why-xohub__features .features-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 12px 16px;

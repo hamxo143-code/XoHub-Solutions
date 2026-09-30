@@ -6938,9 +6938,9 @@ canvas {
         display: none;
     }
 
-    .core-values__grid {
-        opacity: 0.15;
-    }
+    /* NOTE: opacity:0.15 intentionally removed — it was incorrectly applied
+       to the value cards grid instead of a background decoration element,
+       making all six Core Values cards nearly invisible on mobile. */
 }
 
 /* Very small phones */
@@ -7878,7 +7878,8 @@ canvas {
         font-size: 0.95rem;
     }
 
-    .timeline__line {
+    /* Scoped to #company-timeline — prevents interfering with .our-story__timeline */
+    #company-timeline .timeline__line {
         left: 20px;
     }
 
@@ -7992,7 +7993,7 @@ canvas {
         padding: 10px 0 20px;
     }
 
-    .timeline__line {
+    #company-timeline .timeline__line {
         left: 16px;
     }
 
@@ -8099,7 +8100,7 @@ canvas {
         padding-left: 34px !important;
     }
 
-    .timeline__line {
+    #company-timeline .timeline__line {
         left: 13px;
     }
 
@@ -8172,7 +8173,7 @@ canvas {
         padding-left: 28px !important;
     }
 
-    .timeline__line {
+    #company-timeline .timeline__line {
         left: 10px;
         width: 2px;
     }
@@ -53556,4 +53557,66 @@ END: Final CTA – Join Our Journey Responsive
 #cta {
     overflow-x: hidden;
     max-width: 100%;
+}
+
+/* ============================================================
+   ABOUT PAGE LAYOUT FIXES
+   Targeted overrides to resolve CSS cascade conflicts on about.html
+   caused by later-declared global rules in style.css.
+   ============================================================ */
+
+/* ============================================================
+   FIX A: FOUR CORE PRINCIPLE CARDS — One row on desktop
+   Root cause: A later rule at line ~49115 in style.css declared
+   .features-grid { grid-template-columns: repeat(3, 1fr) } globally
+   (inside the "WHY BUSINESSES CHOOSE US" section). This overrode
+   the About page's .features-grid { repeat(4, 1fr) } at line ~7674,
+   collapsing the 4 cards into 3 columns.
+   Fix: The conflicting rule was scoped to .why-xohub__features .features-grid
+   in style.css. This block reinforces the 4-column layout on the About
+   page across all relevant breakpoints.
+   ============================================================ */
+
+/* Desktop: enforce 4-column layout for the feature highlights grid */
+#who-we-are .features-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+/* Large tablet (≤ 1200px): keep 4 columns, reduce gap */
+@media (max-width: 1200px) {
+    #who-we-are .features-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 18px;
+    }
+}
+
+/* Tablet (≤ 992px): 2×2 grid */
+@media (max-width: 992px) {
+    #who-we-are .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+}
+
+/* Mobile (≤ 576px): single column */
+@media (max-width: 576px) {
+    #who-we-are .features-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+}
+
+/* Very small (≤ 375px) */
+@media (max-width: 375px) {
+    #who-we-are .features-grid {
+        gap: 10px;
+    }
+}
+
+/* Extra small (≤ 320px) */
+@media (max-width: 320px) {
+    #who-we-are .features-grid {
+        gap: 8px;
+    }
 }
