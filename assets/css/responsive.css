@@ -5174,22 +5174,52 @@ canvas {
         max-width: 100%;
     }
 
+    /* Break the pill container into a stacked column layout so input and
+       button each get a full-width row. The pill shape only works inline;
+       when wrapped it looks broken. Give each element its own pill border. */
     .newsletter__input-group {
-        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: stretch;
         gap: 8px;
-        padding: 4px 4px 4px 16px;
+        padding: 0;
+        background: transparent;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
     }
 
+    .newsletter__input-group:focus-within {
+        box-shadow: none;
+        border-color: transparent;
+    }
+
+    /* Input gets its own pill-shaped outline */
     .newsletter__input {
         width: 100%;
         min-width: 0;
         flex: 1 1 100%;
+        padding: 11px 18px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 50px;
+        color: var(--color-white);
+        font-size: 0.85rem;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
     }
 
+    .newsletter__input:focus {
+        outline: none;
+        border-color: var(--color-lime);
+        box-shadow: 0 0 0 3px rgba(192, 227, 74, 0.08);
+    }
+
+    /* Button gets full width, keeps pill shape */
     .newsletter__button {
         width: 100%;
         justify-content: center;
         flex-shrink: 0;
+        padding: 11px 24px;
+        border-radius: 50px;
     }
 
     .footer__trust-badges {
@@ -5271,25 +5301,33 @@ canvas {
         font-size: 0.75rem;
     }
 
+    /* Reinforce stacked layout at mobile — input-group remains a column */
     .newsletter__input-group {
-        padding: 2px 2px 2px 14px;
-        flex-wrap: wrap;
-        border-radius: 40px;
+        flex-direction: column;
+        gap: 8px;
+        padding: 0;
+        background: transparent;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
     }
 
     .newsletter__input {
-        font-size: 0.78rem;
-        padding: 8px 0;
+        font-size: 0.82rem;
+        padding: 11px 16px;
         width: 100%;
-        min-width: 100%;
+        min-width: 0;
+        border-radius: 50px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: rgba(255, 255, 255, 0.05);
     }
 
     .newsletter__button {
         width: 100%;
         justify-content: center;
-        padding: 10px 20px;
-        font-size: 0.78rem;
-        border-radius: 40px;
+        padding: 11px 20px;
+        font-size: 0.82rem;
+        border-radius: 50px;
     }
 
     .footer__trust-badges {
@@ -5402,12 +5440,13 @@ canvas {
     }
 
     .newsletter__input {
-        font-size: 0.72rem;
+        font-size: 0.78rem;
+        padding: 10px 14px;
     }
 
     .newsletter__button {
-        font-size: 0.72rem;
-        padding: 8px 16px;
+        font-size: 0.78rem;
+        padding: 10px 16px;
     }
 
     .trust-badge {
@@ -5462,12 +5501,13 @@ canvas {
     }
 
     .newsletter__input {
-        font-size: 0.7rem;
+        font-size: 0.75rem;
+        padding: 10px 14px;
     }
 
     .newsletter__button {
-        font-size: 0.7rem;
-        padding: 9px 14px;
+        font-size: 0.75rem;
+        padding: 10px 14px;
     }
 
     .back-to-top {
@@ -53283,6 +53323,47 @@ END: Final CTA – Join Our Journey Responsive
     box-shadow: none;
 }
 
+/* Restore icon centering — the conflicting rule at line ~32768 in style.css
+   switches .trust-indicator__icon to `display: block` which breaks the
+   horizontal centering achieved via the parent's text-align:center.
+   Restoring inline-flex with margin:auto ensures the icon is always
+   centered regardless of which generic rule wins the cascade. */
+#testimonials .trust-indicator__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: rgba(124, 58, 237, 0.06);
+    color: var(--color-purple);
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+/* Restore number and label display so they're not collapsed to block with
+   reduced font-size from the conflicting later rule */
+#testimonials .trust-indicator__number {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: var(--font-weight-bold);
+    color: var(--color-charcoal);
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+}
+
+#testimonials .trust-indicator__label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: var(--font-weight-medium);
+    color: var(--color-gray-mid);
+    margin: 0;
+    text-transform: none;
+    letter-spacing: normal;
+}
+
 /* Tablet (≤ 992px): 2×2 grid */
 @media (max-width: 992px) {
     #testimonials .trust-indicators__grid {
@@ -53290,6 +53371,10 @@ END: Final CTA – Join Our Journey Responsive
         gap: 16px;
         max-width: 560px;
         margin: 0 auto;
+    }
+
+    #testimonials .trust-indicator__number {
+        font-size: 1.4rem;
     }
 }
 
@@ -53304,6 +53389,21 @@ END: Final CTA – Join Our Journey Responsive
         grid-template-columns: repeat(2, 1fr);
         gap: 12px;
         max-width: 480px;
+    }
+
+    #testimonials .trust-indicator__icon {
+        width: 38px;
+        height: 38px;
+        font-size: 0.9rem;
+        margin-bottom: 4px;
+    }
+
+    #testimonials .trust-indicator__number {
+        font-size: 1.2rem;
+    }
+
+    #testimonials .trust-indicator__label {
+        font-size: 0.7rem;
     }
 }
 
@@ -53326,6 +53426,13 @@ END: Final CTA – Join Our Journey Responsive
 @media (max-width: 320px) {
     #testimonials .trust-indicators__grid {
         gap: 6px;
+    }
+
+    #testimonials .trust-indicator__icon {
+        width: 32px;
+        height: 32px;
+        font-size: 0.75rem;
+        margin-bottom: 3px;
     }
 
     #testimonials .trust-indicator__number {

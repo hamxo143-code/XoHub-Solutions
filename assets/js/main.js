@@ -1060,21 +1060,25 @@
     const serviceTitle = document.querySelector('.services__title');
     const serviceSubtitle = document.querySelector('.services__subtitle');
 
+    // If there are no service cards on this page, do nothing.
+    if (!serviceCards.length) return;
+
     // Set initial state for header elements
     const headerElements = [serviceBadge, serviceTitle, serviceSubtitle];
     headerElements.forEach((el) => {
         if (el) {
             el.style.opacity = '0';
             el.style.transform = 'translateY(20px)';
-            el.style.transition = 'opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+            el.style.transition = 'opacity 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
         }
     });
 
-    // Set initial state for cards
+    // Set initial state for cards — use a per-card stagger capped at 50ms so
+    // the last card in a large grid never waits more than ~550ms total.
     serviceCards.forEach((card, index) => {
         card.style.opacity = '0';
         card.style.transform = 'translateY(30px)';
-        card.style.transition = `opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) ${index * 80}ms, transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) ${index * 80}ms`;
+        card.style.transition = `opacity 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) ${index * 50}ms, transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) ${index * 50}ms`;
     });
 
     // Create observer
@@ -1087,27 +1091,36 @@
                         setTimeout(() => {
                             el.style.opacity = '1';
                             el.style.transform = 'translateY(0)';
-                        }, 100);
+                        }, 60);
                     }
                 });
 
-                // Animate cards with staggered delay
+                // Animate cards with staggered delay — base delay reduced to 150ms
                 serviceCards.forEach((card, index) => {
                     setTimeout(() => {
                         card.style.opacity = '1';
                         card.style.transform = 'translateY(0)';
-                    }, 300 + (index * 80));
+                    }, 150 + (index * 50));
                 });
 
                 servicesObserver.disconnect();
             }
         });
     }, {
-        threshold: 0.12,
-        rootMargin: '0px 0px -50px 0px'
+        threshold: 0.05,
+        rootMargin: '0px 0px 0px 0px'
     });
 
-    const servicesSection = document.getElementById('services');
+    // FIX: getElementById('services') pointed to the wrong element on most pages.
+    // Instead, find the closest section/div ancestor of the first service card so
+    // the observer always watches the correct container regardless of page structure.
+    const firstCard = serviceCards[0];
+    const servicesSection =
+        firstCard.closest('#services') ||
+        firstCard.closest('.services-section') ||
+        firstCard.closest('section') ||
+        firstCard.parentElement;
+
     if (servicesSection) {
         servicesObserver.observe(servicesSection);
     }
