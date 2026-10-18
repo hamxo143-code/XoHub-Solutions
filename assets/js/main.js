@@ -26852,9 +26852,20 @@ END: Final CTA – Join Our Journey JavaScript
 
             this.slidesPerView = this.getSlidesPerView();
             
-            // Calculate offset
-            const cardWidth = this.cards[0].offsetWidth;
+            // Get wrapper padding
+            const wrapper = this.wrapper;
+            const wrapperStyles = getComputedStyle(wrapper);
+            const wrapperPadding = parseInt(wrapperStyles.paddingLeft) || 24;
+            
+            // Calculate card width based on container
+            const containerWidth = wrapper.offsetWidth - (wrapperPadding * 2);
             const gap = parseInt(getComputedStyle(this.track).gap) || 24;
+            
+            // Calculate proper card width for current slides per view
+            const totalGaps = (this.slidesPerView - 1) * gap;
+            const cardWidth = (containerWidth - totalGaps) / this.slidesPerView;
+            
+            // Calculate offset
             const offset = -(this.currentIndex * (cardWidth + gap));
             
             // Apply transition

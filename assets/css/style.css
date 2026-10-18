@@ -102082,7 +102082,9 @@ END: Under Construction Modal
     border-radius: 16px;
     position: relative;
     background: linear-gradient(135deg, rgba(129, 199, 82, 0.03), rgba(124, 80, 204, 0.03));
-    padding: 3px;
+    padding: 24px;
+    margin: 0 auto;
+    max-width: 100%;
 }
 
 .testimonial-slider-wrapper::before {
@@ -102114,6 +102116,7 @@ END: Under Construction Modal
     gap: 24px;
     transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     will-change: transform;
+    align-items: stretch;
 }
 
 /* Smooth motion support */
@@ -102125,14 +102128,26 @@ END: Under Construction Modal
 
 /* Card Styles in Slider */
 .testimonial-slider-track .client-card {
-    min-width: calc(33.333% - 16px);
+    min-width: calc((100% - 48px) / 3);
+    max-width: calc((100% - 48px) / 3);
     flex-shrink: 0;
+    flex-grow: 0;
     display: flex;
     flex-direction: column;
     transition: all 0.3s ease;
     background: var(--color-white);
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    overflow: visible;
+}
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.testimonial-slider-wrapper:hover::before {
+    opacity: 1;
 }
 
 .testimonial-slider-track .client-card:hover {
@@ -102219,11 +102234,16 @@ END: Under Construction Modal
 /* Tablet View */
 @media (max-width: 1024px) {
     .testimonial-slider-track .client-card {
-        min-width: calc(50% - 12px);
+        min-width: calc((100% - 20px) / 2);
+        max-width: calc((100% - 20px) / 2);
     }
     
     .testimonial-slider-track {
         gap: 20px;
+    }
+    
+    .testimonial-slider-wrapper {
+        padding: 20px;
     }
     
     .testimonial-slider-header__title {
@@ -102264,10 +102284,15 @@ END: Under Construction Modal
 
     .testimonial-slider-track .client-card {
         min-width: 100%;
+        max-width: 100%;
     }
     
     .testimonial-slider-track {
         gap: 16px;
+    }
+    
+    .testimonial-slider-wrapper {
+        padding: 16px;
     }
     
     .testimonial-slider-pagination {
@@ -102303,6 +102328,10 @@ END: Under Construction Modal
     
     .testimonial-slider-header__controls {
         gap: 10px;
+    }
+    
+    .testimonial-slider-wrapper {
+        padding: 12px;
     }
 }
 
