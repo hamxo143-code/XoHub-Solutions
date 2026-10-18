@@ -561,13 +561,143 @@ iframe {
     overflow-x: hidden !important;
 }
 
-/* Logo should not cause overflow */
+/* ============================================================
+   HEADER FIXES - COMPREHENSIVE OVERFLOW PREVENTION
+   ============================================================ */
+
+#XoHubSolutions-MainHeader,
+.XoHubSolutions-MainHeader {
+    max-width: 100vw !important;
+    width: 100% !important;
+    overflow-x: hidden !important;
+    overflow-y: visible !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+#XoHubSolutions-TopBar,
+.XoHubSolutions-TopBar {
+    max-width: 100vw !important;
+    width: 100% !important;
+    overflow-x: hidden !important;
+    overflow-y: visible !important;
+}
+
+.XoHubSolutions-TopBarInner {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.XoHubSolutions-TopBarLeft {
+    flex: 1 1 auto;
+    min-width: 0;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.XoHubSolutions-TopBarRight {
+    flex: 0 0 auto;
+    max-width: 50%;
+    overflow: hidden;
+}
+
+.XoHubSolutions-TopBarText {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 100%;
+}
+
+.XoHubSolutions-TopBarNav {
+    display: flex;
+    gap: 18px;
+    flex-shrink: 1;
+    overflow: hidden;
+}
+
+.XoHubSolutions-TopBarSocials {
+    display: flex;
+    gap: 6px;
+    flex-shrink: 0;
+}
+
+.XoHubSolutions-MainNav {
+    max-width: 100vw !important;
+    width: 100% !important;
+    overflow-x: hidden !important;
+    overflow-y: visible !important;
+}
+
+.XoHubSolutions-MainNavInner {
+    max-width: 100% !important;
+    width: 100% !important;
+    overflow-x: hidden !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Logo Container */
+.XoHubSolutions-Logo {
+    flex: 0 0 auto;
+    max-width: 150px;
+    overflow: visible;
+}
+
+.XoHubSolutions-Logo a {
+    display: block;
+    line-height: 0;
+}
+
+/* Logo Image - Responsive Sizing */
 .XoHubSolutions-LogoImage {
     width: 120px !important;
     height: 120px !important;
     max-width: 120px !important;
     max-height: 120px !important;
     object-fit: contain;
+    display: block;
+}
+
+/* Navigation Links Container */
+.XoHubSolutions-NavLinks {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    max-width: 100%;
+    overflow: visible;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.XoHubSolutions-NavLinks > li {
+    flex: 0 0 auto;
+    position: relative;
+}
+
+.XoHubSolutions-NavLink {
+    white-space: nowrap;
+    overflow: visible;
+}
+
+/* Nav Actions */
+.XoHubSolutions-NavActions {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    overflow: visible;
 }
 
 /* When scrolled, make logo smaller */
@@ -577,6 +707,140 @@ iframe {
     height: 80px !important;
     max-width: 80px !important;
     max-height: 80px !important;
+}
+
+/* Hamburger Menu */
+.XoHubSolutions-Hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 6px 4px;
+    z-index: 1100;
+    flex-shrink: 0;
+}
+
+.XoHubSolutions-HamburgerLine {
+    display: block;
+    width: 26px;
+    height: 2.5px;
+    background: var(--color-charcoal);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+/* Mobile responsive header */
+@media (max-width: 1200px) {
+    .XoHubSolutions-NavLinks {
+        gap: 2px;
+    }
+
+    .XoHubSolutions-NavLink {
+        font-size: 0.8rem;
+        padding: 6px 10px;
+    }
+}
+
+@media (max-width: 992px) {
+    .XoHubSolutions-NavLinks {
+        display: none;
+    }
+
+    .XoHubSolutions-Hamburger {
+        display: flex;
+    }
+
+    .XoHubSolutions-MainNavInner {
+        gap: 12px;
+    }
+
+    .XoHubSolutions-TopBarNav {
+        display: none;
+    }
+
+    .XoHubSolutions-LogoImage {
+        width: 100px !important;
+        height: 100px !important;
+        max-width: 100px !important;
+        max-height: 100px !important;
+    }
+
+    #XoHubSolutions-MainHeader.scrolled .XoHubSolutions-LogoImage,
+    .XoHubSolutions-MainHeader.scrolled .XoHubSolutions-LogoImage {
+        width: 70px !important;
+        height: 70px !important;
+        max-width: 70px !important;
+        max-height: 70px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .XoHubSolutions-TopBarInner {
+        gap: 8px;
+    }
+
+    .XoHubSolutions-TopBarText {
+        font-size: 0.7rem;
+    }
+
+    .XoHubSolutions-LogoImage {
+        width: 80px !important;
+        height: 80px !important;
+        max-width: 80px !important;
+        max-height: 80px !important;
+    }
+
+    #XoHubSolutions-MainHeader.scrolled .XoHubSolutions-LogoImage,
+    .XoHubSolutions-MainHeader.scrolled .XoHubSolutions-LogoImage {
+        width: 60px !important;
+        height: 60px !important;
+        max-width: 60px !important;
+        max-height: 60px !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .XoHubSolutions-TopBarSocials {
+        display: none;
+    }
+
+    .XoHubSolutions-MainNavInner {
+        gap: 8px;
+    }
+}
+
+/* ============================================================
+   DROPDOWN MENUS - PREVENT OVERFLOW
+   ============================================================ */
+
+.XoHubSolutions-DropdownMenu,
+.XoHubSolutions-MegaMenu {
+    max-width: calc(100vw - 40px) !important;
+    left: 50% !important;
+    transform: translateX(-50%) translateY(8px) !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+}
+
+.XoHubSolutions-Dropdown:hover .XoHubSolutions-DropdownMenu {
+    transform: translateX(-50%) translateY(0) !important;
+}
+
+.XoHubSolutions-MegaDropdown:hover .XoHubSolutions-MegaMenu {
+    transform: translateX(-50%) translateY(0) !important;
+}
+
+.XoHubSolutions-MegaMenuInner {
+    max-width: 100%;
+    overflow-x: hidden;
+    padding: 0 16px;
+}
+
+.XoHubSolutions-MegaMenuColumn {
+    max-width: 100%;
+    overflow: hidden;
 }
 
 /* ============================================================
