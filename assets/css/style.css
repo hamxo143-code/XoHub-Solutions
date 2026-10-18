@@ -101512,3 +101512,27 @@ START: Under Construction Modal
 /* ==================================================
 END: Under Construction Modal
 ================================================== */
+
+
+/* ============================================================
+   TEMPORARY MENU ITEM HIDING — Products Menu
+   ============================================================
+   IMPORTANT: This class temporarily hides the "Products" menu item
+   across all navigation instances (desktop, tablet, and mobile).
+   
+   To RE-ENABLE the Products menu:
+   1. Remove the class "XoHubSolutions-HideMenuItem" from:
+      - Desktop nav: <li role="none" class="XoHubSolutions-Dropdown XoHubSolutions-MegaDropdown XoHubSolutions-HideMenuItem">
+      - Mobile nav: <li class="XoHubSolutions-HideMenuItem">
+   OR
+   2. Comment out or delete this entire CSS section
+   ============================================================ */
+
+.XoHubSolutions-HideMenuItem {
+    display: none !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    opacity: 0 !important;
+}
+
+/* End of temporary menu hiding */
