@@ -1,146 +1,56 @@
 /* ============================================================
-   WEB DEVELOPMENT PAGE - HERO BANNER FIXES & OPTIMIZATION
-   Professional fixes for header overlap, layout, responsive design,
-   animations, and visual improvements
+   WEB DEVELOPMENT PAGE - HERO BANNER PROFESSIONAL FIXES
+   Conservative fixes focused on critical issues only
    ============================================================ */
 
 /* ==================================================
-   1. HEADER OVERLAP FIX - Add Top Spacing
+   1. HEADER OVERLAP FIX - Critical Priority
    ================================================== */
 
 #webdev-hero {
-    /* Add top padding to account for fixed header
-       Top Bar (42px) + Main Nav (80px) + Extra spacing (50px) */
-    padding-top: 172px !important;
+    /* Add proper top padding to prevent header overlap
+       Top Bar (42px) + Main Nav (80px) + Extra spacing (40px) = 162px */
+    padding-top: 162px;
     padding-bottom: 60px;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    
-    /* Prevent any accidental overlap */
-    margin-top: 0 !important;
 }
 
-/* When top bar is hidden (scrolled), adjust spacing */
-.XoHubSolutions-MainHeader.scrolled ~ main #webdev-hero,
-.scrolled ~ main #webdev-hero {
-    /* Main Nav only (70px when scrolled) + Extra spacing (50px) */
-    padding-top: 120px !important;
+/* Adjust when top bar is hidden on scroll */
+body.scrolled #webdev-hero,
+.XoHubSolutions-MainHeader.scrolled ~ * #webdev-hero {
+    /* Main Nav (70px when scrolled) + Extra spacing (40px) = 110px */
+    padding-top: 110px;
 }
 
 /* ==================================================
-   2. LAYOUT & ALIGNMENT OPTIMIZATION
+   2. LAYOUT FIXES - Proper Grid & Alignment
    ================================================== */
 
-/* Container - improved grid layout */
 .webdev-hero__inner {
-    position: relative;
-    z-index: 2;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
     align-items: center;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
-/* Hero Main Content - proper vertical spacing */
 .webdev-hero__main {
     display: flex;
     flex-direction: column;
     gap: 24px;
-    padding-right: 20px;
 }
 
-/* Header group spacing */
 .webdev-hero__header {
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
 
-/* Badge - ensure visibility */
-.webdev-hero__badge {
-    display: inline-flex;
-    align-items: center;
-    width: fit-content;
-    opacity: 1 !important;
-    transform: translateY(0) !important;
-}
-
-/* Title - prevent text overflow */
-.webdev-hero__title {
-    font-size: 3rem;
-    font-weight: var(--font-weight-bold);
-    color: var(--color-charcoal);
-    letter-spacing: -0.02em;
-    line-height: 1.1;
-    margin: 0;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-}
-
-/* Subtitle - improved readability */
-.webdev-hero__subtitle {
-    font-size: 1.05rem;
-    font-weight: var(--font-weight-regular);
-    color: var(--color-gray-mid);
-    line-height: 1.7;
-    max-width: 540px;
-    margin: 0;
-}
-
-/* CTA Buttons - proper alignment and spacing */
-.webdev-hero__actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 14px;
-    margin-top: 8px;
-}
-
-.btn-webdev-start,
-.btn-webdev-portfolio {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    white-space: nowrap;
-    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-/* Trust Badges - improved spacing */
-.webdev-hero__trust {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px 12px;
-    margin-top: 8px;
-}
-
-/* Highlights Grid - consistent spacing */
-.webdev-hero__highlights {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px 12px;
-    margin-top: 8px;
-}
-
-/* Hero Visual - proper positioning */
-.webdev-hero__visual {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 500px;
-    padding-left: 20px;
-}
-
 /* ==================================================
-   3. ANIMATION & RENDERING OPTIMIZATION
+   3. ANIMATION FIXES - Prevent Blank Screen
    ================================================== */
 
-/* Prevent blank screen - ensure immediate visibility */
+/* Ensure immediate visibility - no delayed rendering */
 #webdev-hero,
+#webdev-hero *,
 .webdev-hero__inner,
 .webdev-hero__main,
 .webdev-hero__header,
@@ -151,40 +61,39 @@
 .webdev-hero__trust,
 .webdev-hero__highlights,
 .webdev-hero__visual {
-    opacity: 1 !important;
-    visibility: visible !important;
+    opacity: 1;
+    visibility: visible;
 }
 
-/* Smooth fade-in for content elements */
+/* Quick, smooth fade-in animations */
 .webdev-hero__badge {
-    animation: fadeInUp 0.6s ease-out 0.1s backwards;
+    animation: quickFadeIn 0.4s ease-out;
 }
 
 .webdev-hero__title {
-    animation: fadeInUp 0.6s ease-out 0.2s backwards;
+    animation: quickFadeIn 0.5s ease-out 0.1s both;
 }
 
 .webdev-hero__subtitle {
-    animation: fadeInUp 0.6s ease-out 0.3s backwards;
+    animation: quickFadeIn 0.5s ease-out 0.2s both;
 }
 
 .webdev-hero__actions {
-    animation: fadeInUp 0.6s ease-out 0.4s backwards;
+    animation: quickFadeIn 0.5s ease-out 0.3s both;
 }
 
 .webdev-hero__trust {
-    animation: fadeInUp 0.6s ease-out 0.5s backwards;
+    animation: quickFadeIn 0.5s ease-out 0.4s both;
 }
 
 .webdev-hero__highlights {
-    animation: fadeInUp 0.6s ease-out 0.6s backwards;
+    animation: quickFadeIn 0.5s ease-out 0.5s both;
 }
 
-/* Fade in animation keyframes */
-@keyframes fadeInUp {
+@keyframes quickFadeIn {
     from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(10px);
     }
     to {
         opacity: 1;
@@ -192,74 +101,21 @@
     }
 }
 
-/* Visual elements - staggered animation */
-.webdev-hero__visual {
-    animation: fadeIn 0.8s ease-out 0.3s backwards;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
 /* ==================================================
-   4. VISUAL IMPROVEMENTS
+   4. RESPONSIVE DESIGN - Tested Breakpoints
    ================================================== */
 
-/* Enhanced spacing and proportions */
-.highlight-card {
-    padding: 12px 14px;
-    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.highlight-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 24px rgba(124, 58, 237, 0.08);
-}
-
-/* Trust badges - improved appearance */
-.webdev-hero__trust .trust-badge {
-    padding: 6px 14px 6px 10px;
-    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.webdev-hero__trust .trust-badge:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 16px rgba(124, 58, 237, 0.06);
-}
-
-/* ==================================================
-   5. RESPONSIVE DESIGN - ALL BREAKPOINTS
-   ================================================== */
-
-/* Large Desktop (1400px - 1920px) */
+/* Desktop Large (1440px+) */
 @media (min-width: 1440px) {
     #webdev-hero {
-        padding-top: 192px !important;
-    }
-    
-    .webdev-hero__inner {
-        max-width: 1400px;
-        gap: 80px;
-    }
-    
-    .webdev-hero__title {
-        font-size: 3.2rem;
+        padding-top: 182px;
     }
 }
 
-/* Desktop (1200px - 1400px) */
-@media (max-width: 1400px) {
+/* Desktop Standard (1200px - 1440px) */
+@media (max-width: 1440px) {
     #webdev-hero {
-        padding-top: 172px !important;
-    }
-    
-    .webdev-hero__inner {
-        gap: 60px;
+        padding-top: 162px;
     }
     
     .webdev-hero__title {
@@ -267,11 +123,10 @@
     }
 }
 
-/* Standard Desktop (1024px - 1200px) */
+/* Desktop Small (1024px - 1200px) */
 @media (max-width: 1200px) {
     #webdev-hero {
-        padding-top: 162px !important;
-        padding-bottom: 50px;
+        padding-top: 152px;
     }
     
     .webdev-hero__inner {
@@ -281,21 +136,12 @@
     .webdev-hero__title {
         font-size: 2.6rem;
     }
-    
-    .webdev-hero__subtitle {
-        font-size: 1rem;
-    }
 }
 
 /* Tablet Landscape (992px - 1024px) */
 @media (max-width: 1024px) {
     #webdev-hero {
-        padding-top: 152px !important;
-        padding-bottom: 50px;
-    }
-    
-    .webdev-hero__inner {
-        gap: 40px;
+        padding-top: 142px;
     }
     
     .webdev-hero__title {
@@ -303,11 +149,11 @@
     }
 }
 
-/* Tablet Portrait (768px - 992px) */
+/* Tablet Portrait (768px - 992px) - Stack Layout */
 @media (max-width: 992px) {
     #webdev-hero {
-        padding-top: 142px !important;
-        padding-bottom: 40px;
+        padding-top: 132px;
+        padding-bottom: 50px;
         min-height: auto;
     }
     
@@ -316,8 +162,12 @@
         gap: 40px;
     }
     
+    .webdev-hero__visual {
+        order: -1;
+        min-height: 400px;
+    }
+    
     .webdev-hero__main {
-        padding-right: 0;
         text-align: center;
         align-items: center;
     }
@@ -326,18 +176,14 @@
         align-items: center;
     }
     
-    .webdev-hero__badge {
-        align-self: center;
-    }
-    
     .webdev-hero__title {
         font-size: 2.4rem;
         text-align: center;
     }
     
     .webdev-hero__subtitle {
-        max-width: 100%;
         text-align: center;
+        max-width: 100%;
     }
     
     .webdev-hero__actions {
@@ -350,20 +196,13 @@
     
     .webdev-hero__highlights {
         grid-template-columns: repeat(3, 1fr);
-        gap: 8px 10px;
-    }
-    
-    .webdev-hero__visual {
-        min-height: 400px;
-        order: -1;
-        padding-left: 0;
     }
 }
 
-/* Tablet Small (768px) */
+/* Tablet Small (576px - 768px) */
 @media (max-width: 768px) {
     #webdev-hero {
-        padding-top: 132px !important;
+        padding-top: 122px;
         padding-bottom: 40px;
     }
     
@@ -380,20 +219,12 @@
     }
 }
 
-/* Mobile Large (576px - 768px) */
+/* Mobile Large (414px - 576px) */
 @media (max-width: 576px) {
     #webdev-hero {
-        /* Top Bar (36px) + Main Nav (64px) + Extra spacing (40px) */
-        padding-top: 140px !important;
+        /* Account for mobile header: Top Bar (36px) + Nav (64px) + spacing (30px) */
+        padding-top: 130px;
         padding-bottom: 30px;
-    }
-    
-    .webdev-hero__main {
-        gap: 20px;
-    }
-    
-    .webdev-hero__header {
-        gap: 14px;
     }
     
     .webdev-hero__badge {
@@ -403,12 +234,10 @@
     
     .webdev-hero__title {
         font-size: 1.8rem;
-        line-height: 1.2;
     }
     
     .webdev-hero__subtitle {
         font-size: 0.9rem;
-        line-height: 1.6;
     }
     
     .webdev-hero__actions {
@@ -421,8 +250,6 @@
     .btn-webdev-portfolio {
         width: 100%;
         justify-content: center;
-        padding: 12px 24px;
-        font-size: 0.85rem;
     }
     
     .webdev-hero__trust {
@@ -434,25 +261,9 @@
         padding: 4px 12px 4px 8px;
     }
     
-    .webdev-hero__trust .trust-badge i {
-        font-size: 0.7rem;
-    }
-    
     .webdev-hero__highlights {
         grid-template-columns: 1fr 1fr;
         gap: 6px 8px;
-    }
-    
-    .highlight-card {
-        padding: 10px 12px;
-    }
-    
-    .highlight-card__icon {
-        font-size: 1rem;
-    }
-    
-    .highlight-card__label {
-        font-size: 0.7rem;
     }
     
     .webdev-hero__visual {
@@ -460,10 +271,10 @@
     }
 }
 
-/* Mobile Standard (414px) */
+/* Mobile Standard (375px - 414px) */
 @media (max-width: 414px) {
     #webdev-hero {
-        padding-top: 130px !important;
+        padding-top: 125px;
     }
     
     .webdev-hero__title {
@@ -475,10 +286,10 @@
     }
 }
 
-/* Mobile Small (375px) */
+/* Mobile Small (320px - 375px) */
 @media (max-width: 375px) {
     #webdev-hero {
-        padding-top: 125px !important;
+        padding-top: 120px;
     }
     
     .webdev-hero__title {
@@ -489,8 +300,12 @@
         font-size: 0.82rem;
     }
     
+    .webdev-hero__trust .trust-badge {
+        font-size: 0.6rem;
+        padding: 3px 10px 3px 6px;
+    }
+    
     .webdev-hero__highlights {
-        grid-template-columns: 1fr 1fr;
         gap: 4px 6px;
     }
     
@@ -506,15 +321,6 @@
         font-size: 0.65rem;
     }
     
-    .webdev-hero__trust .trust-badge {
-        font-size: 0.6rem;
-        padding: 3px 10px 3px 6px;
-    }
-    
-    .webdev-hero__trust .trust-badge i {
-        font-size: 0.65rem;
-    }
-    
     .webdev-hero__visual {
         min-height: 260px;
     }
@@ -523,7 +329,7 @@
 /* Mobile Extra Small (320px) */
 @media (max-width: 320px) {
     #webdev-hero {
-        padding-top: 120px !important;
+        padding-top: 115px;
     }
     
     .webdev-hero__title {
@@ -535,7 +341,6 @@
     }
     
     .webdev-hero__highlights {
-        grid-template-columns: 1fr 1fr;
         gap: 3px 4px;
     }
     
@@ -557,130 +362,50 @@
 }
 
 /* ==================================================
-   6. PREVENT HORIZONTAL SCROLLING
+   5. PREVENT HORIZONTAL SCROLL
    ================================================== */
 
-#webdev-hero,
+#webdev-hero {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 .webdev-hero__inner,
 .webdev-hero__main,
+.webdev-hero__header,
 .webdev-hero__visual {
     max-width: 100%;
     overflow-x: hidden;
 }
 
-.container {
-    max-width: 100%;
-    padding-left: 24px;
-    padding-right: 24px;
-}
-
-@media (max-width: 768px) {
-    .container {
-        padding-left: 16px;
-        padding-right: 16px;
-    }
-}
-
 /* ==================================================
-   7. ACCESSIBILITY & PERFORMANCE
+   6. ACCESSIBILITY
    ================================================== */
 
-/* Reduced motion preference */
+/* Reduced motion support */
 @media (prefers-reduced-motion: reduce) {
-    #webdev-hero *,
     .webdev-hero__badge,
     .webdev-hero__title,
     .webdev-hero__subtitle,
     .webdev-hero__actions,
     .webdev-hero__trust,
-    .webdev-hero__highlights,
-    .webdev-hero__visual {
+    .webdev-hero__highlights {
         animation: none !important;
-        transition: none !important;
-    }
-    
-    /* Still fade in but without motion */
-    .webdev-hero__badge,
-    .webdev-hero__title,
-    .webdev-hero__subtitle,
-    .webdev-hero__actions,
-    .webdev-hero__trust,
-    .webdev-hero__highlights,
-    .webdev-hero__visual {
-        opacity: 1 !important;
-        transform: none !important;
     }
 }
 
-/* High contrast mode support */
-@media (prefers-contrast: high) {
-    .webdev-hero__badge,
-    .webdev-hero__trust .trust-badge,
-    .highlight-card {
-        border: 2px solid currentColor;
-    }
-}
-
-/* Focus visible for accessibility */
+/* Focus states */
 .btn-webdev-start:focus-visible,
-.btn-webdev-portfolio:focus-visible,
-.highlight-card:focus-visible {
-    outline: 3px solid var(--color-lime, #81c752);
+.btn-webdev-portfolio:focus-visible {
+    outline: 3px solid #81c752;
     outline-offset: 4px;
 }
 
 /* ==================================================
-   8. PRINT OPTIMIZATION
+   7. LOADING OPTIMIZATION
    ================================================== */
 
-@media print {
-    #webdev-hero {
-        padding-top: 20px !important;
-        min-height: auto;
-        page-break-inside: avoid;
-    }
-    
-    .webdev-hero__bg,
-    .webdev-hero__visual {
-        display: none;
-    }
-    
-    .webdev-hero__inner {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* ==================================================
-   9. BROWSER-SPECIFIC FIXES
-   ================================================== */
-
-/* Safari backdrop-filter support */
-@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
-    .webdev-hero__trust .trust-badge,
-    .highlight-card {
-        -webkit-backdrop-filter: blur(8px);
-        backdrop-filter: blur(8px);
-    }
-}
-
-/* Firefox smooth scrolling */
-@-moz-document url-prefix() {
-    #webdev-hero {
-        scroll-behavior: smooth;
-    }
-}
-
-/* ==================================================
-   10. LOADING STATE OPTIMIZATION
-   ================================================== */
-
-/* Ensure hero is visible during page load */
-#webdev-hero {
-    content-visibility: auto;
-    contain-intrinsic-size: 100vh;
-}
-
-/* Prevent layout shift */
+/* Prevent layout shift during load */
 .webdev-hero__inner {
     min-height: 500px;
 }
@@ -692,5 +417,5 @@
 }
 
 /* ==================================================
-   END: Web Development Hero Fixes & Optimization
+   END: Web Development Hero Fixes
    ================================================== */
