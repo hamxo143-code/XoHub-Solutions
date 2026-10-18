@@ -26725,52 +26725,118 @@ END: Final CTA – Join Our Journey JavaScript
 
 
 // ============================================================
-// TESTIMONIAL SLIDER — Homepage Client Reviews Slider
-// Independent implementation with pagination
+// TESTIMONIAL SLIDER - Automatic Infinite Loop Slider
+// Modern testimonial slider with autoplay and smooth transitions
 // ============================================================
 (function() {
     'use strict';
 
-    const TestimonialSlider = {
+    const AutoTestimonialSlider = {
+        // DOM Elements
         track: null,
         prevBtn: null,
         nextBtn: null,
         pagination: null,
+        wrapper: null,
+        container: null,
+        
+        // State
         cards: [],
+        originalCards: [],
         currentIndex: 0,
+        realIndex: 0,
         slidesPerView: 3,
         totalSlides: 0,
+        isAnimating: false,
+        
+        // Touch
         touchStartX: 0,
         touchEndX: 0,
+        
+        // Autoplay
+        autoplayInterval: null,
+        autoplayDelay: 5000, // 5 seconds
+        isPaused: false,
+        
+        // Timers
         resizeTimeout: null,
-        isAnimating: false,
 
+        /**
+         * Initialize the slider
+         */
         init() {
             // Get DOM elements
-            this.track = document.getElementById('testimonial-slider-track');
-            this.prevBtn = document.getElementById('testimonial-slider-prev');
-            this.nextBtn = document.getElementById('testimonial-slider-next');
-            this.pagination = document.getElementById('testimonial-slider-pagination');
+            this.track = document.getElementById('testimonial-track');
+            this.prevBtn = document.getElementById('testimonial-prev-btn');
+            this.nextBtn = document.getElementById('testimonial-next-btn');
+            this.pagination = document.getElementById('testimonial-pagination');
+            this.wrapper = document.querySelector('.testimonial-slider-wrapper');
+            this.container = document.querySelector('.testimonial-slider-container');
 
             if (!this.track || !this.prevBtn || !this.nextBtn || !this.pagination) {
+                console.warn('Testimonial slider elements not found');
                 return;
             }
 
-            this.cards = Array.from(this.track.querySelectorAll('.client-card'));
-            this.totalSlides = this.cards.length;
+            // Get original cards
+            this.originalCards = Array.from(this.track.querySelectorAll('.client-card'));
+            this.totalSlides = this.originalCards.length;
 
             if (this.totalSlides === 0) {
+                console.warn('No testimonial cards found');
                 return;
             }
 
-            // Initialize UI
+            // Setup
+            this.setupClonedCards();
             this.setupEventListeners();
             this.createPaginationDots();
-            this.updateSlider();
+            this.updateSlider(false);
+            this.startAutoplay();
 
-            console.log('✅ Testimonial Slider initialized with', this.totalSlides, 'testimonials');
+            console.log('✅ Auto Testimonial Slider initialized with', this.totalSlides, 'testimonials');
         },
 
+        /**
+         * Clone cards for infinite loop
+         */
+        setupClonedCards() {
+            // Clear track
+            this.track.innerHTML = '';
+            
+            // Clone enough cards for smooth infinite loop
+            const clonesNeeded = Math.max(this.slidesPerView * 2, 3);
+            
+            // Add clones before
+            for (let i = this.totalSlides - clonesNeeded; i < this.totalSlides; i++) {
+                const clone = this.originalCards[i].cloneNode(true);
+                clone.classList.add('clone');
+                this.track.appendChild(clone);
+            }
+            
+            // Add original cards
+            this.originalCards.forEach(card => {
+                this.track.appendChild(card.cloneNode(true));
+            });
+            
+            // Add clones after
+            for (let i = 0; i < clonesNeeded; i++) {
+                const clone = this.originalCards[i].cloneNode(true);
+                clone.classList.add('clone');
+                this.track.appendChild(clone);
+            }
+            
+            // Update cards array
+            this.cards = Array.from(this.track.querySelectorAll('.client-card'));
+            
+            // Set initial index to first real card
+            this.currentIndex = clonesNeeded;
+            this.realIndex = 0;
+        },
+
+        /**
+         * Get slides per view based on screen width
+         */
         getSlidesPerView() {
             const width = window.innerWidth;
             if (width <= 768) return 1;
@@ -26778,129 +26844,265 @@ END: Final CTA – Join Our Journey JavaScript
             return 3;
         },
 
-        calculateMaxIndex() {
-            return Math.max(0, this.totalSlides - this.slidesPerView);
-        },
-
-        updateSlider() {
-            if (this.isAnimating) return;
+        /**
+         * Update slider position
+         */
+        updateSlider(animate = true) {
+            if (!this.cards.length) return;
 
             this.slidesPerView = this.getSlidesPerView();
-            const maxIndex = this.calculateMaxIndex();
-
-            // Clamp current index
-            if (this.currentIndex > maxIndex) {
-                this.currentIndex = maxIndex;
-            }
-
+            
             // Calculate offset
             const cardWidth = this.cards[0].offsetWidth;
-            const gap = 24;
+            const gap = parseInt(getComputedStyle(this.track).gap) || 24;
             const offset = -(this.currentIndex * (cardWidth + gap));
-
+            
+            // Apply transition
+            if (animate) {
+                this.track.style.transition = 'transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+            } else {
+                this.track.style.transition = 'none';
+            }
+            
             this.track.style.transform = `translateX(${offset}px)`;
-
-            // Update button states
-            this.prevBtn.disabled = (this.currentIndex === 0);
-            this.nextBtn.disabled = (this.currentIndex >= maxIndex);
-
+            
             // Update pagination
+            this.updatePagination();
+            
+            // Check for infinite loop reset
+            if (animate) {
+                setTimeout(() => this.checkInfiniteLoop(), 600);
+            }
+        },
+
+        /**
+         * Check and reset for infinite loop
+         */
+        checkInfiniteLoop() {
+            const clonesNeeded = Math.max(this.slidesPerView * 2, 3);
+            
+            // If we're at a clone at the end, jump to real start
+            if (this.currentIndex >= this.cards.length - clonesNeeded) {
+                this.currentIndex = clonesNeeded;
+                this.realIndex = 0;
+                this.updateSlider(false);
+            }
+            
+            // If we're at a clone at the start, jump to real end
+            if (this.currentIndex < clonesNeeded - this.slidesPerView) {
+                this.currentIndex = this.cards.length - clonesNeeded - this.slidesPerView;
+                this.realIndex = this.totalSlides - this.slidesPerView;
+                this.updateSlider(false);
+            }
+            
+            // Update real index for pagination
+            this.realIndex = (this.currentIndex - clonesNeeded + this.totalSlides) % this.totalSlides;
             this.updatePagination();
         },
 
+        /**
+         * Create pagination dots
+         */
         createPaginationDots() {
             this.pagination.innerHTML = '';
-            const maxIndex = this.calculateMaxIndex();
-            const numDots = maxIndex + 1;
-
-            for (let i = 0; i < numDots; i++) {
+            
+            // Calculate number of pages
+            const numPages = Math.ceil(this.totalSlides / this.slidesPerView);
+            
+            for (let i = 0; i < numPages; i++) {
                 const dot = document.createElement('button');
-                dot.className = 'testimonial-slider__dot';
-                dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
+                dot.className = 'testimonial-pagination-dot';
+                dot.setAttribute('aria-label', `Go to page ${i + 1}`);
                 dot.setAttribute('data-index', i);
                 
-                if (i === this.currentIndex) {
-                    dot.classList.add('active');
-                }
-
                 dot.addEventListener('click', () => {
-                    this.goToSlide(i);
+                    this.goToPage(i);
+                    this.resetAutoplay();
                 });
-
+                
                 this.pagination.appendChild(dot);
             }
         },
 
+        /**
+         * Update pagination active state
+         */
         updatePagination() {
-            const dots = this.pagination.querySelectorAll('.testimonial-slider__dot');
+            const dots = this.pagination.querySelectorAll('.testimonial-pagination-dot');
+            const currentPage = Math.floor(this.realIndex / this.slidesPerView);
+            
             dots.forEach((dot, index) => {
-                dot.classList.toggle('active', index === this.currentIndex);
+                dot.classList.toggle('active', index === currentPage);
             });
         },
 
-        goToSlide(index) {
-            const maxIndex = this.calculateMaxIndex();
-            if (index >= 0 && index <= maxIndex && index !== this.currentIndex) {
-                this.currentIndex = index;
-                this.updateSlider();
-            }
+        /**
+         * Go to specific page
+         */
+        goToPage(pageIndex) {
+            if (this.isAnimating) return;
+            
+            this.isAnimating = true;
+            
+            const clonesNeeded = Math.max(this.slidesPerView * 2, 3);
+            const targetRealIndex = pageIndex * this.slidesPerView;
+            
+            this.realIndex = Math.min(targetRealIndex, this.totalSlides - this.slidesPerView);
+            this.currentIndex = clonesNeeded + this.realIndex;
+            
+            this.updateSlider(true);
+            
+            setTimeout(() => {
+                this.isAnimating = false;
+            }, 650);
         },
 
+        /**
+         * Navigate to previous slide
+         */
         goToPrevious() {
-            if (this.currentIndex > 0 && !this.isAnimating) {
-                this.isAnimating = true;
-                this.currentIndex--;
-                this.updateSlider();
-                
-                setTimeout(() => {
-                    this.isAnimating = false;
-                }, 700);
-            }
+            if (this.isAnimating) return;
+            
+            this.isAnimating = true;
+            this.currentIndex--;
+            this.updateSlider(true);
+            
+            setTimeout(() => {
+                this.isAnimating = false;
+            }, 650);
         },
 
+        /**
+         * Navigate to next slide
+         */
         goToNext() {
-            const maxIndex = this.calculateMaxIndex();
-            if (this.currentIndex < maxIndex && !this.isAnimating) {
-                this.isAnimating = true;
-                this.currentIndex++;
-                this.updateSlider();
-                
-                setTimeout(() => {
-                    this.isAnimating = false;
-                }, 700);
-            }
+            if (this.isAnimating) return;
+            
+            this.isAnimating = true;
+            this.currentIndex++;
+            this.updateSlider(true);
+            
+            setTimeout(() => {
+                this.isAnimating = false;
+            }, 650);
         },
 
+        /**
+         * Start autoplay
+         */
+        startAutoplay() {
+            // Check for reduced motion preference
+            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            if (prefersReducedMotion) {
+                console.log('Autoplay disabled: prefers-reduced-motion');
+                return;
+            }
+            
+            if (this.autoplayInterval) {
+                clearInterval(this.autoplayInterval);
+            }
+            
+            this.isPaused = false;
+            this.wrapper.classList.add('autoplay-active');
+            
+            this.autoplayInterval = setInterval(() => {
+                if (!this.isPaused) {
+                    this.goToNext();
+                }
+            }, this.autoplayDelay);
+        },
+
+        /**
+         * Stop autoplay
+         */
+        stopAutoplay() {
+            if (this.autoplayInterval) {
+                clearInterval(this.autoplayInterval);
+                this.autoplayInterval = null;
+            }
+            this.wrapper.classList.remove('autoplay-active');
+        },
+
+        /**
+         * Pause autoplay temporarily
+         */
+        pauseAutoplay() {
+            this.isPaused = true;
+            this.wrapper.classList.add('paused');
+            this.wrapper.classList.remove('autoplay-active');
+        },
+
+        /**
+         * Resume autoplay
+         */
+        resumeAutoplay() {
+            this.isPaused = false;
+            this.wrapper.classList.remove('paused');
+            this.wrapper.classList.add('autoplay-active');
+        },
+
+        /**
+         * Reset autoplay timer
+         */
+        resetAutoplay() {
+            this.stopAutoplay();
+            this.startAutoplay();
+        },
+
+        /**
+         * Handle swipe gesture
+         */
         handleSwipe() {
             const swipeThreshold = 50;
             const diff = this.touchStartX - this.touchEndX;
 
             if (Math.abs(diff) > swipeThreshold) {
                 if (diff > 0) {
-                    // Swiped left - go to next
                     this.goToNext();
                 } else {
-                    // Swiped right - go to previous
                     this.goToPrevious();
                 }
+                this.resetAutoplay();
             }
         },
 
+        /**
+         * Setup all event listeners
+         */
         setupEventListeners() {
             // Navigation buttons
-            this.prevBtn.addEventListener('click', () => this.goToPrevious());
-            this.nextBtn.addEventListener('click', () => this.goToNext());
+            this.prevBtn.addEventListener('click', () => {
+                this.goToPrevious();
+                this.resetAutoplay();
+            });
+
+            this.nextBtn.addEventListener('click', () => {
+                this.goToNext();
+                this.resetAutoplay();
+            });
+
+            // Hover pause/resume
+            if (this.wrapper) {
+                this.wrapper.addEventListener('mouseenter', () => {
+                    this.pauseAutoplay();
+                });
+
+                this.wrapper.addEventListener('mouseleave', () => {
+                    this.resumeAutoplay();
+                });
+            }
 
             // Touch/Swipe support
-            const wrapper = this.track.closest('.testimonial-slider__wrapper');
-            if (wrapper) {
-                wrapper.addEventListener('touchstart', (e) => {
+            if (this.wrapper) {
+                this.wrapper.addEventListener('touchstart', (e) => {
                     this.touchStartX = e.changedTouches[0].screenX;
+                    this.pauseAutoplay();
                 }, { passive: true });
 
-                wrapper.addEventListener('touchend', (e) => {
+                this.wrapper.addEventListener('touchend', (e) => {
                     this.touchEndX = e.changedTouches[0].screenX;
                     this.handleSwipe();
+                    setTimeout(() => this.resumeAutoplay(), 1000);
                 }, { passive: true });
             }
 
@@ -26909,9 +27111,7 @@ END: Final CTA – Join Our Journey JavaScript
                 if (e.key === 'ArrowLeft') {
                     e.preventDefault();
                     this.goToPrevious();
-                } else if (e.key === 'ArrowRight') {
-                    e.preventDefault();
-                    this.nextBtn.focus();
+                    this.resetAutoplay();
                 }
             });
 
@@ -26919,9 +27119,7 @@ END: Final CTA – Join Our Journey JavaScript
                 if (e.key === 'ArrowRight') {
                     e.preventDefault();
                     this.goToNext();
-                } else if (e.key === 'ArrowLeft') {
-                    e.preventDefault();
-                    this.prevBtn.focus();
+                    this.resetAutoplay();
                 }
             });
 
@@ -26932,22 +27130,32 @@ END: Final CTA – Join Our Journey JavaScript
                     const oldSlidesPerView = this.slidesPerView;
                     this.slidesPerView = this.getSlidesPerView();
                     
-                    // Recreate pagination if slides per view changed
                     if (oldSlidesPerView !== this.slidesPerView) {
+                        this.setupClonedCards();
                         this.createPaginationDots();
+                        this.updateSlider(false);
+                    } else {
+                        this.updateSlider(false);
                     }
-                    
-                    this.updateSlider();
                 }, 250);
+            });
+
+            // Visibility change (pause when tab not visible)
+            document.addEventListener('visibilitychange', () => {
+                if (document.hidden) {
+                    this.pauseAutoplay();
+                } else {
+                    this.resumeAutoplay();
+                }
             });
         }
     };
 
     // Initialize when DOM is ready
     if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', () => TestimonialSlider.init());
+        document.addEventListener('DOMContentLoaded', () => AutoTestimonialSlider.init());
     } else {
-        TestimonialSlider.init();
+        AutoTestimonialSlider.init();
     }
 
 })();
