@@ -26724,145 +26724,230 @@ END: Final CTA – Join Our Journey JavaScript
 // ============================================================
 
 
-    // ============================================================
-    // TESTIMONIAL CAROUSEL — Homepage Client Reviews Slider
-    // Adapted from Blog Editor's Choice Carousel
-    // ============================================================
-    const initTestimonialCarousel = () => {
-        const track = document.getElementById('testimonial-track');
-        const prevBtn = document.getElementById('testimonial-prev');
-        const nextBtn = document.getElementById('testimonial-next');
+// ============================================================
+// TESTIMONIAL SLIDER — Homepage Client Reviews Slider
+// Independent implementation with pagination
+// ============================================================
+(function() {
+    'use strict';
 
-        if (!track || !prevBtn || !nextBtn) {
-            console.log('Testimonial carousel elements not found');
-            return;
-        }
+    const TestimonialSlider = {
+        track: null,
+        prevBtn: null,
+        nextBtn: null,
+        pagination: null,
+        cards: [],
+        currentIndex: 0,
+        slidesPerView: 3,
+        totalSlides: 0,
+        touchStartX: 0,
+        touchEndX: 0,
+        resizeTimeout: null,
+        isAnimating: false,
 
-        const cards = track.querySelectorAll('.client-card');
-        let currentIndex = 0;
-        let slidesPerView = 3;
-        let totalSlides = cards.length;
-        let resizeTimeout;
+        init() {
+            // Get DOM elements
+            this.track = document.getElementById('testimonial-slider-track');
+            this.prevBtn = document.getElementById('testimonial-slider-prev');
+            this.nextBtn = document.getElementById('testimonial-slider-next');
+            this.pagination = document.getElementById('testimonial-slider-pagination');
 
-        // Get slides per view based on viewport
-        const getSlidesPerView = () => {
+            if (!this.track || !this.prevBtn || !this.nextBtn || !this.pagination) {
+                return;
+            }
+
+            this.cards = Array.from(this.track.querySelectorAll('.client-card'));
+            this.totalSlides = this.cards.length;
+
+            if (this.totalSlides === 0) {
+                return;
+            }
+
+            // Initialize UI
+            this.setupEventListeners();
+            this.createPaginationDots();
+            this.updateSlider();
+
+            console.log('✅ Testimonial Slider initialized with', this.totalSlides, 'testimonials');
+        },
+
+        getSlidesPerView() {
             const width = window.innerWidth;
             if (width <= 768) return 1;
             if (width <= 1024) return 2;
             return 3;
-        };
+        },
 
-        // Update carousel position and button states
-        const updateCarousel = () => {
-            slidesPerView = getSlidesPerView();
-            const maxIndex = Math.max(0, totalSlides - slidesPerView);
+        calculateMaxIndex() {
+            return Math.max(0, this.totalSlides - this.slidesPerView);
+        },
+
+        updateSlider() {
+            if (this.isAnimating) return;
+
+            this.slidesPerView = this.getSlidesPerView();
+            const maxIndex = this.calculateMaxIndex();
 
             // Clamp current index
-            if (currentIndex > maxIndex) {
-                currentIndex = maxIndex;
+            if (this.currentIndex > maxIndex) {
+                this.currentIndex = maxIndex;
             }
 
-            // Calculate offset - account for gap between cards
-            const cardWidth = cards[0].offsetWidth;
-            const gap = 24; // Match CSS gap
-            const offset = -(currentIndex * (cardWidth + gap));
-            
-            track.style.transform = `translateX(${offset}px)`;
+            // Calculate offset
+            const cardWidth = this.cards[0].offsetWidth;
+            const gap = 24;
+            const offset = -(this.currentIndex * (cardWidth + gap));
+
+            this.track.style.transform = `translateX(${offset}px)`;
 
             // Update button states
-            prevBtn.disabled = currentIndex === 0;
-            nextBtn.disabled = currentIndex >= maxIndex;
-        };
+            this.prevBtn.disabled = (this.currentIndex === 0);
+            this.nextBtn.disabled = (this.currentIndex >= maxIndex);
 
-        // Navigation handlers
-        prevBtn.addEventListener('click', () => {
-            if (currentIndex > 0) {
-                currentIndex--;
-                updateCarousel();
+            // Update pagination
+            this.updatePagination();
+        },
+
+        createPaginationDots() {
+            this.pagination.innerHTML = '';
+            const maxIndex = this.calculateMaxIndex();
+            const numDots = maxIndex + 1;
+
+            for (let i = 0; i < numDots; i++) {
+                const dot = document.createElement('button');
+                dot.className = 'testimonial-slider__dot';
+                dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
+                dot.setAttribute('data-index', i);
+                
+                if (i === this.currentIndex) {
+                    dot.classList.add('active');
+                }
+
+                dot.addEventListener('click', () => {
+                    this.goToSlide(i);
+                });
+
+                this.pagination.appendChild(dot);
             }
-        });
+        },
 
-        nextBtn.addEventListener('click', () => {
-            const maxIndex = Math.max(0, totalSlides - slidesPerView);
-            if (currentIndex < maxIndex) {
-                currentIndex++;
-                updateCarousel();
+        updatePagination() {
+            const dots = this.pagination.querySelectorAll('.testimonial-slider__dot');
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === this.currentIndex);
+            });
+        },
+
+        goToSlide(index) {
+            const maxIndex = this.calculateMaxIndex();
+            if (index >= 0 && index <= maxIndex && index !== this.currentIndex) {
+                this.currentIndex = index;
+                this.updateSlider();
             }
-        });
+        },
 
-        // Touch/Swipe support
-        let touchStartX = 0;
-        let touchEndX = 0;
-        const wrapper = track.closest('.testimonial-carousel-track-wrapper');
+        goToPrevious() {
+            if (this.currentIndex > 0 && !this.isAnimating) {
+                this.isAnimating = true;
+                this.currentIndex--;
+                this.updateSlider();
+                
+                setTimeout(() => {
+                    this.isAnimating = false;
+                }, 700);
+            }
+        },
 
-        if (wrapper) {
-            wrapper.addEventListener('touchstart', (e) => {
-                touchStartX = e.changedTouches[0].screenX;
-            }, { passive: true });
+        goToNext() {
+            const maxIndex = this.calculateMaxIndex();
+            if (this.currentIndex < maxIndex && !this.isAnimating) {
+                this.isAnimating = true;
+                this.currentIndex++;
+                this.updateSlider();
+                
+                setTimeout(() => {
+                    this.isAnimating = false;
+                }, 700);
+            }
+        },
 
-            wrapper.addEventListener('touchend', (e) => {
-                touchEndX = e.changedTouches[0].screenX;
-                handleSwipe();
-            }, { passive: true });
-        }
-
-        const handleSwipe = () => {
+        handleSwipe() {
             const swipeThreshold = 50;
-            const diff = touchStartX - touchEndX;
+            const diff = this.touchStartX - this.touchEndX;
 
             if (Math.abs(diff) > swipeThreshold) {
                 if (diff > 0) {
                     // Swiped left - go to next
-                    nextBtn.click();
+                    this.goToNext();
                 } else {
                     // Swiped right - go to previous
-                    prevBtn.click();
+                    this.goToPrevious();
                 }
             }
-        };
+        },
 
-        // Keyboard navigation
-        prevBtn.addEventListener('keydown', (e) => {
-            if (e.key === 'ArrowLeft') {
-                e.preventDefault();
-                prevBtn.click();
-            } else if (e.key === 'ArrowRight') {
-                e.preventDefault();
-                nextBtn.focus();
-                nextBtn.click();
+        setupEventListeners() {
+            // Navigation buttons
+            this.prevBtn.addEventListener('click', () => this.goToPrevious());
+            this.nextBtn.addEventListener('click', () => this.goToNext());
+
+            // Touch/Swipe support
+            const wrapper = this.track.closest('.testimonial-slider__wrapper');
+            if (wrapper) {
+                wrapper.addEventListener('touchstart', (e) => {
+                    this.touchStartX = e.changedTouches[0].screenX;
+                }, { passive: true });
+
+                wrapper.addEventListener('touchend', (e) => {
+                    this.touchEndX = e.changedTouches[0].screenX;
+                    this.handleSwipe();
+                }, { passive: true });
             }
-        });
 
-        nextBtn.addEventListener('keydown', (e) => {
-            if (e.key === 'ArrowRight') {
-                e.preventDefault();
-                nextBtn.click();
-            } else if (e.key === 'ArrowLeft') {
-                e.preventDefault();
-                prevBtn.focus();
-                prevBtn.click();
-            }
-        });
+            // Keyboard navigation
+            this.prevBtn.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowLeft') {
+                    e.preventDefault();
+                    this.goToPrevious();
+                } else if (e.key === 'ArrowRight') {
+                    e.preventDefault();
+                    this.nextBtn.focus();
+                }
+            });
 
-        // Responsive handling
-        window.addEventListener('resize', () => {
-            clearTimeout(resizeTimeout);
-            resizeTimeout = setTimeout(() => {
-                updateCarousel();
-            }, 200);
-        });
+            this.nextBtn.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowRight') {
+                    e.preventDefault();
+                    this.goToNext();
+                } else if (e.key === 'ArrowLeft') {
+                    e.preventDefault();
+                    this.prevBtn.focus();
+                }
+            });
 
-        // Initialize
-        setTimeout(() => {
-            updateCarousel();
-        }, 100);
+            // Responsive handling
+            window.addEventListener('resize', () => {
+                clearTimeout(this.resizeTimeout);
+                this.resizeTimeout = setTimeout(() => {
+                    const oldSlidesPerView = this.slidesPerView;
+                    this.slidesPerView = this.getSlidesPerView();
+                    
+                    // Recreate pagination if slides per view changed
+                    if (oldSlidesPerView !== this.slidesPerView) {
+                        this.createPaginationDots();
+                    }
+                    
+                    this.updateSlider();
+                }, 250);
+            });
+        }
     };
 
-    // Initialize testimonial carousel when DOM is ready
+    // Initialize when DOM is ready
     if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', initTestimonialCarousel);
+        document.addEventListener('DOMContentLoaded', () => TestimonialSlider.init());
     } else {
-        initTestimonialCarousel();
+        TestimonialSlider.init();
     }
 
 })();
