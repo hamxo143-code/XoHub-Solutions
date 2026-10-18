@@ -28,6 +28,20 @@ The following individual service items within the Services mega menu have been h
 **Status:** Hidden (desktop & mobile)  
 **Date Hidden:** October 18, 2026
 
+### 3. **Resources/Knowledge Section Items**
+The following items within the Knowledge section of the Resources mega menu have been hidden:
+
+**Knowledge:**
+- Case Studies
+- Documentation (with FREE badge)
+
+**Status:** Hidden (desktop & mobile)  
+**Date Hidden:** October 18, 2026
+
+**Visible Knowledge Items:**
+- ✓ Blog
+- ✓ Portfolio
+
 ## What Was Changed
 
 1. **CSS Changes** (`assets/css/style.css`):
@@ -67,6 +81,17 @@ Find lines like this:
 Change to:
 ```html
 <li><a href="services.html#aws" class="mobile-sub-link">AWS Solutions</a></li>
+```
+
+**For Resources/Knowledge Section Items:**
+Find lines like this:
+```html
+<li class="XoHubSolutions-HideMenuItem"><a href="Case_Studies.html" class="XoHubSolutions-MegaLink">Case Studies</a></li>
+```
+
+Change to:
+```html
+<li><a href="Case_Studies.html" class="XoHubSolutions-MegaLink">Case Studies</a></li>
 ```
 
 **For Products Menu (Full Menu Item):**
@@ -150,7 +175,10 @@ If you want to re-enable items quickly across all files, use your code editor's 
 | AWS Solutions | `<li class="XoHubSolutions-HideMenuItem"><a href="services.html#aws"` | `<li><a href="services.html#aws"` |
 | Microsoft Azure | `<li class="XoHubSolutions-HideMenuItem"><a href="services.html#azure"` | `<li><a href="services.html#azure"` |
 | Google Cloud | `<li class="XoHubSolutions-HideMenuItem"><a href="services.html#gcp"` | `<li><a href="services.html#gcp"` |
+| Google Cloud | `<li class="XoHubSolutions-HideMenuItem"><a href="services.html#gcp"` | `<li><a href="services.html#gcp"` |
 | DevOps & Security | `<li class="XoHubSolutions-HideMenuItem"><a href="services.html#devops"` | `<li><a href="services.html#devops"` |
+| Case Studies | `<li class="XoHubSolutions-HideMenuItem"><a href="Case_Studies.html"` | `<li><a href="Case_Studies.html"` |
+| Documentation | `<li class="XoHubSolutions-HideMenuItem"><a href="documentation.html"` | `<li><a href="documentation.html"` |
 
 **To Re-Enable Products Menu:**
 
@@ -187,15 +215,25 @@ These service items remain visible and unchanged:
 **Cloud & Infrastructure:**
 - ✓ Hostinger Hosting
 
+**Resources/Knowledge:**
+- ✓ Blog
+- ✓ Portfolio
+
 ## Notes
 
-- **7 service submenu items** are temporarily hidden across all pages
-- **1 top-level Products menu** remains hidden from the previous update
-- The actual service pages were NOT modified or deleted
+- **2 Knowledge section items** are temporarily hidden across all pages
+- **7 service submenu items** remain hidden from previous update
+- **1 top-level Products menu** remains hidden from initial update
+## Notes
+
+- **2 Knowledge section items** are temporarily hidden across all pages
+- **7 service submenu items** remain hidden from previous update
+- **1 top-level Products menu** remains hidden from initial update
+- The actual Case Studies and Documentation pages were NOT modified or deleted
 - All hidden menu links and content remain intact in the code
 - The navigation structure is fully preserved
-- Other menu items (Company, Resources, etc.) are unaffected
-- Badges (POPULAR, NEW) remain on visible items
+- Other menu items remain unaffected
+- The FREE badge on Documentation is hidden with the item
 - The hiding works on all screen sizes (desktop, tablet, mobile)
 - Dropdown/mega-menu layouts automatically adjust to show only visible items
 
@@ -205,4 +243,5 @@ These service items remain visible and unchanged:
 **Modified By:** Kiro AI Agent  
 **Changes:**
 - Initial: Hid Products menu (entire top-level item)
-- Update: Hid 7 specific submenu items from Services mega menu
+- Update 1: Hid 7 specific submenu items from Services mega menu
+- Update 2: Hid 2 items (Case Studies, Documentation) from Knowledge section
