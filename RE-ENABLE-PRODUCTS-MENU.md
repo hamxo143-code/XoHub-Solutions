@@ -1,6 +1,32 @@
-# How to Re-Enable the Products Navigation Menu
+# How to Re-Enable Hidden Navigation Menu Items
 
-The **Products** menu item has been temporarily hidden from both desktop and mobile navigation across all pages of the XoHub Solutions website.
+The following navigation items have been temporarily hidden from the XoHub Solutions website:
+
+## Currently Hidden Items
+
+### 1. **Products Menu** (Entire Top-Level Menu)
+- **Location:** Main navigation bar
+- **Status:** Completely hidden (desktop & mobile)
+- **Date Hidden:** October 18, 2026
+
+### 2. **Services Submenu Items** (Specific Items)
+The following individual service items within the Services mega menu have been hidden:
+
+**Web Development:**
+- Laravel Development
+
+**Digital Marketing:**
+- Content Strategy
+- Branding & Design
+
+**Cloud & Infrastructure:**
+- AWS Solutions
+- Microsoft Azure
+- Google Cloud
+- DevOps & Security
+
+**Status:** Hidden (desktop & mobile)  
+**Date Hidden:** October 18, 2026
 
 ## What Was Changed
 
@@ -14,14 +40,36 @@ The **Products** menu item has been temporarily hidden from both desktop and mob
      - Mobile Products mega menu navigation item
    - Added HTML comments for easy identification
 
-## How to Re-Enable the Products Menu
+## How to Re-Enable Hidden Items
 
-You have **two options** to restore the Products menu:
+You have **two options** to restore any hidden menu items:
 
-### Option 1: Remove the CSS Class (Recommended)
-This is the cleanest approach and leaves no trace.
+### Option 1: Remove the CSS Class from Specific Items (Recommended)
+This is the cleanest approach for selective re-enabling.
 
-**For Desktop Navigation:**
+**For Desktop Navigation Submenus:**
+Find lines like this in HTML files:
+```html
+<li class="XoHubSolutions-HideMenuItem"><a href="services.html#laravel" class="XoHubSolutions-MegaLink">Laravel Development</a></li>
+```
+
+Change to:
+```html
+<li><a href="services.html#laravel" class="XoHubSolutions-MegaLink">Laravel Development</a></li>
+```
+
+**For Mobile Navigation Submenus:**
+Find lines like this:
+```html
+<li class="XoHubSolutions-HideMenuItem"><a href="services.html#aws" class="mobile-sub-link">AWS Solutions</a></li>
+```
+
+Change to:
+```html
+<li><a href="services.html#aws" class="mobile-sub-link">AWS Solutions</a></li>
+```
+
+**For Products Menu (Full Menu Item):**
 Find this line in each HTML file:
 ```html
 <li role="none" class="XoHubSolutions-Dropdown XoHubSolutions-MegaDropdown XoHubSolutions-HideMenuItem">
@@ -88,9 +136,23 @@ All HTML files in the root directory were updated:
 Plus:
 - `assets/css/style.css`
 
-## Quick Search & Replace (for developers)
+### Quick Search & Replace Guide (for developers)
 
-If you want to re-enable quickly across all files, use your code editor's find/replace:
+If you want to re-enable items quickly across all files, use your code editor's find/replace:
+
+**To Re-Enable Specific Services:**
+
+| Item | Find | Replace |
+|------|------|---------|
+| Laravel | `<li class="XoHubSolutions-HideMenuItem"><a href="services.html#laravel"` | `<li><a href="services.html#laravel"` |
+| Content Strategy | `<li class="XoHubSolutions-HideMenuItem"><a href="services.html#content"` | `<li><a href="services.html#content"` |
+| Branding & Design | `<li class="XoHubSolutions-HideMenuItem"><a href="services.html#branding"` | `<li><a href="services.html#branding"` |
+| AWS Solutions | `<li class="XoHubSolutions-HideMenuItem"><a href="services.html#aws"` | `<li><a href="services.html#aws"` |
+| Microsoft Azure | `<li class="XoHubSolutions-HideMenuItem"><a href="services.html#azure"` | `<li><a href="services.html#azure"` |
+| Google Cloud | `<li class="XoHubSolutions-HideMenuItem"><a href="services.html#gcp"` | `<li><a href="services.html#gcp"` |
+| DevOps & Security | `<li class="XoHubSolutions-HideMenuItem"><a href="services.html#devops"` | `<li><a href="services.html#devops"` |
+
+**To Re-Enable Products Menu:**
 
 **Desktop Menu:**
 - **Find:** `class="XoHubSolutions-Dropdown XoHubSolutions-MegaDropdown XoHubSolutions-HideMenuItem"`
@@ -100,16 +162,47 @@ If you want to re-enable quickly across all files, use your code editor's find/r
 - **Find:** `<li class="XoHubSolutions-HideMenuItem">\n                    <button class="mobile-menu__link mobile-dropdown-toggle"`
 - **Replace:** `<li>\n                    <button class="mobile-menu__link mobile-dropdown-toggle"`
 
+## Currently Visible Services
+
+These service items remain visible and unchanged:
+
+**Web Development:**
+- ✓ Custom Websites
+- ✓ WordPress Solutions
+- ✓ Shopify Development
+- ✓ E-commerce Solutions
+
+**Digital Marketing:**
+- ✓ SEO & AEO
+- ✓ Social Media Marketing
+- ✓ Paid Advertising
+
+**Automation & AI:**
+- ✓ AI Integration (with POPULAR badge)
+- ✓ Chatbot Development
+- ✓ Business Automation (with NEW badge)
+- ✓ Make.com Solutions
+- ✓ Zapier & n8n
+
+**Cloud & Infrastructure:**
+- ✓ Hostinger Hosting
+
 ## Notes
 
-- The Products pages themselves were NOT modified or deleted
-- All Products menu links and content remain intact
-- The navigation structure is preserved
-- Other menu items (Company, Services, Resources, etc.) are unaffected
+- **7 service submenu items** are temporarily hidden across all pages
+- **1 top-level Products menu** remains hidden from the previous update
+- The actual service pages were NOT modified or deleted
+- All hidden menu links and content remain intact in the code
+- The navigation structure is fully preserved
+- Other menu items (Company, Resources, etc.) are unaffected
+- Badges (POPULAR, NEW) remain on visible items
 - The hiding works on all screen sizes (desktop, tablet, mobile)
+- Dropdown/mega-menu layouts automatically adjust to show only visible items
 
 ---
 
-**Date Modified:** October 18, 2026  
+**Last Updated:** October 18, 2026  
 **Modified By:** Kiro AI Agent  
-**Reason:** Temporary hiding of Products menu as requested by the client
+**Changes:**
+- Initial: Hid Products menu (entire top-level item)
+- Update: Hid 7 specific submenu items from Services mega menu
