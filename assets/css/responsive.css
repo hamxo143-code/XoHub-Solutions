@@ -6363,7 +6363,7 @@ canvas {
         gap: 20px;
     }
 
-    .timeline__line {
+    .our-story__timeline .timeline__line {
         left: 12px;
     }
 
@@ -6432,7 +6432,7 @@ canvas {
         gap: 16px;
     }
 
-    .timeline__line {
+    .our-story__timeline .timeline__line {
         left: 10px;
         top: 20px;
         bottom: 20px;
@@ -6520,7 +6520,7 @@ canvas {
         gap: 14px;
     }
 
-    .timeline__line {
+    .our-story__timeline .timeline__line {
         left: 8px;
     }
 
@@ -6735,9 +6735,9 @@ canvas {
         display: none;
     }
 
-    .mission-vision__grid {
-        opacity: 0.15;
-    }
+    /* NOTE: opacity:0.15 removed — .mission-vision__grid is used for both
+       the decorative SVG overlay and the cards layout div. Applying opacity
+       here makes the Mission & Vision cards nearly invisible on mobile. */
 }
 
 /* Very small phones */

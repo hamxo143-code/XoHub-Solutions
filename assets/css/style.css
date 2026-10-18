@@ -8043,8 +8043,8 @@ input:focus-visible {
     gap: 24px;
 }
 
-/* Timeline Line */
-.timeline__line {
+/* Timeline Line — scoped to our-story context */
+.our-story__timeline .timeline__line {
     position: absolute;
     top: 28px;
     bottom: 28px;
@@ -8055,7 +8055,7 @@ input:focus-visible {
     overflow: hidden;
 }
 
-.timeline__line-fill {
+.our-story__timeline .timeline__line-fill {
     height: 0%;
     width: 100%;
     background: linear-gradient(180deg, var(--color-lime), var(--color-purple));
@@ -8063,7 +8063,7 @@ input:focus-visible {
     transition: height 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-.timeline__line-fill.animated {
+.our-story__timeline .timeline__line-fill.animated {
     height: 100%;
 }
 
