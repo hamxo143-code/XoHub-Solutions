@@ -1,42 +1,225 @@
 /* ============================================================
-   WEB DEVELOPMENT PAGE - HERO BANNER PROFESSIONAL FIXES
-   Conservative fixes focused on critical issues only
+   WEB DEVELOPMENT PAGE - HERO BANNER OVERFLOW & RESPONSIVE FIXES
+   Critical fixes for horizontal scroll, visual elements overflow,
+   and responsive design issues
    ============================================================ */
 
 /* ==================================================
-   1. HEADER OVERLAP FIX - Critical Priority
+   1. PREVENT HORIZONTAL OVERFLOW - CRITICAL
    ================================================== */
 
+/* Root-level overflow prevention */
+html,
+body {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+}
+
+/* Hero section overflow fix */
 #webdev-hero {
-    /* Add proper top padding to prevent header overlap
-       Top Bar (42px) + Main Nav (80px) + Extra spacing (40px) = 162px */
+    overflow-x: hidden !important;
+    overflow-y: visible;
+    max-width: 100vw !important;
+    position: relative;
+    
+    /* Header spacing */
     padding-top: 162px;
     padding-bottom: 60px;
 }
 
-/* Adjust when top bar is hidden on scroll */
+/* Adjust when scrolled */
 body.scrolled #webdev-hero,
 .XoHubSolutions-MainHeader.scrolled ~ * #webdev-hero {
-    /* Main Nav (70px when scrolled) + Extra spacing (40px) = 110px */
     padding-top: 110px;
 }
 
-/* ==================================================
-   2. LAYOUT FIXES - Proper Grid & Alignment
-   ================================================== */
-
+/* Container overflow fix */
 .webdev-hero__inner {
+    overflow-x: hidden !important;
+    max-width: 100% !important;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
     align-items: center;
 }
 
+/* Main content area */
 .webdev-hero__main {
+    overflow-x: hidden !important;
+    max-width: 100%;
     display: flex;
     flex-direction: column;
     gap: 24px;
 }
+
+/* ==================================================
+   2. VISUAL ELEMENTS OVERFLOW FIX - CRITICAL
+   ================================================== */
+
+/* Visual container - prevent overflow */
+.webdev-hero__visual {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden !important;
+    max-width: 100%;
+    min-height: 500px;
+}
+
+/* Hero visual wrapper - constrain size */
+.hero-visual {
+    position: relative;
+    width: 100%;
+    max-width: 450px !important;
+    height: 450px;
+    margin: 0 auto;
+    overflow: hidden !important;
+}
+
+/* Visual cards - prevent overflow */
+.visual-card {
+    position: absolute;
+    max-width: 100%;
+}
+
+/* Browser mockup - adjusted positioning */
+.visual-card--browser {
+    top: 5%;
+    left: 8%;
+    right: auto;
+    width: 220px;
+    max-width: 45%;
+}
+
+/* Code block - adjusted positioning */
+.visual-card--code {
+    bottom: 25%;
+    left: 3%;
+    right: auto;
+    width: 130px;
+    max-width: 35%;
+}
+
+/* Mobile device - adjusted positioning */
+.visual-card--mobile {
+    bottom: 10%;
+    right: 8%;
+    left: auto;
+    width: 100px;
+    max-width: 25%;
+}
+
+/* Floating code icons - constrain within bounds */
+.code-icon {
+    position: absolute;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--color-purple);
+    opacity: 0.15;
+    pointer-events: none;
+}
+
+.code-icon--1 {
+    top: 15%;
+    right: 10%;
+    left: auto;
+}
+
+.code-icon--2 {
+    bottom: 35%;
+    right: 5%;
+    left: auto;
+}
+
+.code-icon--3 {
+    top: 50%;
+    left: 15%;
+    right: auto;
+}
+
+/* Connection lines - constrain within container */
+.connection-lines {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+/* Floating orbs - constrain within bounds */
+.orb {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.orb--1 {
+    top: 10%;
+    right: 15%;
+    left: auto;
+    width: 40px;
+    height: 40px;
+}
+
+.orb--2 {
+    bottom: 20%;
+    left: 10%;
+    right: auto;
+    width: 30px;
+    height: 30px;
+}
+
+.orb--3 {
+    top: 60%;
+    right: 20%;
+    left: auto;
+    width: 25px;
+    height: 25px;
+}
+
+/* ==================================================
+   3. BACKGROUND ELEMENTS - PREVENT OVERFLOW
+   ================================================== */
+
+.webdev-hero__bg {
+    position: absolute;
+    inset: 0;
+    overflow: hidden !important;
+    pointer-events: none;
+}
+
+/* Glows - keep within bounds */
+.webdev-hero__glow {
+    max-width: 100%;
+}
+
+/* Orbs - keep within bounds */
+.webdev-hero__orb {
+    max-width: 100px;
+}
+
+/* Shapes - keep within bounds */
+.webdev-hero__shape {
+    max-width: 160px;
+}
+
+/* Grid - prevent overflow */
+.webdev-hero__grid {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+}
+
+/* Particles - constrain */
+.particle {
+    max-width: 12px;
+    max-height: 12px;
+}
+
+/* ==================================================
+   4. LAYOUT FIXES
+   ================================================== */
 
 .webdev-hero__header {
     display: flex;
@@ -44,28 +227,37 @@ body.scrolled #webdev-hero,
     gap: 16px;
 }
 
+.webdev-hero__badge {
+    display: inline-flex;
+    width: fit-content;
+}
+
+.webdev-hero__title {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+}
+
+.webdev-hero__subtitle {
+    max-width: 540px;
+}
+
+.webdev-hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
 /* ==================================================
-   3. ANIMATION FIXES - Prevent Blank Screen
+   5. QUICK ANIMATIONS - NO BLANK SCREEN
    ================================================== */
 
-/* Ensure immediate visibility - no delayed rendering */
 #webdev-hero,
-#webdev-hero *,
-.webdev-hero__inner,
-.webdev-hero__main,
-.webdev-hero__header,
-.webdev-hero__badge,
-.webdev-hero__title,
-.webdev-hero__subtitle,
-.webdev-hero__actions,
-.webdev-hero__trust,
-.webdev-hero__highlights,
-.webdev-hero__visual {
+#webdev-hero * {
     opacity: 1;
     visibility: visible;
 }
 
-/* Quick, smooth fade-in animations */
 .webdev-hero__badge {
     animation: quickFadeIn 0.4s ease-out;
 }
@@ -82,14 +274,6 @@ body.scrolled #webdev-hero,
     animation: quickFadeIn 0.5s ease-out 0.3s both;
 }
 
-.webdev-hero__trust {
-    animation: quickFadeIn 0.5s ease-out 0.4s both;
-}
-
-.webdev-hero__highlights {
-    animation: quickFadeIn 0.5s ease-out 0.5s both;
-}
-
 @keyframes quickFadeIn {
     from {
         opacity: 0;
@@ -102,7 +286,7 @@ body.scrolled #webdev-hero,
 }
 
 /* ==================================================
-   4. RESPONSIVE DESIGN - Tested Breakpoints
+   6. RESPONSIVE DESIGN - ALL BREAKPOINTS
    ================================================== */
 
 /* Desktop Large (1440px+) */
@@ -121,6 +305,11 @@ body.scrolled #webdev-hero,
     .webdev-hero__title {
         font-size: 2.8rem;
     }
+    
+    .hero-visual {
+        max-width: 400px !important;
+        height: 400px;
+    }
 }
 
 /* Desktop Small (1024px - 1200px) */
@@ -136,6 +325,11 @@ body.scrolled #webdev-hero,
     .webdev-hero__title {
         font-size: 2.6rem;
     }
+    
+    .hero-visual {
+        max-width: 380px !important;
+        height: 380px;
+    }
 }
 
 /* Tablet Landscape (992px - 1024px) */
@@ -147,9 +341,14 @@ body.scrolled #webdev-hero,
     .webdev-hero__title {
         font-size: 2.4rem;
     }
+    
+    .hero-visual {
+        max-width: 360px !important;
+        height: 360px;
+    }
 }
 
-/* Tablet Portrait (768px - 992px) - Stack Layout */
+/* Tablet Portrait (768px - 992px) - STACK LAYOUT */
 @media (max-width: 992px) {
     #webdev-hero {
         padding-top: 132px;
@@ -162,9 +361,9 @@ body.scrolled #webdev-hero,
         gap: 40px;
     }
     
+    /* Hide visual on tablet to prevent issues */
     .webdev-hero__visual {
-        order: -1;
-        min-height: 400px;
+        display: none !important;
     }
     
     .webdev-hero__main {
@@ -213,16 +412,11 @@ body.scrolled #webdev-hero,
     .webdev-hero__subtitle {
         font-size: 0.95rem;
     }
-    
-    .webdev-hero__visual {
-        min-height: 350px;
-    }
 }
 
 /* Mobile Large (414px - 576px) */
 @media (max-width: 576px) {
     #webdev-hero {
-        /* Account for mobile header: Top Bar (36px) + Nav (64px) + spacing (30px) */
         padding-top: 130px;
         padding-bottom: 30px;
     }
@@ -265,10 +459,6 @@ body.scrolled #webdev-hero,
         grid-template-columns: 1fr 1fr;
         gap: 6px 8px;
     }
-    
-    .webdev-hero__visual {
-        min-height: 320px;
-    }
 }
 
 /* Mobile Standard (375px - 414px) */
@@ -279,10 +469,6 @@ body.scrolled #webdev-hero,
     
     .webdev-hero__title {
         font-size: 1.6rem;
-    }
-    
-    .webdev-hero__visual {
-        min-height: 280px;
     }
 }
 
@@ -320,10 +506,6 @@ body.scrolled #webdev-hero,
     .highlight-card__label {
         font-size: 0.65rem;
     }
-    
-    .webdev-hero__visual {
-        min-height: 260px;
-    }
 }
 
 /* Mobile Extra Small (320px) */
@@ -355,46 +537,39 @@ body.scrolled #webdev-hero,
     .highlight-card__label {
         font-size: 0.6rem;
     }
-    
-    .webdev-hero__visual {
-        min-height: 220px;
+}
+
+/* ==================================================
+   7. CONTAINER FIXES - PREVENT ANY OVERFLOW
+   ================================================== */
+
+.container {
+    max-width: 100% !important;
+    padding-left: 24px;
+    padding-right: 24px;
+    overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding-left: 16px;
+        padding-right: 16px;
     }
 }
 
 /* ==================================================
-   5. PREVENT HORIZONTAL SCROLL
+   8. ACCESSIBILITY
    ================================================== */
 
-#webdev-hero {
-    max-width: 100%;
-    overflow-x: hidden;
-}
-
-.webdev-hero__inner,
-.webdev-hero__main,
-.webdev-hero__header,
-.webdev-hero__visual {
-    max-width: 100%;
-    overflow-x: hidden;
-}
-
-/* ==================================================
-   6. ACCESSIBILITY
-   ================================================== */
-
-/* Reduced motion support */
 @media (prefers-reduced-motion: reduce) {
     .webdev-hero__badge,
     .webdev-hero__title,
     .webdev-hero__subtitle,
-    .webdev-hero__actions,
-    .webdev-hero__trust,
-    .webdev-hero__highlights {
+    .webdev-hero__actions {
         animation: none !important;
     }
 }
 
-/* Focus states */
 .btn-webdev-start:focus-visible,
 .btn-webdev-portfolio:focus-visible {
     outline: 3px solid #81c752;
@@ -402,20 +577,19 @@ body.scrolled #webdev-hero,
 }
 
 /* ==================================================
-   7. LOADING OPTIMIZATION
+   9. REMOVE UNWANTED SCROLLBARS
    ================================================== */
 
-/* Prevent layout shift during load */
-.webdev-hero__inner {
-    min-height: 500px;
+/* Remove vertical scrollbar if caused by overflow */
+#webdev-hero::-webkit-scrollbar {
+    display: none;
 }
 
-@media (max-width: 992px) {
-    .webdev-hero__inner {
-        min-height: auto;
-    }
+#webdev-hero {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 /* ==================================================
-   END: Web Development Hero Fixes
+   END: Web Development Hero Overflow Fixes
    ================================================== */
