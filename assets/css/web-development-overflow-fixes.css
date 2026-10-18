@@ -587,7 +587,9 @@ iframe {
 }
 
 .XoHubSolutions-TopBarInner {
-    max-width: 100% !important;
+    max-width: 1200px !important;
+    margin: 0 auto;
+    padding: 0 20px;
     overflow-x: hidden !important;
     display: flex;
     align-items: center;
@@ -617,7 +619,7 @@ iframe {
 
 .XoHubSolutions-TopBarNav {
     display: flex;
-    gap: 18px;
+    gap: 16px;
     flex-shrink: 1;
     overflow: hidden;
 }
@@ -636,19 +638,22 @@ iframe {
 }
 
 .XoHubSolutions-MainNavInner {
-    max-width: 100% !important;
+    max-width: 1200px !important;
     width: 100% !important;
+    margin: 0 auto;
+    padding: 0 20px;
     overflow-x: hidden !important;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 20px;
+    gap: 12px;
+    box-sizing: border-box !important;
 }
 
 /* Logo Container */
 .XoHubSolutions-Logo {
     flex: 0 0 auto;
-    max-width: 150px;
+    max-width: 140px;
     overflow: visible;
 }
 
@@ -659,21 +664,21 @@ iframe {
 
 /* Logo Image - Responsive Sizing */
 .XoHubSolutions-LogoImage {
-    width: 120px !important;
-    height: 120px !important;
-    max-width: 120px !important;
-    max-height: 120px !important;
+    width: 100px !important;
+    height: 100px !important;
+    max-width: 100px !important;
+    max-height: 100px !important;
     object-fit: contain;
     display: block;
 }
 
-/* Navigation Links Container */
+/* Navigation Links Container - ULTRA Tight Spacing to prevent overflow */
 .XoHubSolutions-NavLinks {
     flex: 1 1 auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 4px;
+    gap: 0px !important;
     max-width: 100%;
     overflow: visible;
     list-style: none;
@@ -684,29 +689,51 @@ iframe {
 .XoHubSolutions-NavLinks > li {
     flex: 0 0 auto;
     position: relative;
+    margin: 0 !important;
 }
 
 .XoHubSolutions-NavLink {
     white-space: nowrap;
     overflow: visible;
+    font-size: 0.78rem !important;
+    padding: 6px 8px !important;
+    font-weight: 500 !important;
+    letter-spacing: -0.01em !important;
 }
 
-/* Nav Actions */
+.XoHubSolutions-NavLink .XoHubSolutions-DropdownIcon {
+    font-size: 0.65rem !important;
+    margin-left: 3px !important;
+}
+
+/* Nav Actions - Ultra Compact */
 .XoHubSolutions-NavActions {
     flex: 0 0 auto;
     display: flex;
     align-items: center;
-    gap: 14px;
+    gap: 6px;
     overflow: visible;
+}
+
+.XoHubSolutions-NavActions .XoHubSolutions-BtnPrimary {
+    padding: 8px 14px !important;
+    font-size: 0.75rem !important;
+    white-space: nowrap;
+    font-weight: 600 !important;
+}
+
+.XoHubSolutions-SearchBtn {
+    padding: 6px !important;
+    font-size: 0.95rem !important;
 }
 
 /* When scrolled, make logo smaller */
 #XoHubSolutions-MainHeader.scrolled .XoHubSolutions-LogoImage,
 .XoHubSolutions-MainHeader.scrolled .XoHubSolutions-LogoImage {
-    width: 80px !important;
-    height: 80px !important;
-    max-width: 80px !important;
-    max-height: 80px !important;
+    width: 70px !important;
+    height: 70px !important;
+    max-width: 70px !important;
+    max-height: 70px !important;
 }
 
 /* Hamburger Menu */
@@ -732,14 +759,46 @@ iframe {
 }
 
 /* Mobile responsive header */
+@media (max-width: 1440px) {
+    .XoHubSolutions-MainNavInner {
+        max-width: 1140px !important;
+        padding: 0 16px;
+    }
+    
+    .XoHubSolutions-NavLink {
+        font-size: 0.76rem !important;
+        padding: 6px 7px !important;
+    }
+    
+    .XoHubSolutions-NavActions {
+        gap: 6px;
+    }
+}
+
 @media (max-width: 1200px) {
+    .XoHubSolutions-MainNavInner {
+        max-width: 960px !important;
+    }
+    
     .XoHubSolutions-NavLinks {
-        gap: 2px;
+        gap: 0px !important;
     }
 
     .XoHubSolutions-NavLink {
-        font-size: 0.8rem;
-        padding: 6px 10px;
+        font-size: 0.72rem !important;
+        padding: 5px 6px !important;
+    }
+
+    .XoHubSolutions-LogoImage {
+        width: 90px !important;
+        height: 90px !important;
+        max-width: 90px !important;
+        max-height: 90px !important;
+    }
+    
+    .XoHubSolutions-NavActions .XoHubSolutions-BtnPrimary {
+        padding: 7px 12px !important;
+        font-size: 0.7rem !important;
     }
 }
 
@@ -754,35 +813,11 @@ iframe {
 
     .XoHubSolutions-MainNavInner {
         gap: 12px;
+        padding: 0 16px;
     }
 
     .XoHubSolutions-TopBarNav {
         display: none;
-    }
-
-    .XoHubSolutions-LogoImage {
-        width: 100px !important;
-        height: 100px !important;
-        max-width: 100px !important;
-        max-height: 100px !important;
-    }
-
-    #XoHubSolutions-MainHeader.scrolled .XoHubSolutions-LogoImage,
-    .XoHubSolutions-MainHeader.scrolled .XoHubSolutions-LogoImage {
-        width: 70px !important;
-        height: 70px !important;
-        max-width: 70px !important;
-        max-height: 70px !important;
-    }
-}
-
-@media (max-width: 768px) {
-    .XoHubSolutions-TopBarInner {
-        gap: 8px;
-    }
-
-    .XoHubSolutions-TopBarText {
-        font-size: 0.7rem;
     }
 
     .XoHubSolutions-LogoImage {
@@ -801,6 +836,21 @@ iframe {
     }
 }
 
+@media (max-width: 768px) {
+    .XoHubSolutions-TopBarInner {
+        gap: 8px;
+        padding: 0 16px;
+    }
+
+    .XoHubSolutions-TopBarText {
+        font-size: 0.7rem;
+    }
+
+    .XoHubSolutions-MainNavInner {
+        padding: 0 16px;
+    }
+}
+
 @media (max-width: 576px) {
     .XoHubSolutions-TopBarSocials {
         display: none;
@@ -808,6 +858,21 @@ iframe {
 
     .XoHubSolutions-MainNavInner {
         gap: 8px;
+    }
+
+    .XoHubSolutions-NavActions .XoHubSolutions-BtnPrimary {
+        font-size: 0 !important;
+        padding: 10px 14px !important;
+        width: 44px;
+        height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .XoHubSolutions-NavActions .XoHubSolutions-BtnPrimary i {
+        margin: 0 !important;
+        font-size: 1rem !important;
     }
 }
 
