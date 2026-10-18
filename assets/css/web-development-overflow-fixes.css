@@ -568,7 +568,7 @@ iframe {
 #XoHubSolutions-MainHeader,
 .XoHubSolutions-MainHeader {
     max-width: 100vw !important;
-    width: 100% !important;
+    width: 100vw !important;
     overflow-x: hidden !important;
     overflow-y: visible !important;
     position: fixed;
@@ -576,6 +576,7 @@ iframe {
     left: 0;
     right: 0;
     z-index: 1000;
+    box-sizing: border-box !important;
 }
 
 #XoHubSolutions-TopBar,
@@ -584,6 +585,7 @@ iframe {
     width: 100% !important;
     overflow-x: hidden !important;
     overflow-y: visible !important;
+    box-sizing: border-box !important;
 }
 
 .XoHubSolutions-TopBarInner {
@@ -595,6 +597,7 @@ iframe {
     align-items: center;
     justify-content: space-between;
     gap: 12px;
+    box-sizing: border-box !important;
 }
 
 .XoHubSolutions-TopBarLeft {
@@ -635,6 +638,7 @@ iframe {
     width: 100% !important;
     overflow-x: hidden !important;
     overflow-y: visible !important;
+    box-sizing: border-box !important;
 }
 
 .XoHubSolutions-MainNavInner {
@@ -655,6 +659,7 @@ iframe {
     flex: 0 0 auto;
     max-width: 140px;
     overflow: visible;
+    box-sizing: border-box;
 }
 
 .XoHubSolutions-Logo a {
@@ -684,12 +689,14 @@ iframe {
     list-style: none;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 .XoHubSolutions-NavLinks > li {
     flex: 0 0 auto;
     position: relative;
     margin: 0 !important;
+    box-sizing: border-box;
 }
 
 .XoHubSolutions-NavLink {
@@ -713,6 +720,7 @@ iframe {
     align-items: center;
     gap: 6px;
     overflow: visible;
+    box-sizing: border-box;
 }
 
 .XoHubSolutions-NavActions .XoHubSolutions-BtnPrimary {
