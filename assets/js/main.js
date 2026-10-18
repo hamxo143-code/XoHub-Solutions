@@ -26722,3 +26722,147 @@ END: Final CTA – Join Our Journey JavaScript
 // ============================================================
 // END: XoHub Solutions Main JavaScript
 // ============================================================
+
+
+    // ============================================================
+    // TESTIMONIAL CAROUSEL — Homepage Client Reviews Slider
+    // Adapted from Blog Editor's Choice Carousel
+    // ============================================================
+    const initTestimonialCarousel = () => {
+        const track = document.getElementById('testimonial-track');
+        const prevBtn = document.getElementById('testimonial-prev');
+        const nextBtn = document.getElementById('testimonial-next');
+
+        if (!track || !prevBtn || !nextBtn) {
+            console.log('Testimonial carousel elements not found');
+            return;
+        }
+
+        const cards = track.querySelectorAll('.client-card');
+        let currentIndex = 0;
+        let slidesPerView = 3;
+        let totalSlides = cards.length;
+        let resizeTimeout;
+
+        // Get slides per view based on viewport
+        const getSlidesPerView = () => {
+            const width = window.innerWidth;
+            if (width <= 768) return 1;
+            if (width <= 1024) return 2;
+            return 3;
+        };
+
+        // Update carousel position and button states
+        const updateCarousel = () => {
+            slidesPerView = getSlidesPerView();
+            const maxIndex = Math.max(0, totalSlides - slidesPerView);
+
+            // Clamp current index
+            if (currentIndex > maxIndex) {
+                currentIndex = maxIndex;
+            }
+
+            // Calculate offset - account for gap between cards
+            const cardWidth = cards[0].offsetWidth;
+            const gap = 24; // Match CSS gap
+            const offset = -(currentIndex * (cardWidth + gap));
+            
+            track.style.transform = `translateX(${offset}px)`;
+
+            // Update button states
+            prevBtn.disabled = currentIndex === 0;
+            nextBtn.disabled = currentIndex >= maxIndex;
+        };
+
+        // Navigation handlers
+        prevBtn.addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateCarousel();
+            }
+        });
+
+        nextBtn.addEventListener('click', () => {
+            const maxIndex = Math.max(0, totalSlides - slidesPerView);
+            if (currentIndex < maxIndex) {
+                currentIndex++;
+                updateCarousel();
+            }
+        });
+
+        // Touch/Swipe support
+        let touchStartX = 0;
+        let touchEndX = 0;
+        const wrapper = track.closest('.testimonial-carousel-track-wrapper');
+
+        if (wrapper) {
+            wrapper.addEventListener('touchstart', (e) => {
+                touchStartX = e.changedTouches[0].screenX;
+            }, { passive: true });
+
+            wrapper.addEventListener('touchend', (e) => {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+            }, { passive: true });
+        }
+
+        const handleSwipe = () => {
+            const swipeThreshold = 50;
+            const diff = touchStartX - touchEndX;
+
+            if (Math.abs(diff) > swipeThreshold) {
+                if (diff > 0) {
+                    // Swiped left - go to next
+                    nextBtn.click();
+                } else {
+                    // Swiped right - go to previous
+                    prevBtn.click();
+                }
+            }
+        };
+
+        // Keyboard navigation
+        prevBtn.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                prevBtn.click();
+            } else if (e.key === 'ArrowRight') {
+                e.preventDefault();
+                nextBtn.focus();
+                nextBtn.click();
+            }
+        });
+
+        nextBtn.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight') {
+                e.preventDefault();
+                nextBtn.click();
+            } else if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                prevBtn.focus();
+                prevBtn.click();
+            }
+        });
+
+        // Responsive handling
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(() => {
+                updateCarousel();
+            }, 200);
+        });
+
+        // Initialize
+        setTimeout(() => {
+            updateCarousel();
+        }, 100);
+    };
+
+    // Initialize testimonial carousel when DOM is ready
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initTestimonialCarousel);
+    } else {
+        initTestimonialCarousel();
+    }
+
+})();
