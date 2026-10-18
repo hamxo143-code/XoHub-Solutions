@@ -1,0 +1,479 @@
+/**
+ * Web Development Page - Accordion Fixes
+ * Ensures smooth expand/collapse animations for Stage Details and FAQ sections
+ * Version: 1.0.0
+ */
+
+/* ============================================================
+   STAGE DETAILS ACCORDION FIXES
+   ============================================================ */
+
+.stage-detail-card {
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.stage-detail-card__content {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                opacity 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                padding 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    padding: 0 18px 0;
+}
+
+.stage-detail-card__trigger[aria-expanded="true"] + .stage-detail-card__content {
+    opacity: 1;
+    padding: 0 18px 18px;
+}
+
+/* Rotate the toggle icon when expanded */
+.stage-detail-card__trigger[aria-expanded="true"] .stage-detail-card__toggle i {
+    transform: rotate(180deg);
+}
+
+.stage-detail-card__toggle i {
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Add active state styling */
+.stage-detail-card.active {
+    border-color: var(--color-purple);
+    box-shadow: 0 4px 16px rgba(124, 58, 237, 0.08);
+}
+
+.stage-detail-card.active .stage-detail-card__number {
+    background: linear-gradient(135deg, var(--color-purple) 0%, var(--color-purple-light) 100%);
+    color: var(--color-white);
+}
+
+/* Ensure nested lists display properly */
+.stage-detail-card__content ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 8px 0;
+}
+
+.stage-detail-card__content ul li {
+    padding-left: 24px;
+    position: relative;
+    margin-bottom: 6px;
+    line-height: 1.6;
+}
+
+.stage-detail-card__content ul li::before {
+    content: '•';
+    position: absolute;
+    left: 8px;
+    color: var(--color-lime);
+    font-weight: bold;
+    font-size: 1.2em;
+    line-height: 1.2;
+}
+
+/* Remove empty bullets */
+.stage-detail-card__content ul li:empty {
+    display: none;
+}
+
+.stage-detail-card__content ul li:empty::before {
+    display: none;
+}
+
+/* ============================================================
+   FAQ ACCORDION FIXES
+   ============================================================ */
+
+.faq-item {
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.faq-item__content {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                opacity 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                padding 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    padding: 0 20px 0;
+}
+
+.faq-item__trigger[aria-expanded="true"] + .faq-item__content {
+    opacity: 1;
+    padding: 0 20px 18px;
+}
+
+/* Rotate the toggle icon when expanded */
+.faq-item__trigger[aria-expanded="true"] .faq-item__toggle i {
+    transform: rotate(180deg);
+}
+
+.faq-item__toggle i {
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Add active state styling */
+.faq-item.active {
+    border-color: var(--color-purple);
+    background: rgba(124, 58, 237, 0.02);
+    box-shadow: 0 2px 12px rgba(124, 58, 237, 0.06);
+}
+
+.faq-item.active .faq-item__question {
+    color: var(--color-purple);
+}
+
+/* Remove empty bullets */
+.faq-item__content ul li:empty {
+    display: none;
+}
+
+.faq-item__content ul li:empty::before {
+    display: none;
+}
+
+/* FAQ Actions */
+.faq-item__actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 12px;
+    flex-wrap: wrap;
+}
+
+.faq-item__vote,
+.faq-item__copy {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--color-charcoal);
+    background: var(--color-off-white);
+    border: 1px solid var(--color-gray-light);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.faq-item__vote:hover,
+.faq-item__copy:hover {
+    background: var(--color-white);
+    border-color: var(--color-purple);
+    color: var(--color-purple);
+    transform: translateY(-1px);
+}
+
+.faq-item__vote i,
+.faq-item__copy i {
+    font-size: 0.7rem;
+}
+
+/* ============================================================
+   ONGOING SUPPORT SECTION RESPONSIVE FIXES
+   ============================================================ */
+
+.commitment-banner {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+    max-width: 100%;
+    padding: 32px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, rgba(124, 58, 237, 0.03) 0%, rgba(192, 227, 74, 0.03) 100%);
+    border: 1px solid rgba(124, 58, 237, 0.1);
+}
+
+.commitment-banner__content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
+}
+
+.commitment-banner__icon {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: var(--color-lime);
+    background: rgba(192, 227, 74, 0.1);
+    border-radius: 12px;
+}
+
+.commitment-banner__text {
+    flex: 1;
+    min-width: 0;
+}
+
+.commitment-banner__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-charcoal);
+    margin: 0 0 12px 0;
+    line-height: 1.3;
+}
+
+.commitment-banner__desc {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--color-charcoal);
+    margin: 0;
+    opacity: 0.9;
+}
+
+.commitment-banner__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    width: 100%;
+}
+
+.commitment-banner__actions .btn-primary,
+.commitment-banner__actions .btn-secondary {
+    flex: 1 1 auto;
+    min-width: 200px;
+    justify-content: center;
+}
+
+/* ============================================================
+   RESPONSIVE ADJUSTMENTS
+   ============================================================ */
+
+@media (max-width: 768px) {
+    .commitment-banner {
+        padding: 24px 20px;
+        gap: 20px;
+    }
+
+    .commitment-banner__content {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .commitment-banner__icon {
+        width: 44px;
+        height: 44px;
+        font-size: 1.3rem;
+    }
+
+    .commitment-banner__title {
+        font-size: 1.25rem;
+    }
+
+    .commitment-banner__desc {
+        font-size: 0.9rem;
+    }
+
+    .commitment-banner__actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .commitment-banner__actions .btn-primary,
+    .commitment-banner__actions .btn-secondary {
+        width: 100%;
+        min-width: 100%;
+    }
+
+    .stage-detail-card__content {
+        padding: 0 12px 0;
+    }
+
+    .stage-detail-card__trigger[aria-expanded="true"] + .stage-detail-card__content {
+        padding: 0 12px 12px;
+    }
+
+    .faq-item__content {
+        padding: 0 14px 0;
+    }
+
+    .faq-item__trigger[aria-expanded="true"] + .faq-item__content {
+        padding: 0 14px 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    .commitment-banner {
+        padding: 20px 16px;
+        gap: 16px;
+    }
+
+    .commitment-banner__icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+
+    .commitment-banner__title {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+    }
+
+    .commitment-banner__desc {
+        font-size: 0.85rem;
+    }
+
+    .stage-detail-card__content ul li {
+        padding-left: 20px;
+        font-size: 0.9rem;
+    }
+
+    .stage-detail-card__content ul li::before {
+        font-size: 1em;
+    }
+}
+
+/* ============================================================
+   BUSINESS VALUE SECTION - RESPONSIVE FIXES
+   ============================================================ */
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    width: 100%;
+    max-width: 100%;
+}
+
+.value-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 24px 16px;
+    background: var(--color-white);
+    border: 1px solid var(--color-gray-light);
+    border-radius: 12px;
+    text-align: center;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    min-height: 120px;
+}
+
+.value-card:hover {
+    border-color: var(--color-purple);
+    box-shadow: 0 4px 16px rgba(124, 58, 237, 0.08);
+    transform: translateY(-2px);
+}
+
+.value-card__icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: var(--color-lime);
+    background: rgba(192, 227, 74, 0.1);
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+
+.value-card__label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--color-charcoal);
+    line-height: 1.3;
+}
+
+@media (max-width: 768px) {
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .value-card {
+        padding: 20px 12px;
+        gap: 10px;
+        min-height: 100px;
+    }
+
+    .value-card__icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.25rem;
+    }
+
+    .value-card__label {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .value-card {
+        padding: 16px 10px;
+        gap: 8px;
+        min-height: 90px;
+    }
+
+    .value-card__icon {
+        width: 36px;
+        height: 36px;
+        font-size: 1.1rem;
+    }
+
+    .value-card__label {
+        font-size: 0.8rem;
+    }
+}
+
+/* ============================================================
+   PREVENT CONTENT OVERFLOW ON MOBILE
+   ============================================================ */
+
+.webdev-faq-final__layout {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.webdev-faq-final__faq {
+    flex: 1 1 auto;
+    min-width: 0;
+    max-width: 100%;
+}
+
+.webdev-faq-final__contact {
+    flex: 0 0 auto;
+    width: 320px;
+    max-width: 320px;
+}
+
+@media (max-width: 992px) {
+    .webdev-faq-final__layout {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .webdev-faq-final__contact {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+/* Ensure sections don't create horizontal scroll */
+.container {
+    overflow-x: hidden;
+}
+
+.webdev-industries__values,
+.webdev-process__details,
+.webdev-faq-final {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+}
