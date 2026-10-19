@@ -26921,7 +26921,7 @@ START: Contact Hero Banner Responsive
 /* Tablet */
 @media (max-width: 992px) {
     #contact-hero {
-        padding: 40px 0 60px;
+        padding: 120px 0 60px;
         min-height: auto;
     }
 
@@ -26931,11 +26931,12 @@ START: Contact Hero Banner Responsive
     }
 
     .contact-hero__title {
-        font-size: 2.4rem;
+        font-size: 2.6rem;
+        margin-bottom: 20px;
     }
 
     .contact-hero__subtitle {
-        max-width: 100%;
+        display: none;
     }
 
     .contact-hero__quick-cards {
@@ -26995,15 +26996,16 @@ START: Contact Hero Banner Responsive
 /* Mobile Landscape */
 @media (max-width: 576px) {
     #contact-hero {
-        padding: 30px 0 40px;
+        padding: 100px 0 40px;
     }
 
     .contact-hero__title {
-        font-size: 1.8rem;
+        font-size: 1.9rem;
+        margin-bottom: 20px;
     }
 
     .contact-hero__subtitle {
-        font-size: 0.9rem;
+        display: none;
     }
 
     .contact-hero__actions {
@@ -27126,15 +27128,15 @@ START: Contact Hero Banner Responsive
 /* Very small phones */
 @media (max-width: 375px) {
     #contact-hero {
-        padding: 20px 0 30px;
+        padding: 90px 0 30px;
     }
 
     .contact-hero__title {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
     }
 
     .contact-hero__subtitle {
-        font-size: 0.8rem;
+        display: none;
     }
 
     .contact-hero__visual {
@@ -27192,8 +27194,16 @@ START: Contact Hero Banner Responsive
 
 /* Extra small */
 @media (max-width: 320px) {
+    #contact-hero {
+        padding: 80px 0 30px;
+    }
+
     .contact-hero__title {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
+    }
+
+    .contact-hero__subtitle {
+        display: none;
     }
 
     .contact-hero__visual {
