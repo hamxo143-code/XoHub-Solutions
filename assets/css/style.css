@@ -45493,7 +45493,7 @@ START: Multiple Contact Options & Communication Channels
     max-width: 1100px;
     margin: 0 auto 40px;
     padding: 28px 32px 24px;
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     border: 1px solid var(--color-gray-light);
@@ -45520,28 +45520,28 @@ START: Multiple Contact Options & Communication Channels
     grid-template-columns: auto 1fr auto;
     gap: 8px 12px;
     padding: 14px 16px;
-    background: rgba(255, 255, 255, 0.3);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 14px;
     transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     align-items: center;
 }
 
 .channel-card:hover {
-    background: rgba(255, 255, 255, 0.7);
-    border-color: rgba(192, 227, 74, 0.15);
+    background: rgba(255, 255, 255, 0.85);
+    border-color: rgba(192, 227, 74, 0.25);
     transform: translateX(4px);
-    box-shadow: 0 4px 16px rgba(192, 227, 74, 0.04);
+    box-shadow: 0 6px 20px rgba(192, 227, 74, 0.08);
 }
 
 .channel-card--highlight {
-    border-color: rgba(124, 58, 237, 0.12);
-    background: rgba(124, 58, 237, 0.02);
+    border-color: rgba(124, 58, 237, 0.2);
+    background: rgba(124, 58, 237, 0.04);
 }
 
 .channel-card--highlight:hover {
-    border-color: rgba(124, 58, 237, 0.2);
-    background: rgba(124, 58, 237, 0.04);
+    border-color: rgba(124, 58, 237, 0.3);
+    background: rgba(124, 58, 237, 0.08);
 }
 
 .channel-card__icon {
