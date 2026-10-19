@@ -9,7 +9,20 @@ The following navigation items have been temporarily hidden from the XoHub Solut
 - **Status:** Completely hidden (desktop & mobile)
 - **Date Hidden:** October 18, 2026
 
-### 2. **Services Submenu Items** (Specific Items)
+### 2. **Products Footer Column** (Entire Column)
+- **Location:** Website footer (Column 4)
+- **Status:** Completely hidden (all screen sizes)
+- **Date Hidden:** October 18, 2026
+- **Includes:** 
+  - Products heading
+  - Business Management System link
+  - CRM Platform link
+  - HR Management link
+  - E-Commerce Platform link
+  - AI Business Assistant link
+  - Custom Enterprise Software link
+
+### 3. **Services Submenu Items** (Specific Items)
 The following individual service items within the Services mega menu have been hidden:
 
 **Web Development:**
@@ -28,7 +41,7 @@ The following individual service items within the Services mega menu have been h
 **Status:** Hidden (desktop & mobile)  
 **Date Hidden:** October 18, 2026
 
-### 3. **Resources/Knowledge Section Items**
+### 4. **Resources/Knowledge Section Items**
 The following items within the Knowledge section of the Resources mega menu have been hidden:
 
 **Knowledge:**
@@ -49,9 +62,10 @@ The following items within the Knowledge section of the Resources mega menu have
    - This class uses `display: none`, `visibility: hidden`, `pointer-events: none`, and `opacity: 0`
 
 2. **HTML Changes** (All HTML files):
-   - Added class `XoHubSolutions-HideMenuItem` to both:
+   - Added class `XoHubSolutions-HideMenuItem` to:
      - Desktop Products mega menu navigation item
      - Mobile Products mega menu navigation item
+     - Footer Products column (Column 4)
    - Added HTML comments for easy identification
 
 ## How to Re-Enable Hidden Items
@@ -118,6 +132,21 @@ Change it to:
 <li>
     <button class="mobile-menu__link mobile-dropdown-toggle" aria-expanded="false">
         Products <i class="fas fa-chevron-down" aria-hidden="true"></i>
+```
+
+**For Footer Products Column:**
+Find this line in each HTML file:
+```html
+                <!-- Column 4: Products -->
+                <div class="footer__column XoHubSolutions-HideMenuItem">
+                    <h4 class="footer__column-title">Products</h4>
+```
+
+Change it to:
+```html
+                <!-- Column 4: Products -->
+                <div class="footer__column">
+                    <h4 class="footer__column-title">Products</h4>
 ```
 
 ### Option 2: Delete the CSS Rule
@@ -245,3 +274,4 @@ These service items remain visible and unchanged:
 - Initial: Hid Products menu (entire top-level item)
 - Update 1: Hid 7 specific submenu items from Services mega menu
 - Update 2: Hid 2 items (Case Studies, Documentation) from Knowledge section
+- Update 3: Hid Products column from footer (Column 4)
