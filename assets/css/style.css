@@ -101517,6 +101517,44 @@ END: Under Construction Modal
 
 
 /* ============================================================
+   TEMPORARY COOKIE BANNER HIDING — Cookie Consent Popup
+   ============================================================
+   IMPORTANT: This section temporarily hides the Cookie Consent Banner/Popup
+   across all pages (desktop, tablet, and mobile).
+   
+   Hidden Elements:
+   - Cookie consent banner (#cookie-banner, .cookie-banner)
+   - Cookie modal/settings popup (#cookie-modal, .cookie-modal)
+   - Cookie settings button (#cookie-settings-btn)
+   - Modal overlays and backdrops (.cookie-modal-overlay, .cookie-backdrop)
+   
+   To RE-ENABLE the Cookie Banner:
+   1. Comment out or delete this entire CSS section (lines below)
+   AND
+   2. In assets/js/main.js, find initCookieBanner() function and change:
+      const COOKIE_BANNER_ENABLED = false; → const COOKIE_BANNER_ENABLED = true;
+   
+   Note: Cookie Policy page remains accessible via footer link
+   ============================================================ */
+
+#cookie-banner,
+.cookie-banner,
+#cookie-modal,
+.cookie-modal,
+#cookie-settings-btn,
+.cookie-modal-overlay,
+.cookie-backdrop {
+    display: none !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    opacity: 0 !important;
+    z-index: -9999 !important;
+}
+
+/* End of temporary cookie banner hiding */
+
+
+/* ============================================================
    TEMPORARY MENU ITEM HIDING — Products Menu
    ============================================================
    IMPORTANT: This class temporarily hides the "Products" menu item

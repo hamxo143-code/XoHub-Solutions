@@ -1,8 +1,20 @@
-# How to Re-Enable Hidden Navigation Menu Items
+# How to Re-Enable Hidden Navigation Menu Items and Cookie Banner
 
-The following navigation items have been temporarily hidden from the XoHub Solutions website:
+The following navigation items and features have been temporarily hidden from the XoHub Solutions website:
 
 ## Currently Hidden Items
+
+### 0. **Cookie Consent Banner/Popup** (Entire Feature)
+- **Location:** Appears on page load across all pages
+- **Status:** Completely hidden and disabled (desktop, tablet, mobile)
+- **Date Hidden:** October 18, 2026
+- **Includes:**
+  - Cookie consent banner
+  - Cookie settings modal/popup
+  - Cookie preferences customization
+  - "🍪 Cookie Preferences" button
+  - Modal overlays and backdrops
+- **Note:** Cookie Policy page remains accessible via footer link
 
 ### 1. **Products Menu** (Entire Top-Level Menu)
 - **Location:** Main navigation bar
@@ -57,6 +69,31 @@ The following items within the Knowledge section of the Resources mega menu have
 
 ## What Was Changed
 
+### Cookie Banner Changes
+
+1. **CSS Changes** (`assets/css/style.css`):
+   - Added CSS rules to hide all cookie banner elements:
+     - `#cookie-banner`, `.cookie-banner` (main consent banner)
+     - `#cookie-modal`, `.cookie-modal` (settings popup)
+     - `#cookie-settings-btn` (settings button)
+     - `.cookie-modal-overlay`, `.cookie-backdrop` (overlays)
+   - Uses `display: none !important` and multiple visibility properties
+   - Located before the Products menu hiding section
+
+2. **JavaScript Changes** (`assets/js/main.js`):
+   - Added `COOKIE_BANNER_ENABLED = false` flag in `initCookieBanner()` function
+   - Function exits early when flag is false, preventing initialization
+   - No banner display, no localStorage checks, no event listeners attached
+
+3. **Functionality Preserved:**
+   - HTML structure remains intact
+   - JavaScript functions remain in code
+   - Cookie Policy page (`cookie-policy.html`) remains accessible via footer link
+   - Existing user preferences in localStorage are not deleted
+   - Easy to re-enable by changing flag and removing CSS
+
+### Navigation Menu Changes
+
 1. **CSS Changes** (`assets/css/style.css`):
    - Added a utility class `.XoHubSolutions-HideMenuItem` that hides elements completely
    - This class uses `display: none`, `visibility: hidden`, `pointer-events: none`, and `opacity: 0`
@@ -69,6 +106,94 @@ The following items within the Knowledge section of the Resources mega menu have
    - Added HTML comments for easy identification
 
 ## How to Re-Enable Hidden Items
+
+### Re-Enabling Cookie Consent Banner
+
+To restore the cookie consent banner/popup functionality, you must make **TWO changes**:
+
+#### Step 1: Enable JavaScript Initialization
+Open `assets/js/main.js` and find the `initCookieBanner()` function (around line 21756).
+
+**Find this code:**
+```javascript
+const initCookieBanner = () => {
+    // ----- TEMPORARY DISABLE FLAG -----
+    // Set to false to hide cookie banner across all pages
+    // To re-enable: change false to true AND remove CSS hiding rules in style.css
+    const COOKIE_BANNER_ENABLED = false;
+    
+    if (!COOKIE_BANNER_ENABLED) {
+        console.log('Cookie banner is temporarily disabled');
+        return; // Exit function early, preventing banner initialization
+    }
+```
+
+**Change to:**
+```javascript
+const initCookieBanner = () => {
+    // ----- TEMPORARY DISABLE FLAG -----
+    // Set to false to hide cookie banner across all pages
+    // To re-enable: change false to true AND remove CSS hiding rules in style.css
+    const COOKIE_BANNER_ENABLED = true;
+    
+    if (!COOKIE_BANNER_ENABLED) {
+        console.log('Cookie banner is temporarily disabled');
+        return; // Exit function early, preventing banner initialization
+    }
+```
+
+#### Step 2: Remove CSS Hiding Rules
+Open `assets/css/style.css` and find the cookie banner hiding section (search for "TEMPORARY COOKIE BANNER HIDING").
+
+**Either delete this entire section:**
+```css
+/* ============================================================
+   TEMPORARY COOKIE BANNER HIDING — Cookie Consent Popup
+   ============================================================
+   ... (entire section including all rules)
+   ============================================================ */
+
+#cookie-banner,
+.cookie-banner,
+#cookie-modal,
+.cookie-modal,
+#cookie-settings-btn,
+.cookie-modal-overlay,
+.cookie-backdrop {
+    display: none !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    opacity: 0 !important;
+    z-index: -9999 !important;
+}
+
+/* End of temporary cookie banner hiding */
+```
+
+**Or comment it out:**
+```css
+/*
+#cookie-banner,
+.cookie-banner,
+#cookie-modal,
+.cookie-modal,
+#cookie-settings-btn,
+.cookie-modal-overlay,
+.cookie-backdrop {
+    display: none !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    opacity: 0 !important;
+    z-index: -9999 !important;
+}
+*/
+```
+
+**Important:** Both steps are required. JavaScript alone won't work because CSS hides the elements with `!important`.
+
+---
+
+### Re-Enabling Navigation Menu Items
 
 You have **two options** to restore any hidden menu items:
 
@@ -167,6 +292,11 @@ This will automatically show all Products menus without touching the HTML files.
 
 ## Files Modified
 
+**Cookie Banner Hiding:**
+- `assets/css/style.css` (added CSS hiding rules)
+- `assets/js/main.js` (added JavaScript disable flag)
+
+**Navigation Menu Hiding:**
 All HTML files in the root directory were updated:
 - `404.html`
 - `about.html`
@@ -250,16 +380,17 @@ These service items remain visible and unchanged:
 
 ## Notes
 
+- **Cookie consent banner** is temporarily hidden and disabled across all pages
 - **2 Knowledge section items** are temporarily hidden across all pages
 - **7 service submenu items** remain hidden from previous update
 - **1 top-level Products menu** remains hidden from initial update
-## Notes
-
-- **2 Knowledge section items** are temporarily hidden across all pages
-- **7 service submenu items** remain hidden from previous update
-- **1 top-level Products menu** remains hidden from initial update
+- **1 Products footer column** is hidden across all pages
 - The actual Case Studies and Documentation pages were NOT modified or deleted
 - All hidden menu links and content remain intact in the code
+- Cookie banner HTML/JS/CSS functionality remains intact and ready to re-enable
+- Cookie Policy page remains accessible via footer "Cookie Policy" link
+- Existing user cookie preferences in localStorage are preserved
+- No tracking cookies are activated by hiding the banner
 - The navigation structure is fully preserved
 - Other menu items remain unaffected
 - The FREE badge on Documentation is hidden with the item
@@ -275,3 +406,4 @@ These service items remain visible and unchanged:
 - Update 1: Hid 7 specific submenu items from Services mega menu
 - Update 2: Hid 2 items (Case Studies, Documentation) from Knowledge section
 - Update 3: Hid Products column from footer (Column 4)
+- Update 4: Hid and disabled Cookie Consent Banner/Popup (entire feature)

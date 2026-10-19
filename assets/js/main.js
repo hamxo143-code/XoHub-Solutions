@@ -21754,6 +21754,16 @@ START: Global Cookie Consent Banner JavaScript
     // 118. COOKIE CONSENT BANNER — GLOBAL COMPONENT
     // ============================================================
     const initCookieBanner = () => {
+        // ----- TEMPORARY DISABLE FLAG -----
+        // Set to false to hide cookie banner across all pages
+        // To re-enable: change false to true AND remove CSS hiding rules in style.css
+        const COOKIE_BANNER_ENABLED = false;
+        
+        if (!COOKIE_BANNER_ENABLED) {
+            console.log('Cookie banner is temporarily disabled');
+            return; // Exit function early, preventing banner initialization
+        }
+        
         // ----- DOM References -----
         const banner = document.getElementById('cookie-banner');
         const acceptBtn = document.getElementById('cookie-accept-btn');
