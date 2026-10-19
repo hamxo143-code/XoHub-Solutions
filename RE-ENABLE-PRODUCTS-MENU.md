@@ -34,7 +34,23 @@ The following navigation items and features have been temporarily hidden from th
   - AI Business Assistant link
   - Custom Enterprise Software link
 
-### 3. **Services Submenu Items** (Specific Items)
+### 4. **Resources Footer Links** (Specific Links)
+The following individual footer links within the Resources column have been hidden:
+
+**Resources Column:**
+- Case Studies
+- Documentation
+- FAQs
+- Support Center
+
+**Status:** Hidden (all screen sizes)  
+**Date Hidden:** October 18, 2026
+
+**Visible Resources Items:**
+- ✓ Privacy Policy
+- ✓ Terms & Conditions
+
+### 5. **Services Submenu Items** (Specific Items)
 The following individual service items within the Services mega menu have been hidden:
 
 **Web Development:**
@@ -53,7 +69,7 @@ The following individual service items within the Services mega menu have been h
 **Status:** Hidden (desktop & mobile)  
 **Date Hidden:** October 18, 2026
 
-### 4. **Resources/Knowledge Section Items**
+### 6. **Resources/Knowledge Section Items**
 The following items within the Knowledge section of the Resources mega menu have been hidden:
 
 **Knowledge:**
@@ -97,13 +113,24 @@ The following items within the Knowledge section of the Resources mega menu have
 1. **CSS Changes** (`assets/css/style.css`):
    - Added a utility class `.XoHubSolutions-HideMenuItem` that hides elements completely
    - This class uses `display: none`, `visibility: hidden`, `pointer-events: none`, and `opacity: 0`
+   - Updated footer column spacing: `gap: 40px 32px` (was `32px 24px`) for better desktop layout
+   - Updated footer links spacing: `gap: 10px` (was `8px`) for better vertical spacing
 
 2. **HTML Changes** (All HTML files):
    - Added class `XoHubSolutions-HideMenuItem` to:
      - Desktop Products mega menu navigation item
      - Mobile Products mega menu navigation item
      - Footer Products column (Column 4)
+     - Footer Resources links: Case Studies, Documentation, FAQs, Support Center
+   - Updated footer Company links (About Us, Our Team, Careers)
+   - Updated footer Services links with proper section anchors
+   - Updated footer office address to: "Rabbani Heights, Nasir Bagh Road, Peshawar, Pakistan"
    - Added HTML comments for easy identification
+
+3. **Responsive CSS Changes** (`assets/css/responsive.css`):
+   - Updated tablet footer spacing: `gap: 30px 24px` (was `24px 20px`)
+   - Updated mobile footer spacing: `gap: 24px` (was `20px`)
+   - Ensures proper layout after hiding footer links
 
 ## How to Re-Enable Hidden Items
 
@@ -233,6 +260,23 @@ Change to:
 <li><a href="Case_Studies.html" class="XoHubSolutions-MegaLink">Case Studies</a></li>
 ```
 
+**For Footer Resources Links:**
+Find lines like this in the footer Resources column:
+```html
+<li class="XoHubSolutions-HideMenuItem"><a href="Case_Studies.html">Case Studies</a></li>
+<li class="XoHubSolutions-HideMenuItem"><a href="documentation.html">Documentation</a></li>
+<li class="XoHubSolutions-HideMenuItem"><a href="faqs.html">FAQs</a></li>
+<li class="XoHubSolutions-HideMenuItem"><a href="support-center.html">Support Center</a></li>
+```
+
+Change to:
+```html
+<li><a href="Case_Studies.html">Case Studies</a></li>
+<li><a href="documentation.html">Documentation</a></li>
+<li><a href="faqs.html">FAQs</a></li>
+<li><a href="support-center.html">Support Center</a></li>
+```
+
 **For Products Menu (Full Menu Item):**
 Find this line in each HTML file:
 ```html
@@ -334,10 +378,23 @@ If you want to re-enable items quickly across all files, use your code editor's 
 | AWS Solutions | `<li class="XoHubSolutions-HideMenuItem"><a href="services.html#aws"` | `<li><a href="services.html#aws"` |
 | Microsoft Azure | `<li class="XoHubSolutions-HideMenuItem"><a href="services.html#azure"` | `<li><a href="services.html#azure"` |
 | Google Cloud | `<li class="XoHubSolutions-HideMenuItem"><a href="services.html#gcp"` | `<li><a href="services.html#gcp"` |
-| Google Cloud | `<li class="XoHubSolutions-HideMenuItem"><a href="services.html#gcp"` | `<li><a href="services.html#gcp"` |
 | DevOps & Security | `<li class="XoHubSolutions-HideMenuItem"><a href="services.html#devops"` | `<li><a href="services.html#devops"` |
-| Case Studies | `<li class="XoHubSolutions-HideMenuItem"><a href="Case_Studies.html"` | `<li><a href="Case_Studies.html"` |
-| Documentation | `<li class="XoHubSolutions-HideMenuItem"><a href="documentation.html"` | `<li><a href="documentation.html"` |
+
+**To Re-Enable Knowledge Section Items:**
+
+| Item | Find | Replace |
+|------|------|---------|
+| Case Studies (Nav) | `<li class="XoHubSolutions-HideMenuItem"><a href="Case_Studies.html" class="XoHubSolutions-MegaLink">` | `<li><a href="Case_Studies.html" class="XoHubSolutions-MegaLink">` |
+| Documentation (Nav) | `<li class="XoHubSolutions-HideMenuItem"><a href="documentation.html" class="XoHubSolutions-MegaLink">` | `<li><a href="documentation.html" class="XoHubSolutions-MegaLink">` |
+
+**To Re-Enable Footer Resources Links:**
+
+| Item | Find | Replace |
+|------|------|---------|
+| Case Studies (Footer) | `<li class="XoHubSolutions-HideMenuItem"><a href="Case_Studies.html">Case Studies</a></li>` | `<li><a href="Case_Studies.html">Case Studies</a></li>` |
+| Documentation (Footer) | `<li class="XoHubSolutions-HideMenuItem"><a href="documentation.html">Documentation</a></li>` | `<li><a href="documentation.html">Documentation</a></li>` |
+| FAQs (Footer) | `<li class="XoHubSolutions-HideMenuItem"><a href="faqs.html">FAQs</a></li>` | `<li><a href="faqs.html">FAQs</a></li>` |
+| Support Center (Footer) | `<li class="XoHubSolutions-HideMenuItem"><a href="support-center.html">Support Center</a></li>` | `<li><a href="support-center.html">Support Center</a></li>` |
 
 **To Re-Enable Products Menu:**
 
@@ -381,10 +438,16 @@ These service items remain visible and unchanged:
 ## Notes
 
 - **Cookie consent banner** is temporarily hidden and disabled across all pages
+- **4 Resources footer links** are temporarily hidden across all pages (Case Studies, Documentation, FAQs, Support Center)
 - **2 Knowledge section items** are temporarily hidden across all pages
 - **7 service submenu items** remain hidden from previous update
 - **1 top-level Products menu** remains hidden from initial update
 - **1 Products footer column** is hidden across all pages
+- Footer office address updated to: "Rabbani Heights, Nasir Bagh Road, Peshawar, Pakistan"
+- Footer Company and Services links updated with proper URLs and section anchors
+- Footer column spacing improved: Desktop gap increased from 24px to 32px
+- Footer vertical spacing improved: Link gap increased from 8px to 10px
+- Responsive spacing updated for tablet (30px gap) and mobile (24px gap)
 - The actual Case Studies and Documentation pages were NOT modified or deleted
 - All hidden menu links and content remain intact in the code
 - Cookie banner HTML/JS/CSS functionality remains intact and ready to re-enable
@@ -396,6 +459,7 @@ These service items remain visible and unchanged:
 - The FREE badge on Documentation is hidden with the item
 - The hiding works on all screen sizes (desktop, tablet, mobile)
 - Dropdown/mega-menu layouts automatically adjust to show only visible items
+- Footer layout automatically adjusts after hiding items
 
 ---
 
@@ -407,3 +471,4 @@ These service items remain visible and unchanged:
 - Update 2: Hid 2 items (Case Studies, Documentation) from Knowledge section
 - Update 3: Hid Products column from footer (Column 4)
 - Update 4: Hid and disabled Cookie Consent Banner/Popup (entire feature)
+- Update 5: Hid 4 Resources footer links, updated footer address, improved footer spacing and layout
