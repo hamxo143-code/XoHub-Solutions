@@ -1,0 +1,653 @@
+/* ==================================================
+   PROFESSIONAL PROJECT INQUIRY SECTION — COMPLETE REDESIGN
+   Clean two-column SaaS-style layout with proper alignment
+   ================================================== */
+
+/* ============================================================
+   SECTION CONTAINER
+   ============================================================ */
+#xo-contact-inquiry {
+    padding: 80px 0 80px;
+    background: #f9fafb;
+    position: relative;
+    overflow: hidden;
+}
+
+.xo-contact-inquiry-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* ============================================================
+   SECTION HEADER
+   ============================================================ */
+.xo-contact-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 50px;
+}
+
+.xo-contact-badge {
+    display: inline-block;
+    padding: 6px 18px;
+    background: rgba(124, 58, 237, 0.1);
+    border: 1px solid rgba(124, 58, 237, 0.2);
+    border-radius: 50px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: #7c50cc;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.xo-contact-title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #1a202c;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    margin-bottom: 14px;
+}
+
+.xo-contact-subtitle {
+    font-size: 1.05rem;
+    font-weight: 400;
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+/* ============================================================
+   TWO-COLUMN LAYOUT
+   ============================================================ */
+.xo-contact-grid {
+    display: grid;
+    grid-template-columns: 1.85fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+/* ============================================================
+   LEFT COLUMN: FORM CARD
+   ============================================================ */
+.xo-form-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), 0 4px 16px rgba(0, 0, 0, 0.03);
+}
+
+/* Progress Bar */
+.xo-form-progress {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 32px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.xo-progress-bar {
+    flex: 1;
+    height: 8px;
+    background: #e5e7eb;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.xo-progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #81c752 0%, #7c50cc 100%);
+    border-radius: 10px;
+    transition: width 0.4s ease;
+    width: 17%;
+}
+
+.xo-progress-label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #7c50cc;
+    white-space: nowrap;
+}
+
+/* Form Section */
+.xo-form-section {
+    display: none;
+}
+
+.xo-form-section--active {
+    display: block;
+}
+
+.xo-section-heading {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1a202c;
+    margin: 0 0 28px 0;
+    padding: 0;
+    border: none;
+}
+
+/* Form Rows */
+.xo-form-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.xo-form-row--two-col {
+    grid-template-columns: 1fr 1fr;
+}
+
+/* Form Groups */
+.xo-form-group {
+    position: relative;
+}
+
+.xo-form-label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 8px;
+}
+
+.xo-form-label .required {
+    color: #dc2626;
+    margin-left: 3px;
+}
+
+/* Input Fields */
+.xo-form-input,
+.xo-form-select {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 0.9375rem;
+    font-weight: 400;
+    color: #1a202c;
+    background: #ffffff;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.xo-form-input::placeholder {
+    color: #9ca3af;
+}
+
+.xo-form-input:hover,
+.xo-form-select:hover {
+    border-color: #9ca3af;
+}
+
+.xo-form-input:focus,
+.xo-form-select:focus {
+    border-color: #7c50cc;
+    box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
+    outline: none;
+}
+
+/* Select Dropdown */
+.xo-form-select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M4 6L8 10L12 6' stroke='%236b7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 16px;
+    padding-right: 40px;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.xo-form-textarea {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 0.9375rem;
+    font-weight: 400;
+    color: #1a202c;
+    background: #ffffff;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    font-family: 'Poppins', sans-serif;
+    resize: vertical;
+    min-height: 120px;
+    line-height: 1.6;
+}
+
+.xo-form-textarea::placeholder {
+    color: #9ca3af;
+}
+
+.xo-form-textarea:hover {
+    border-color: #9ca3af;
+}
+
+.xo-form-textarea:focus {
+    border-color: #7c50cc;
+    box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
+    outline: none;
+}
+
+/* Form Navigation */
+.xo-form-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid #e5e7eb;
+}
+
+.xo-btn-prev {
+    padding: 11px 24px;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: #6b7280;
+    background: #f3f4f6;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: 'Poppins', sans-serif;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.xo-btn-prev:hover {
+    background: #e5e7eb;
+    color: #374151;
+}
+
+.xo-btn-next,
+.xo-btn-submit {
+    padding: 11px 28px;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: #ffffff;
+    background: #7c50cc;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: 'Poppins', sans-serif;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 1px 2px rgba(124, 58, 237, 0.1);
+    margin-left: auto;
+}
+
+.xo-btn-next:hover,
+.xo-btn-submit:hover {
+    background: #6640a8;
+    box-shadow: 0 2px 8px rgba(124, 58, 237, 0.2);
+}
+
+.xo-btn-submit {
+    background: #81c752;
+}
+
+.xo-btn-submit:hover {
+    background: #6ba845;
+    box-shadow: 0 2px 8px rgba(129, 199, 82, 0.3);
+}
+
+/* ============================================================
+   RIGHT COLUMN: INFO CARDS
+   ============================================================ */
+.xo-info-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.xo-info-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 28px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease;
+}
+
+.xo-info-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-color: #d1d5db;
+}
+
+/* Card Header */
+.xo-card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.xo-card-icon {
+    font-size: 1.5rem;
+    color: #7c50cc;
+}
+
+.xo-card-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #1a202c;
+    margin: 0;
+    line-height: 1.3;
+}
+
+/* Why Choose List */
+.xo-benefits-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.xo-benefit-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.875rem;
+    color: #4b5563;
+    line-height: 1.5;
+}
+
+.xo-benefit-item i {
+    color: #81c752;
+    font-size: 0.875rem;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+/* Process Grid */
+.xo-process-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px 12px;
+}
+
+.xo-process-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.xo-process-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #7c50cc;
+    background: rgba(124, 58, 237, 0.1);
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.xo-process-label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #1a202c;
+    line-height: 1.3;
+}
+
+/* Promise List */
+.xo-promise-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.xo-promise-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+.xo-promise-item i {
+    color: #7c50cc;
+    font-size: 1rem;
+    margin-top: 1px;
+    flex-shrink: 0;
+}
+
+.xo-promise-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.xo-promise-value {
+    font-weight: 700;
+    color: #1a202c;
+}
+
+.xo-promise-desc {
+    color: #6b7280;
+    font-size: 0.8125rem;
+}
+
+/* Radio & Checkbox Groups */
+.xo-radio-group,
+.xo-checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.xo-radio-option,
+.xo-checkbox-option {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-size: 0.9375rem;
+    color: #374151;
+}
+
+.xo-radio-option input[type="radio"],
+.xo-checkbox-option input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #7c50cc;
+    cursor: pointer;
+}
+
+/* File Upload */
+.xo-file-upload-area {
+    border: 2px dashed #d1d5db;
+    border-radius: 8px;
+    padding: 32px 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.xo-file-upload-area:hover {
+    border-color: #7c50cc;
+    background: rgba(124, 58, 237, 0.02);
+}
+
+.xo-file-upload-icon {
+    font-size: 2rem;
+    color: #7c50cc;
+    margin-bottom: 8px;
+}
+
+.xo-file-upload-text {
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: #374151;
+}
+
+.xo-file-upload-hint {
+    font-size: 0.8125rem;
+    color: #9ca3af;
+    margin-top: 4px;
+}
+
+.xo-file-upload-input {
+    display: none;
+}
+
+/* Error Messages */
+.xo-form-error {
+    display: none;
+    font-size: 0.8125rem;
+    color: #dc2626;
+    margin-top: 6px;
+}
+
+.xo-form-error.visible {
+    display: block;
+}
+
+.xo-form-input.error,
+.xo-form-select.error,
+.xo-form-textarea.error {
+    border-color: #dc2626;
+}
+
+/* ============================================================
+   RESPONSIVE DESIGN
+   ============================================================ */
+
+/* Tablet (768px - 1023px) */
+@media (max-width: 1023px) {
+    #xo-contact-inquiry {
+        padding: 60px 0;
+    }
+
+    .xo-contact-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .xo-form-card {
+        padding: 32px;
+    }
+
+    .xo-info-sidebar {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .xo-info-card:last-child {
+        grid-column: 1 / -1;
+    }
+}
+
+/* Mobile (below 768px) */
+@media (max-width: 767px) {
+    #xo-contact-inquiry {
+        padding: 50px 0;
+    }
+
+    .xo-contact-title {
+        font-size: 1.875rem;
+    }
+
+    .xo-contact-subtitle {
+        font-size: 0.9375rem;
+    }
+
+    .xo-contact-header {
+        margin-bottom: 36px;
+    }
+
+    .xo-form-card {
+        padding: 28px 20px;
+    }
+
+    .xo-form-row--two-col {
+        grid-template-columns: 1fr;
+    }
+
+    .xo-form-nav {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .xo-btn-prev,
+    .xo-btn-next,
+    .xo-btn-submit {
+        width: 100%;
+        justify-content: center;
+        margin-left: 0;
+    }
+
+    .xo-info-sidebar {
+        grid-template-columns: 1fr;
+    }
+
+    .xo-info-card {
+        padding: 24px 20px;
+    }
+
+    .xo-info-card:last-child {
+        grid-column: auto;
+    }
+
+    .xo-process-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Small Mobile (below 480px) */
+@media (max-width: 479px) {
+    .xo-contact-inquiry-container {
+        padding: 0 16px;
+    }
+
+    .xo-contact-title {
+        font-size: 1.625rem;
+    }
+
+    .xo-form-card {
+        padding: 24px 16px;
+    }
+
+    .xo-info-card {
+        padding: 20px 16px;
+    }
+
+    .xo-form-progress {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .xo-progress-label {
+        text-align: left;
+    }
+}
+
+/* Focus States for Accessibility */
+.xo-form-input:focus-visible,
+.xo-form-select:focus-visible,
+.xo-form-textarea:focus-visible,
+.xo-btn-next:focus-visible,
+.xo-btn-prev:focus-visible,
+.xo-btn-submit:focus-visible {
+    outline: 3px solid #81c752;
+    outline-offset: 2px;
+}

@@ -11928,17 +11928,18 @@ START: Smart Contact Form & Project Inquiry JavaScript
         const form = document.getElementById('project-inquiry-form');
         if (!form) return;
 
-        const sections = form.querySelectorAll('.form-section');
-        const progressFill = form.querySelector('.form-progress__fill');
-        const progressLabel = form.querySelector('.form-progress__label');
-        const nextBtns = form.querySelectorAll('.btn-form-next');
-        const prevBtns = form.querySelectorAll('.btn-form-prev');
-        const submitBtn = form.querySelector('.btn-submit-form');
+        // Support both old and new class names for backward compatibility
+        const sections = form.querySelectorAll('.form-section, .xo-project-inquiry-section, .xo-form-section');
+        const progressFill = form.querySelector('.form-progress__fill, .xo-project-inquiry-progress-fill, .xo-progress-fill');
+        const progressLabel = form.querySelector('.form-progress__label, .xo-project-inquiry-progress-label, .xo-progress-label');
+        const nextBtns = form.querySelectorAll('.btn-form-next, .xo-project-inquiry-btn-next, .xo-btn-next');
+        const prevBtns = form.querySelectorAll('.btn-form-prev, .xo-project-inquiry-btn-prev, .xo-btn-prev');
+        const submitBtn = form.querySelector('.btn-submit-form, .xo-project-inquiry-btn-submit, .xo-btn-submit');
         const successMsg = form.querySelector('.form-success');
         const errorGlobal = form.querySelector('.form-error-global');
-        const fileInput = form.querySelector('.file-upload-input');
+        const fileInput = form.querySelector('.file-upload-input, .xo-file-upload-input');
         const fileList = form.querySelector('.file-upload-list');
-        const fileArea = form.querySelector('.file-upload-area');
+        const fileArea = form.querySelector('.file-upload-area, .xo-file-upload-area');
 
         let currentSection = 0;
         let totalSections = sections.length;
@@ -11947,6 +11948,8 @@ START: Smart Contact Form & Project Inquiry JavaScript
         function showSection(index) {
             sections.forEach((section, i) => {
                 section.classList.toggle('form-section--active', i === index);
+                section.classList.toggle('xo-project-inquiry-section--active', i === index);
+                section.classList.toggle('xo-form-section--active', i === index);
             });
             updateProgress(index);
             updateReviewData();
@@ -11958,6 +11961,7 @@ START: Smart Contact Form & Project Inquiry JavaScript
             const progress = ((index + 1) / totalSections) * 100;
             if (progressFill) progressFill.style.width = progress + '%';
             if (progressLabel) progressLabel.textContent = Math.round(progress) + '% Complete';
+            if (progressFill) progressFill.setAttribute('aria-valuenow', Math.round(progress));
         }
 
         // ----- Update Review Summary -----
@@ -11995,23 +11999,23 @@ START: Smart Contact Form & Project Inquiry JavaScript
             let valid = true;
 
             inputs.forEach((input) => {
-                const errorEl = input.closest('.form-group')?.querySelector('.form-error') ||
-                                input.closest('.form-group')?.querySelector('.form-error-radio');
+                const formGroup = input.closest('.form-group, .xo-project-inquiry-form-group, .xo-form-group');
+                const errorEl = formGroup?.querySelector('.form-error, .xo-form-error') || formGroup?.querySelector('.form-error-radio');
                 let isValid = true;
 
                 if (input.type === 'radio') {
-                    const group = input.closest('.form-radio-group');
+                    const group = input.closest('.form-radio-group, .xo-radio-group');
                     if (group) {
                         const checked = group.querySelector('input[type="radio"]:checked');
                         isValid = !!checked;
-                        const error = group.closest('.form-group')?.querySelector('.form-error');
+                        const error = group.closest('.form-group, .xo-project-inquiry-form-group, .xo-form-group')?.querySelector('.form-error, .xo-form-error');
                         if (error) {
                             error.classList.toggle('visible', !isValid);
                         }
                     }
                 } else if (input.type === 'checkbox' && input.name === 'consent') {
                     isValid = input.checked;
-                    const error = input.closest('.form-group')?.querySelector('.form-error');
+                    const error = input.closest('.form-group, .xo-project-inquiry-form-group, .xo-form-group')?.querySelector('.form-error, .xo-form-error');
                     if (error) error.classList.toggle('visible', !isValid);
                 } else if (input.type === 'email') {
                     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -12044,7 +12048,7 @@ START: Smart Contact Form & Project Inquiry JavaScript
                     }
                     const firstError = sections[currentSection].querySelector('.form-error.visible');
                     if (firstError) {
-                        firstError.closest('.form-group')?.querySelector('input, select, textarea')?.focus();
+                        firstError.closest('.form-group, .xo-project-inquiry-form-group, .xo-form-group')?.querySelector('input, select, textarea')?.focus();
                     }
                     setTimeout(() => {
                         if (errorGlobal) errorGlobal.style.display = 'none';
@@ -12065,7 +12069,7 @@ START: Smart Contact Form & Project Inquiry JavaScript
         // ----- Real-time validation on input -----
         form.querySelectorAll('input, select, textarea').forEach((input) => {
             input.addEventListener('blur', function() {
-                const errorEl = this.closest('.form-group')?.querySelector('.form-error');
+                const errorEl = this.closest('.form-group, .xo-project-inquiry-form-group, .xo-form-group')?.querySelector('.form-error, .xo-form-error');
                 if (this.hasAttribute('required') && !this.value.trim()) {
                     this.classList.add('error');
                     if (errorEl) errorEl.classList.add('visible');
@@ -12089,7 +12093,7 @@ START: Smart Contact Form & Project Inquiry JavaScript
                 input.addEventListener('input', function() {
                     const count = this.value.length;
                     const max = parseInt(this.getAttribute('maxlength'), 10);
-                    const counter = this.closest('.form-group')?.querySelector('.char-count');
+                    const counter = this.closest('.form-group, .xo-project-inquiry-form-group, .xo-form-group')?.querySelector('.char-count');
                     if (counter) counter.textContent = count;
                     if (count > max) {
                         this.value = this.value.slice(0, max);
