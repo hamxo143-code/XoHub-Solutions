@@ -102456,3 +102456,19 @@ END: Under Construction Modal
 .testimonial-slider-wrapper.paused .testimonial-slider-pause-indicator {
     opacity: 1;
 }
+
+
+/* Enhanced Address Styling for New Office Location */
+.address-line--main {
+    font-size: 0.95rem;
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-purple);
+    margin-bottom: 2px;
+}
+
+.office-card__address {
+    background: rgba(124, 58, 237, 0.02);
+    padding: 18px 16px;
+    border-radius: 12px;
+    border: 1px solid rgba(124, 58, 237, 0.08);
+}
