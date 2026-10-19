@@ -45243,6 +45243,8 @@ START: Multiple Contact Options & Communication Channels
    ============================================================ */
 .contact-channels__featured {
     margin-bottom: 48px;
+    position: relative;
+    z-index: 3;
 }
 
 .featured-contact {
@@ -45260,8 +45262,7 @@ START: Multiple Contact Options & Communication Channels
 }
 
 .featured-contact:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 16px 48px rgba(124, 58, 237, 0.06);
+    box-shadow: 0 12px 40px rgba(124, 58, 237, 0.06);
 }
 
 .featured-contact__content {
@@ -45499,12 +45500,13 @@ START: Multiple Contact Options & Communication Channels
     border-radius: 20px;
     box-shadow: var(--shadow-glass);
     transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    z-index: 3;
 }
 
 .contact-channels__grid:hover {
-    transform: translateY(-4px);
-    border-color: rgba(124, 58, 237, 0.06);
-    box-shadow: 0 12px 40px rgba(124, 58, 237, 0.04);
+    border-color: rgba(124, 58, 237, 0.08);
+    box-shadow: 0 8px 32px rgba(124, 58, 237, 0.04);
 }
 
 .channels-grid {
@@ -45689,12 +45691,13 @@ START: Multiple Contact Options & Communication Channels
     border-radius: 20px;
     box-shadow: var(--shadow-glass);
     transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    z-index: 3;
 }
 
 .contact-channels__inquiries:hover {
-    transform: translateY(-4px);
-    border-color: rgba(124, 58, 237, 0.06);
-    box-shadow: 0 12px 40px rgba(124, 58, 237, 0.04);
+    border-color: rgba(124, 58, 237, 0.08);
+    box-shadow: 0 8px 32px rgba(124, 58, 237, 0.04);
 }
 
 .inquiries-grid {
@@ -45766,6 +45769,8 @@ START: Multiple Contact Options & Communication Channels
 .contact-channels__info-panel {
     max-width: 900px;
     margin: 0 auto 40px;
+    position: relative;
+    z-index: 3;
 }
 
 .info-panel {
@@ -45859,6 +45864,8 @@ START: Multiple Contact Options & Communication Channels
     border: 1px solid var(--color-gray-light);
     border-radius: 18px;
     box-shadow: var(--shadow-glass);
+    position: relative;
+    z-index: 3;
 }
 
 .contact-channels__metrics .metrics-grid {
