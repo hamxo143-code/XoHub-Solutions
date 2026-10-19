@@ -45957,7 +45957,7 @@ START: Smart Contact Form & Project Inquiry
     padding: 80px 0 60px;
     background: var(--color-white);
     position: relative;
-    overflow: hidden;
+    overflow: visible;
 }
 
 /* ----- Background Decorations ----- */
@@ -46178,9 +46178,10 @@ START: Smart Contact Form & Project Inquiry
    ============================================================ */
 .contact-form__layout {
     display: grid;
-    grid-template-columns: 1.5fr 1fr;
-    gap: 32px;
+    grid-template-columns: 1fr 380px;
+    gap: 40px;
     align-items: start;
+    max-width: 100%;
 }
 
 /* ============================================================
@@ -46188,6 +46189,8 @@ START: Smart Contact Form & Project Inquiry
    ============================================================ */
 .contact-form__form-wrapper {
     position: relative;
+    width: 100%;
+    max-width: 100%;
 }
 
 .form-container {
@@ -46199,6 +46202,9 @@ START: Smart Contact Form & Project Inquiry
     padding: 32px 32px 28px;
     box-shadow: var(--shadow-glass);
     transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .form-container:hover {
@@ -46266,21 +46272,25 @@ START: Smart Contact Form & Project Inquiry
     gap: 16px;
     margin-bottom: 18px;
     flex-wrap: wrap;
+    width: 100%;
 }
 
 .form-group {
     position: relative;
     margin-bottom: 0;
+    box-sizing: border-box;
 }
 
 .form-group--full {
     flex: 1 1 100%;
     min-width: 0;
+    max-width: 100%;
 }
 
 .form-group--half {
     flex: 1 1 calc(50% - 8px);
     min-width: 0;
+    max-width: calc(50% - 8px);
 }
 
 .form-label {
@@ -46300,6 +46310,7 @@ START: Smart Contact Form & Project Inquiry
 .form-select,
 .form-textarea {
     width: 100%;
+    max-width: 100%;
     padding: 10px 14px;
     font-size: 0.88rem;
     font-weight: var(--font-weight-regular);
@@ -46309,6 +46320,7 @@ START: Smart Contact Form & Project Inquiry
     border-radius: 12px;
     transition: all 0.3s ease;
     font-family: inherit;
+    box-sizing: border-box;
 }
 
 .form-select {
@@ -46769,6 +46781,8 @@ START: Smart Contact Form & Project Inquiry
     display: flex;
     flex-direction: column;
     gap: 20px;
+    width: 100%;
+    max-width: 380px;
 }
 
 .info-card {

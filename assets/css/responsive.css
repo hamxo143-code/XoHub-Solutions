@@ -27687,6 +27687,12 @@ START: Smart Contact Form & Project Inquiry Responsive
         gap: 32px;
     }
 
+    .contact-form__form-wrapper,
+    .contact-form__info-panel {
+        max-width: 100%;
+        width: 100%;
+    }
+
     .form-container {
         padding: 24px 24px 20px;
         border-radius: 20px;
@@ -27696,6 +27702,7 @@ START: Smart Contact Form & Project Inquiry Responsive
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 16px;
+        max-width: 100%;
     }
 
     .info-card {
@@ -27780,6 +27787,7 @@ START: Smart Contact Form & Project Inquiry Responsive
     .form-group--half {
         flex: 1 1 100%;
         min-width: 0;
+        max-width: 100%;
     }
 
     .form-radio-group {
@@ -27790,6 +27798,11 @@ START: Smart Contact Form & Project Inquiry Responsive
     .form-radio-group--inline {
         flex-direction: column;
         gap: 8px;
+    }
+
+    .form-container {
+        padding: 16px 14px 14px;
+        border-radius: 14px;
     }
 
     .form-input,
