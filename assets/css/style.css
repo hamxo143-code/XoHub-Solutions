@@ -5015,6 +5015,29 @@ input:focus-visible {
     margin: 0 auto 48px;
 }
 
+/* ----- Trustindex Google Reviews Widget Wrapper ----- */
+.testimonials-widget-wrapper {
+    max-width: 1140px;
+    margin: 48px auto 48px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Allow the Trustindex widget to be responsive */
+.testimonials-widget-wrapper > div {
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Ensure no horizontal overflow */
+.testimonials-widget-wrapper iframe,
+.testimonials-widget-wrapper > div > div {
+    max-width: 100% !important;
+    width: 100% !important;
+}
+
 /* ----- Testimonial Card ----- */
 .testimonial-card {
     background: var(--color-off-white);

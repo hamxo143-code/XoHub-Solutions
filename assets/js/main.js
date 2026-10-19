@@ -1667,6 +1667,7 @@ if (document.readyState === 'loading') {
 // ============================================================
 const initTestimonialsAnimations = () => {
     const testimonialCards = document.querySelectorAll('.testimonial-card');
+    const testimonialWidget = document.querySelector('.testimonials-widget-wrapper');
     const trustIndicators = document.querySelectorAll('.trust-indicator');
     const tsBadge = document.querySelector('.testimonials-section__badge');
     const tsTitle = document.querySelector('.testimonials-section__title');
@@ -1690,6 +1691,13 @@ const initTestimonialsAnimations = () => {
         card.style.transform = 'translateY(30px)';
         card.style.transition = `opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) ${index * 100}ms, transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) ${index * 100}ms`;
     });
+
+    // Set initial state for widget wrapper
+    if (testimonialWidget) {
+        testimonialWidget.style.opacity = '0';
+        testimonialWidget.style.transform = 'translateY(30px)';
+        testimonialWidget.style.transition = 'opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+    }
 
     // Set initial state for trust indicators
     trustIndicators.forEach((indicator, index) => {
@@ -1729,6 +1737,14 @@ const initTestimonialsAnimations = () => {
                         card.style.transform = 'translateY(0)';
                     }, 250 + (index * 100));
                 });
+
+                // Animate widget wrapper
+                if (testimonialWidget) {
+                    setTimeout(() => {
+                        testimonialWidget.style.opacity = '1';
+                        testimonialWidget.style.transform = 'translateY(0)';
+                    }, 250);
+                }
 
                 // Animate trust indicators
                 trustIndicators.forEach((indicator, index) => {
