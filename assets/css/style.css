@@ -4926,6 +4926,13 @@ input:focus-visible {
 /* ============================================================
    CLIENT TESTIMONIALS SECTION — Phase 11
    ============================================================ */
+   
+/* TEMPORARILY HIDDEN SECTION */
+/* To re-enable testimonials: Remove or comment out the rule below */
+.testimonials-section--hidden {
+    display: none !important;
+}
+
 #testimonials {
     padding: 100px 0 80px;
     background: var(--color-white);
