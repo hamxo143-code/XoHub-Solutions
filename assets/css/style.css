@@ -2890,7 +2890,7 @@ body.mobile-menu-open {
     margin: 0 auto;
 }
 
-.feature-card {
+.why-choose-us__grid .feature-card {
     background: var(--color-white);
     border: 1px solid var(--color-gray-light);
     border-radius: 20px;
@@ -2901,13 +2901,13 @@ body.mobile-menu-open {
     position: relative;
 }
 
-.feature-card:hover {
+.why-choose-us__grid .feature-card:hover {
     transform: translateY(-6px);
     border-color: var(--color-purple-light);
     box-shadow: var(--shadow-card-hover);
 }
 
-.feature-card__icon {
+.why-choose-us__grid .feature-card__icon {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -2921,20 +2921,20 @@ body.mobile-menu-open {
     transition: var(--transition-smooth);
 }
 
-.feature-card:hover .feature-card__icon {
+.why-choose-us__grid .feature-card:hover .feature-card__icon {
     background: var(--color-lime);
     color: var(--color-charcoal);
     transform: scale(1.05) rotate(-3deg);
 }
 
-.feature-card__title {
+.why-choose-us__grid .why-choose-us__grid .feature-card__title {
     font-size: 1.05rem;
     font-weight: var(--font-weight-semibold);
     color: var(--color-charcoal);
     margin-bottom: 8px;
 }
 
-.feature-card__description {
+.why-choose-us__grid .feature-card__description {
     font-size: 0.88rem;
     font-weight: var(--font-weight-regular);
     color: var(--color-gray-mid);
@@ -3281,7 +3281,7 @@ input:focus-visible {
 }
 
 /* ----- Feature Card ----- */
-.feature-card {
+.why-choose-us__grid .feature-card {
     display: flex;
     align-items: flex-start;
     gap: 16px;
@@ -3295,7 +3295,7 @@ input:focus-visible {
 }
 
 /* Left accent border */
-.feature-card::before {
+.why-choose-us__grid .feature-card::before {
     content: '';
     position: absolute;
     top: 16px;
@@ -3308,18 +3308,18 @@ input:focus-visible {
     transition: opacity 0.4s ease;
 }
 
-.feature-card:hover {
+.why-choose-us__grid .feature-card:hover {
     transform: translateY(-4px);
     border-color: rgba(124, 58, 237, 0.12);
     box-shadow: 0 12px 40px rgba(124, 58, 237, 0.06), 0 4px 16px rgba(192, 227, 74, 0.06);
 }
 
-.feature-card:hover::before {
+.why-choose-us__grid .feature-card:hover::before {
     opacity: 1;
 }
 
 /* ----- Feature Card Icon ----- */
-.feature-card__icon {
+.why-choose-us__grid .feature-card__icon {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -3333,26 +3333,26 @@ input:focus-visible {
     transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-.feature-card:hover .feature-card__icon {
+.why-choose-us__grid .feature-card:hover .feature-card__icon {
     background: var(--color-purple);
     color: var(--color-white);
     transform: scale(1.05);
 }
 
 /* ----- Feature Card Content ----- */
-.feature-card__content {
+.why-choose-us__grid .feature-card__content {
     flex: 1;
     min-width: 0;
 }
 
-.feature-card__title {
+.why-choose-us__grid .feature-card__title {
     font-size: 0.95rem;
     font-weight: var(--font-weight-semibold);
     color: var(--color-charcoal);
     margin-bottom: 4px;
 }
 
-.feature-card__description {
+.why-choose-us__grid .feature-card__description {
     font-size: 0.82rem;
     font-weight: var(--font-weight-regular);
     color: var(--color-gray-mid);
@@ -49195,7 +49195,7 @@ START: Why Contact XoHub Solutions & Client Success Highlights
     gap: 12px 16px;
 }
 
-.feature-card {
+.why-xohub__features .feature-card {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -49206,27 +49206,27 @@ START: Why Contact XoHub Solutions & Client Success Highlights
     transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-.feature-card:hover {
+.why-xohub__features .feature-card:hover {
     background: rgba(255, 255, 255, 0.7);
     border-color: rgba(192, 227, 74, 0.15);
     transform: translateY(-4px);
     box-shadow: 0 4px 16px rgba(192, 227, 74, 0.04);
 }
 
-.feature-card__icon {
+.why-xohub__features .feature-card__icon {
     font-size: 1.4rem;
     color: var(--color-purple);
     margin-bottom: 6px;
 }
 
-.feature-card__title {
+.why-xohub__features .feature-card__title {
     font-size: 0.82rem;
     font-weight: var(--font-weight-semibold);
     color: var(--color-charcoal);
     line-height: 1.2;
 }
 
-.feature-card__desc {
+.why-xohub__features .feature-card__desc {
     font-size: 0.68rem;
     font-weight: var(--font-weight-regular);
     color: var(--color-gray-mid);
@@ -49234,7 +49234,7 @@ START: Why Contact XoHub Solutions & Client Success Highlights
     margin: 2px 0 4px;
 }
 
-.feature-card__btn {
+.why-xohub__features .feature-card__btn {
     font-size: 0.6rem;
     font-weight: var(--font-weight-medium);
     color: var(--color-purple);
@@ -49246,7 +49246,7 @@ START: Why Contact XoHub Solutions & Client Success Highlights
     margin-top: 4px;
 }
 
-.feature-card__btn:hover {
+.why-xohub__features .feature-card__btn:hover {
     background: var(--color-purple);
     color: var(--color-white);
     box-shadow: 0 4px 12px rgba(124, 58, 237, 0.2);
@@ -65354,7 +65354,7 @@ START: Features Included in Every Website We Build
 }
 
 /* ============================================================
-   FEATURE GRID
+   FEATURE GRID — Web Development Page
    ============================================================ */
 .webdev-features__grid {
     display: grid;
@@ -65363,7 +65363,7 @@ START: Features Included in Every Website We Build
     margin-bottom: 48px;
 }
 
-.feature-card {
+.webdev-features__grid .feature-card {
     display: flex;
     flex-direction: column;
     padding: 18px 16px 16px;
@@ -65378,34 +65378,34 @@ START: Features Included in Every Website We Build
     position: relative;
 }
 
-.feature-card:hover {
+.webdev-features__grid .feature-card:hover {
     transform: translateY(-6px);
     border-color: rgba(124, 58, 237, 0.06);
     box-shadow: 0 16px 48px rgba(124, 58, 237, 0.06);
     background: rgba(255, 255, 255, 0.6);
 }
 
-.feature-card__icon {
+.webdev-features__grid .feature-card__icon {
     font-size: 1.4rem;
     color: var(--color-purple);
     margin-bottom: 6px;
 }
 
-.feature-card__title {
+.webdev-features__grid .feature-card__title {
     font-size: 0.85rem;
     font-weight: var(--font-weight-semibold);
     color: var(--color-charcoal);
     line-height: 1.2;
 }
 
-.feature-card__benefit {
+.webdev-features__grid .feature-card__benefit {
     font-size: 0.68rem;
     font-weight: var(--font-weight-medium);
     color: var(--color-lime-dark);
     margin: 2px 0 4px;
 }
 
-.feature-card__desc {
+.webdev-features__grid .feature-card__desc {
     font-size: 0.7rem;
     font-weight: var(--font-weight-regular);
     color: var(--color-gray-mid);
@@ -65413,7 +65413,7 @@ START: Features Included in Every Website We Build
     flex: 1;
 }
 
-.feature-card__badge {
+.webdev-features__grid .feature-card__badge {
     position: absolute;
     top: 12px;
     right: 12px;
