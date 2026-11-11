@@ -8117,6 +8117,7 @@ input:focus-visible {
     align-items: center;
     justify-content: center;
     z-index: 2;
+    margin-top: 20px; /* Align with icon center in card */
 }
 
 .timeline__node-dot {
