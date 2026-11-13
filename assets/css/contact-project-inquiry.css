@@ -1,0 +1,837 @@
+/* ==================================================
+   DEDICATED CSS: PROJECT INQUIRY SECTION — CONTACT PAGE
+   Purpose: Isolated, conflict-free styles with unique selectors
+   Prefix: xo-project-inquiry-
+   ================================================== */
+
+/* ============================================================
+   ROOT SCOPE & RESET
+   ============================================================ */
+#xo-project-inquiry-section {
+    padding: 80px 0 60px;
+    background: #FFFFFF;
+    position: relative;
+    overflow: visible;
+    isolation: isolate;
+}
+
+/* Ensure no conflicting z-index or positioning from parent */
+#xo-project-inquiry-section * {
+    box-sizing: border-box;
+}
+
+/* ============================================================
+   BACKGROUND DECORATIONS
+   ============================================================ */
+.xo-project-inquiry-bg {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.xo-project-inquiry-glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.04;
+    pointer-events: none;
+}
+
+.xo-project-inquiry-glow--1 {
+    width: 450px;
+    height: 450px;
+    top: -120px;
+    right: -80px;
+    background: #7c50cc;
+}
+
+.xo-project-inquiry-glow--2 {
+    width: 400px;
+    height: 400px;
+    bottom: -100px;
+    left: -60px;
+    background: #81c752;
+    opacity: 0.03;
+}
+
+.xo-project-inquiry-glow--3 {
+    width: 250px;
+    height: 250px;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #7c50cc;
+    opacity: 0.03;
+}
+
+/* ============================================================
+   SECTION HEADER
+   ============================================================ */
+.xo-project-inquiry-inner {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.xo-project-inquiry-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 48px;
+}
+
+.xo-project-inquiry-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 18px;
+    background: rgba(124, 58, 237, 0.08);
+    border: 1px solid rgba(124, 58, 237, 0.12);
+    border-radius: 50px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: #7c50cc;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.xo-project-inquiry-badge::before {
+    content: '◆';
+    margin-right: 8px;
+    font-size: 0.5rem;
+    color: #81c752;
+}
+
+.xo-project-inquiry-title {
+    font-size: 2.6rem;
+    font-weight: 700;
+    color: #1A1A2E;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+    margin-bottom: 12px;
+}
+
+.xo-project-inquiry-subtitle {
+    font-size: 1.05rem;
+    font-weight: 400;
+    color: #9BA3B5;
+    line-height: 1.7;
+}
+
+/* ============================================================
+   TWO-COLUMN LAYOUT (Form + Info Panel)
+   ============================================================ */
+.xo-project-inquiry-layout {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 40px;
+    align-items: start;
+    max-width: 100%;
+}
+
+/* ============================================================
+   LEFT: FORM WRAPPER
+   ============================================================ */
+.xo-project-inquiry-form-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+}
+
+.xo-project-inquiry-form-container {
+    background: #FFFFFF;
+    border: 1px solid #E8ECF0;
+    border-radius: 20px;
+    padding: 36px;
+    box-shadow: 0 4px 20px rgba(26, 26, 46, 0.08);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    width: 100%;
+}
+
+.xo-project-inquiry-form-container:hover {
+    box-shadow: 0 8px 32px rgba(124, 58, 237, 0.12);
+    border-color: rgba(124, 58, 237, 0.15);
+}
+
+/* Progress Indicator */
+.xo-project-inquiry-progress {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 32px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #E8ECF0;
+}
+
+.xo-project-inquiry-progress-bar {
+    flex: 1;
+    height: 6px;
+    background: #F3F4F6;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.xo-project-inquiry-progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #81c752 0%, #7c50cc 100%);
+    border-radius: 10px;
+    transition: width 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    width: 17%;
+    position: relative;
+    box-shadow: 0 0 12px rgba(129, 199, 82, 0.5);
+}
+
+.xo-project-inquiry-progress-fill::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 20px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4));
+    animation: progressShine 2s ease-in-out infinite;
+}
+
+@keyframes progressShine {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+.xo-project-inquiry-progress-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #7c50cc;
+    min-width: 90px;
+    text-align: right;
+    white-space: nowrap;
+}
+
+/* Form Sections */
+.xo-project-inquiry-section {
+    display: none;
+}
+
+.xo-project-inquiry-section--active {
+    display: block;
+    animation: xoFadeUp 0.5s ease;
+}
+
+@keyframes xoFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.xo-project-inquiry-section-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #1A1A2E;
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+    border-bottom: 3px solid #81c752;
+    display: inline-block;
+    position: relative;
+}
+
+.xo-project-inquiry-section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 40%;
+    height: 3px;
+    background: #7c50cc;
+    transition: width 0.3s ease;
+}
+
+.xo-project-inquiry-section--active .xo-project-inquiry-section-title::after {
+    width: 100%;
+}
+
+/* Form Rows & Groups */
+.xo-project-inquiry-form-row {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 18px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.xo-project-inquiry-form-group {
+    position: relative;
+    margin-bottom: 0;
+}
+
+.xo-project-inquiry-form-group--full {
+    flex: 1 1 100%;
+    min-width: 0;
+    max-width: 100%;
+}
+
+.xo-project-inquiry-form-group--half {
+    flex: 1 1 calc(50% - 8px);
+    min-width: 0;
+    max-width: calc(50% - 8px);
+}
+
+.xo-project-inquiry-label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #1A1A2E;
+    margin-bottom: 8px;
+    letter-spacing: 0.01em;
+}
+
+.xo-project-inquiry-label .required {
+    color: #dc2626;
+    margin-left: 3px;
+    font-weight: 700;
+}
+
+.xo-project-inquiry-input,
+.xo-project-inquiry-select,
+.xo-project-inquiry-textarea {
+    width: 100%;
+    max-width: 100%;
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #1A1A2E;
+    background: #FFFFFF;
+    border: 2px solid #E8ECF0;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+.xo-project-inquiry-input::placeholder,
+.xo-project-inquiry-textarea::placeholder {
+    color: #9BA3B5;
+    opacity: 0.7;
+}
+
+.xo-project-inquiry-select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 14 14'%3E%3Cpath fill='%237c50cc' d='M7 10L2 5h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    background-size: 14px;
+    padding-right: 42px;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.xo-project-inquiry-input:focus,
+.xo-project-inquiry-select:focus,
+.xo-project-inquiry-textarea:focus {
+    border-color: #7c50cc;
+    box-shadow: 0 0 0 4px rgba(124, 58, 237, 0.1);
+    outline: none;
+    background: #FEFEFF;
+}
+
+.xo-project-inquiry-input:hover,
+.xo-project-inquiry-select:hover,
+.xo-project-inquiry-textarea:hover {
+    border-color: rgba(124, 58, 237, 0.4);
+}
+
+.xo-project-inquiry-input.error,
+.xo-project-inquiry-select.error,
+.xo-project-inquiry-textarea.error {
+    border-color: #dc2626;
+    box-shadow: 0 0 0 4px rgba(220, 38, 38, 0.08);
+}
+
+.xo-project-inquiry-textarea {
+    resize: vertical;
+    min-height: 120px;
+    line-height: 1.6;
+}
+
+/* ============================================================
+   RIGHT: INFORMATION PANEL
+   ============================================================ */
+.xo-project-inquiry-info-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 380px;
+}
+
+/* Info Card Base */
+.xo-project-inquiry-info-card {
+    background: #FFFFFF;
+    border: 1px solid #E8ECF0;
+    border-radius: 18px;
+    padding: 28px 26px;
+    box-shadow: 0 4px 16px rgba(26, 26, 46, 0.06);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    overflow: hidden;
+}
+
+.xo-project-inquiry-info-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, #7c50cc 0%, #81c752 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.xo-project-inquiry-info-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 32px rgba(124, 58, 237, 0.12);
+    border-color: rgba(124, 58, 237, 0.2);
+}
+
+.xo-project-inquiry-info-card:hover::before {
+    opacity: 1;
+}
+
+.xo-project-inquiry-info-card-icon {
+    font-size: 1.8rem;
+    color: #7c50cc;
+    display: block;
+    margin-bottom: 14px;
+    transition: transform 0.3s ease;
+}
+
+.xo-project-inquiry-info-card:hover .xo-project-inquiry-info-card-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.xo-project-inquiry-info-card-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1A1A2E;
+    margin: 0 0 16px;
+    letter-spacing: -0.02em;
+    line-height: 1.3;
+}
+
+/* Why Choose List */
+.xo-project-inquiry-info-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.xo-project-inquiry-info-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 7px 0;
+    font-size: 0.85rem;
+    color: #5a5a6e;
+    line-height: 1.5;
+}
+
+.xo-project-inquiry-info-list li i {
+    color: #81c752;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+    margin-top: 3px;
+}
+
+/* Our Process Steps */
+.xo-project-inquiry-process-steps {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px 18px;
+}
+
+.xo-project-inquiry-process-step {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: transform 0.2s ease;
+}
+
+.xo-project-inquiry-process-step:hover {
+    transform: translateX(4px);
+}
+
+.xo-project-inquiry-step-number {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    background: linear-gradient(135deg, #7c50cc 0%, #9670d9 100%);
+    padding: 6px 12px;
+    border-radius: 50px;
+    min-width: 38px;
+    text-align: center;
+    line-height: 1.2;
+    flex-shrink: 0;
+    box-shadow: 0 2px 8px rgba(124, 58, 237, 0.25);
+    transition: all 0.3s ease;
+}
+
+.xo-project-inquiry-process-step:hover .xo-project-inquiry-step-number {
+    background: linear-gradient(135deg, #9670d9 0%, #7c50cc 100%);
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(124, 58, 237, 0.35);
+}
+
+.xo-project-inquiry-step-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #1A1A2E;
+    line-height: 1.3;
+}
+
+/* ============================================================
+   FORM NAVIGATION BUTTONS
+   ============================================================ */
+.xo-project-inquiry-navigation {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+    padding-top: 18px;
+    border-top: 1px solid #E8ECF0;
+}
+
+.xo-project-inquiry-btn-next,
+.xo-project-inquiry-btn-prev {
+    padding: 12px 28px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.xo-project-inquiry-btn-next {
+    background: #7c50cc;
+    color: #FFFFFF;
+    margin-left: auto;
+    box-shadow: 0 4px 14px rgba(124, 58, 237, 0.3);
+}
+
+.xo-project-inquiry-btn-next:hover {
+    background: #6640a8;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(124, 58, 237, 0.4);
+}
+
+.xo-project-inquiry-btn-next:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(124, 58, 237, 0.3);
+}
+
+.xo-project-inquiry-btn-prev {
+    background: #F3F4F6;
+    color: #6B7280;
+}
+
+.xo-project-inquiry-btn-prev:hover {
+    background: #E5E7EB;
+    color: #374151;
+    transform: translateY(-2px);
+}
+
+.xo-project-inquiry-btn-prev:active {
+    transform: translateY(0);
+}
+
+/* Submit Button */
+.xo-project-inquiry-submit-area {
+    display: flex;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.xo-project-inquiry-btn-submit {
+    padding: 14px 40px;
+    font-size: 1rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #81c752 0%, #6ba845 100%);
+    color: #1A1A2E;
+    box-shadow: 0 6px 24px rgba(129, 199, 82, 0.4);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 220px;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+.xo-project-inquiry-btn-submit::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.xo-project-inquiry-btn-submit:hover {
+    background: linear-gradient(135deg, #6ba845 0%, #5a9037 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 32px rgba(129, 199, 82, 0.5);
+}
+
+.xo-project-inquiry-btn-submit:hover::before {
+    left: 100%;
+}
+
+.xo-project-inquiry-btn-submit:active {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 16px rgba(129, 199, 82, 0.4);
+}
+
+/* ============================================================
+   RESPONSIVE DESIGN
+   ============================================================ */
+
+/* Tablets (768px - 1024px) */
+@media (max-width: 1024px) {
+    #xo-project-inquiry-section {
+        padding: 60px 0 50px;
+    }
+
+    .xo-project-inquiry-header {
+        margin-bottom: 36px;
+    }
+
+    .xo-project-inquiry-title {
+        font-size: 2.2rem;
+    }
+
+    .xo-project-inquiry-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .xo-project-inquiry-layout {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .xo-project-inquiry-info-panel {
+        max-width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .xo-project-inquiry-info-card {
+        padding: 20px;
+    }
+
+    .xo-project-inquiry-process-steps {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px 12px;
+    }
+}
+
+/* Mobile Landscape / Small Tablets (481px - 767px) */
+@media (max-width: 767px) {
+    #xo-project-inquiry-section {
+        padding: 50px 0 40px;
+    }
+
+    .xo-project-inquiry-header {
+        margin-bottom: 28px;
+    }
+
+    .xo-project-inquiry-title {
+        font-size: 1.8rem;
+    }
+
+    .xo-project-inquiry-subtitle {
+        font-size: 0.88rem;
+    }
+
+    .xo-project-inquiry-form-container {
+        padding: 24px;
+    }
+
+    .xo-project-inquiry-form-group--half {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .xo-project-inquiry-info-panel {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .xo-project-inquiry-info-card {
+        padding: 18px;
+    }
+
+    .xo-project-inquiry-info-card-title {
+        font-size: 0.95rem;
+    }
+
+    .xo-project-inquiry-process-steps {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .xo-project-inquiry-step-label {
+        font-size: 0.78rem;
+    }
+}
+
+/* Mobile Portrait (375px - 480px) */
+@media (max-width: 480px) {
+    #xo-project-inquiry-section {
+        padding: 40px 0 35px;
+    }
+
+    .xo-project-inquiry-inner {
+        padding: 0 20px;
+    }
+
+    .xo-project-inquiry-header {
+        margin-bottom: 24px;
+    }
+
+    .xo-project-inquiry-title {
+        font-size: 1.5rem;
+    }
+
+    .xo-project-inquiry-subtitle {
+        font-size: 0.82rem;
+    }
+
+    .xo-project-inquiry-form-container {
+        padding: 20px;
+        border-radius: 20px;
+    }
+
+    .xo-project-inquiry-progress {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .xo-project-inquiry-progress-label {
+        text-align: left;
+        min-width: auto;
+    }
+
+    .xo-project-inquiry-form-row {
+        gap: 14px;
+    }
+
+    .xo-project-inquiry-info-card {
+        padding: 16px;
+    }
+
+    .xo-project-inquiry-info-card-title {
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+    }
+
+    .xo-project-inquiry-info-list li {
+        font-size: 0.78rem;
+        padding: 5px 0;
+    }
+
+    .xo-project-inquiry-process-steps {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+    }
+
+    .xo-project-inquiry-step-number {
+        font-size: 0.68rem;
+        padding: 2px 8px;
+        min-width: 30px;
+    }
+
+    .xo-project-inquiry-step-label {
+        font-size: 0.75rem;
+    }
+
+    .xo-project-inquiry-btn-submit {
+        width: 100%;
+        padding: 12px 24px;
+        font-size: 0.88rem;
+    }
+
+    .xo-project-inquiry-navigation {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .xo-project-inquiry-btn-next,
+    .xo-project-inquiry-btn-prev {
+        width: 100%;
+        justify-content: center;
+        margin-left: 0;
+    }
+}
+
+/* Extra Small Mobile (320px - 374px) */
+@media (max-width: 374px) {
+    .xo-project-inquiry-title {
+        font-size: 1.3rem;
+    }
+
+    .xo-project-inquiry-subtitle {
+        font-size: 0.78rem;
+    }
+
+    .xo-project-inquiry-form-container {
+        padding: 18px;
+    }
+
+    .xo-project-inquiry-info-card {
+        padding: 14px;
+    }
+
+    .xo-project-inquiry-process-steps {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .xo-project-inquiry-info-list li {
+        font-size: 0.72rem;
+    }
+
+    .xo-project-inquiry-step-label {
+        font-size: 0.72rem;
+    }
+}
+
+/* Focus States for Accessibility */
+.xo-project-inquiry-input:focus-visible,
+.xo-project-inquiry-select:focus-visible,
+.xo-project-inquiry-textarea:focus-visible,
+.xo-project-inquiry-btn-submit:focus-visible,
+.xo-project-inquiry-btn-next:focus-visible,
+.xo-project-inquiry-btn-prev:focus-visible {
+    outline: 3px solid #81c752;
+    outline-offset: 4px;
+}

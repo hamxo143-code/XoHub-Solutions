@@ -1573,94 +1573,19 @@ if (document.readyState === 'loading') {
 // ============================================================
 // 19. PORTFOLIO — SCROLL-TRIGGERED ANIMATIONS
 // ============================================================
+// DISABLED: Portfolio section now uses slider, must be visible immediately
+// Animation conflicts with slider initialization
 const initPortfolioAnimations = () => {
-    const portfolioCards = document.querySelectorAll('.portfolio-card');
-    const pfBadge = document.querySelector('.portfolio-section__badge');
-    const pfTitle = document.querySelector('.portfolio-section__title');
-    const pfSubtitle = document.querySelector('.portfolio-section__subtitle');
-    const pfHeaderBtn = document.querySelector('.btn-portfolio-header');
-    const pfCta = document.querySelector('.portfolio-cta');
-
-    // Set initial state for header elements
-    const headerElements = [pfBadge, pfTitle, pfSubtitle, pfHeaderBtn];
-    headerElements.forEach((el) => {
-        if (el) {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(20px)';
-            el.style.transition = 'opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
-        }
-    });
-
-    // Set initial state for portfolio cards
-    portfolioCards.forEach((card, index) => {
-        card.style.opacity = '0';
-        card.style.transform = 'translateY(30px)';
-        card.style.transition = `opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) ${index * 80}ms, transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) ${index * 80}ms`;
-    });
-
-    // Set initial state for bottom CTA
-    if (pfCta) {
-        const ctaElements = pfCta.querySelectorAll('.portfolio-cta__title, .portfolio-cta__description, .portfolio-cta__buttons');
-        ctaElements.forEach((el) => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(20px)';
-            el.style.transition = 'opacity 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
-        });
-    }
-
-    // Create observer
-    const pfObserver = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                // Animate header elements
-                headerElements.forEach((el) => {
-                    if (el) {
-                        setTimeout(() => {
-                            el.style.opacity = '1';
-                            el.style.transform = 'translateY(0)';
-                        }, 100);
-                    }
-                });
-
-                // Animate portfolio cards with staggered delay
-                portfolioCards.forEach((card, index) => {
-                    setTimeout(() => {
-                        card.style.opacity = '1';
-                        card.style.transform = 'translateY(0)';
-                    }, 250 + (index * 80));
-                });
-
-                // Animate bottom CTA
-                if (pfCta) {
-                    const ctaElements = pfCta.querySelectorAll('.portfolio-cta__title, .portfolio-cta__description, .portfolio-cta__buttons');
-                    ctaElements.forEach((el, index) => {
-                        setTimeout(() => {
-                            el.style.opacity = '1';
-                            el.style.transform = 'translateY(0)';
-                        }, 500 + (index * 100));
-                    });
-                }
-
-                pfObserver.disconnect();
-            }
-        });
-    }, {
-        threshold: 0.12,
-        rootMargin: '0px 0px -50px 0px'
-    });
-
-    const pfSection = document.getElementById('portfolio');
-    if (pfSection) {
-        pfObserver.observe(pfSection);
-    }
+    // Animation disabled for slider implementation
+    console.log('📂 Portfolio animations disabled - slider active');
 };
 
-// Initialize portfolio animations
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initPortfolioAnimations);
-} else {
-    initPortfolioAnimations();
-}
+// Do not initialize portfolio animations
+// if (document.readyState === 'loading') {
+//     document.addEventListener('DOMContentLoaded', initPortfolioAnimations);
+// } else {
+//     initPortfolioAnimations();
+// }
 
 // ============================================================
 // 20. TESTIMONIALS — SCROLL-TRIGGERED ANIMATIONS
@@ -4914,8 +4839,8 @@ START: Portfolio Hero Banner JavaScript
         const phDashboard = document.querySelector('.portfolio-visual__dashboard');
         const phFloats = document.querySelectorAll('.portfolio-visual__float');
 
-        // Set initial state for content elements
-        const contentElements = [phBadge, phTitle, phDescription, phButtons, phTrust];
+        // Set initial state for content elements (excluding phTrust - keep it always visible)
+        const contentElements = [phBadge, phTitle, phDescription, phButtons];
         contentElements.forEach((el) => {
             if (el) {
                 el.style.opacity = '0';
@@ -4923,6 +4848,13 @@ START: Portfolio Hero Banner JavaScript
                 el.style.transition = 'opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
             }
         });
+        
+        // Keep trust badges always visible (no animation)
+        if (phTrust) {
+            phTrust.style.opacity = '1';
+            phTrust.style.transform = 'translateY(0)';
+            phTrust.style.visibility = 'visible';
+        }
 
         // Set initial state for visual elements
         if (phDashboard) {

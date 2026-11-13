@@ -21977,7 +21977,7 @@ START: Portfolio Hero Banner
 
 /* ----- Trust Badges ----- */
 .portfolio-hero__trust {
-    display: flex;
+    display: flex !important;
     flex-wrap: wrap;
     gap: 16px 24px;
     padding-top: 8px;
@@ -21985,15 +21985,18 @@ START: Portfolio Hero Banner
     z-index: 10;
     opacity: 1 !important;
     transform: translateY(0) !important;
+    visibility: visible !important;
 }
 
 .trust-badge {
-    display: flex;
+    display: flex !important;
     align-items: center;
     gap: 8px;
     font-size: 0.82rem;
     font-weight: var(--font-weight-medium);
     color: var(--color-charcoal);
+    opacity: 1 !important;
+    visibility: visible !important;
 }
 
 .trust-badge__icon {
