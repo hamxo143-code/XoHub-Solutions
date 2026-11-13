@@ -21983,6 +21983,8 @@ START: Portfolio Hero Banner
     padding-top: 8px;
     position: relative;
     z-index: 10;
+    opacity: 1 !important;
+    transform: translateY(0) !important;
 }
 
 .trust-badge {
